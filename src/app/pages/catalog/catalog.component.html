@@ -1,1 +1,40 @@
-<p>catalog works!</p>
+<!-- catalog.component.html -->
+<div class="container-fluid p-3">
+  <!-- Sorting Buttons -->
+  <div class="sort-buttons-container">
+    <div class="mb-3">
+      <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+        <button type="button" class="btn btn-outline-dark disabled"><i class="bi bi-sort-down">Sortuj po :</i></button>
+        <button type="button" class="btn btn-outline-dark" (click)="sortBy('size')">Powierzchnia</button>
+        <button type="button" class="btn btn-outline-dark" (click)="sortBy('floors')">Kondygnacja</button>
+        <button type="button" class="btn btn-outline-dark" (click)="sortBy('roofType')">Typ Dachu</button>
+        <button type="button" class="btn btn-outline-dark" (click)="sortBy('beds')">Sypialnie</button>
+        <button type="button" class="btn btn-outline-dark" (click)="sortBy('baths')">Łazienki</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Cards Display -->
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let card of cards">
+          <div 
+              class="card" 
+              (mouseover)="onMouseOver(card)" 
+              (mouseleave)="onMouseLeave(card)"
+              [ngClass]="{'hover': card.isHovered}">
+              <img src="{{card.imgSrc}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">{{card.title}}</h5>
+                  <p class="card-text">{{card.description}}</p>
+                  <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                      <button type="button" class="btn btn-secondary"><i class="bi bi-arrows">{{card.size}}<small>m2</small></i></button>
+                      <button type="button" class="btn btn-secondary"><i class="bi bi-layers-fill">{{card.floors}}</i></button>
+                      <button type="button" class="btn btn-secondary"><i class="bi bi-triangle-fill"></i>{{card.roofType}}</button>
+                      <button type="button" class="btn btn-secondary"><img src="assets/bed_icon.png" style="height: 18px;"> {{card.beds}}</button>
+                      <button type="button" class="btn btn-secondary"><img src="assets/bath_icon.png" style="height: 18px;"> {{card.baths}}</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

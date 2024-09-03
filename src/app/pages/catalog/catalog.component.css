@@ -1,0 +1,16 @@
+/* catalog.component.css */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sort-buttons-container {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    margin-bottom: 1rem; /* Adds some space below the buttons */
+  }
+  
