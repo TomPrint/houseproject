@@ -3,13 +3,25 @@
   <!-- Sorting Buttons -->
   <div class="sort-buttons-container">
     <div class="mb-3">
-      <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-        <button type="button" class="btn btn-outline-dark disabled"><i class="bi bi-sort-down">Sortuj po :</i></button>
-        <button type="button" class="btn btn-outline-dark" (click)="sortBy('size')">Powierzchnia</button>
-        <button type="button" class="btn btn-outline-dark" (click)="sortBy('floors')">Kondygnacja</button>
-        <button type="button" class="btn btn-outline-dark" (click)="sortBy('roofType')">Typ Dachu</button>
-        <button type="button" class="btn btn-outline-dark" (click)="sortBy('beds')">Sypialnie</button>
-        <button type="button" class="btn btn-outline-dark" (click)="sortBy('baths')">Łazienki</button>
+      <div class="row align-items-center">
+        <div class="col-6 col-md-auto mb-md-0">
+          <button type="button" class="btn btn-outline-dark disabled w-100"><i class="bi bi-sort-down">Sortuj po :</i></button>
+        </div>
+        <div class="col-6 col-md my-1">
+          <button type="button" class="btn btn-outline-dark w-100" (click)="sortBy('size')">Powierzchnia</button>
+        </div>
+        <div class="col-6 col-md my-1">
+          <button type="button" class="btn btn-outline-dark w-100" (click)="sortBy('floors')">Kondygnacja</button>
+        </div>
+        <div class="col-6 col-md my-1">
+          <button type="button" class="btn btn-outline-dark w-100" (click)="sortBy('roofType')">Dach</button>
+        </div>
+        <div class="col-6 col-md my-1">
+          <button type="button" class="btn btn-outline-dark w-100" (click)="sortBy('beds')">Sypialnie</button>
+        </div>
+        <div class="col-6 col-md my-1">
+          <button type="button" class="btn btn-outline-dark w-100" (click)="sortBy('baths')">Łazienki</button>
+        </div>
       </div>
     </div>
   </div>
