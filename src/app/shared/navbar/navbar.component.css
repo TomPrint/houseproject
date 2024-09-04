@@ -41,6 +41,8 @@
   color: #000; /* Ensure text color remains as specified */
 }
 
+
+
 /* Mobile specific styles */
 @media (max-width: 991.98px) {
   /* Hide the hamburger menu */
@@ -71,10 +73,12 @@
   .dropdown-menu {
     position: static; /* Ensures dropdown is visible on mobile */
     width: 100%; /* Full width on mobile */
+    align-items: center;
   }
 
   .dropdown-menu .dropdown-item {
-    width: 100%; /* Full width for dropdown items on mobile */
-    text-align: right; /* Align text to the right */
+    width: 100%;
+    text-align: center; /* Center the text inside the dropdown items */
+ 
   }
 }
