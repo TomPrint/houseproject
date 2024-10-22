@@ -1,0 +1,24 @@
+
+/* ! Navbar Styling ! */
+.logo {
+    height: 9vh;
+}
+
+.bg-img {
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+    position: relative; 
+
+}
+
+
+.btnContact {
+    background-color: #B89F86;
+    color: white;
+    width: 150px; 
+}
+
+.btnContact:hover {
+    background-color: #ffffff4d;
+}
