@@ -1,7 +1,15 @@
-
 /* ! Navbar Styling ! */
+/* Logo styling */
 .logo {
-    height: 9vh;
+    max-height: 220px;    /* Maximum height for larger screens */
+    width: auto;          /* Maintain aspect ratio */
+    height: 100%;         /* Allow the height to shrink on smaller screens */
+}
+
+/* Navbar Styling */
+.navbar {
+    padding-top: 10px;   /* Adjust padding as needed */
+    padding-bottom: 0px; /* Reduce bottom padding */
 }
 
 .bg-img {
@@ -9,10 +17,9 @@
     object-fit: cover;
     filter: brightness(0.9);
     position: relative; 
-
 }
 
-
+/* Button styling */
 .btnContact {
     background-color: #B89F86;
     color: white;
@@ -22,3 +29,69 @@
 .btnContact:hover {
     background-color: #ffffff4d;
 }
+
+/* Adjust the margin of the navigation links */
+.navbar-nav .nav-item {
+    margin-top: 20px; /* Move the nav items higher */
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .logo {
+        max-height: 100px; /* Shrink logo height on smaller screens */
+    }
+
+    .navbar-nav .nav-item {
+        margin-top: 5px; /* Reduce top margin for smaller screens */
+    }
+
+    /* Make the font size smaller for mobile screens */
+    .nav-link {
+        font-size: 0.9rem; /* Decrease the size of nav items */
+    }
+
+    .btnContact {
+        width: 120px; /* Reduce button size on mobile */
+        font-size: 0.9rem; /* Decrease button text size */
+    }
+}
+
+/* ! Top Bg Image Animation */
+.bg-slideshow {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.9);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .bg-img:first-child {
+    animation: fadeInOut 10s infinite;
+  }
+  
+  .bg-img:nth-child(2) {
+    animation: fadeInOut2 10s infinite;
+  }
+  
+  /* Keyframes with corrected opacity values */
+  @keyframes fadeInOut {
+    0%, 50% { opacity: 2; }
+    51%, 100% { opacity: 1; }
+  }
+  
+  @keyframes fadeInOut2 {
+    0%, 50% { opacity: 0; }
+    51%, 100% { opacity: 1; }
+  }
+
