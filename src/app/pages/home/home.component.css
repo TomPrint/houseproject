@@ -80,46 +80,40 @@
 
 /* Image animation */
 .bg-img:nth-child(1) {
-    animation: fadeInOut 30s infinite;
+    animation: fadeInOut 30s infinite; /* Total time for all 6 images */
 }
 
 .bg-img:nth-child(2) {
     animation: fadeInOut 30s infinite;
-    animation-delay: 5s;
+    animation-delay: 5s; /* Start 5s after image 1 */
 }
 
 .bg-img:nth-child(3) {
     animation: fadeInOut 30s infinite;
-    animation-delay: 10s;
+    animation-delay: 10s; /* Start 10s after image 1 */
 }
 
 .bg-img:nth-child(4) {
     animation: fadeInOut 30s infinite;
-    animation-delay: 15s;
+    animation-delay: 15s; /* Start 15s after image 1 */
 }
 
 .bg-img:nth-child(5) {
     animation: fadeInOut 30s infinite;
-    animation-delay: 20s;
+    animation-delay: 20s; /* Start 20s after image 1 */
 }
 
 .bg-img:nth-child(6) {
     animation: fadeInOut 30s infinite;
-    animation-delay: 25s;
+    animation-delay: 25s; /* Start 25s after image 1 */
 }
 
 /* Fade-in and fade-out keyframes */
 @keyframes fadeInOut {
-    0% {
-        opacity: 0;
+    0%, 16.66% { 
+        opacity: 1; /* Image visible */
     }
-    10%, 40% {
-        opacity: 1; /* Visible */
-    }
-    50% {
-        opacity: 0; /* Start fading out */
-    }
-    100% {
-        opacity: 0; /* Fully invisible */
+    17%, 100% { 
+        opacity: 0; /* Image fades out */
     }
 }
