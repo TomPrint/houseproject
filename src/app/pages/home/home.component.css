@@ -1,3 +1,5 @@
+
+
 /* ! Navbar Styling ! */
 /* Logo styling */
 .logo {
@@ -34,6 +36,87 @@
 .navbar-nav .nav-item {
     margin-top: 20px; /* Move the nav items higher */
 }
+
+
+
+/* ! SECTION 1 ! */
+
+/* TŁO SEKCJI Z IKONAMI NA BRĄZOWYM TLE */
+.bg-custom {
+    background-color: #B89F86; 
+  }
+
+  .bg-custom img {
+    width: 80px;  
+    height: 80px; 
+    object-fit: contain; 
+}
+  
+ .btnProject {
+    background-color: #7C8A77;
+    color: #ffffff;
+    width: 150px;
+    
+  }
+
+  .btnProject:hover {
+    color: #ffffff;
+    background-color: #B89F86;
+}
+  
+.white-text{
+    color: #F5F5F5
+}
+  
+.icon-line2 {
+    height: 2px;
+    background-color: rgba(245, 245, 245, 0.5); ;
+    width: 20%; 
+    margin: 0 auto; 
+  }
+
+.icon-line {
+    height: 2px;
+    background-color: #F5F5F5; 
+    width: 5%; 
+    margin: 0 auto; 
+}
+
+
+
+
+
+
+/* ! SECTION WITH MARBLE BB ! */
+
+.bg-img-spokoj-section {
+    background-image: url("/assets/augustine-wong-li0iC0rjvvg-unsplash 1.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+@media (max-width: 1800px) {
+    .bg-img-spokoj-section {
+        background-repeat: repeat; /* Change to repeat on screens smaller than medium */
+        /* Change the position to center on screens smaller than medium */
+    }
+}
+    
+.image-translate{
+    transform: translateY(-100px) translateX(-80px);  
+}
+
+@media (max-width: 1300px) {
+    .image-translate {
+      transform: none;
+      transform: translateY(-100px);
+     /* Dostosuj wartość paddigu według potrzeb */
+    }
+  }
+
+
+
+
 
 /* Responsive behavior for smaller screens */
 @media (max-width: 768px) {

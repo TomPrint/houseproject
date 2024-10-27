@@ -7,9 +7,9 @@
     </iframe>
   
     <div *ngIf="loading" class="spinner-container">
-        <div class="spinner-grow text-secondary" role="status">
-            
-          </div>
+        <!-- <div class="spinner-grow text-secondary" role="status"></div> -->
+          <mat-spinner></mat-spinner>
+          <span class="loading-text">Ładuję spacer 3D</span>
     </div>
     <br>
     <div>
