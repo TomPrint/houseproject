@@ -7,14 +7,14 @@
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
     font-style: normal;
-  };
+  }
 
 html {
     overflow-y: scroll;
-  };
+  }
 html, body { height: 100%; }
 body {  
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   font-style: normal;
- };
+ }
