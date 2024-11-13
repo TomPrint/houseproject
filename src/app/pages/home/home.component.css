@@ -1,7 +1,5 @@
 
-body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
+
 
 .bg-img-slider,
 .bg-slideshow {
@@ -9,8 +7,10 @@ body {
 }
 
 
+
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
 /* ! Navbar Styling ! */
@@ -19,12 +19,15 @@ html {
     max-height: 220px;    /* Maximum height for larger screens */
     width: auto;          /* Maintain aspect ratio */
     height: 100%;         /* Allow the height to shrink on smaller screens */
+    overflow-x: hidden;
 }
 
 /* Navbar Styling */
 .navbar {
+    position: fixed;
     padding-top: 10px;   /* Adjust padding as needed */
     padding-bottom: 0px; /* Reduce bottom padding */
+    overflow-x: hidden;
 }
 
 .bg-img {
@@ -32,6 +35,7 @@ html {
     object-fit: cover;
     filter: brightness(0.9);
     position: relative; 
+    overflow-x: hidden;
 }
 
 /* Button styling */
@@ -48,6 +52,7 @@ html {
 /* Adjust the margin of the navigation links */
 .navbar-nav .nav-item {
     margin-top: 20px; /* Move the nav items higher */
+    overflow-x: hidden
 }
 
 
@@ -57,24 +62,28 @@ html {
 /* TŁO SEKCJI Z IKONAMI NA BRĄZOWYM TLE */
 .bg-custom {
     background-color: #B89F86; 
+    overflow-x: hidden
   }
 
   .bg-custom img {
     width: 80px;  
     height: 80px; 
     object-fit: contain; 
+    overflow-x: hidden
 }
   
  .btnProject {
     background-color: #7C8A77;
     color: #ffffff;
     width: 150px;
+    overflow-x: hidden;
     
   }
 
   .btnProject:hover {
     color: #ffffff;
     background-color: #B89F86;
+    overflow-x: hidden;
 }
   
 .white-text{
@@ -278,7 +287,7 @@ html {
 .iframe-container {
     position: relative;
     width: 100%;
-    height: 909px;
+    height: 700px;
     padding: 10px;
   }
   
@@ -288,13 +297,14 @@ html {
     border: none;
   }
 
-  @media (max-width: 768px) {
-    iframe {
-      margin: 0 20px; /* Transparent space around the iframe for scrolling */
-      width: calc(100% - 40px); /* Adjust width to fit within margins */
-      height: 100%;
+  @media (max-width: 900px) {
+    .iframe-container {
+      height: 500px;
+      max-width: calc(100% - 40px); /* Total width minus horizontal padding */
+      padding: 0; /* No internal padding, width is controlled by max-width */
+      margin: 20px auto; /* Center the container */
     }
-  }
+}
   
   .spinner-container {
     position: absolute;
