@@ -169,7 +169,7 @@
 
 <!-- SPLIDE SLIDER SECTION  -->
  
-<section>
+<!-- <section>
   <div class="bg-img-slider">
     <div id="splide" class="splide">
       <div class="splide__track">
@@ -196,10 +196,10 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- MARKETING TEXT BOTTOM SECTION -->
-<section>
+<!-- <section>
   <div class="container my-5">
     <div class="row">
       <div class="col-xl">
@@ -207,7 +207,27 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
+
+
+<!-- 3D TOUR SECTION -->
+
+<div class="iframe-container" @defer>
+  <iframe
+    [src]="Walk3dSanitizedUrl"
+    frameborder="0"
+    allowfullscreen
+    (load)="onIframeLoad()">
+  </iframe>
+
+  <div *ngIf="loading" class="spinner-container">
+      <!-- <div class="spinner-grow text-secondary" role="status"></div> -->
+        <mat-spinner></mat-spinner>
+        <span class="loading-text">Ładuję spacer 3D</span>
+  </div>
+
+
+</div>
 
 
 <!-- FOOTER SECTION -->
@@ -227,3 +247,4 @@
     </div>
   </div>
 </section>
+
