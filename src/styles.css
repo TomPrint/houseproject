@@ -10,15 +10,15 @@
   }
 
   
-  html {
-    overflow-x: hidden; /* Restrict horizontal overflow */
-    overflow-y: scroll; /* Keep vertical scroll on html */
-}
 
 body {
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
     font-style: normal;
     height: 100%;
-    overflow-x: hidden; /* Allow auto overflow in body */
+    width:100%;  
+    overflow-x: hidden; /* Restrict horizontal overflow */
+    overflow-y: scroll; /* Keep vertical scroll on html */
 }
+
+

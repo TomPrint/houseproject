@@ -15,7 +15,7 @@ export const routes: Routes = [
   { path: 'kontakt', component: ContactComponent},
   { path: 'faq', component: FaqComponent},
   { path: 'technologia', component: TechnologyComponent},
-  { path: 'oferta/spacer3D', component: OfferComponent},
+  { path: 'oferta', component: OfferComponent},
   { path: 'oferta/catalog', component: CatalogComponent},
   { path: 'oferta/realizacja', component:RealizationComponent},
   { path: 'oferta/indywidualna', component: IndividualComponent},

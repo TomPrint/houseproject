@@ -20,7 +20,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent {
   Walk3dSanitizedUrl: SafeResourceUrl;
   loading = true; // Loading spinner
 
@@ -29,17 +29,17 @@ export class HomeComponent implements AfterViewInit {
     this.Walk3dSanitizedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
-  ngAfterViewInit() {
-    new Splide('#splide', {
-      type: 'loop',
-      perPage: 1,
-      focus: 'center',
-      gap: '1rem',
-      padding: '20%',
-      speed: 1800,
-      lazyLoad: 'nearby',
-    }).mount();
-  }
+  // ngAfterViewInit() {
+  //   new Splide('#splide', {
+  //     type: 'loop',
+  //     perPage: 1,
+  //     focus: 'center',
+  //     gap: '1rem',
+  //     padding: '20%',
+  //     speed: 1800,
+  //     lazyLoad: 'nearby',
+  //   }).mount();
+  // }
 
   
 

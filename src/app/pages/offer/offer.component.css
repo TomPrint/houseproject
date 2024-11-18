@@ -1,39 +1,38 @@
-/* 3D TOUR */
+.container {
+    background-color: #F5F5F5; /* Light gray background */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    max-width: 100%; /* Prevent exceeding viewport width */
+    position: relative; /* Needed for positioning the triangle */
+    overflow: hidden; /* Ensures triangle doesn’t overflow */
+}
 
-/* .iframe-container {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    padding: 10px;
-  }
-  
-  iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-  
-  .spinner-container {
+/* Roof-like triangle at the top */
+.triangle {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 10;
-  }
-  
-  .loading-text {
-    margin-top: 10px;
-    font-size: 18px;
-    color: black; 
-    font-weight: bold;
-  }
+    width: 100%; /* Full width */
+    height: 100%; /* Match height for consistency */
+    background: #D9D9D9; /* Base color for the building */
+    clip-path: polygon(
+        50% 0%, /* Peak of the roof at the center top */
+        100% calc(50vw), /* Right edge slants down at 45 degrees */
+        100% 100%, /* Bottom-right corner of the container */
+        0% 100%, /* Bottom-left corner of the container */
+        0% calc(50vw) /* Left edge slants down at 45 degrees */
+    );
+    z-index: 1; /* Position it below the content */
+}
 
-  .mat-mdc-progress-spinner { 
-    --mdc-circular-progress-active-indicator-color: black; 
-  }  */
+/* Position and style the logo */
+.logo {
+    position: absolute; /* Absolute positioning inside the triangle */
+    top: 20px; /* Adjust vertical position as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Offset to truly center the logo */
+    max-width: 160px; /* Adjust logo size */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 2; /* Ensure it is above the triangle background */
+}
