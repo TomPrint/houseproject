@@ -1,58 +1,66 @@
-
-
-
-.bg-img-slider,
+/* 16x9 ratio for the slideshow */
 .bg-slideshow {
-    overflow: hidden; /* Hide any overflowing content */
-}
-
-
-
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-  }
-
-/* ! Navbar Styling ! */
-/* Logo styling */
-.logo {
-    max-height: 220px;    /* Maximum height for larger screens */
-    width: auto;          /* Maintain aspect ratio */
-    height: 100%;         /* Allow the height to shrink on smaller screens */
-    overflow-x: hidden;
-}
-
-/* Navbar Styling */
-.navbar {
-    position: fixed;
-    padding-top: 10px;   /* Adjust padding as needed */
-    padding-bottom: 0px; /* Reduce bottom padding */
-    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16x9 aspect ratio (9 / 16 = 0.5625) */
+    overflow: hidden; /* Prevent overflow */
+    background-color: black; /* Fallback background color */
 }
 
 .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    object-fit: cover;
-    filter: brightness(0.9);
-    position: relative; 
-    overflow-x: hidden;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
 }
 
-/* Button styling */
-.btnContact {
-    background-color: #B89F86;
-    color: white;
-    width: 150px; 
+/* Ensure navbar is fixed at the top */
+.navbar-container {
+    position: absolute; /* Stick the navbar to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15; /* Ensure it appears above all other elements */
+ 
 }
 
-.btnContact:hover {
-    background-color: #ffffff4d;
+.logo-container {
+    position: absolute; /* Positioned relative to the parent */
+    top: 20px; /* Adjust spacing from the top */
+    left: 10%; /* Move it more to the left side */
+    transform: translateX(0); /* Neutralize centering */
+    z-index: 10; /* Ensure it's above other elements */
 }
 
-/* Adjust the margin of the navigation links */
-.navbar-nav .nav-item {
-    margin-top: 20px; /* Move the nav items higher */
-    overflow-x: hidden
+/* Logo size */
+.logo {
+    max-height: 150px; /* Default size */
+    width: auto;
+    height: auto;
+}
+
+/* Larger Screens - Adjustments */
+@media (min-width: 1200px) {
+    .logo-container {
+        top: 30px; /* Add more spacing from the top */
+        left: 5%; /* Move further to the left */
+    }
+
+    .logo {
+        max-height: 250px; /* Make the logo bigger */
+        width: auto; /* Maintain aspect ratio */
+        height: auto;
+    }
+}
+
+/* General adjustments for other elements */
+.outside-container {
+    position: relative; /* Ensure proper stacking context */
+    overflow: hidden; /* Prevent unwanted overflow */
 }
 
 
@@ -94,14 +102,16 @@ html {
     height: 2px;
     background-color: rgba(245, 245, 245, 0.5); ;
     width: 20%; 
-    margin: 0 auto; 
+    margin: 0 auto;
+    
   }
 
 .icon-line {
     height: 2px;
     background-color: #F5F5F5; 
     width: 5%; 
-    margin: 0 auto; 
+    margin: 0 auto;
+     
 }
 
 
@@ -245,47 +255,45 @@ html {
     background-size: cover; /* Cover to ensure the image fills the area */
     background-position: center; /* Center the image */
     filter: brightness(0.9);
-    opacity: 0;
+    opacity: 0; /* Start with all images hidden */
     transition: opacity 1s ease-in-out;
+    animation: fadeInOut 30s infinite;
 }
 
 /* Image animation */
 .bg-img:nth-child(1) {
-    animation: fadeInOut 30s infinite; /* Total time for all 6 images */
+    animation-delay: 0s;
 }
 
 .bg-img:nth-child(2) {
-    animation: fadeInOut 30s infinite;
-    animation-delay: 5s; /* Start 5s after image 1 */
+    animation-delay: 5s;
 }
 
 .bg-img:nth-child(3) {
-    animation: fadeInOut 30s infinite;
-    animation-delay: 10s; /* Start 10s after image 1 */
+    animation-delay: 10s;
 }
 
 .bg-img:nth-child(4) {
-    animation: fadeInOut 30s infinite;
-    animation-delay: 15s; /* Start 15s after image 1 */
+    animation-delay: 15s;
 }
 
 .bg-img:nth-child(5) {
-    animation: fadeInOut 30s infinite;
-    animation-delay: 20s; /* Start 20s after image 1 */
+    animation-delay: 20s;
 }
 
 .bg-img:nth-child(6) {
-    animation: fadeInOut 30s infinite;
-    animation-delay: 25s; /* Start 25s after image 1 */
+    animation-delay: 25s;
 }
 
 /* Fade-in and fade-out keyframes */
 @keyframes fadeInOut {
     0%, 16.66% { 
-        opacity: 1; /* Image visible */
+        opacity: 1; /* Image visible for ~16.66% of the cycle */
+        z-index: 1; /* Ensure the active image is on top */
     }
     17%, 100% { 
         opacity: 0; /* Image fades out */
+        z-index: 0; /* Move the image to the back */
     }
 }
 

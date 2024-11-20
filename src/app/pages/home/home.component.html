@@ -1,40 +1,27 @@
-<div class="bg-slideshow ratio ratio-16x9">
-  <div class="bg-img" style="background-image: url('/assets/main1.webp');"></div>
-  <div class="bg-img" style="background-image: url('/assets/main2.webp');"></div>
-  <div class="bg-img" style="background-image: url('/assets/main3.webp');"></div>
-  <div class="bg-img" style="background-image: url('/assets/main4.webp');"></div>
-  <div class="bg-img" style="background-image: url('/assets/main5.webp');"></div>
-  <div class="bg-img" style="background-image: url('/assets/main6.webp');"></div>
-</div>
+<div class="outside-container">
+  <!-- Navbar -->
+  <app-navbar class="navbar-container"></app-navbar>
 
-<!-- ! Navbar Section ! -->
-
-<nav class="navbar navbar-expand-lg navbar-dark my-3 position-absolute top-0 start-0 w-100" style="z-index: 10;">
-  <div class="container d-flex align-items-start justify-content-between">
-    
-    <!-- Logo Section -->
-    <div class="navbar-brand">
-      <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
-    </div>
-
-    <div class="navbar-nav-wrapper d-flex ms-auto align-items-center">
-      <ul class="navbar-nav d-flex align-items-center">
-        <li class="nav-item px-3">
-          <a class="nav-link prata-regular" href="#onas">O nas</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link prata-regular" [routerLink]="['oferta']">Oferta</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link prata-regular" href="#proces">Proces</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="btn btnContact prata-regular" role="button" href="#contact">Kontakt</a>
-        </li>
-      </ul>
-    </div>
+  <!-- Background Slideshow -->
+  <div class="bg-slideshow">
+    <div class="bg-img" style="background-image: url('/assets/main1.webp');"></div>
+    <div class="bg-img" style="background-image: url('/assets/main2.webp');"></div>
+    <div class="bg-img" style="background-image: url('/assets/main3.webp');"></div>
+    <div class="bg-img" style="background-image: url('/assets/main4.webp');"></div>
+    <div class="bg-img" style="background-image: url('/assets/main5.webp');"></div>
+    <div class="bg-img" style="background-image: url('/assets/main6.webp');"></div>
   </div>
-</nav>
+
+  <!-- Logo Section -->
+  <div class="logo-container">
+    <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
+  </div>
+
+
+
+
+
+
 
   <!--ABOUT US SECTION  -->
  
@@ -259,3 +246,4 @@
   </div>
 </section>
 
+</div>

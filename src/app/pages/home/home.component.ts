@@ -3,6 +3,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import Splide from '@splidejs/splide';
+import { NavbarComponent } from "../../shared/navbar/navbar.component";
 
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button';
@@ -11,12 +12,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterModule, 
-            CommonModule, 
-            RouterLink, 
-            MatProgressSpinnerModule,
-            MatButtonModule,
-            MatTooltipModule,],
+  imports: [RouterModule,
+    CommonModule,
+    RouterLink,
+    MatProgressSpinnerModule,
+    MatButtonModule,
+    MatTooltipModule, NavbarComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

@@ -1,6 +1,7 @@
 
 /* NAVIGATION */
 
+
 .custom-navbar {
   position: absolute;
   top: 5px;
@@ -81,9 +82,3 @@
   }
 }
 
-/* Button Offer Style */
-.btnOffer {
-  background-color: #7C8A77;
-  border-radius: 5px;
-  padding: 10px;
-}
