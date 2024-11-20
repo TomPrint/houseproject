@@ -112,12 +112,18 @@ html {
 /* ! SECTION WITH MARBLE BB ! */
 
 .bg-img-spokoj-section {
-    background-image: url("/assets/augustine-wong-li0iC0rjvvg-unsplash 1.png");
-    background-repeat: no-repeat;
+    background-image: url("/assets/bg tree 1.jpg");
+    background-repeat: repeat-y;
     background-position: left top;
 }
 
-@media (max-width: 1800px) {
+@media (max-width: 1800px){
+    .bg-img-spokoj-section {
+       background-position: -170px;
+    }
+}
+
+@media (max-width: 1520px) {
     .bg-img-spokoj-section {
         background-repeat: repeat; /* Change to repeat on screens smaller than medium */
         /* Change the position to center on screens smaller than medium */
@@ -125,7 +131,7 @@ html {
 }
     
 .image-translate{
-    transform: translateY(-100px) translateX(-80px);  
+    transform: translateY(-80px) translateX(-70px);  
 }
 
 @media (max-width: 1300px) {
@@ -330,3 +336,49 @@ html {
   .mat-mdc-progress-spinner { 
     --mdc-circular-progress-active-indicator-color: black; 
   }
+
+
+  /* ABIUT US  */
+  .left-top-spacer{
+    padding-top: 100px;
+  }
+
+  .image-translate2{
+    transform: translateY(50px);
+}
+
+@media (max-width: 576px) { /* Adjust the breakpoint as needed */
+    .image-translate2{
+        transform: none
+    }
+    .left-top-spacer{
+        padding-top: 20px;
+      }
+
+}
+
+@media (max-width: 767px) {
+    .mx-4 {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+
+
+
+
+p {
+    font-size: 16px; /* Domyślny rozmiar tekstu */
+}
+
+/* Zwiększ rozmiar tekstu na większych ekranach */
+@media (min-width: 1200px) {
+    p {
+        font-size: 20px; /* Rozmiar tekstu dla ekranów powyżej 1200px */
+    }
+}
