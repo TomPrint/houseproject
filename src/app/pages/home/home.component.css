@@ -21,11 +21,12 @@
 /* Ensure navbar is fixed at the top */
 .navbar-container {
     position: absolute; /* Stick the navbar to the top */
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     width: 100%;
+    right: 5px;
     z-index: 15; /* Ensure it appears above all other elements */
- 
+    /* padding: 10px 20px; */
 }
 
 .logo-container {

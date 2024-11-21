@@ -1,12 +1,11 @@
-
 /* NAVIGATION */
 
-
+/* General Custom Navbar Styling */
 .custom-navbar {
   position: absolute;
-  top: 5px;
+  top: 15px;
   right: 5px;
-  background-color: rgba(124, 138, 119, 0.5); /* Green background */
+  background-color: rgba(124, 138, 119, 0.5); /* Default green background */
   padding: 10px 20px;
   border-radius: 5px;
   z-index: 10;
@@ -14,71 +13,111 @@
   overflow: hidden;
 }
 
-/* Regular Navbar for Larger Screens and Landscape Mode */
-@media (min-width: 911px), (orientation: landscape) {
+/* Styling for nav items */
+.nav-item {
+  padding-left: 10px;
+}
+
+/* Active navigation item styling */
+.custom-navbar .active-nav-item .nav-link {
+  background-color: fffff; /* Background similar to btnOffer */
+  border-radius: 5px; /* Rounded edges */
+  padding: 5px 5px; /* Add padding for better spacing */
+  color: white !important; /* White text color */
+  text-decoration: none;
+}
+
+
+/* Special styling for the home page */
+.home-page-navbar .custom-navbar {
+  background-color: rgba(151, 179, 195, 0.75);
+}
+
+/* Regular Navbar for Larger Screens */
+@media (min-width: 1100px) {
   .custom-navbar {
-      display: block; /* Show regular navbar */
-      overflow: hidden;
+    display: block; /* Show regular navbar */
   }
 
   .navbar-toggler,
   .fullscreen-nav {
-      display: none; /* Hide hamburger menu and fullscreen nav */
-      overflow: hidden;
+    display: none; /* Hide hamburger menu and fullscreen nav */
   }
 }
 
-/* Fullscreen Navigation for Portrait Mode on Mobile */
-@media (max-width: 910px) and (orientation: portrait) {
+/* Fullscreen Navigation for Smaller Screens */
+@media (max-width: 1099px) {
   .custom-navbar {
-      display: none; /* Hide regular navbar */
+    display: none !important; /* Hide inline navbar */
+  }
+
+  .navbar-toggler {
+    display: flex !important; /* Show hamburger button */
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1100; /* Ensure it's above everything */
+    background-color: rgba(124, 138, 119, 0.7); /* Match design */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
   }
 
   .fullscreen-nav {
-      position: fixed; /* Cover entire screen */
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(124, 138, 119, 0.9); /* Fullscreen green overlay */
-      z-index: 1050; /* Ensure it's above everything */
-      display: none; /* Initially hide fullscreen menu */
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.3s ease-in-out; /* Smooth open/close animation */
+    position: fixed; /* Cover entire screen */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(124, 138, 119, 0.9); /* Fullscreen green overlay */
+    z-index: 1050; /* Ensure it's above everything */
+    display: none; /* Initially hide fullscreen menu */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Ensure items stack vertically */
+    gap: 20px; /* Add spacing between links */
+    transition: transform 0.3s ease-in-out; /* Smooth open/close animation */
+    text-align: center; /* Center align text */
+  }
+
+  /* Ensure nav items stack vertically */
+  .fullscreen-nav ul {
+    display: flex; /* Use flexbox for vertical stacking */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align all items */
+    justify-content: center; /* Center justify the nav */
+    list-style: none; /* Remove list styles */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ensure full width */
   }
 
   /* Show fullscreen navigation when toggled */
   .fullscreen-nav.show {
-      display: flex !important; /* Show when `show` class is added */
+    display: flex !important; /* Ensure flexbox layout when shown */
   }
 
   /* Center and style navigation links */
   .fullscreen-nav .nav-link {
-      font-size: 2rem; /* Larger text for visibility */
-      color: #ffffff; /* White text */
-      margin: 20px 0; /* Spacing between links */
-      padding:5px;
-
+    font-size: 2rem; /* Larger text for visibility */
+    color: #ffffff; /* White text */
+    margin: 15px 0; /* Spacing between links */
+    text-align: center;
+    display: block; /* Ensure block layout for stacking */
   }
 
   .fullscreen-nav .nav-link:hover {
-      color: #b8c7b9; /* Light green on hover */
+    color: black; /* Change to a different hover color */
   }
 
-  /* Hamburger Button for Portrait Mode */
-  .navbar-toggler {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 1100; /* Ensure it's above all other elements */
-      background-color: rgba(124, 138, 119, 0.7); /* Match design */
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      display: flex !important; /* Force visibility on mobile portrait */
-      align-items: center;
-      justify-content: center;
+  /* Special styling for the home page fullscreen navigation */
+  .home-page-navbar .fullscreen-nav {
+    background-color: rgba(151, 179, 195, 0.75); /* Light blue overlay for home */
+  }
+
+  .home-page-navbar .navbar-toggler {
+    background-color: rgba(151, 179, 195, 0.75);
   }
 }
-
