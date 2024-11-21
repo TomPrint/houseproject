@@ -194,29 +194,6 @@
 }
 
 
-/* FOOTER */
-
-.footer-bg {
-    background-color: #7C8A77;
-    display: flex;              /* Enable Flexbox */
-    flex-direction: column;     /* Stack children vertically */
-    justify-content: flex-end;  /* Align children to the bottom */
-    height: 100%;               /* Ensure it takes the full height of the parent */
-}
-
-.logo-footer {
-    height: 200px;
-    padding: 20px;
-}
-
-@media (max-width: 576px) { /* Adjust the breakpoint as needed */
-    .logo-footer {
-        height: 150px;
-        margin-top: 1px; /* Increased size for small screens */
-    }
-}
-
-
 /* Responsive behavior for smaller screens */
 @media (max-width: 768px) {
     .logo {
@@ -390,4 +367,8 @@ p {
     p {
         font-size: 20px; /* Rozmiar tekstu dla ekranów powyżej 1200px */
     }
+}
+
+.no_underline{
+    text-decoration: none;
 }

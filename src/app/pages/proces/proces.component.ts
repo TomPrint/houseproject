@@ -3,12 +3,12 @@ import { NavbarComponent } from "../../shared/navbar/navbar.component";
 import { FooterComponent } from "../../shared/footer/footer.component";
 
 @Component({
-  selector: 'app-contact',
+  selector: 'app-proces',
   standalone: true,
   imports: [NavbarComponent, FooterComponent],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  templateUrl: './proces.component.html',
+  styleUrl: './proces.component.css'
 })
-export class ContactComponent {
+export class ProcesComponent {
 
 }

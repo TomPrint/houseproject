@@ -8,6 +8,7 @@ import { NavbarComponent } from "../../shared/navbar/navbar.component";
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { FooterComponent } from "../../shared/footer/footer.component";
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     RouterLink,
     MatProgressSpinnerModule,
     MatButtonModule,
-    MatTooltipModule, NavbarComponent],
+    MatTooltipModule, NavbarComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
