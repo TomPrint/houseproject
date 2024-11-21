@@ -6,12 +6,21 @@
   position: absolute;
   top: 5px;
   right: 5px;
-  background-color: rgba(124, 138, 119, 0.5); /* Green background */
+  background-color: rgba(124, 138, 119, 0.5); /* Default green background */
   padding: 10px 20px;
   border-radius: 5px;
   z-index: 10;
   width: auto;
   overflow: hidden;
+}
+
+.nav-item{
+  padding-left: 10px
+}
+
+/* Special styling for the home page */
+.home-page-navbar .custom-navbar {
+  background-color: rgba(151, 179, 195, 0.75);
 }
 
 /* Regular Navbar for Larger Screens and Landscape Mode */
@@ -48,6 +57,10 @@
       transition: transform 0.3s ease-in-out; /* Smooth open/close animation */
   }
 
+  .home-page-navbar .fullscreen-nav{
+    background-color: rgba(151, 179, 195, 0.75);
+  }
+
   /* Show fullscreen navigation when toggled */
   .fullscreen-nav.show {
       display: flex !important; /* Show when `show` class is added */
@@ -63,7 +76,7 @@
   }
 
   .fullscreen-nav .nav-link:hover {
-      color: #b8c7b9; /* Light green on hover */
+      color: black; /* Light green on hover */
   }
 
   /* Hamburger Button for Portrait Mode */
@@ -79,6 +92,10 @@
       display: flex !important; /* Force visibility on mobile portrait */
       align-items: center;
       justify-content: center;
+  }
+
+  .home-page-navbar .navbar-toggler{
+    background-color: rgba(151, 179, 195, 0.75);
   }
 }
 

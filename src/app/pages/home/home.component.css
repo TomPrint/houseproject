@@ -25,7 +25,7 @@
     left: 0;
     width: 100%;
     z-index: 15; /* Ensure it appears above all other elements */
- 
+    padding: 10px 20px;
 }
 
 .logo-container {

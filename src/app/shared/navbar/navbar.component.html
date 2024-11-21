@@ -1,59 +1,62 @@
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark mt-3">
-    <div class="container-fluid">
-      <!-- Hamburger Button -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mobileNav"
-        aria-controls="mobileNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<!-- Navbar -->
+<nav
+  class="navbar navbar-expand-lg navbar-dark"
+  [ngClass]="{ 'home-page-navbar': isHomePage() }"
+>
+  <div class="container-fluid">
+    <!-- Hamburger Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mobileNav"
+      aria-controls="mobileNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <!-- Regular Menu for Larger Screens -->
-      <div class="collapse navbar-collapse custom-navbar" id="navbarNav">
-        <ul class="navbar-nav ms-auto d-flex align-items-center">
-          <li class="nav-item">
-            <a class="nav-link active" href="">O nas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btnOffer" href="oferta">Oferta</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="proces">Proces</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="dostepne">Dostępne od ręki</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact">Kontakt</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Fullscreen Navigation for Mobile -->
-      <div class="collapse fullscreen-nav" id="mobileNav">
-        <ul class="navbar-nav text-center w-100">
-          <li class="nav-item">
-            <a class="nav-link active" href="">O nas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="oferta">Oferta</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="proces">Proces</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="dostepne">Dostępne od ręki</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact">Kontakt</a>
-          </li>
-        </ul>
-      </div>
+    <!-- Regular Menu for Larger Screens -->
+    <div class="collapse navbar-collapse custom-navbar" id="navbarNav">
+      <ul class="navbar-nav ms-auto d-flex align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" href="">O nas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="oferta">Oferta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="proces">Proces</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dostepne">Dostępne od ręki</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact">Kontakt</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+
+    <!-- Fullscreen Navigation for Mobile -->
+    <div class="collapse fullscreen-nav" id="mobileNav">
+      <ul class="navbar-nav text-center w-100">
+        <li class="nav-item">
+          <a class="nav-link" href="">O nas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="oferta">Oferta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="proces">Proces</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dostepne">Dostępne od ręki</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
