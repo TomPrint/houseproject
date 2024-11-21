@@ -3,7 +3,7 @@
 /* General Custom Navbar Styling */
 .custom-navbar {
   position: absolute;
-  top: 5px;
+  top: 15px;
   right: 5px;
   background-color: rgba(124, 138, 119, 0.5); /* Default green background */
   padding: 10px 20px;
@@ -17,6 +17,16 @@
 .nav-item {
   padding-left: 10px;
 }
+
+/* Active navigation item styling */
+.custom-navbar .active-nav-item .nav-link {
+  background-color: fffff; /* Background similar to btnOffer */
+  border-radius: 5px; /* Rounded edges */
+  padding: 5px 5px; /* Add padding for better spacing */
+  color: white !important; /* White text color */
+  text-decoration: none;
+}
+
 
 /* Special styling for the home page */
 .home-page-navbar .custom-navbar {
