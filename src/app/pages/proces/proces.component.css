@@ -1,0 +1,19 @@
+.bg_proces_img {
+    background-image: url("/assets/proces_img_4.png");
+    background-repeat: repeat;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-area {
+    flex-grow: 1; /* Ta sekcja wypełnia pozostałą przestrzeń między navbar a footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+app-footer {
+    /* Zapewniamy, że stopka ma stałą wysokość */
+    height: 100px; /* lub zmień na odpowiednią wysokość */
+}

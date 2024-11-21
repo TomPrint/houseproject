@@ -8,10 +8,12 @@ import { RealizationComponent } from './pages/realization/realization.component'
 import { OfferComponent } from './pages/offer/offer.component';
 import { TechnologyComponent } from './pages/technology/technology.component';
 import { IndividualComponent } from './pages/individual/individual.component';
+import { ProcesComponent } from './pages/proces/proces.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, 
   { path: 'onas', component: AboutComponent },
+  { path: 'proces', component: ProcesComponent },
   { path: 'kontakt', component: ContactComponent},
   { path: 'faq', component: FaqComponent},
   { path: 'technologia', component: TechnologyComponent},
