@@ -1,9 +1,89 @@
 .bg-green {
     background-color: #485145;
-    height: 500px;
+    height:60vh;
 }
 
 .shadow {
     box-shadow: 3px -1px 24px -12px rgba(66, 68, 90, 1);
+}
+
+.rounded {
     border-radius: 5px;
 }
+
+.form-control {
+    border: none; /* Ukryj wszystkie krawędzie */
+    border-bottom: solid 1px #485145; /* Tylko dolna linia */
+    box-shadow: none; /* Usunięcie domyślnego cienia */
+    border-radius: 0; /* Usunięcie zaokrągleń */
+}
+.form-control:focus {
+    border-color: #485145; /* Kolor obramowania po fokusu */
+    outline: none; /* Usunięcie domyślnego konturu */
+    box-shadow: none; /* Usunięcie domyślnego cienia przy focus */
+}
+
+input:-webkit-autofill {
+    background-color: #fff !important; /* Kolor tła podczas autofill */
+    color: #000 !important; /* Kolor tekstu */
+    transition: background-color 5000s ease-in-out 0s; /* Płynne przejście tła */
+}
+
+.form-check-inline {
+    display: inline-flex; /* Ustawienie elementów w linii */
+    align-items: center;  /* Wyrównanie elementów pionowo */
+    margin-right: 15px;    /* Odstęp między przyciskami */
+}
+
+/* Zmiana koloru podświetlenia (focus) dla radio buttonów */
+input[type="radio"]:focus {
+    box-shadow: none; /* zielony kolor z przezroczystością */
+    border-color: #485145; /* zielona ramka */
+}
+
+/* Opcjonalnie, zmiana koloru dla radio button, kiedy jest zaznaczone */
+input[type="radio"]:checked {
+    background-color: #485145; /* zielony kolor */
+    border-color: #485145; /* zielona ramka */
+}
+
+input[type="radio"]:checked:focus {
+    box-shadow: none; /* zielony focus */
+}
+
+.btn-success2 {
+    background-color: #485145;/* Green background */
+    border-color: #485145;
+    color: white; /* Optional: match the border with the background */
+}
+
+.btn-success2:hover{
+    background-color: #7C8A77;/* Green background */
+    border-color: #7C8A77;
+    color: white; /* Optional: match the border with the background */
+}
+
+/* Wyśrodkowanie zawartości na małych ekranach */
+@media (max-width: 768px) {
+    .bg-green {
+        height: 20vh;
+        text-align: center;
+        margin-bottom: 20px; /* Zmniejszenie wysokości tła na urządzeniach mobilnych */
+    }
+
+      .d-inline-flex {
+        display: flex !important;  /* Wymuszenie flexboxa */
+        flex-direction: column;    /* Ustawienie elementów w kolumnie */
+    }
+
+    /* Dopasowanie szerokości dla przycisków */
+    .btn-success2 {
+        width: 100%; /* Przyciski zajmują pełną szerokość kontenera */
+        padding: 10px;
+    }
+
+    textarea {
+        height: 170px !important; /* Ustawienie wysokości na 120px, co odpowiada około 5 wierszom */
+    }
+}
+
