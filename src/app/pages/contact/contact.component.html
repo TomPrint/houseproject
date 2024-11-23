@@ -1,27 +1,131 @@
 <app-navbar></app-navbar>
-<div class="container mb-5 mt-5">
-    <div class="row w-100 text-center">
-      <div class="col-12">
-        <h1>Skontaktuj się z nami!</h1>
-        <p>Jakieś pytania lub uwagi? Napisz do nas wiadomość!</p>
-      </div>
-    </div>
-    <div class="row w-100">
-      <div class="col-md-2"></div>
-      
-      <div class="col-md-8 shadow">
-        <div class="row">
-            <div class="col-4 bg-green shadow m-2">
-                <h4 class="m-2 mt-4 text-white">Dane kontaktowe</h4>
-            </div>
-            <div class="col-8"></div>
+<div class="container mb-5 mt-5 mx-auto">
+    <div class="row w-100 text-center mx-auto">
+        <div class="col-12 mx-auto mb-4">
+            <h1>Skontaktuj się z nami!</h1>
+            <p>Jakieś pytania lub uwagi? Napisz do nas wiadomość!</p>
         </div>
-      
-      </div>
-
-      
-      <div class="col-md-2"></div>
     </div>
-  </div>
+
+    <div class="row w-100 mx-auto">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8 shadow rounded">
+            <div class="px-2 py-2">
+                <div class="row align-items-start">
+                    <div class="col-md-4 bg-green d-flex flex-column justify-content-between p-3 rounded align-items-start">
+                        <!-- Top Section -->
+                        <h4 class="text-white text-center">Dane kontaktowe</h4>
+                        
+                        <!-- Middle Section -->
+                        <div class="d-flex flex-column align-items-start justify-content-center gap-3 my-3 flex-grow-1">
+                            <div class="d-flex align-items-center text-white">
+                                <i class="bi bi-telephone-fill fs-4 me-2"></i>
+                                <p class="m-0">+48 603 303 003</p>
+                            </div>
+                            <div class="d-flex align-items-center text-white">
+                                <i class="bi bi-envelope-fill fs-4 me-2"></i>
+                                <p class="m-0">info&#64;ammerhouse.com</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Bottom Section -->
+                        <div class="d-flex justify-content-around mt-auto">
+                            <i class="bi bi-facebook text-white fs-4 px-3"></i>
+                            <i class="bi bi-twitter text-white fs-4 px-3"></i>
+                            <i class="bi bi-instagram text-white fs-4 px-3"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                      
+                      <form class="custom-form" >
+                      
+                      <div class="row mt-1">
+                        <div class="col-6">
+                          <div class="mb-2">
+                            <label for="name" class="form-label">Imię</label>
+                            <input type="text" class="form-control" id="name">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="mb-2">
+                            <label for="surname" class="form-label">Nazwisko</label>
+                            <input type="text" class="form-control" id="surname">
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="row mt-1">
+                        <div class="col-6">
+                          <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email">
+                        
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="mb-3">
+                            <label for="phone" class="form-label">Telefon</label>
+                            <input type="tel" class="form-control" id="phone">
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="row mt-2 mb-4">
+                        <h6 class="fw-bold">Wybierz temat:</h6>
+                        <div class="d-inline-flex gap-3">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label small" for="inlineRadio1">Dom 01</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label small" for="inlineRadio2">Dom 02</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label small" for="inlineRadio2">Projekt indywidualny</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label small" for="inlineRadio2">Konsultacja projektu</label>
+                        </div>
+                      </div>
+                      </div>
+
+                      <div class="row mt-2 mb-4">
+                        <h6 class="fw-bold">Wybierz preferowaną formę kontaktu:</h6>
+                        <div class="d-inline-flex gap-3">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="option1">
+                          <label class="form-check-label small" for="inlineRadio1">Telefon</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2">
+                          <label class="form-check-label small" for="inlineRadio2">Email</label>
+                        </div>
+                      </div>
+                      </div>
+
+                      <div class="mb-3 mt-3">
+                        <label for="exampleFormControlTextarea1" class="form-label fw-bold">Wiadomość:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Wpisz swoją wiadomość..."></textarea>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-12 text-end">
+                            <button class="btn btn-success2">Wyślij wiadomość</button>
+                        </div>
+                    </div>
+                    </form>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2"></div>
+    </div>
+</div>
 <app-footer></app-footer>
-  
