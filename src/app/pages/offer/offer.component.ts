@@ -21,7 +21,7 @@ export class OfferComponent {
       name: 'CALMA',
       image: '/assets/calma_house.png'
     },
-    GIOLA: {
+    GIOIA: {
       name: 'GIOLA',
       image: '/assets/gioia_house.png'
     }
@@ -30,5 +30,6 @@ export class OfferComponent {
   // Toggle between the houses
   toggleHouse(house: 'CALMA' | 'GIOIA') {
     this.selectedHouse.set(house);
+    console.log(`Selected house: ${house}`);
   }
 }

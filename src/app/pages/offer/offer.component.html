@@ -1,33 +1,53 @@
 <div class="container">
-
+  <app-navbar></app-navbar>
+  <!-- Triangle section -->
   <div class="triangle">
     <!-- Logo -->
     <img src="/assets/logo.svg" alt="Logo" class="logo" />
 
-    <!-- Title inside the triangle -->
-    <h1 class="title">WYBIERZ SWÓJ DOM!</h1>
+   
+    <!-- Content Below Logo -->
+    <div class="d-flex flex-column align-items-center">
+      <!-- Title -->
+      <h1 class="title text-center">WYBIERZ SWÓJ DOM!</h1>
 
-    <!-- House Selection -->
-    <div class="houses">
-      <!-- CALMA House -->
-      <div
-        class="house"
-        [class.active]="selectedHouse() === 'CALMA'"
-        [class.faded]="selectedHouse() !== 'CALMA'"
-        (click)="toggleHouse('CALMA')"
-      >
-        <img [src]="houses.CALMA.image" alt="CALMA House" />
-      </div>
+      <!-- House Selection -->
+      <div class="row justify-content-center align-items-center mt-4 g-3 houses">
+        <!-- CALMA House -->
+        <div
+          class="col-6 col-md-4 text-center house"
+          [class.active]="selectedHouse() === 'CALMA'"
+          [class.faded]="selectedHouse() !== 'CALMA'"
+          (click)="toggleHouse('CALMA')"
+        >
+          <img
+            [src]="houses.CALMA.image"
+            alt="CALMA House"
+            class="img-fluid house-img"
+          />
+        </div>
 
-      <!-- GIOLA House -->
-      <div
-        class="house"
-        [class.active]="selectedHouse() === 'GIOIA'"
-        [class.faded]="selectedHouse() !== 'GIOIA'"
-        (click)="toggleHouse('GIOIA')"
-      >
-        <img [src]="houses.GIOLA.image" alt="GIOIA House" />
+        <!-- GIOIA House -->
+        <div
+          class="col-6 col-md-4 text-center house"
+          [class.active]="selectedHouse() === 'GIOIA'"
+          [class.faded]="selectedHouse() !== 'GIOIA'"
+          (click)="toggleHouse('GIOIA')"
+        >
+          <img
+            [src]="houses.GIOIA.image"
+            alt="GIOIA House"
+            class="img-fluid house-img"
+          />
+        </div>
       </div>
     </div>
   </div>
+</div>
+
+<br>
+<br>
+
+<div>
+  <p>HELLO THIS WILL BE NEW SECTION</p>
 </div>

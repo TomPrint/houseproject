@@ -1,88 +1,113 @@
 /* General Container Styles */
 .container {
-    background-color: #F5F5F5;
-    width: 100%;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Ensure full viewport width */
+    height: auto; /* Allow height to adapt */
+    position: relative; /* Ensure elements are positioned correctly */
+    overflow-x: hidden; /* Prevent horizontal overflow */
     max-width: 100%;
-    position: relative;
-    overflow: hidden;
+    background-color: #F5F5F5;
 }
 
 /* Roof-like triangle at the top */
 .triangle {
     position: relative;
-    width: 100%;
-    height: 100%;
-    background: #FFFFFF;
-    clip-path: polygon(50% 0%, 100% calc(50vw), 100% 100%, 0% 100%, 0% calc(50vw));
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 50px; /* Add spacing for responsiveness */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: auto; /* Adapt to content height */
+    min-height: 100vh; /* Ensure it covers the viewport height */
+    background: #FFFFFF; /* Triangle background color */
+    clip-path: polygon(
+        50% 0%,         /* Peak at the top-center */
+        100% 50vw,      /* Right edge slants down at 45 degrees */
+        100% 100%,      /* Bottom-right corner */
+        0% 100%,        /* Bottom-left corner */
+        0% 50vw         /* Left edge slants down at 45 degrees */
+    );
+    z-index: 1; /* Ensure it stays behind other elements */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Ensure content starts from the top */
+    padding-bottom: 20px; /* Add padding at the bottom */
 }
 
 /* Logo Styling */
 .logo {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 160px;
-    z-index: 2;
+    max-width: 160px; /* Ensure a consistent logo size */
+    margin-top: 15px;
+    height: auto;
+    z-index: 5;
+    margin-bottom: 20px; /* Place above the title */
 }
 
 /* Title Styling */
 .title {
-    font-size: 1.5rem;
-    margin-top: 80px;
+    font-size: 2rem;
     color: #333;
     text-transform: uppercase;
     text-align: center;
     font-family: 'Prata', serif;
+    margin-bottom: 20px; /* Add spacing below the title */
 }
 
-/* Adjust title margin for smaller screens */
+/* Adjust title spacing for smaller screens */
 @media (max-width: 768px) {
     .title {
-        margin-top: 100px; /* Push text further down */
-        font-size: 1.2rem; /* Decrease font size */
+        font-size: 1.5rem; /* Slightly smaller font size */
+        margin-bottom: 15px; /* Reduce spacing */
     }
 }
 
 /* Houses container */
 .houses {
-    display: flex;
-    gap: 30px;
-    margin-top: 40px;
-    justify-content: center;
-    align-items: center;
+    gap: 30px; /* Add spacing between houses */
     position: relative;
     z-index: 2;
+    flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+    display: flex;
+    justify-content: center; /* Center the houses */
+    padding-bottom: 20px; /* Add bottom padding for better spacing */
 }
 
 /* House Styling */
 .house {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    flex: 1 1 150px; /* Set flexible size for responsive layout */
+    max-width: 200px; /* Limit the maximum width */
+    min-width: 120px; /* Set minimum width for smaller screens */
+    margin-bottom: 15px; /* Add spacing between houses */
+}
+
+/* House Image Styling */
+.house-img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.house img {
-    max-width: 100%; /* Ensure responsiveness */
-    height: auto;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+/* Reduce house image size on smaller screens */
+@media (max-width: 768px) {
+    .house-img {
+        max-width: 80%; /* Decrease image size */
+    }
 }
 
-.house-name {
-    margin-top: 10px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: #333;
-    font-family: 'Prata', serif;
+/* Further reduction for very short screens */
+@media (max-height: 600px) {
+    .house-img {
+        max-width: 70%; /* Shrink the image further */
+    }
+    .title {
+        font-size: 1.3rem; /* Reduce the title font size */
+        margin-bottom: 10px; /* Minimize spacing */
+    }
+    .houses {
+        gap: 15px; /* Reduce the gap between houses */
+    }
 }
 
 /* Active house */
@@ -91,17 +116,28 @@
     opacity: 1; /* Fully visible */
 }
 
-.house.active .house-name {
-    font-weight: bold;
-    color: #000;
-}
-
 /* Faded house */
 .house.faded img {
     transform: scale(0.9); /* Shrink the faded image */
     opacity: 0.5; /* Fade effect */
 }
 
-.house.faded .house-name {
-    color: #aaa;
+/* Ensure houses are clickable */
+.house:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Prevent overlapping on very small screens */
+@media (max-height: 500px) {
+    .triangle {
+        min-height: auto; /* Allow triangle height to adapt */
+        height: auto;
+        padding-bottom: 30px; /* Add more padding for space */
+    }
+    .container {
+        height: auto; /* Allow the container to grow */
+    }
+    .houses {
+        margin-top: 20px; /* Add spacing to prevent overlap */
+    }
 }
