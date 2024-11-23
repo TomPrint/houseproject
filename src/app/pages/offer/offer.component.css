@@ -1,40 +1,107 @@
 /* General Container Styles */
 .container {
-    background-color: #F5F5F5; /* Light gray background */
-    width: 100%; /* Full width */
-    height: 100vh; /* Full viewport height */
-    max-width: 100%; /* Prevent exceeding viewport width */
-    position: relative; /* Needed for positioning the triangle */
-    overflow: hidden; /* Ensures triangle doesn’t overflow */
+    background-color: #F5F5F5;
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Roof-like triangle at the top */
 .triangle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Match height for consistency */
-    background: #FFFFFF; /* Base color for the building */
-    clip-path: polygon(
-        50% 0%, /* Peak of the roof at the center top */
-        100% calc(50vw), /* Right edge slants down at 45 degrees */
-        100% 100%, /* Bottom-right corner of the container */
-        0% 100%, /* Bottom-left corner of the container */
-        0% calc(50vw) /* Left edge slants down at 45 degrees */
-    );
-    z-index: 1; /* Position it below the content */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    clip-path: polygon(50% 0%, 100% calc(50vw), 100% 100%, 0% 100%, 0% calc(50vw));
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px; /* Add spacing for responsiveness */
 }
 
-/* Position and style the logo */
+/* Logo Styling */
 .logo {
-    position: absolute; /* Absolute positioning inside the triangle */
-    top: 20px; /* Adjust vertical position as needed */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Offset to truly center the logo */
-    max-width: 160px; /* Adjust logo size */
-    width: auto; /* Maintain aspect ratio */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 2; /* Ensure it is above the triangle background */
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 160px;
+    z-index: 2;
 }
 
+/* Title Styling */
+.title {
+    font-size: 1.5rem;
+    margin-top: 80px;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Prata', serif;
+}
+
+/* Adjust title margin for smaller screens */
+@media (max-width: 768px) {
+    .title {
+        margin-top: 100px; /* Push text further down */
+        font-size: 1.2rem; /* Decrease font size */
+    }
+}
+
+/* Houses container */
+.houses {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* House Styling */
+.house {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.house img {
+    max-width: 100%; /* Ensure responsiveness */
+    height: auto;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.house-name {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #333;
+    font-family: 'Prata', serif;
+}
+
+/* Active house */
+.house.active img {
+    transform: scale(1.2); /* Enlarge the active image */
+    opacity: 1; /* Fully visible */
+}
+
+.house.active .house-name {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Faded house */
+.house.faded img {
+    transform: scale(0.9); /* Shrink the faded image */
+    opacity: 0.5; /* Fade effect */
+}
+
+.house.faded .house-name {
+    color: #aaa;
+}

@@ -1,7 +1,33 @@
 <div class="container">
-  <div class="triangle">
-    <img src="/assets/logo.svg" alt="Logo" class="logo" />
-  </div>
-<app-navbar></app-navbar>
 
+  <div class="triangle">
+    <!-- Logo -->
+    <img src="/assets/logo.svg" alt="Logo" class="logo" />
+
+    <!-- Title inside the triangle -->
+    <h1 class="title">WYBIERZ SWÓJ DOM!</h1>
+
+    <!-- House Selection -->
+    <div class="houses">
+      <!-- CALMA House -->
+      <div
+        class="house"
+        [class.active]="selectedHouse() === 'CALMA'"
+        [class.faded]="selectedHouse() !== 'CALMA'"
+        (click)="toggleHouse('CALMA')"
+      >
+        <img [src]="houses.CALMA.image" alt="CALMA House" />
+      </div>
+
+      <!-- GIOLA House -->
+      <div
+        class="house"
+        [class.active]="selectedHouse() === 'GIOIA'"
+        [class.faded]="selectedHouse() !== 'GIOIA'"
+        (click)="toggleHouse('GIOIA')"
+      >
+        <img [src]="houses.GIOLA.image" alt="GIOIA House" />
+      </div>
+    </div>
+  </div>
 </div>
