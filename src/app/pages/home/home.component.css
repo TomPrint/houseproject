@@ -24,7 +24,7 @@
     /* top: 0;
     left: 0; */
     width: 100%;
-    right: 5px;
+ 
     z-index: 15; /* Ensure it appears above all other elements */
     /* padding: 10px 20px; */
 }
