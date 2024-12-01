@@ -5,7 +5,6 @@
     <!-- Logo -->
     <img src="/assets/logo.svg" alt="Logo" class="logo" />
 
-   
     <!-- Content Below Logo -->
     <div class="d-flex flex-column align-items-center">
       <!-- Title -->
@@ -43,11 +42,37 @@
       </div>
     </div>
   </div>
-</div>
 
-<br>
-<br>
 
-<div>
-  <p>TEST - NEW SECTION </p>
+<!-- Floor Plan Section -->
+<div class="floor-plan-section px-2">
+  <div class="row justify-content-center align-items-center position-relative">
+    <!-- Current Drawing Image -->
+    <div class="col-12 col-md-7 text-center">
+      <div class="image-wrapper">
+        <img
+          [src]="houses[selectedHouse()].drawing[currentDrawingIndex()]"
+          alt="Drawing"
+          class="img-fluid floor-plan-img"
+        />
+      </div>
+    </div>
+    <!-- Navigation Arrow -->
+    <div class="col-2 text-center align-self-center">
+      <button class="btn btn-link text-success" (click)="nextDrawing()">
+        <i class="bi bi-arrow-right-circle" style="font-size: 2rem"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Info List -->
+  <div class="row justify-content-end mt-1">
+    <div class="col-12 col-md-3 text-end info-list">
+      <ul class="list-unstyled">
+        <li *ngFor="let item of houses[selectedHouse()].info">
+          {{ item }}
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
