@@ -16,6 +16,7 @@ export class OfferComponent {
 
   // Signals for managing the current drawing index
   currentDrawingIndex = signal(0);
+  currentRenderIndex = signal(0);
 
   // House data
   houses = {
@@ -23,6 +24,7 @@ export class OfferComponent {
       name: 'CALMA',
       image: '/assets/calma_house.png', // Main image for CALMA
       drawing: ['/assets/Calma_parter.webp', '/assets/Calma_gora.webp'], // Floor plans
+      renders: ['/assets/Calma_render.webp', '/assets/Calma_render2.webp'], //render images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 4.1 m²',
@@ -38,6 +40,7 @@ export class OfferComponent {
       name: 'GIOIA',
       image: '/assets/gioia_house.png', // Main image for GIOIA
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
+      renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], //render images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 3.8 m²',
@@ -65,4 +68,20 @@ export class OfferComponent {
     const nextIndex = (currentIndex + 1) % drawings.length;
     this.currentDrawingIndex.set(nextIndex);
   }
+
+
+  // Switch to the next render
+  nextRender() {
+    const renders = this.houses[this.selectedHouse()].renders;
+    const currentIndex = this.currentRenderIndex();
+    const nextIndex = (currentIndex + 1) % renders.length;
+    this.currentRenderIndex.set(nextIndex);
+  }
+
+  // Get text for the current render
+  currentRenderText() {
+    return this.currentRenderIndex() === 0 ? 'PARTER' : 'PIĘTRO';
+  }
+
+  
 }

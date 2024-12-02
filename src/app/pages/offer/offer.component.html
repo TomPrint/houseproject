@@ -10,7 +10,7 @@
       <!-- Title -->
       <h1 class="title text-center">WYBIERZ SWÓJ DOM!</h1>
 
-      <!-- House Selection -->
+  <!-- HOUSES CHANGE -->
       <div class="row justify-content-center align-items-center mt-4 g-3 houses">
         <!-- CALMA House -->
         <div
@@ -44,7 +44,7 @@
   </div>
 
 
-<!-- Floor Plan Section -->
+<!-- DRAWINGS CHANGE -->
 <div class="floor-plan-section px-2">
   <div class="row justify-content-center align-items-center position-relative">
     <!-- Current Drawing Image -->
@@ -75,4 +75,33 @@
       </ul>
     </div>
   </div>
+
+  <!-- RENDERS CHANGE -->
+
+<!-- Render Section -->
+<div class="render-section px-2 mt-4 renders">
+  <div class="row justify-content-center align-items-center">
+    <!-- Current Render Image -->
+    <div class="col-12 col-md-8 text-center">
+      <div class="render-img-wrapper">
+        <img
+          [src]="houses[selectedHouse()].renders[currentRenderIndex()]"
+          alt="Render"
+          class="render-img"
+        />
+      </div>
+    </div>
+    <!-- Navigation and Text -->
+    <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mt-3 mt-md-0">
+      <button class="btn btn-link text-success me-2" (click)="nextRender()">
+        <i class="bi bi-arrow-right-circle" style="font-size: 2rem"></i>
+      </button>
+      <span class="render-text text-success fs-5">
+        {{ currentRenderText() }}
+      </span>
+    </div>
+  </div>
 </div>
+
+</div>
+

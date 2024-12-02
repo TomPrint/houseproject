@@ -71,7 +71,7 @@
     flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
     display: flex;
     justify-content: center; /* Center the houses */
-    padding-bottom: 20px; /* Add bottom padding for better spacing */
+    padding-bottom: 10px; /* Add bottom padding for better spacing */
 }
 
 /* House Styling */
@@ -81,7 +81,7 @@
     flex: 1 1 150px; /* Set flexible size for responsive layout */
     max-width: 200px; /* Limit the maximum width */
     min-width: 120px; /* Set minimum width for smaller screens */
-    margin-bottom: 15px; /* Add spacing between houses */
+    margin-bottom: 30px; /* Add spacing between houses */
 }
 
 /* House Image Styling */
@@ -145,7 +145,7 @@
     }
 }
 
-/* Floor Plan Section */
+/* DRAWINGS SECTION */
 .floor-plan-section {
     background-color: #FFFFFF;
     text-align: center
@@ -182,7 +182,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
+
+/* Make the drawings smaller on normal screens */
+@media (min-width: 769px) {
+    .image-wrapper {
+        padding-top: 80%; /* Reduce size on larger screens */
+    }
+}
+
+
 
 .image-wrapper img {
     position: absolute;
@@ -200,3 +210,43 @@
 }
 
 
+
+/* RENDERS */
+.renders {
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.render-img-wrapper {
+    position: relative;
+    width: 100%; /* Stretch to fill parent container */
+    max-width: 600px; /* Consistent max width for all devices */
+    aspect-ratio: 4 / 3; /* Ensures consistent aspect ratio */
+    overflow: hidden; /* Prevent overflow */
+    margin: 0 auto; /* Center align the wrapper */
+}
+
+.render-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Fill the wrapper's width */
+    height: 100%; /* Fill the wrapper's height */
+    object-fit: contain; /* Scale image to fit inside wrapper without distortion */
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+    .render-img-wrapper {
+        max-width: 500px; /* Adjust for smaller screens */
+        aspect-ratio: 4 / 3; /* Keep aspect ratio consistent */
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+    .render-img-wrapper {
+        max-width: 800px; /* Adjust for larger screens */
+        aspect-ratio: 4 / 3; /* Maintain the same aspect ratio */
+    }
+}
