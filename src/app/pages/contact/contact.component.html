@@ -1,16 +1,17 @@
 <app-navbar></app-navbar>
-<div class="container mb-5 mt-5 mx-auto">
+<br>
+<div class="container mb-3 mt-5 mx-auto">
     <div class="row w-100 text-center mx-auto">
-        <div class="col-12 mx-auto mb-4">
-            <h1>Skontaktuj się z nami!</h1>
+        <div class="col-12 mx-auto mb-3">
+            <h2>Skontaktuj się z nami!</h2>
             <p>Jakieś pytania lub uwagi? Napisz do nas wiadomość!</p>
         </div>
     </div>
 
     <div class="row w-100 mx-auto">
-        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
 
-        <div class="col-md-8 shadow rounded">
+        <div class="col-md-10 shadow rounded">
             <div class="px-2 py-2">
                 <div class="row align-items-start">
                     <div class="col-md-4 bg-green d-flex flex-column justify-content-between p-3 rounded align-items-start">
@@ -37,36 +38,51 @@
                         </div>
                     </div>
                     <div class="col-md-8">
-                      
-                      <form class="custom-form" >
+                      <!-- CONTACT FORM -->
+                      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="custom-form"  >
                       
                       <div class="row mt-1">
                         <div class="col-6">
-                          <div class="mb-2">
+                          <div class="mb-1">
                             <label for="name" class="form-label">Imię</label>
-                            <input type="text" class="form-control" id="name">
+                            <input type="text" class="form-control" id="name" formControlName="name" >
+                            <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
+                              <small *ngIf="contactForm.get('name')?.hasError('required')">Imię jest wymagane.</small>
+                              <small *ngIf="contactForm.get('name')?.hasError('pattern')">Imię może zawierać tylko litery.</small>
+                            </div>
                           </div>
                         </div>
                         <div class="col-6">
-                          <div class="mb-2">
+                          <div class="mb-1">
                             <label for="surname" class="form-label">Nazwisko</label>
-                            <input type="text" class="form-control" id="surname">
+                            <input type="text" class="form-control" id="surname" formControlName="surname">
+                            <div *ngIf="contactForm.get('surname')?.invalid && contactForm.get('surname')?.touched" class="text-danger">
+                              <small *ngIf="contactForm.get('surname')?.hasError('required')">Nazwisko jest wymagane.</small>
+                              <small *ngIf="contactForm.get('surname')?.hasError('pattern')">Nazwisko może zawierać tylko litery.</small>
+                            </div>
                           </div>
                         </div>
                       </div>
                       
                       <div class="row mt-1">
                         <div class="col-6">
-                          <div class="mb-3">
+                          <div class="mb-1">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email">
+                            <input type="email" class="form-control" id="email" formControlName="email">
+                            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+                              <small *ngIf="contactForm.get('email')?.hasError('required')">Email jest wymagany.</small>
+                            </div>
                         
                           </div>
                         </div>
                         <div class="col-6">
-                          <div class="mb-3">
+                          <div class="mb-1">
                             <label for="phone" class="form-label">Telefon</label>
-                            <input type="tel" class="form-control" id="phone">
+                            <input type="tel" class="form-control" id="phone"  formControlName="phone">
+                            <div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" class="text-danger">
+                              <small *ngIf="contactForm.get('phone')?.hasError('required')">Telefon jest wymagany.</small>
+                              <small *ngIf="contactForm.get('phone')?.hasError('pattern')">Telefon może zawierać tylko cyfry</small>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -75,21 +91,24 @@
                         <h6 class="fw-bold">Wybierz temat:</h6>
                         <div class="d-inline-flex gap-3">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label small" for="inlineRadio1">Dom 01</label>
+                          <input class="form-check-input" type="radio" id="inlineRadio1" formControlName="topic" value="Dom 01">
+                          <label class="form-check-label small mx-1" for="inlineRadio1">Dom 01</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label small" for="inlineRadio2">Dom 02</label>
+                          <input class="form-check-input" type="radio" id="inlineRadio2" formControlName="topic" value="Dom 02">
+                          <label class="form-check-label small mx-1" for="inlineRadio2">Dom 02</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label small" for="inlineRadio2">Projekt indywidualny</label>
+                          <input class="form-check-input" type="radio"n id="inlineRadio2" formControlName="topic" value="Projekt indywidualny">
+                          <label class="form-check-label small mx-1" for="inlineRadio2">Projekt indywidualny</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label small" for="inlineRadio2">Konsultacja projektu</label>
+                          <input class="form-check-input" type="radio" id="inlineRadio2" formControlName="topic" value="Konsultacja projektu">
+                          <label class="form-check-label small mx-1" for="inlineRadio2">Konsultacja projektu</label>
                         </div>
+                      </div>
+                      <div *ngIf="contactForm.get('topic')?.invalid && contactForm.get('topic')?.touched" class="text-danger mt-2">
+                        <small>Temat jest wymagany.</small>
                       </div>
                       </div>
 
@@ -97,35 +116,54 @@
                         <h6 class="fw-bold">Wybierz preferowaną formę kontaktu:</h6>
                         <div class="d-inline-flex gap-3">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="option1">
-                          <label class="form-check-label small" for="inlineRadio1">Telefon</label>
+                          <input class="form-check-input" type="radio" id="inlineRadio1" formControlName="contactPreference" value="Telefon">
+                          <label class="form-check-label small mx-1" for="inlineRadio1">Telefon</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2">
-                          <label class="form-check-label small" for="inlineRadio2">Email</label>
+                          <input class="form-check-input" type="radio" id="inlineRadio2" formControlName="contactPreference" value="Email">
+                          <label class="form-check-label small mx-1" for="inlineRadio2">Email</label>
                         </div>
+                      </div>
+                      <div *ngIf="contactForm.get('contactPreference')?.invalid && contactForm.get('contactPreference')?.touched" class="text-danger mt-2">
+                        <small>Forma kontaktu jest wymagana.</small>
                       </div>
                       </div>
 
                       <div class="mb-3 mt-3">
                         <label for="exampleFormControlTextarea1" class="form-label fw-bold">Wiadomość:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Wpisz swoją wiadomość..."></textarea>
-                      </div>
-                      <div class="row mt-3">
-                        <div class="col-12 text-end">
-                            <button class="btn btn-success2">Wyślij wiadomość</button>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Wpisz swoją wiadomość..."  formControlName="message"></textarea>
+                        <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger mt-2">
+                          <small>Wiadomość musi mieć 10 - 1000 znaków.</small>
                         </div>
+                      </div>
+
+                      <div class="row mt-3 align-items-center">
+                        <!-- Komunikat o błędach -->
+                        <div class="col-12 col-md-7 order-2 order-md-1 p-0">
+                          <div *ngIf="formError" class="alert alert-danger m-3 text-center" role="alert">
+                            Uwaga! Formularz zawiera błędy.
+                          </div>
+                          <div *ngIf="formSuccess" class="alert alert-success m-3 text-center" role="alert">
+                            Dziękujemy! Twoja wiadomość została wysłana.
+                          </div>
+                        </div>
+                      
+                        <!-- Przycisk -->
+                        <div class="col-12 col-md-5 text-end order-1 order-md-2">
+                          <button type="submit" class="btn btn-success2">Wyślij wiadomość</button>
+                        </div>
+                        
                     </div>
+                  
                     </form>
-
-
-
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
     </div>
+   
 </div>
+<br>
 <app-footer></app-footer>

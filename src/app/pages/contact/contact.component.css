@@ -1,6 +1,6 @@
 .bg-green {
     background-color: #485145;
-    height:60vh;
+    height:70vh;
 }
 
 .shadow {
@@ -66,9 +66,9 @@ input[type="radio"]:checked:focus {
 /* Wyśrodkowanie zawartości na małych ekranach */
 @media (max-width: 768px) {
     .bg-green {
-        height: 20vh;
+        height: 22vh;
         text-align: center;
-        margin-bottom: 20px; /* Zmniejszenie wysokości tła na urządzeniach mobilnych */
+        margin-bottom: 10px; /* Zmniejszenie wysokości tła na urządzeniach mobilnych */
     }
 
       .d-inline-flex {
@@ -87,3 +87,22 @@ input[type="radio"]:checked:focus {
     }
 }
 
+.alert {
+    font-size: 18px; /* Domyślny rozmiar dla mobilnych */
+    line-height: 1.5; /* Zachowanie czytelności */
+  }
+  
+  @media (min-width: 768px) {
+    .alert {
+      font-size: 14px; 
+  }
+}
+
+  .form-label {
+    margin-bottom: 0.1rem; /* Zmniejsz odstęp poniżej label */
+  }
+  
+  .form-control {
+    margin-top: 0;
+    margin-bottom: 0; /* Usuń dodatkowe odstępy nad input */
+  }
