@@ -13,10 +13,11 @@ import { NavbarComponent } from "../../shared/navbar/navbar.component";
 export class OfferComponent {
   // Signals for managing the selected house
   selectedHouse = signal<'CALMA' | 'GIOIA'>('CALMA');
-
+  selectedFacade = signal<string>('');
   // Signals for managing the current drawing index
   currentDrawingIndex = signal(0);
   currentRenderIndex = signal(0);
+ 
 
   // House data
   houses = {
@@ -25,6 +26,12 @@ export class OfferComponent {
       image: '/assets/calma_house.png', // Main image for CALMA
       drawing: ['/assets/Calma_parter.webp', '/assets/Calma_gora.webp'], // Floor plans
       renders: ['/assets/Calma_render.webp', '/assets/Calma_render2.webp'], //render images
+      facades: [
+        '/assets/Calma_facade1.png',
+        '/assets/Calma_facade2.png',
+        '/assets/Calma_facade3.png',
+        '/assets/Calma_facade4.png',
+      ], // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 4.1 m²',
@@ -41,6 +48,12 @@ export class OfferComponent {
       image: '/assets/gioia_house.png', // Main image for GIOIA
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], //render images
+      facades: [
+        '/assets/Gioia_facade1.png',
+        '/assets/Gioia_facade2.png',
+        '/assets/Gioia_facade3.png',
+        '/assets/Gioia_facade4.png',
+      ], // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 3.8 m²',
@@ -83,5 +96,16 @@ export class OfferComponent {
     return this.currentRenderIndex() === 0 ? 'PARTER' : 'PIĘTRO';
   }
 
-  
+
+  openModal(facade: string) {
+    this.selectedFacade.set(facade);
+    const modalElement = document.getElementById('facadeModal');
+    if (modalElement) {
+      const modal = new (window as any).bootstrap.Modal(modalElement);
+      modal.show();
+    } else {
+      console.error('Modal element not found');
+    }
+  }
+
 }

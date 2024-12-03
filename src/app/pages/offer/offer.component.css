@@ -220,7 +220,7 @@
 .render-img-wrapper {
     position: relative;
     width: 100%; /* Stretch to fill parent container */
-    max-width: 600px; /* Consistent max width for all devices */
+    max-width: 750px; /* Consistent max width for all devices */
     aspect-ratio: 4 / 3; /* Ensures consistent aspect ratio */
     overflow: hidden; /* Prevent overflow */
     margin: 0 auto; /* Center align the wrapper */
@@ -250,3 +250,98 @@
         aspect-ratio: 4 / 3; /* Maintain the same aspect ratio */
     }
 }
+
+/* SECTION FOR 2x2 FACADE IMAGES */
+
+/* Facade Section */
+.facade-section {
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .facade-img {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
+    max-width: 80%; /* Ensure responsiveness */
+    height: 80%; /* Maintain aspect ratio */
+    
+  }
+  
+  .facade-img:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Custom Box Sizing for Images */
+  @media (min-width: 768px) {
+    .facade-img {
+      max-width: 80%; /* Adjust image size on medium and larger screens */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .facade-img {
+      max-width: 60%; /* Adjust image size for large screens */
+    }
+  }
+  
+  /* Modal Styles */
+  .modal-content {
+    background-color: #ffffff;
+    border-radius: 8px;
+  }
+  
+  .modal-body img {
+    max-height: 80vh; /* Ensure the image doesn't overflow the modal */
+  }
+
+
+  /* BROWN ICON SECTION */
+.bg-custom {
+    background-color: #B89F86; 
+    overflow-x: hidden
+  }
+
+  .bg-custom img {
+    width: 80px;  
+    height: 80px; 
+    object-fit: contain; 
+    overflow-x: hidden
+}
+  
+ .btnProject {
+    background-color: #7C8A77;
+    color: #ffffff;
+    width: 150px;
+    overflow-x: hidden;
+    
+  }
+
+  .btnProject:hover {
+    color: #ffffff;
+    background-color: #B89F86;
+    overflow-x: hidden;
+}
+  
+.white-text{
+    color: #F5F5F5
+}
+  
+.icon-line2 {
+    height: 2px;
+    background-color: rgba(245, 245, 245, 0.5); ;
+    width: 20%; 
+    margin: 0 auto;
+    
+  }
+
+.icon-line {
+    height: 2px;
+    background-color: #F5F5F5; 
+    width: 5%; 
+    margin: 0 auto;
+     
+}
+  
+  
+  

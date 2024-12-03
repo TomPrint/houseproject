@@ -103,5 +103,78 @@
   </div>
 </div>
 
+
+<!-- FACADE IMAGES SECTION -->
+
+<div class="facade-section container mt-4">
+  <div class="row g-2 justify-content-center">
+    <!-- Facade Images -->
+    <div
+      *ngFor="let facade of houses[selectedHouse()].facades; let i = index"
+      class="col-6 text-center d-flex justify-content-center align-items-center"
+    >
+      <img
+        [src]="facade"
+        alt="Facade Image {{ i + 1 }}"
+        class="facade-img img-fluid"
+        (click)="openModal(facade)"
+      />
+    </div>
+  </div>
+</div>    
+
+<!-- Modal for Enlarged Image -->
+<div
+  class="modal fade"
+  id="facadeModal"
+  tabindex="-1"
+  aria-labelledby="facadeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        <img [src]="selectedFacade()" alt="Enlarged Facade" class="img-fluid" />
+      </div>
+    </div>
+  </div>
 </div>
+
+</div>
+
+<!-- BROWN ICONS SECTION -->
+
+<section>
+  <div class="row bg-custom  p-5 text-center">
+    <p></p>
+    <div class="col-md-4 my-5">
+      <img src="/assets/middle_section_hand_with_seed_img.png" alt="hand_with_seed" class="mb-3">
+      <p class="white-text bodoni-moda mb-1">ZRÓWNOWAŻONA ARCHITEKTURA</p>
+      <p class="white-text bodoni-moda mb-1">WSPIERAJĄCA BIORÓŻNORODNOŚĆ!</p>
+      <div class="icon-line my-2"></div>
+    </div>
+    <div class="col-md-4 my-5">
+      <img src="/assets/middle_section_trees_img.png" alt="trees" class="mb-3">
+      <p class="white-text bodoni-moda mb-1">DOM, KTÓRY PRZYNOSI KORZYŚĆ</p>
+      <p class="white-text bodoni-moda mb-1">NATURZE I TOBIE!</p>
+      <div class="icon-line my-2"></div>
+    </div>
+    <div class="col-md-4 my-5">  
+      <img src="/assets/middle_section_wood_works_img.png" alt="wood_works" class="mb-3">
+      <p class="white-text bodoni-moda mb-1">DOSKONAŁA OCHRONA NATURY</p>
+      <p class="white-text bodoni-moda mb-1">PRZY BUDOWIE TWOJEGO DOMU!</p>
+      <div class="icon-line my-2"></div>
+    </div>
+    <p></p>
+    <p></p>
+  </div> 
+</section>
 
