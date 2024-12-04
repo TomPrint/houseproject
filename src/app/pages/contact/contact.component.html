@@ -71,6 +71,7 @@
                             <input type="email" class="form-control" id="email" formControlName="email">
                             <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
                               <small *ngIf="contactForm.get('email')?.hasError('required')">Email jest wymagany.</small>
+                              <small *ngIf="contactForm.get('email')?.hasError('email')">Popraw format email</small>
                             </div>
                         
                           </div>

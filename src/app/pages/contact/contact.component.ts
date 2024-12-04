@@ -4,8 +4,10 @@ import { NavbarComponent } from "../../shared/navbar/navbar.component";
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { MatInputModule } from '@angular/material/input';
 
+
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { environment } from '../../../environment';
 
 
 @Component({
@@ -20,6 +22,9 @@ export class ContactComponent implements OnInit {
   formError: boolean = false;
   formSuccess: boolean = false; 
   
+  serviceID: string = environment.SERVICE;
+  templateID: string = environment.TEMPLATE;
+  public: string = environment.PUBLIC;
 
   constructor(private fb: FormBuilder){}
 
@@ -47,10 +52,27 @@ export class ContactComponent implements OnInit {
     this.formError = false;
     console.log(this.contactForm.value);
     this.formSuccess = true;
-    this.contactForm.reset();
 
-    // Wyślij dane formularza
-    console.log(this.contactForm.value);
+    const formData = {
+      name: this.contactForm.value.name,
+      surname: this.contactForm.value.surname,
+      email: this.contactForm.value.email,
+      phone: this.contactForm.value.phone,
+      topic: this.contactForm.value.topic,
+      contactPreference: this.contactForm.value.contactPreference,
+      message: this.contactForm.value.message
+    };
+
+    emailjs.send(environment.SERVICE, environment.TEMPLATE, formData ,environment.PUBLIC)
+    .then(() => {
+        console.log('SUCCESS!');
+        console.log(this.contactForm.value);
+        this.contactForm.reset(); // Reset the form fields
+      },
+      (error:any) => {
+        console.log('FAILED...', (error as EmailJSResponseStatus).text);
+      });
+    
   }
 
 }
