@@ -11,7 +11,9 @@
     <div class="bg-img" style="background-image: url('/assets/main5.webp');"></div>
     <div class="bg-img" style="background-image: url('/assets/main6.webp');"></div>
   </div>
-
+  <div class="bg-slideshow-button-container">
+    <a href="#spacer"><img src="assets/spacer3d_img.png" class="spacer3D"></a>
+  </div>
   <!-- Logo Section -->
   <div class="logo-container">
     <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
@@ -195,7 +197,7 @@
 
 <!-- 3D TOUR SECTION -->
 
-<div class="iframe-container" @defer>
+<div id="spacer" class="iframe-container" @defer>
   <iframe
     [src]="Walk3dSanitizedUrl"
     frameborder="0"
