@@ -126,6 +126,7 @@
     background-image: url("/assets/bg tree 1.jpg");
     background-repeat: repeat-y;
     background-position: left top;
+    background-size: cover;
 }
 
 @media (max-width: 1800px){
