@@ -18,6 +18,23 @@
     transition: opacity 1s ease-in-out;
 }
 
+
+/* Button container for the slideshow */
+.bg-slideshow-button-container {
+    position: relative;
+    height: 100%; /* Fill the height of the slideshow */
+}
+
+/* The actual button positioned at the bottom-right */
+.spacer3D {
+    position: absolute; /* Positioned within the bg-slideshow-button-container */
+    bottom: 20px;       /* 20px from the bottom of the container */
+    right: 20px;        /* 20px from the right of the container */
+    z-index: 10;
+    margin: 10px;
+       /* Ensure it appears above other elements in the slideshow */
+}
+
 /* Ensure navbar is fixed at the top */
 .navbar-container {
     position: absolute; /* Stick the navbar to the top */
@@ -126,13 +143,9 @@
     background-image: url("/assets/bg tree 1.jpg");
     background-repeat: repeat-y;
     background-position: left top;
+    background-size: cover;
 }
 
-@media (max-width: 1800px){
-    .bg-img-spokoj-section {
-       background-position: -170px;
-    }
-}
 
 @media (max-width: 1520px) {
     .bg-img-spokoj-section {
@@ -212,6 +225,11 @@
     .btnContact {
         width: 120px; /* Reduce button size on mobile */
         font-size: 0.9rem; /* Decrease button text size */
+    }
+
+    .spacer3D {
+        height: 30px;
+           /* Ensure it appears above other elements in the slideshow */
     }
 }
 

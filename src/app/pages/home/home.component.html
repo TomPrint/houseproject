@@ -11,7 +11,9 @@
     <div class="bg-img" style="background-image: url('/assets/main5.webp');"></div>
     <div class="bg-img" style="background-image: url('/assets/main6.webp');"></div>
   </div>
-
+  <div class="bg-slideshow-button-container">
+    <a href="#spacer"><img src="assets/spacer3d_img.png" class="spacer3D"></a>
+  </div>
   <!-- Logo Section -->
   <div class="logo-container">
     <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
@@ -84,12 +86,11 @@
 <!-- SECTION WITH MARBLE BG & PICS -->
 <section class="mb-5">
   <!-- Background -->
-  <div class="bg-img-spokoj-section">
-    
+  <div>
     <!-- First Row -->
     <div class="row">
       <!-- First Row, First Col -->
-      <div class="col-md-6 align-items-center text-center">
+      <div class="col-md-6 align-items-center text-center bg-img-spokoj-section">
         <div class="row">
           <div class="col-xl-2"></div>
           <div class="col-xl-8">
@@ -118,7 +119,7 @@
     <!-- Second Row -->
     <div class="row">
       <!-- Second row, first col -->
-      <div class="col-md-6 order-2 order-md-1 d-flex justify-content-end">
+      <div class="col-md-6 order-2 order-md-1 d-flex justify-content-end bg-img-spokoj-section">
         <img class="img-fluid" src="/assets/minimalistyczny_img_2.jpg" alt="minimalistyczny_img">
       </div>
       <!-- Second row, second col (mobile first) -->
@@ -196,7 +197,7 @@
 
 <!-- 3D TOUR SECTION -->
 
-<div class="iframe-container" @defer>
+<div id="spacer" class="iframe-container" @defer>
   <iframe
     [src]="Walk3dSanitizedUrl"
     frameborder="0"
