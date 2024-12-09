@@ -34,11 +34,14 @@
     padding-bottom: 20px; /* Add padding at the bottom */
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1026px) {
     .triangle {
         min-height: 60vh;
     }
 }
+
+
+
 /* Logo Styling */
 .logo {
     max-width: 160px; /* Ensure a consistent logo size */
@@ -395,52 +398,68 @@
 
 
 
-  /* BROWN ICON SECTION */
+/* BROWN ICON SECTION */
 .bg-custom {
-    background-color: #B89F86; 
-    overflow-x: hidden
+    position: relative;
+    background-color: #B89F86;
+    background-image: url('/assets/bg_tree.png');
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-repeat: no-repeat;
+    background-position: center center; /* Center the image horizontally and vertically */
   }
 
-  .bg-custom img {
-    width: 80px;  
-    height: 80px; 
-    object-fit: contain; 
-    overflow-x: hidden
+  @media (max-width: 768px) {
+    .bg-custom {
+      background-size: cover !important;
+      background-position: top center; /* Adjust vertical position for smaller screens */
+    }
+  }
+
+/* Content inside the section remains centered and styled */
+.bg-custom img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    overflow-x: hidden;
 }
-  
- .btnProject {
+
+.btnProject {
     background-color: #7C8A77;
     color: #ffffff;
     width: 150px;
     overflow-x: hidden;
-    
-  }
+}
 
-  .btnProject:hover {
+.btnProject:hover {
     color: #ffffff;
     background-color: #B89F86;
     overflow-x: hidden;
 }
-  
-.white-text{
-    color: #F5F5F5
+
+.white-text {
+    color: #F5F5F5;
 }
-  
+
 .icon-line2 {
     height: 2px;
-    background-color: rgba(245, 245, 245, 0.5); ;
-    width: 20%; 
+    background-color: rgba(245, 245, 245, 0.5);
+    width: 20%;
     margin: 0 auto;
-    
-  }
+}
 
 .icon-line {
     height: 2px;
-    background-color: #F5F5F5; 
-    width: 5%; 
+    background-color: #F5F5F5;
+    width: 5%;
     margin: 0 auto;
-     
 }
-  
-  
+
+/* Ensure section responsiveness */
+@media (max-width: 768px) {
+    .bg-custom {
+        background-size: contain; /* Adjust background for smaller screens */
+        background-position: top; /* Shift image position for better view */
+    }
+}
+
   
