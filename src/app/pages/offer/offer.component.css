@@ -36,7 +36,7 @@
 
 @media (max-width: 1024px) {
     .triangle {
-        min-height: 65vh;
+        min-height: 60vh;
     }
 }
 /* Logo Styling */
@@ -154,6 +154,24 @@
     text-align: center
 }
 
+/* Adjust Arrow Styling */
+.floor-plan-section .arrow-btn {
+    background-color: #78856B; /* Match color from the example */
+    border: none;
+    width: 40px; /* Circle width */
+    height: 40px; /* Circle height */
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* White arrow color */
+    font-size: 1.5rem; /* Arrow icon size */
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: relative; /* Ensure it stays in position */
+}
+
+
 
 /* Info List */
 .info-list ul {
@@ -189,7 +207,7 @@
 }
 
 /* Make the drawings smaller on normal screens */
-@media (min-width: 1000px) {
+@media (min-width: 1300px) {
     .image-wrapper {
         padding-top: 80%; /* Reduce size on larger screens */
     }
@@ -213,90 +231,168 @@
 }
 
 
-
 /* RENDERS */
+
+/* RENDER SECTION */
 .renders {
     background-color: #FFFFFF;
     text-align: center;
+    padding: 20px 0;
 }
 
-.render-img-wrapper {
+/* Render Container */
+.render-container {
     position: relative;
-    width: 100%; /* Stretch to fill parent container */
-    max-width: 750px; /* Consistent max width for all devices */
-    aspect-ratio: 4 / 3; /* Ensures consistent aspect ratio */
-    overflow: hidden; /* Prevent overflow */
-    margin: 0 auto; /* Center align the wrapper */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.render-img {
+/* Arrow Container */
+.arrow-container {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Fill the wrapper's width */
-    height: 100%; /* Fill the wrapper's height */
-    object-fit: contain; /* Scale image to fit inside wrapper without distortion */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+/* Arrow Button */
+.arrow-btn {
+    background-color: #78856B; /* Match background to the image style */
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* White arrow */
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+/* Arrow Text */
+.arrow-text {
+    font-size: 0.9rem;
+    color: #5E7D63; /* Match text color */
+    margin-top: 5px; /* Add some spacing between arrow and text */
+    text-align: center;
+}
+
+/* Render Image Wrapper */
+.render-img-wrapper {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    overflow: hidden; /* Prevent any overflow issues */
+
+}
+
+/* Render Image */
+.render-img {
+    display: block;
+    width: 100%;
+    max-width: 1728px; /* For large screens */
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain; /* Maintain aspect ratio */
+    transition: transform 0.5s ease-in-out; /* Smooth transitions for hover */
+    cursor: pointer;
+}
+
+/* Prevent Image Movement */
+.render-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px; /* Ensures consistent container height */
 }
 
 /* Mobile Screens */
 @media (max-width: 768px) {
-    .render-img-wrapper {
-        max-width: 500px; /* Adjust for smaller screens */
-        aspect-ratio: 4 / 3; /* Keep aspect ratio consistent */
+    .render-img {
+        max-width: 100%;
+    }
+
+    .arrow-container {
+        top: 5px;
+        right: 5px;
     }
 }
 
-/* Large Screens */
-@media (min-width: 1200px) {
-    .render-img-wrapper {
-        max-width: 800px; /* Adjust for larger screens */
-        aspect-ratio: 4 / 3; /* Maintain the same aspect ratio */
-    }
-}
 
-/* SECTION FOR 2x2 FACADE IMAGES */
+
+/* SECTION FOR FACADE IMAGES */
 
 /* Facade Section */
 .facade-section {
     background-color: #ffffff;
     text-align: center;
-  }
-  
-  .facade-img {
+    padding: 10px 0;
+}
+
+.facade-img {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 4px;
-    max-width: 80%; /* Ensure responsiveness */
-    height: 80%; /* Maintain aspect ratio */
-    
-  }
-  
-  .facade-img:hover {
+    max-width: 150px; /* Base size for images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (min-width: 768px) {
+    .facade-img {
+        max-width: 200px; /* Larger size for tablet screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .facade-img {
+        max-width: 300px; /* Larger size for large screens */
+    }
+}
+
+.facade-img:hover {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Custom Box Sizing for Images */
-  @media (min-width: 768px) {
-    .facade-img {
-      max-width: 80%; /* Adjust image size on medium and larger screens */
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    .facade-img {
-      max-width: 60%; /* Adjust image size for large screens */
-    }
-  }
-  
-  /* Modal Styles */
-  .modal-content {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Modal Styles */
+.modal-content {
     background-color: #ffffff;
     border-radius: 8px;
-  }
-  
-  .modal-body img {
+}
+
+.modal-body img {
     max-height: 80vh; /* Ensure the image doesn't overflow the modal */
-  }
+}
+
+/* Move the close button to the top-left corner */
+.modal-header {
+    justify-content: flex-start; /* Align items to the left */
+    position: relative; /* Allow the close button to be positioned */
+    padding: 0.5rem; /* Adjust padding as necessary */
+}
+
+.btn-close-custom {
+    position: absolute;
+    left: 1rem; /* Adjust distance from the left edge */
+    top: 1rem; /* Adjust distance from the top edge */
+    z-index: 1051; /* Ensure it's above other elements */
+}
+
+/* Optional: Larger close button for better visibility */
+.btn-close-custom {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 
 
   /* BROWN ICON SECTION */

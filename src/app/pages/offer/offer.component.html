@@ -59,14 +59,14 @@
     </div>
     <!-- Navigation Arrow -->
     <div class="col-2 text-center align-self-center">
-      <button class="btn btn-link text-success" (click)="nextDrawing()">
-        <i class="bi bi-arrow-right-circle" style="font-size: 2rem"></i>
+      <button class="arrow-btn px-2 py-2" (click)="nextDrawing()">
+        <i class="bi bi-chevron-right"></i>
       </button>
     </div>
   </div>
 
   <!-- Info List -->
-  <div class="row justify-content-end mt-1">
+  <div class="row justify-content-end mt-1 mx-2">
     <div class="col-12 col-md-3 text-end info-list">
       <ul class="list-unstyled">
         <li *ngFor="let item of houses[selectedHouse()].info">
@@ -77,30 +77,32 @@
   </div>
 
   <!-- RENDERS CHANGE -->
-
-<!-- Render Section -->
-<div class="render-section px-2 mt-4 renders" @defer>
-  <div class="row justify-content-center align-items-center">
-    <!-- Current Render Image -->
-    <div class="col-12 col-md-8 text-center">
-      <div class="render-img-wrapper">
-        <img
-          [src]="houses[selectedHouse()].renders[currentRenderIndex()]"
-          alt="Render"
-          class="render-img"
-        />
+  <div class="render-section px-2 mt-4 renders">
+    <div class="row justify-content-center align-items-center">
+      <!-- Render Container -->
+      <div class="col-12 col-md-8 text-center render-container">
+        <!-- Arrow and Text -->
+        <div class="arrow-container">
+          <button class="btn arrow-btn" (click)="nextRender()">
+            <i class="bi bi-chevron-up"></i>
+          </button>
+          <span class="arrow-text mt-2">
+            {{ currentRenderText() }}
+          </span>
+        </div>
+        <!-- Render Image -->
+        <div class="render-img-wrapper">
+          <img
+            [src]="houses[selectedHouse()].renders[currentRenderIndex()]"
+            alt="Render"
+            class="render-img"
+            (click)="openModal(houses[selectedHouse()].renders[currentRenderIndex()])"
+          />
+        </div>
       </div>
     </div>
-    <!-- Navigation and Text -->
-    <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mt-3 mt-md-0">
-      <button class="btn btn-link text-success me-2" (click)="nextRender()">
-        <i class="bi bi-arrow-right-circle" style="font-size: 2rem"></i>
-      </button>
-      <span class="render-text text-success fs-5">
-        {{ currentRenderText() }}
-      </span>
-    </div>
   </div>
+  
 
 
 
@@ -111,7 +113,7 @@
     <!-- Facade Images -->
     <div
       *ngFor="let facade of houses[selectedHouse()].facades; let i = index"
-      class="col-6 text-center d-flex justify-content-center align-items-center"
+      class="col-6 col-lg-auto d-flex justify-content-center align-items-center"
     >
       <img
         [src]="facade"
@@ -121,33 +123,33 @@
       />
     </div>
   </div>
-</div>    
+</div>
+   
 
 <!-- Modal for Enlarged Image -->
+
 <div
   class="modal fade"
-  id="facadeModal"
+  id="enlargeModal"
   tabindex="-1"
-  aria-labelledby="facadeModalLabel"
+  aria-labelledby="enlargeModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog modal-dialog-centered modal-xl">
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="justify-content-start">
         <button
           type="button"
-          class="btn-close"
+          class="btn-close btn-close-custom"
           data-bs-dismiss="modal"
           aria-label="Close"
         ></button>
       </div>
-      <div class="modal-body text-center">
-        <img [src]="selectedFacade()" alt="Enlarged Facade" class="img-fluid" />
+      <div class="modal-body d-flex justify-content-center align-items-center">
+        <img [src]="selectedImage()" alt="Enlarged Render" class="img-fluid" />
       </div>
     </div>
   </div>
-</div>
-
 </div>
 
 <!-- BROWN ICONS SECTION -->

@@ -13,7 +13,7 @@ import { NavbarComponent } from "../../shared/navbar/navbar.component";
 export class OfferComponent {
   // Signals for managing the selected house
   selectedHouse = signal<'CALMA' | 'GIOIA'>('CALMA');
-  selectedFacade = signal<string>('');
+  selectedImage = signal<string>('');
   // Signals for managing the current drawing index
   currentDrawingIndex = signal(0);
   currentRenderIndex = signal(0);
@@ -100,15 +100,19 @@ export class OfferComponent {
   }
 
 
-  openModal(facade: string) {
-    this.selectedFacade.set(facade);
-    const modalElement = document.getElementById('facadeModal');
+  openModal(image: string) {
+    this.selectedImage.set(image); // Set the image to be displayed in the modal
+    const modalElement = document.getElementById('enlargeModal');
     if (modalElement) {
-      const modal = new (window as any).bootstrap.Modal(modalElement);
-      modal.show();
-    } else {
-      console.error('Modal element not found');
+      const modalInstance = new (window as any).bootstrap.Modal(modalElement);
+      modalInstance.show();
     }
   }
 
+
+
+
+
 }
+
+
