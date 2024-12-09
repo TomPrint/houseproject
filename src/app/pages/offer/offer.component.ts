@@ -34,13 +34,13 @@ export class OfferComponent {
       ], // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
-        '1. Wiatrołap - 4.1 m²',
-        '2. Salon z aneksem kuchennym - 25.1 m²',
-        '3. Pokój - 7.5 m²',
-        '4. Łazienka - 4.2 m²',
-        '5. Hol - 4.7 m²',
+        '1. Wiatrołap - 4,2 m²',
+        '2. Pokój dzienny + aneks kuchenny - 13,3 m²',
+        '3. Łaźienka - 3,9 m²',
         'Powierzchnia dodatkowa:',
-        '6. Taras - 9.9 m²',
+        '4. Antresola - 6,6 m², powierzchnia podłogi - 9,8 m²',
+        '5. Taras - 4,4 m²',
+        '6. Taras - 4,3 m2'
       ],
     },
     GIOIA: {
@@ -56,13 +56,16 @@ export class OfferComponent {
       ], // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
-        '1. Wiatrołap - 3.8 m²',
-        '2. Salon z aneksem kuchennym - 28.3 m²',
-        '3. Pokój - 6.7 m²',
-        '4. Łazienka - 5.1 m²',
-        '5. Hol - 3.5 m²',
+        '1. Wiatrołap - 4,2 m²',
+        '2. Pokój dzienny + aneks kuchenny - 26,3 m²',
+        '3. Pokój - 7,5 m²',
+        '4. Łazienka - 4,3 m²',
+        '5. Hol - 1,75 m², powierzchnia podłogi - 1,9 m²',
+        '6. Pokój - 4,7 m², powierzchnia podłogi - 8,1 m²',
+        '7. Pokój - 6,65 m², powierzchnia podłogi - 11,2 m²',
         'Powierzchnia dodatkowa:',
-        '6. Taras - 8.3 m²',
+        '8. Taras - 9,2 m²',
+        '9. Taras - 4,4 m²'
       ],
     },
   };

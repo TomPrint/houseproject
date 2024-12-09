@@ -34,8 +34,11 @@
     padding-bottom: 20px; /* Add padding at the bottom */
 }
 
-
-
+@media (max-width: 1024px) {
+    .triangle {
+        min-height: 65vh;
+    }
+}
 /* Logo Styling */
 .logo {
     max-width: 160px; /* Ensure a consistent logo size */
@@ -79,7 +82,7 @@
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
     flex: 1 1 150px; /* Set flexible size for responsive layout */
-    max-width: 200px; /* Limit the maximum width */
+    max-width: 180px; /* Limit the maximum width */
     min-width: 120px; /* Set minimum width for smaller screens */
     margin-bottom: 30px; /* Add spacing between houses */
 }
@@ -186,7 +189,7 @@
 }
 
 /* Make the drawings smaller on normal screens */
-@media (min-width: 769px) {
+@media (min-width: 1000px) {
     .image-wrapper {
         padding-top: 80%; /* Reduce size on larger screens */
     }
