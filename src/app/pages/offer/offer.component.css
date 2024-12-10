@@ -41,7 +41,6 @@
 }
 
 
-
 /* Logo Styling */
 .logo {
     max-width: 160px; /* Ensure a consistent logo size */
@@ -398,68 +397,6 @@
 
 
 
-/* BROWN ICON SECTION */
-.bg-custom {
-    position: relative;
-    background-color: #B89F86;
-    background-image: url('/assets/bg_tree.png');
-    background-size: cover; /* Ensure the image covers the entire section */
-    background-repeat: no-repeat;
-    background-position: center center; /* Center the image horizontally and vertically */
-  }
 
-  @media (max-width: 768px) {
-    .bg-custom {
-      background-size: cover !important;
-      background-position: top center; /* Adjust vertical position for smaller screens */
-    }
-  }
-
-/* Content inside the section remains centered and styled */
-.bg-custom img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    overflow-x: hidden;
-}
-
-.btnProject {
-    background-color: #7C8A77;
-    color: #ffffff;
-    width: 150px;
-    overflow-x: hidden;
-}
-
-.btnProject:hover {
-    color: #ffffff;
-    background-color: #B89F86;
-    overflow-x: hidden;
-}
-
-.white-text {
-    color: #F5F5F5;
-}
-
-.icon-line2 {
-    height: 2px;
-    background-color: rgba(245, 245, 245, 0.5);
-    width: 20%;
-    margin: 0 auto;
-}
-
-.icon-line {
-    height: 2px;
-    background-color: #F5F5F5;
-    width: 5%;
-    margin: 0 auto;
-}
-
-/* Ensure section responsiveness */
-@media (max-width: 768px) {
-    .bg-custom {
-        background-size: contain; /* Adjust background for smaller screens */
-        background-position: top; /* Shift image position for better view */
-    }
-}
 
   
