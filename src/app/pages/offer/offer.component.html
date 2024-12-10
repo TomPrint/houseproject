@@ -1,164 +1,162 @@
-<div class="container">
-  <app-navbar></app-navbar>
-  <!-- Triangle section -->
-  <div class="triangle">
-    <!-- Logo -->
-    <img src="/assets/logo.svg" alt="Logo" class="logo" />
+<div class="outside-container">
 
-    <!-- Content Below Logo -->
-    <div class="d-flex flex-column align-items-center">
-      <!-- Title -->
-      <h1 class="title text-center">WYBIERZ SWÓJ DOM!</h1>
+  <div class="container">
+    <app-navbar></app-navbar>
+    <!-- Triangle section -->
+    <div class="triangle">
+      <!-- Logo -->
+      <img src="/assets/logo.svg" alt="Logo" class="logo" />
 
-  <!-- HOUSES CHANGE -->
-      <div class="row justify-content-center align-items-center mt-4 g-3 houses">
-        <!-- CALMA House -->
-        <div
-          class="col-6 col-md-4 text-center house"
-          [class.active]="selectedHouse() === 'CALMA'"
-          [class.faded]="selectedHouse() !== 'CALMA'"
-          (click)="toggleHouse('CALMA')"
-        >
-          <img
-            [src]="houses.CALMA.image"
-            alt="CALMA House"
-            class="img-fluid house-img"
-          />
-        </div>
+      <!-- Content Below Logo -->
+      <div class="d-flex flex-column align-items-center">
+        <!-- Title -->
+        <h1 class="title text-center">WYBIERZ SWÓJ DOM!</h1>
 
-        <!-- GIOIA House -->
-        <div
-          class="col-6 col-md-4 text-center house"
-          [class.active]="selectedHouse() === 'GIOIA'"
-          [class.faded]="selectedHouse() !== 'GIOIA'"
-          (click)="toggleHouse('GIOIA')"
-        >
-          <img
-            [src]="houses.GIOIA.image"
-            alt="GIOIA House"
-            class="img-fluid house-img"
-          />
+        <!-- HOUSES CHANGE -->
+        <div class="row justify-content-center align-items-center mt-4 g-3 houses">
+          <!-- CALMA House -->
+          <div
+            class="col-6 col-md-4 text-center house"
+            [class.active]="selectedHouse() === 'CALMA'"
+            [class.faded]="selectedHouse() !== 'CALMA'"
+            (click)="toggleHouse('CALMA')"
+          >
+            <img
+              [src]="houses.CALMA.image"
+              alt="CALMA House"
+              class="img-fluid house-img"
+            />
+          </div>
+
+          <!-- GIOIA House -->
+          <div
+            class="col-6 col-md-4 text-center house"
+            [class.active]="selectedHouse() === 'GIOIA'"
+            [class.faded]="selectedHouse() !== 'GIOIA'"
+            (click)="toggleHouse('GIOIA')"
+          >
+            <img
+              [src]="houses.GIOIA.image"
+              alt="GIOIA House"
+              class="img-fluid house-img"
+            />
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-</div>
-<!-- DRAWINGS CHANGE -->
-<div class="floor-plan-section px-2" @defer>
-  <div class="row justify-content-center align-items-center position-relative">
-    <!-- Current Drawing Image -->
-    <div class="col-12 col-md-7 text-center">
-      <div class="image-wrapper">
-        <img
-          [src]="houses[selectedHouse()].drawing[currentDrawingIndex()]"
-          alt="Drawing"
-          class="img-fluid floor-plan-img"
-        />
-      </div>
-    </div>
-    <!-- Navigation Arrow -->
-    <div class="col-2 text-center align-self-center">
-      <button class="arrow-btn px-2 py-2" (click)="nextDrawing()">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-  </div>
-
-  <!-- Info List -->
-  <div class="row justify-content-end mt-1 mx-2">
-    <div class="col-12 col-md-3 text-end info-list">
-      <ul class="list-unstyled">
-        <li *ngFor="let item of houses[selectedHouse()].info">
-          {{ item }}
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- RENDERS CHANGE -->
-  <div class="render-section px-2 mt-4 renders">
-    <div class="row justify-content-center align-items-center">
-      <!-- Render Container -->
-      <div class="col-12 col-md-8 text-center render-container">
-        <!-- Arrow and Text -->
-        <div class="arrow-container">
-          <button class="btn arrow-btn" (click)="nextRender()">
-            <i class="bi bi-chevron-up"></i>
-          </button>
-          <span class="arrow-text mt-2">
-            {{ currentRenderText() }}
-          </span>
-        </div>
-        <!-- Render Image -->
-        <div class="render-img-wrapper">
+  <!-- DRAWINGS CHANGE -->
+  <div class="floor-plan-section px-2" @defer>
+    <div class="row justify-content-center align-items-center position-relative">
+      <!-- Current Drawing Image -->
+      <div class="col-12 col-md-7 text-center">
+        <div class="image-wrapper">
           <img
-            [src]="houses[selectedHouse()].renders[currentRenderIndex()]"
-            alt="Render"
-            class="render-img"
-            (click)="openModal(houses[selectedHouse()].renders[currentRenderIndex()])"
+            [src]="houses[selectedHouse()].drawing[currentDrawingIndex()]"
+            alt="Drawing"
+            class="img-fluid floor-plan-img"
           />
         </div>
       </div>
+      <!-- Navigation Arrow -->
+      <div class="col-2 text-center align-self-center">
+        <button class="arrow-btn px-2 py-2" (click)="nextDrawing()">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
     </div>
-  </div>
-  
 
+    <!-- Info List -->
+    <div class="row justify-content-end mt-1 mx-2">
+      <div class="col-12 col-md-3 text-end info-list">
+        <ul class="list-unstyled">
+          <li *ngFor="let item of houses[selectedHouse()].info">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+    </div>
 
-<!-- FACADE IMAGES SECTION -->
-
-<div class="container  bg-white py-2">
-  <div class="row row-cols-2 row-cols-md-4 g-3 justify-content-center align-items-end">
-    <!-- Facade Images -->
-    <div
-      *ngFor="let facade of houses[selectedHouse()].facades; let i = index"
-      class="col d-flex justify-content-center"
-    >
-      <div class="ratio ratio-1x1 w-75">
-        <img
-          [src]="facade"
-          alt="Facade Image {{ i + 1 }}"
-          class="img-fluid rounded"
-          (click)="openModal(facade)"
-        />
+    <!-- RENDERS CHANGE -->
+    <div class="render-section px-2 mt-4 renders">
+      <div class="row justify-content-center align-items-center">
+        <!-- Render Container -->
+        <div class="col-12 col-md-8 text-center render-container">
+          <!-- Arrow and Text -->
+          <div class="arrow-container">
+            <button class="btn arrow-btn" (click)="nextRender()">
+              <i class="bi bi-chevron-up"></i>
+            </button>
+            <span class="arrow-text mt-2">
+              {{ currentRenderText() }}
+            </span>
+          </div>
+          <!-- Render Image -->
+          <div class="render-img-wrapper">
+            <img
+              [src]="houses[selectedHouse()].renders[currentRenderIndex()]"
+              alt="Render"
+              class="render-img"
+              (click)="openModal(houses[selectedHouse()].renders[currentRenderIndex()])"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-
-   
-
-<!-- Modal for Enlarged Image -->
-
-<div
-  class="modal fade"
-  id="enlargeModal"
-  tabindex="-1"
-  aria-labelledby="enlargeModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-fullscreen modal-dialog-centered">
-    <div class="modal-content">
-      <div class="justify-content-start">
-        <button
-          type="button"
-          class="btn-close btn-close-custom"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body d-flex justify-content-center align-items-center">
-        <img [src]="selectedImage()" alt="Enlarged Render" class="img-fluid" />
+  <!-- FACADE IMAGES SECTION -->
+  <div class="container bg-white py-2">
+    <div class="row row-cols-2 row-cols-md-4 g-3 justify-content-center align-items-end">
+      <!-- Facade Images -->
+      <div
+        *ngFor="let facade of houses[selectedHouse()].facades; let i = index"
+        class="col d-flex justify-content-center"
+      >
+        <div class="ratio ratio-1x1 w-75">
+          <img
+            [src]="facade"
+            alt="Facade Image {{ i + 1 }}"
+            class="img-fluid rounded"
+            (click)="openModal(facade)"
+          />
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- BROWN ICONS SECTION -->
-<app-brown  @defer></app-brown>
+  <!-- Modal for Enlarged Image -->
+  <div
+    class="modal fade"
+    id="enlargeModal"
+    tabindex="-1"
+    aria-labelledby="enlargeModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+      <div class="modal-content">
+        <div class="justify-content-start">
+          <button
+            type="button"
+            class="btn-close btn-close-custom"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body d-flex justify-content-center align-items-center">
+          <img [src]="selectedImage()" alt="Enlarged Render" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  </div>
 
-<app-slider @defer></app-slider>
+  <!-- BROWN ICONS SECTION -->
+  <app-brown @defer></app-brown>
 
-<app-footer></app-footer>
+  <!-- SLIDER -->
+  <app-slider @defer></app-slider>
 
+  <!-- FOOTER -->
+  <app-footer></app-footer>
+</div> <!-- Close .outside-container -->

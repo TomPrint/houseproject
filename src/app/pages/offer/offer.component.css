@@ -1,7 +1,7 @@
 /* General Container Styles */
-.outside-container{
-    overflow-x: hidden; 
-    overflow-y: scroll; 
+
+.outside-container {
+    overflow: hidden; /* Prevent unwanted overflow */
 }
 
 .container {
