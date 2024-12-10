@@ -1,4 +1,9 @@
 /* General Container Styles */
+.outside-container{
+    overflow-x: hidden; /* Restrict horizontal overflow */
+    overflow-y: scroll; /* Keep vertical scroll on html */
+}
+
 .container {
     margin: 0;
     padding: 0;
@@ -8,6 +13,7 @@
     overflow-x: hidden; /* Prevent horizontal overflow */
     max-width: 100%;
     background-color: #F5F5F5;
+    
 }
 
 /* Roof-like triangle at the top */
@@ -32,6 +38,7 @@
     align-items: center; /* Center items horizontally */
     justify-content: flex-start; /* Ensure content starts from the top */
     padding-bottom: 20px; /* Add padding at the bottom */
+    
 }
 
 @media (max-width: 1026px) {
@@ -76,7 +83,8 @@
     flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
     display: flex;
     justify-content: center; /* Center the houses */
-    padding-bottom: 10px; /* Add bottom padding for better spacing */
+    padding-bottom: 10px;
+     /* Add bottom padding for better spacing */
 }
 
 /* House Styling */
@@ -153,7 +161,8 @@
 /* DRAWINGS SECTION */
 .floor-plan-section {
     background-color: #FFFFFF;
-    text-align: center
+    text-align: center;
+    overflow-x: hidden;
 }
 
 /* Adjust Arrow Styling */

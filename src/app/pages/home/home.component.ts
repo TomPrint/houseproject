@@ -2,7 +2,6 @@ import { Component, AfterViewInit, HostListener } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import Splide from '@splidejs/splide';
 import { NavbarComponent } from "../../shared/navbar/navbar.component";
 
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -31,17 +30,6 @@ export class HomeComponent {
     this.Walk3dSanitizedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
-  // ngAfterViewInit() {
-  //   new Splide('#splide', {
-  //     type: 'loop',
-  //     perPage: 1,
-  //     focus: 'center',
-  //     gap: '1rem',
-  //     padding: '20%',
-  //     speed: 1800,
-  //     lazyLoad: 'nearby',
-  //   }).mount();
-  // }
 
   
 

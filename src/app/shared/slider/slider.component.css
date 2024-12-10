@@ -1,0 +1,40 @@
+
+  /* SECTION WITH SLIDER */
+
+  .splide__slide img {
+    width: 100%; /* or a specific value, like 600px */
+    height: auto; /* keeps the aspect ratio */
+    object-fit: cover; /* ensures the image fills the slide area */
+    border-radius: 3px;
+     /* optional, rounds the image corners */
+  }
+
+  .bg-img-slider {
+    position: relative;
+    width: 100%;
+    height: auto; /* Set a specific height for the background */
+    overflow: visible;
+    padding:0.5em /* Ensure overflow content is visible */
+}
+
+.bg-img-slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/bg_img_slider.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    opacity: 25%; 
+    z-index: 1; /* Positioned behind content */
+}
+
+#splide {
+    position: relative;
+    z-index: 2; /* Ensures the slider appears above the background overlay */
+}
+
+
