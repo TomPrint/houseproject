@@ -7,10 +7,10 @@
 .container {
     margin: 0;
     padding: 0;
-    width: 100vw; /* Ensure full viewport width */
-    height: auto; /* Allow height to adapt */
-    position: relative; /* Ensure elements are positioned correctly */
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    width: 100vw; 
+    height: auto; 
+    position: relative; 
+    overflow-x: hidden; 
     max-width: 100%;
     background-color: #F5F5F5;
     
@@ -21,23 +21,23 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 100vw; /* Full width of the viewport */
-    height: auto; /* Adapt to content height */
-    min-height: 100vh; /* Ensure it covers the viewport height */
-    background: #FFFFFF; /* Triangle background color */
+    width: 100vw; 
+    height: auto; 
+    min-height: 100vh; 
+    background: #FFFFFF; 
     clip-path: polygon(
-        50% 0%,         /* Peak at the top-center */
-        100% 50vw,      /* Right edge slants down at 45 degrees */
-        100% 100%,      /* Bottom-right corner */
-        0% 100%,        /* Bottom-left corner */
-        0% 50vw         /* Left edge slants down at 45 degrees */
+        50% 0%,         
+        100% 50vw,      
+        100% 100%,      
+        0% 100%,        
+        0% 50vw         
     );
-    z-index: 1; /* Ensure it stays behind other elements */
-    display: flex; /* Flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: flex-start; /* Ensure content starts from the top */
-    padding-bottom: 20px; /* Add padding at the bottom */
+    z-index: 1; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+    padding-bottom: 20px;
     
 }
 
@@ -50,11 +50,11 @@
 
 /* Logo Styling */
 .logo {
-    max-width: 160px; /* Ensure a consistent logo size */
+    max-width: 160px; 
     margin-top: 15px;
     height: auto;
     z-index: 5;
-    margin-bottom: 20px; /* Place above the title */
+    margin-bottom: 20px; 
 }
 
 /* Title Styling */
@@ -63,43 +63,41 @@
     color: #333;
     text-transform: uppercase;
     text-align: center;
-    font-family: 'Prata', serif;
-    margin-bottom: 20px; /* Add spacing below the title */
+    margin-bottom: 20px; 
 }
 
-/* Adjust title spacing for smaller screens */
+
 @media (max-width: 768px) {
     .title {
-        font-size: 1.5rem; /* Slightly smaller font size */
-        margin-bottom: 15px; /* Reduce spacing */
+        font-size: 1.5rem; 
+        margin-bottom: 15px; 
     }
 }
 
 /* Houses container */
 .houses {
-    gap: 30px; /* Add spacing between houses */
+    gap: 30px;
     position: relative;
     z-index: 2;
-    flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+    flex-wrap: wrap; 
     display: flex;
-    justify-content: center; /* Center the houses */
+    justify-content: center; 
     padding-bottom: 10px;
-     /* Add bottom padding for better spacing */
 }
 
 /* House Styling */
 .house {
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    flex: 1 1 150px; /* Set flexible size for responsive layout */
-    max-width: 180px; /* Limit the maximum width */
-    min-width: 120px; /* Set minimum width for smaller screens */
-    margin-bottom: 30px; /* Add spacing between houses */
+    flex: 1 1 150px; 
+    max-width: 180px; 
+    min-width: 120px; 
+    margin-bottom: 30px; 
 }
 
 /* House Image Styling */
 .house-img {
-    max-width: 100%; /* Ensure images are responsive */
+    max-width: 100%; 
     height: auto;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -107,54 +105,54 @@
 /* Reduce house image size on smaller screens */
 @media (max-width: 768px) {
     .house-img {
-        max-width: 80%; /* Decrease image size */
+        max-width: 80%; 
     }
 }
 
 /* Further reduction for very short screens */
 @media (max-height: 600px) {
     .house-img {
-        max-width: 70%; /* Shrink the image further */
+        max-width: 70%; 
     }
     .title {
-        font-size: 1.3rem; /* Reduce the title font size */
-        margin-bottom: 10px; /* Minimize spacing */
+        font-size: 1.3rem; 
+        margin-bottom: 10px; 
     }
     .houses {
-        gap: 15px; /* Reduce the gap between houses */
+        gap: 15px;
        
     }
 }
 
 /* Active house */
 .house.active img {
-    transform: scale(1.2); /* Enlarge the active image */
-    opacity: 1; /* Fully visible */
+    transform: scale(1.2); 
+    opacity: 1; 
 }
 
 /* Faded house */
 .house.faded img {
-    transform: scale(0.9); /* Shrink the faded image */
-    opacity: 0.5; /* Fade effect */
+    transform: scale(0.9); 
+    opacity: 0.5; 
 }
 
 /* Ensure houses are clickable */
 .house:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05); 
 }
 
 /* Prevent overlapping on very small screens */
 @media (max-height: 500px) {
     .triangle {
-        min-height: auto; /* Allow triangle height to adapt */
+        min-height: auto; 
         height: auto;
-        padding-bottom: 3px; /* Add more padding for space */
+        padding-bottom: 3px; 
     }
     .container {
-        height: auto; /* Allow the container to grow */
+        height: auto; 
     }
     .houses {
-        margin-top: 20px; /* Add spacing to prevent overlap */
+        margin-top: 20px; 
     }
 }
 
@@ -167,19 +165,19 @@
 
 /* Adjust Arrow Styling */
 .floor-plan-section .arrow-btn {
-    background-color: #78856B; /* Match color from the example */
+    background-color: #78856B; 
     border: none;
-    width: 40px; /* Circle width */
-    height: 40px; /* Circle height */
-    border-radius: 50%; /* Make it circular */
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff; /* White arrow color */
-    font-size: 1.5rem; /* Arrow icon size */
+    color: #ffffff; 
+    font-size: 1.5rem; 
     cursor: pointer;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    position: relative; /* Ensure it stays in position */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+    position: relative;
 }
 
 
@@ -208,19 +206,19 @@
 /* Wrapper for consistent aspect ratio */
 .image-wrapper {
     position: relative;
-    width: 100%; /* Ensure it spans the parent width */
-    padding-top: 120%; /* Aspect ratio (4:3 in this case) */
-    overflow: hidden; /* Hide overflow to maintain ratio */
+    width: 100%; 
+    padding-top: 120%; 
+    overflow: hidden; 
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
 
-/* Make the drawings smaller on normal screens */
+
 @media (min-width: 1300px) {
     .image-wrapper {
-        padding-top: 80%; /* Reduce size on larger screens */
+        padding-top: 80%; 
     }
 }
 
@@ -232,7 +230,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensure the image fits without distortion */
+    object-fit: contain; 
 }
 
 /* Adjust arrow positioning */
@@ -242,13 +240,13 @@
 }
 
 
-/* RENDERS */
+/* RENDERS SECTION */
 
-/* RENDER SECTION */
 .renders {
     background-color: #FFFFFF;
     text-align: center;
     padding: 20px 0;
+    
 }
 
 /* Render Container */
@@ -257,13 +255,14 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 /* Arrow Container */
 .arrow-container {
     position: absolute;
-    top: 10px; /* Adjust top position */
-    right: 10px; /* Adjust right position */
+    top: 10px; 
+    right: 10px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -272,15 +271,15 @@
 
 /* Arrow Button */
 .arrow-btn {
-    background-color: #78856B; /* Match background to the image style */
+    background-color: #78856B; 
     border: none;
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Make it circular */
+    border-radius: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff; /* White arrow */
+    color: #ffffff; 
     font-size: 1.5rem;
     transition: transform 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
@@ -291,8 +290,8 @@
 /* Arrow Text */
 .arrow-text {
     font-size: 0.9rem;
-    color: #5E7D63; /* Match text color */
-    margin-top: 5px; /* Add some spacing between arrow and text */
+    color: #5E7D63; 
+    margin-top: 5px; 
     text-align: center;
 }
 
@@ -301,7 +300,7 @@
     width: 100%;
     height: auto;
     text-align: center;
-    overflow: hidden; /* Prevent any overflow issues */
+    overflow: hidden; 
 
 }
 
@@ -309,11 +308,11 @@
 .render-img {
     display: block;
     width: 100%;
-    max-width: 1728px; /* For large screens */
+    max-width: 1728px; 
     height: auto;
     margin: 0 auto;
-    object-fit: contain; /* Maintain aspect ratio */
-    transition: transform 0.5s ease-in-out; /* Smooth transitions for hover */
+    object-fit: contain; 
+    transition: transform 0.5s ease-in-out; 
     cursor: pointer;
 }
 
@@ -323,7 +322,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 600px; /* Ensures consistent container height */
+    min-height: 600px; 
 }
 
 /* Mobile Screens */
@@ -342,49 +341,12 @@
 
 /* SECTION FOR FACADE IMAGES */
 
-/* Facade Section */
-.facade-section {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 8px 0;
-}
-
-.facade-img {
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 4px;
-    width: 100%; /* Make images fill parent container */
-    max-height: 150px; /* Constrain height */
-    object-fit: contain; /* Ensure all images fit uniformly */
-}
-
-@media (min-width: 768px) {
-    .facade-img {
-        max-height: 200px; /* Adjust height for tablet screens */
-    }
-}
-
-@media (min-width: 1200px) {
-    .facade-img {
-        max-height: 300px; /* Adjust height for large screens */
-    }
-}
-
-/* Keep all images aligned */
-.row-cols-md-4 .col {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%; /* Equalize heights */
-}
-
-.facade-img:hover {
+.ratio img:hover {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
-
-
 
 
 /* MODAL*/
@@ -394,28 +356,24 @@
 }
 
 .modal-body img {
-    max-height: 80vh; /* Ensure the image doesn't overflow the modal */
+    max-height: 80vh; 
 }
 
 /* Move the close button to the top-left corner */
 .modal-header {
-    justify-content: flex-start; /* Align items to the left */
-    position: relative; /* Allow the close button to be positioned */
-    padding: 0.5rem; /* Adjust padding as necessary */
+    justify-content: flex-start; 
+    position: relative; 
+    padding: 0.5rem; 
 }
 
 .btn-close-custom {
     position: absolute;
-    left: 1rem; /* Adjust distance from the left edge */
-    top: 1rem; /* Adjust distance from the top edge */
-    z-index: 1051; /* Ensure it's above other elements */
+    left: 1rem; 
+    top: 1rem; 
+    z-index: 1051; 
 }
 
-/* Optional: Larger close button for better visibility */
-.btn-close-custom {
-    width: 1.5rem;
-    height: 1.5rem;
-}
+
 
 
 
