@@ -1,7 +1,7 @@
 /* General Container Styles */
 .outside-container{
-    overflow-x: hidden; /* Restrict horizontal overflow */
-    overflow-y: scroll; /* Keep vertical scroll on html */
+    overflow-x: hidden; 
+    overflow-y: scroll; 
 }
 
 .container {

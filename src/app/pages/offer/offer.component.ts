@@ -30,10 +30,10 @@ export class OfferComponent {
       drawing: ['/assets/Calma_parter.webp', '/assets/Calma_gora.webp'], // Floor plans
       renders: ['/assets/Calma_render.webp', '/assets/Calma_render2.webp'], //render images
       facades: [
-        '/assets/Calma_facade1.png',
-        '/assets/Calma_facade2.png',
-        '/assets/Calma_facade3.png',
-        '/assets/Calma_facade4.png',
+        '/assets/Calma_facade1.webp',
+        '/assets/Calma_facade2.webp',
+        '/assets/Calma_facade3.webp',
+        '/assets/Calma_facade4.webp',
       ], // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
@@ -52,10 +52,10 @@ export class OfferComponent {
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], //render images
       facades: [
-        '/assets/Gioia_facade1.png',
-        '/assets/Gioia_facade2.png',
-        '/assets/Gioia_facade3.png',
-        '/assets/Gioia_facade4.png',
+        '/assets/Gioia_facade1.webp',
+        '/assets/Gioia_facade2.webp',
+        '/assets/Gioia_facade3.webp',
+        '/assets/Gioia_facade4.webp',
       ], // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
