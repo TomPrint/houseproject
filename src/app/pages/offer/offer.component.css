@@ -337,27 +337,37 @@
 .facade-section {
     background-color: #ffffff;
     text-align: center;
-    padding: 10px 0;
+    padding: 8px 0;
 }
 
 .facade-img {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 4px;
-    max-width: 150px; /* Base size for images */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Make images fill parent container */
+    max-height: 150px; /* Constrain height */
+    object-fit: contain; /* Ensure all images fit uniformly */
 }
 
 @media (min-width: 768px) {
     .facade-img {
-        max-width: 200px; /* Larger size for tablet screens */
+        max-height: 200px; /* Adjust height for tablet screens */
     }
 }
 
 @media (min-width: 1200px) {
     .facade-img {
-        max-width: 300px; /* Larger size for large screens */
+        max-height: 300px; /* Adjust height for large screens */
     }
+}
+
+/* Keep all images aligned */
+.row-cols-md-4 .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%; /* Equalize heights */
 }
 
 .facade-img:hover {
@@ -365,7 +375,10 @@
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-/* Modal Styles */
+
+
+
+/* MODAL*/
 .modal-content {
     background-color: #ffffff;
     border-radius: 8px;

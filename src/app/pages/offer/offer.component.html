@@ -108,18 +108,18 @@
 
 <!-- FACADE IMAGES SECTION -->
 
-<div class="facade-section container mt-4" @defer>
-  <div class="row g-2 justify-content-center">
+<div class="facade-section container mt-4">
+  <div class="row row-cols-2 row-cols-md-4 g-2 justify-content-center">
     <!-- Facade Images -->
     <div
       *ngFor="let facade of houses[selectedHouse()].facades; let i = index"
-      class="col-6 col-lg-auto d-flex justify-content-center align-items-center"
+      class="col d-flex justify-content-center align-items-end text-center"
     >
       <img
         [src]="facade"
         alt="Facade Image {{ i + 1 }}"
         class="facade-img img-fluid"
-        (click)="openModal(facade)"
+        (click)="openModal(facade)" 
       />
     </div>
   </div>
