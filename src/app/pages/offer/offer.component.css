@@ -23,14 +23,14 @@
     left: 0;
     width: 100vw; 
     height: auto; 
-    min-height: 100vh; 
+    min-height: auto; 
     background: #FFFFFF; 
     clip-path: polygon(
         50% 0%,         
-        100% 45vw,      
+        100% 35vw,      
         100% 100%,      
         0% 100%,        
-        0% 45vw         
+        0% 35vw         
     );
     z-index: 1; 
     display: flex; 
@@ -41,11 +41,7 @@
     
 }
 
-@media (max-width: 1026px) {
-    .triangle {
-        min-height: 60vh;
-    }
-}
+
 
 
 /* Logo Styling */
