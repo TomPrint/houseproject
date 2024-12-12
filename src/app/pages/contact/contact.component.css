@@ -1,7 +1,20 @@
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+
 .bg-green {
     background-color: #485145;
-    height:70vh;
+    height:70vh;  
 }
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .bg-green {
+        min-height: 70vh;
+    }
+  }
+
 
 .shadow {
     box-shadow: 3px -1px 24px -12px rgba(66, 68, 90, 1);

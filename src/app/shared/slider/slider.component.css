@@ -38,4 +38,9 @@
     z-index: 2; /* Ensures the slider appears above the background overlay */
 }
 
-
+@media (max-width: 768px) {
+  .splide__slide img {
+   height: 350px;/* or a specific value, like 600px */
+     /* optional, rounds the image corners */
+  }
+}
