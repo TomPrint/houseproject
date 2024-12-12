@@ -155,6 +155,15 @@
   <!-- BROWN ICONS SECTION -->
   <app-brown @defer></app-brown>
 
+  <!-- DESIGN COMPONENT -->
+  <app-design
+  [houseData]="houses[selectedHouse()]"
+  [selectedInterior]="selectedInterior()"
+  [selectedExterior]="selectedExterior()"
+  [currentInteriorIndex]="currentInteriorIndex"
+  [currentExteriorIndex]="currentExteriorIndex"
+></app-design>
+
   <!-- SLIDER -->
   <app-slider @defer></app-slider>
 

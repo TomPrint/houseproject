@@ -4,12 +4,12 @@ import { NavbarComponent } from "../../shared/navbar/navbar.component";
 import { BrownComponent } from "../../shared/brown/brown.component";
 import { SliderComponent } from "../../shared/slider/slider.component";
 import { FooterComponent } from "../../shared/footer/footer.component";
-
+import { DesignComponent } from '../../partials/design/design.component';
 
 @Component({
   selector: 'app-offer',
   standalone: true,
-  imports: [NavbarComponent, CommonModule, BrownComponent, SliderComponent, FooterComponent],
+  imports: [NavbarComponent, CommonModule, BrownComponent, SliderComponent, FooterComponent, DesignComponent],
   templateUrl: './offer.component.html',
   styleUrls: ['./offer.component.css']
 })
@@ -17,10 +17,12 @@ export class OfferComponent {
   // Signals for managing the selected house
   selectedHouse = signal<'CALMA' | 'GIOIA'>('CALMA');
   selectedImage = signal<string>('');
-  // Signals for managing the current drawing index
   currentDrawingIndex = signal(0);
   currentRenderIndex = signal(0);
- 
+  selectedInterior = signal<string>(''); 
+  selectedExterior = signal<string>(''); 
+  currentInteriorIndex = signal(0);
+  currentExteriorIndex = signal(0);
 
   // House data
   houses = {
@@ -28,7 +30,7 @@ export class OfferComponent {
       name: 'CALMA',
       image: '/assets/calma_house.png', // Main image for CALMA
       drawing: ['/assets/Calma_parter.webp', '/assets/Calma_gora.webp'], // Floor plans
-      renders: ['/assets/Calma_render.webp', '/assets/Calma_render2.webp'], //render images
+      renders: ['/assets/Calma_render.webp', '/assets/Calma_render2.webp'], // Render images
       facades: [
         '/assets/Calma_facade1.webp',
         '/assets/Calma_facade2.webp',
@@ -45,12 +47,37 @@ export class OfferComponent {
         '5. Taras - 4,4 m²',
         '6. Taras - 4,3 m2'
       ],
+      interiors: [
+        {
+          name: 'NOWOCZESNY',
+          image: '/assets/calma_interior1.webp',
+          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę. 
+Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.`
+        },
+        {
+          name: 'MINIMALISTYCZNY',
+          image: '/assets/calma_interior2.webp',
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
+        }
+      ],
+      exteriors: [
+        {
+          name: 'DREWNO',
+          image: '/assets/calma_exterior1.webp',
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
+        },
+        {
+          name: 'METAL',
+          image: '/assets/calma_exterior2.webp',
+          description: `Sipsum lemur sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
+        }
+      ]
     },
     GIOIA: {
       name: 'GIOIA',
       image: '/assets/gioia_house.png', // Main image for GIOIA
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
-      renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], //render images
+      renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
       facades: [
         '/assets/Gioia_facade1.webp',
         '/assets/Gioia_facade2.webp',
@@ -70,15 +97,42 @@ export class OfferComponent {
         '8. Taras - 9,2 m²',
         '9. Taras - 4,4 m²'
       ],
-    },
+      interiors: [
+        {
+          name: 'NOWOCZESNY',
+          image: '/assets/gioia_interior1.webp',
+          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę.`
+        },
+        {
+          name: 'MINIMALISTYCZNY',
+          image: '/assets/gioia_interior2.webp',
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
+        }
+      ],
+      exteriors: [
+        {
+          name: 'MINIMALISTYCZNY',
+          image: '/assets/gioia_exterior1.webp',
+          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. 
+Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.`
+        },
+        {
+          name: 'METAL',
+          image: '/assets/gioia_exterior2.webp',
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
+        }
+      ]
+    }
   };
 
   // Toggle between the houses
   toggleHouse(house: 'CALMA' | 'GIOIA') {
     this.selectedHouse.set(house);
     this.currentDrawingIndex.set(0); // Reset drawing index when switching houses
-    console.log(`Selected house: ${house}`);
   }
+
+  // Navigate interiors
+
 
   // Switch to the next drawing
   nextDrawing() {
@@ -87,7 +141,6 @@ export class OfferComponent {
     const nextIndex = (currentIndex + 1) % drawings.length;
     this.currentDrawingIndex.set(nextIndex);
   }
-
 
   // Switch to the next render
   nextRender() {
@@ -102,7 +155,6 @@ export class OfferComponent {
     return this.currentRenderIndex() === 0 ? 'PARTER' : 'PIĘTRO';
   }
 
-
   openModal(image: string) {
     this.selectedImage.set(image); // Set the image to be displayed in the modal
     const modalElement = document.getElementById('enlargeModal');
@@ -111,11 +163,4 @@ export class OfferComponent {
       modalInstance.show();
     }
   }
-
-
-
-
-
 }
-
-

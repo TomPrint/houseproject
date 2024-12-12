@@ -1,0 +1,22 @@
+.interior, .exterior {
+    margin-bottom: 30px;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .vector-house {
+    max-width: 300px;
+    margin: 20px auto;
+  }
+  
+  .arrow {
+    background-color: #78856B;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+  }
+  
