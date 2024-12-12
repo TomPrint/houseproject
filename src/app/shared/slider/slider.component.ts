@@ -18,6 +18,15 @@ export class SliderComponent implements AfterViewInit {
       padding: '20%',
       speed: 1800,
       lazyLoad: 'nearby',
+      breakpoints: {
+        768: {
+      
+        },
+        480: {
+          padding: '10%', // Jeszcze mniejsze odstępy na bardzo małych ekranach
+          height: 350  // Większa proporcja wysokości
+        }
+      }
     }).mount();
   }
 }

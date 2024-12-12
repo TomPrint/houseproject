@@ -9,6 +9,7 @@ import { OfferComponent } from './pages/offer/offer.component';
 import { TechnologyComponent } from './pages/technology/technology.component';
 import { IndividualComponent } from './pages/individual/individual.component';
 import { ProcesComponent } from './pages/proces/proces.component';
+import { AvaiableComponent } from './pages/avaiable/avaiable.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, 
@@ -21,6 +22,7 @@ export const routes: Routes = [
   { path: 'oferta/catalog', component: CatalogComponent},
   { path: 'oferta/realizacja', component:RealizationComponent},
   { path: 'oferta/indywidualna', component: IndividualComponent},
+  { path: 'dostepne', component: AvaiableComponent},
 
   { path: '**', redirectTo: '', pathMatch: 'full' }, // ! place this line always as last item !
 ];
