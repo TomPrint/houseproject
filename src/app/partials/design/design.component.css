@@ -12,11 +12,60 @@
     margin: 20px auto;
   }
   
-  .arrow {
-    background-color: #78856B;
+
+
+  /* BUTTON ARROWS AND CHOICE */
+  /* General Button Styling */
+.btn {
+    background-color: #78856B; /* Match button color */
+    color: #fff;
     border: none;
-    padding: 10px 15px;
-    color: white;
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
+  
+  .btn:hover {
+    background-color: #657961; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+/* Arrow Buttons */
+.arrow {
+    background-color: #78856B; /* Match arrow button color */
+    border: none;
+    width: 48px; /* Adjusted size for better visibility */
+    height: 48px;
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; /* White color for the arrow */
+    font-size: 1.8rem; /* Adjusted size for arrow icon */
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow for 3D effect */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .arrow:hover {
+    background-color: #657961; /* Slightly darker green on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  /* Icon Alignment */
+  .arrow i {
+    transform: rotate(0deg); /* Default rotation for right arrow */
+    font-weight: bold; /* Make the arrow appear thicker */
+  }
+  
+  /* Left Arrow */
+  .arrow.left i {
+    transform: rotate(180deg); /* Rotate left-facing arrow */
+  }
+  
+  
   

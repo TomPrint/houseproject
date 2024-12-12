@@ -1,43 +1,56 @@
-import { Component, Input, signal } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-design',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './design.component.html',
   styleUrl: './design.component.css'
 })
-export class DesignComponent {
+export class DesignComponent implements OnChanges{
   @Input() houseData: any; 
   @Input() selectedInterior: string = '';
   @Input() selectedExterior: string = '';
-  @Input() currentInteriorIndex = signal(0);
-  @Input() currentExteriorIndex = signal(0);
+  @Input() currentInteriorIndex: number = 0; 
+  @Input() currentExteriorIndex: number = 0;
 
-  // Navigate interiors
-  nextInterior() {
-    const interiors = this.houseData.interiors;
-    const nextIndex = (this.currentInteriorIndex() + 1) % interiors.length;
-    this.currentInteriorIndex.set(nextIndex);
+    // React to input changes
+    ngOnChanges() {
+      // Ensure indices are reset if new house data is provided
+      if (this.houseData) {
+        this.currentInteriorIndex = 0;
+        this.currentExteriorIndex = 0;
+   
+    // Clear previously selected interior and exterior
+    this.selectedInterior = '';
+    this.selectedExterior = '';
+
+        
+      }
+    }
+
+    nextInterior() {
+      this.currentInteriorIndex =
+        (this.currentInteriorIndex + 1) % this.houseData.interiors.length;
+    }
+  
+    // Navigate through exteriors
+    nextExterior() {
+      this.currentExteriorIndex =
+        (this.currentExteriorIndex + 1) % this.houseData.exteriors.length;
+    }
+  
+    // Select the current interior
+    selectInterior() {
+      this.selectedInterior = this.houseData.interiors[this.currentInteriorIndex].name;
+    }
+  
+    // Select the current exterior
+    selectExterior() {
+      this.selectedExterior = this.houseData.exteriors[this.currentExteriorIndex].name;
+    }
   }
 
-  // Navigate exteriors
-  nextExterior() {
-    const exteriors = this.houseData.exteriors;
-    const nextIndex = (this.currentExteriorIndex() + 1) % exteriors.length;
-    this.currentExteriorIndex.set(nextIndex);
-  }
+  
 
-  // Set selected interior
-  selectInterior() {
-    const interior = this.houseData.interiors[this.currentInteriorIndex()];
-    this.selectedInterior = interior.name;
-  }
-
-  // Set selected exterior
-  selectExterior() {
-    const exterior = this.houseData.exteriors[this.currentExteriorIndex()];
-    this.selectedExterior = exterior.name;
-  }
-}

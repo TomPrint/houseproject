@@ -1,45 +1,128 @@
-<div class="container">
-    <h2>WYBÓR WNĘTRZA</h2>
-    <div class="row align-items-center interior">
-      <div class="col-md-6">
-        <p class="description">
-          {{ houseData.interiors[currentInteriorIndex()].description }}
-        </p>
+<!-- CALMA Layout -->
+<div *ngIf="houseData.name === 'CALMA'">
+    <div class="container">
+      <h2>WYBÓR WNĘTRZA</h2>
+      <div class="row align-items-center interior">
+        <div class="col-md-6">
+          <!-- Interior Name -->
+          <h3 class="design-name">
+            {{ houseData.interiors[currentInteriorIndex].name }}
+          </h3>
+          <!-- Interior Description -->
+          <p class="description">
+            {{ houseData.interiors[currentInteriorIndex].description }}
+          </p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img
+            [src]="houseData.interiors[currentInteriorIndex].image"
+            class="img-fluid"
+            alt="Interior Design"
+          />
+          <button class="btn btn-primary" (click)="selectInterior()">WYBIERZ</button>
+        </div>
+        <button class="arrow" (click)="nextInterior()">
+            <i class="bi bi-chevron-right"></i>
+          </button>
       </div>
-      <div class="col-md-6 text-center">
-        <img
-          [src]="houseData.interiors[currentInteriorIndex()].image"
-          class="img-fluid"
-          alt="Interior Design"
-        />
-        <button class="btn btn-primary" (click)="selectInterior()">WYBIERZ</button>
+  
+      <h2>WYBÓR ZEWNĘTRZNEGO WYGLĄDU</h2>
+      <div class="row align-items-center exterior">
+        <div class="col-md-6 text-center">
+          <img
+            [src]="houseData.exteriors[currentExteriorIndex].image"
+            class="img-fluid"
+            alt="Exterior Design"
+          />
+          <button class="btn btn-primary" (click)="selectExterior()">WYBIERZ</button>
+        </div>
+        <div class="col-md-6">
+          <!-- Exterior Name -->
+          <h3 class="design-name">
+            {{ houseData.exteriors[currentExteriorIndex].name }}
+          </h3>
+          <!-- Exterior Description -->
+          <p class="description">
+            {{ houseData.exteriors[currentExteriorIndex].description }}
+          </p>
+        </div>
+        <button class="arrow left" (click)="nextExterior()">
+            <i class="bi bi-chevron-right"></i>
+          </button>
       </div>
-      <button class="arrow" (click)="nextInterior()">→</button>
     </div>
   
-    <h2>WYBÓR ZEWNĘTRZNEGO WYGLĄDU</h2>
-    <div class="row align-items-center exterior">
-      <div class="col-md-6 text-center">
-        <img
-          [src]="houseData.exteriors[currentExteriorIndex()].image"
-          class="img-fluid"
-          alt="Exterior Design"
-        />
-        <button class="btn btn-primary" (click)="selectExterior()">WYBIERZ</button>
-      </div>
-      <div class="col-md-6">
-        <p class="description">
-          {{ houseData.exteriors[currentExteriorIndex()].description }}
-        </p>
-      </div>
-      <button class="arrow" (click)="nextExterior()">→</button>
-    </div>
-  
+    <!-- Vector House Section -->
     <h2>TWÓJ WYBÓR</h2>
     <div class="selection-summary text-center">
-      <img src="/assets/vector_house.svg" class="vector-house" alt="House Vector" />
-      <p>WNĘTRZE: {{ selectedInterior }}</p>
-      <p>ELEWACJA: {{ selectedExterior }}</p>
+      <img src="/assets/CALMA_vector.webp" class="vector-house" alt="House Vector" />
+      <p *ngIf="selectedInterior">WNĘTRZE: {{ selectedInterior }}</p>
+      <p *ngIf="selectedExterior">ELEWACJA: {{ selectedExterior }}</p>
+      <p *ngIf="!selectedInterior && !selectedExterior" class="no-choice">
+        Brak wyborów. Wybierz wnętrze i elewację, aby zobaczyć swój wybór.
+      </p>
+    </div>
+  </div>
+  
+  <!-- GIOIA Layout -->
+  <div *ngIf="houseData.name === 'GIOIA'">
+    <div class="container">
+      <h2>WYBÓR WNĘTRZA</h2>
+      <div class="row align-items-center interior">
+        <div class="col-md-12 text-center">
+          <img
+            [src]="houseData.interiors[currentInteriorIndex].image"
+            class="img-fluid"
+            alt="Interior Design"
+          />
+          <!-- Interior Name -->
+          <h3 class="design-name">
+            {{ houseData.interiors[currentInteriorIndex].name }}
+          </h3>
+          <!-- Interior Description -->
+          <p class="description">
+            {{ houseData.interiors[currentInteriorIndex].description }}
+          </p>
+          <button class="btn btn-primary" (click)="selectInterior()">WYBIERZ</button>
+        </div>
+        <button class="arrow" (click)="nextInterior()">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+      </div>
+  
+      <h2>WYBÓR ZEWNĘTRZNEGO WYGLĄDU</h2>
+      <div class="row align-items-center exterior">
+        <div class="col-md-12 text-center">
+          <img
+            [src]="houseData.exteriors[currentExteriorIndex].image"
+            class="img-fluid"
+            alt="Exterior Design"
+          />
+          <!-- Exterior Name -->
+          <h3 class="design-name">
+            {{ houseData.exteriors[currentExteriorIndex].name }}
+          </h3>
+          <!-- Exterior Description -->
+          <p class="description">
+            {{ houseData.exteriors[currentExteriorIndex].description }}
+          </p>
+          <button class="btn btn-primary" (click)="selectExterior()">WYBIERZ</button>
+        </div>
+        <button class="arrow left" (click)="nextExterior()">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+      </div>
+    </div>
+  
+    <!-- Vector House Section -->
+    <h2>TWÓJ WYBÓR</h2>
+    <div class="selection-summary text-center">
+      <img src="/assets/GIOIA_vector.webp" class="vector-house" alt="House Vector" />
+      <p *ngIf="selectedInterior">WNĘTRZE: {{ selectedInterior }}</p>
+      <p *ngIf="selectedExterior">ELEWACJA: {{ selectedExterior }}</p>
+      <p *ngIf="!selectedInterior && !selectedExterior" class="no-choice">
+        Brak wyborów. Wybierz wnętrze i elewację, aby zobaczyć swój wybór.
+      </p>
     </div>
   </div>
   

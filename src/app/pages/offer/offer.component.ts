@@ -50,25 +50,25 @@ export class OfferComponent {
       interiors: [
         {
           name: 'NOWOCZESNY',
-          image: '/assets/calma_interior1.webp',
+          image: '/assets/CALMA_nowoczesny_int.webp',
           description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę. 
 Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.`
         },
         {
           name: 'MINIMALISTYCZNY',
-          image: '/assets/calma_interior2.webp',
+          image: '/assets/CALMA_minimalistyczny_int.webp',
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
         }
       ],
       exteriors: [
         {
           name: 'DREWNO',
-          image: '/assets/calma_exterior1.webp',
+          image: '/assets/CALMA_drewno_ext.webp',
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
         },
         {
           name: 'METAL',
-          image: '/assets/calma_exterior2.webp',
+          image: '/assets/CALMA_metal_ext.webp',
           description: `Sipsum lemur sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
         }
       ]
@@ -100,25 +100,25 @@ Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktow
       interiors: [
         {
           name: 'NOWOCZESNY',
-          image: '/assets/gioia_interior1.webp',
+          image: '/assets/GIOIA_nowoczesny_int.webp',
           description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę.`
         },
         {
           name: 'MINIMALISTYCZNY',
-          image: '/assets/gioia_interior2.webp',
+          image: '/assets/GIOIA_minimalistyczny_int.webp',
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
         }
       ],
       exteriors: [
         {
           name: 'MINIMALISTYCZNY',
-          image: '/assets/gioia_exterior1.webp',
+          image: '/assets/GIOIA_minimalistyczny_ext.webp',
           description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. 
 Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.`
         },
         {
           name: 'METAL',
-          image: '/assets/gioia_exterior2.webp',
+          image: '/assets/GIOIA_metal_ext.webp',
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
         }
       ]
@@ -129,6 +129,14 @@ Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktow
   toggleHouse(house: 'CALMA' | 'GIOIA') {
     this.selectedHouse.set(house);
     this.currentDrawingIndex.set(0); // Reset drawing index when switching houses
+
+  // Reset current selections
+  this.selectedInterior.set(''); // Clear selected interior
+  this.selectedExterior.set(''); // Clear selected exterior
+
+  // Reset the indices for interiors and exteriors
+  this.currentInteriorIndex.set(0);
+  this.currentExteriorIndex.set(0);
   }
 
   // Navigate interiors
