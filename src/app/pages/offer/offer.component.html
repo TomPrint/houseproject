@@ -47,15 +47,17 @@
   </div>
 
   <!-- DRAWINGS CHANGE -->
-  <div class="floor-plan-section px-2" @defer>
+  <div class="floor-plan-section px-2">
     <div class="row justify-content-center align-items-center position-relative">
       <!-- Current Drawing Image -->
       <div class="col-12 col-md-7 text-center">
         <div class="image-wrapper">
           <img
+            id="drawingImage"
             [src]="houses[selectedHouse()].drawing[currentDrawingIndex()]"
             alt="Drawing"
             class="img-fluid floor-plan-img"
+            (click)="openModal(houses[selectedHouse()].drawing[currentDrawingIndex()])"
           />
         </div>
       </div>
@@ -66,7 +68,7 @@
         </button>
       </div>
     </div>
-
+  
     <!-- Info List -->
     <div class="row justify-content-end mt-1 mx-2">
       <div class="col-12 col-md-3 text-end info-list">
@@ -77,30 +79,30 @@
         </ul>
       </div>
     </div>
+  </div>
 
-    <!-- RENDERS CHANGE -->
-    <div class="render-section px-2 mt-4 renders">
-      <div class="row justify-content-center align-items-center">
-        <!-- Render Container -->
-        <div class="col-12 col-md-8 text-center render-container">
-          <!-- Arrow and Text -->
-          <div class="arrow-container">
-            <button class="btn arrow-btn" (click)="nextRender()">
-              <i class="bi bi-chevron-up"></i>
-            </button>
-            <span class="arrow-text mt-2">
-              {{ currentRenderText() }}
-            </span>
-          </div>
-          <!-- Render Image -->
-          <div class="render-img-wrapper">
-            <img
-              [src]="houses[selectedHouse()].renders[currentRenderIndex()]"
-              alt="Render"
-              class="render-img"
-              (click)="openModal(houses[selectedHouse()].renders[currentRenderIndex()])"
-            />
-          </div>
+  <!-- RENDERS CHANGE -->
+  <div class="render-section px-2 mt-4 renders">
+    <div class="row justify-content-center align-items-center">
+      <!-- Render Container -->
+      <div class="col-12 col-md-8 text-center render-container">
+        <!-- Arrow and Text -->
+        <div class="arrow-container px-2">
+          <button class="btn arrow-btn" (click)="nextRender()">
+            <i class="bi bi-chevron-up"></i>
+          </button>
+          <span class="arrow-text mt-2">
+            {{ currentRenderText() }}
+          </span>
+        </div>
+        <!-- Render Image -->
+        <div class="render-img-wrapper">
+          <img
+            [src]="houses[selectedHouse()].renders[currentRenderIndex()]"
+            alt="Render"
+            class="render-img"
+            (click)="openModal(houses[selectedHouse()].renders[currentRenderIndex()])"
+          />
         </div>
       </div>
     </div>
@@ -126,30 +128,29 @@
     </div>
   </div>
 
-  <!-- Modal for Enlarged Image -->
   <div
-    class="modal fade"
-    id="enlargeModal"
-    tabindex="-1"
-    aria-labelledby="enlargeModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
-      <div class="modal-content">
-        <div class="justify-content-start">
-          <button
-            type="button"
-            class="btn-close btn-close-custom"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body d-flex justify-content-center align-items-center">
-          <img [src]="selectedImage()" alt="Enlarged Render" class="img-fluid" />
-        </div>
+  class="modal fade"
+  id="enlargeModal"
+  tabindex="-1"
+  aria-labelledby="enlargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+    <div class="modal-content">
+      <div class="justify-content-start">
+        <button
+          type="button"
+          class="btn-close btn-close-custom"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body d-flex justify-content-center align-items-center">
+        <img [src]="selectedImage()" alt="Enlarged Drawing" class="img-fluid" />
       </div>
     </div>
   </div>
+</div>
 
   <!-- BROWN ICONS SECTION -->
   <app-brown @defer></app-brown>

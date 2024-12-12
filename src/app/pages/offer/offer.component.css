@@ -27,10 +27,10 @@
     background: #FFFFFF; 
     clip-path: polygon(
         50% 0%,         
-        100% 50vw,      
+        100% 45vw,      
         100% 100%,      
         0% 100%,        
-        0% 50vw         
+        0% 45vw         
     );
     z-index: 1; 
     display: flex; 
@@ -161,6 +161,7 @@
     background-color: #FFFFFF;
     text-align: center;
     overflow-x: hidden;
+    cursor: pointer;
 }
 
 /* Adjust Arrow Styling */
@@ -357,13 +358,6 @@
 
 .modal-body img {
     max-height: 80vh; 
-}
-
-/* Move the close button to the top-left corner */
-.modal-header {
-    justify-content: flex-start; 
-    position: relative; 
-    padding: 0.5rem; 
 }
 
 .btn-close-custom {

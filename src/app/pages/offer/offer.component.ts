@@ -5,6 +5,7 @@ import { BrownComponent } from "../../shared/brown/brown.component";
 import { SliderComponent } from "../../shared/slider/slider.component";
 import { FooterComponent } from "../../shared/footer/footer.component";
 
+
 @Component({
   selector: 'app-offer',
   standalone: true,
