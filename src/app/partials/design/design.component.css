@@ -59,59 +59,76 @@
   transform: rotate(180deg);
 }
 
-/* VECTOR HOUSE SECTION */
-.your {
-  color: #646464;
-}
-
-.change{
-  color:#7C8A77
-}
-
-.fix{
-  color: #444444
-}
-
-.vector-house-section .row {
-  margin-top: 10px;
-  align-items: center;
-}
-
-.vector-house {
-  max-width: 80%;
-}
-
-.selection-text {
-  font-size: 1.1rem;
-  margin-top: 4px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.selection-text .line {
-  display: block;
-  margin: 20px 0;
-}
-
 @media (max-width: 768px) {
   .interior .text-section {
     order: 1; /* Interior description comes first */
   }
   .interior .arrow-container {
-    order: 3; /* Interior arrow comes third */
+    order: 2; /* Interior arrow comes second */
   }
   .interior .image-section {
-    order: 2; /* Interior image comes second */
+    order: 3; /* Interior image comes third */
   }
 
   .exterior .text-section {
     order: 1; /* Exterior description comes first */
   }
   .exterior .arrow-container {
-    order: 3; /* Exterior arrow comes third */
+    order: 2; /* Exterior arrow comes second */
   }
   .exterior .image-section {
-    order: 2; /* Exterior image comes second */
+    order: 3; /* Exterior image comes third */
   }
 }
+
+/* VECTOR HOUSE SECTION */
+.your {
+  color: #646464;
+}
+
+.vector-house-section .row {
+  margin-top: 10px; /* Add a bit of spacing above the row */
+  align-items: center; /* Vertically center items in the row */
+}
+
+.vector-house {
+  max-width: 80%; /* Ensure the vector image scales properly */
+}
+
+.selection-text {
+  font-size: 1.1rem; /* Maintain readability */
+  margin-top: 4px; 
+  flex-direction: column; /* Stack text lines vertically */
+  justify-content: center; /* Center vertically within the column */
+  align-items: center; /* Center horizontally within the column */
+}
+
+.selection-text .line {
+  display: block; /* Each item on a new line */
+  margin: 20px 0; /* Adjust spacing between text lines */
+}
+
+@media (max-width: 768px) {
+  .selection-text .line{
+    margin: 2px 0;/* Slightly reduce image size on mobile */
+  }
+}
+
+.fix {
+  color: #444444; /* Color for headings */
+}
+
+.change {
+  color: #7C8A77; /* Color for choices */
+}
+
+@media (max-width: 768px) {
+  .vector-house {
+    max-width: 98%; /* Slightly reduce image size on mobile */
+  }
+
+  .selection-text {
+    padding: 0; /* Remove extra padding on smaller screens */
+  }
+}
+
