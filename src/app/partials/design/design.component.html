@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row align-items-center interior mt-2">
       <div class="col-md-5 text-section">
-        <h3 class="design-name">{{ houseData.interiors[currentInteriorIndex].name }}</h3>
+        <h3 class="design-name text-center">{{ houseData.interiors[currentInteriorIndex].name }}</h3>
         <p class="description">{{ houseData.interiors[currentInteriorIndex].description }}</p>
       </div>
       <div class="col-md-2 arrow-container d-flex justify-content-center py-3">
@@ -25,28 +25,29 @@
         </button>
       </div>
       <div class="col-md-5 text-section">
-        <h3 class="design-name">{{ houseData.exteriors[currentExteriorIndex].name }}</h3>
+        <h3 class="design-name text-center">{{ houseData.exteriors[currentExteriorIndex].name }}</h3>
         <p class="description">{{ houseData.exteriors[currentExteriorIndex].description }}</p>
       </div>
     </div>
   </div>
-<!-- VECTOR HOUSE SECTION -->
-  <div class="vector-house-section container my-5">
-    <h2 class="text-center mb-4 mt-3 your">TWÓJ WYBÓR</h2>
-    <div class="row align-items-center">
-      <div class="col-6 col-md-6 d-flex justify-content-end mb-3 mb-md-0">
-        <img src="/assets/CALMA_vector.webp" class="vector-house img-fluid" alt="House Vector" />
-      </div>
-      <div class="col-6 col-md-6 text-md-start text-center">
-        <div class="selection-text">
-          <div class="line fix"><span>WNĘTRZE</span></div>
-          <div class="line change"><span>{{ selectedInterior }}</span></div>
-          <div class="line fix"><span>ELEWACJA</span></div>
-          <div class="line change"><span>{{ selectedExterior }}</span></div>
-        </div>
+
+<!-- CALMA VECTOR HOUSE SECTION -->
+<div class="vector-section container my-5 py-4">
+  <h2 class="text-center mb-4 mt-3 py-4 your">TWÓJ WYBÓR</h2>
+  <div class="row align-items-center">
+    <div class="col-6 col-md-6 d-flex justify-content-end mb-3 mb-md-0">
+      <img src="/assets/CALMA_vector.webp" class="vector-house img-fluid" alt="House Vector" />
+    </div>
+    <div class="col-6 col-md-6 text-md-start text-center">
+      <div class="selection-text calma-text">
+        <div class="line fix"><span>WNĘTRZE</span></div>
+        <div class="line change"><span>{{ selectedInterior }}</span></div>
+        <div class="line fix"><span>ELEWACJA</span></div>
+        <div class="line change"><span>{{ selectedExterior }}</span></div>
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <!-- GIOIA -->
@@ -86,21 +87,21 @@
       </div>
       <!-- Exterior Text -->
       <div class="col-12 col-lg-5 text-section text-lg-start text-center">
-        <h3 class="design-name">{{ houseData.exteriors[currentExteriorIndex].name }}</h3>
+        <h3 class="design-name text-center">{{ houseData.exteriors[currentExteriorIndex].name }}</h3>
         <p class="description">{{ houseData.exteriors[currentExteriorIndex].description }}</p>
       </div>
     </div>
   </div>
 
-  <!-- VECTOR HOUSE SECTION -->
-  <div class="gioia-vector-section container my-5">
-    <h2 class="text-center mb-4 mt-3 your">TWÓJ WYBÓR</h2>
+  <!-- GIOIA VECTOR HOUSE SECTION -->
+  <div class="vector-section container my-5 py-4">
+    <h2 class="text-center mb-4 mt-3 py-4 your">TWÓJ WYBÓR</h2>
     <div class="row align-items-center">
       <div class="col-6 col-md-6 d-flex justify-content-end mb-3 mb-md-0">
-        <img src="/assets/GIOIA_vector.webp" class="gioia-vector img-fluid" alt="House Vector" />
+        <img src="/assets/GIOIA_vector.webp" class="vector-house img-fluid px-lg-5" alt="House Vector" />
       </div>
       <div class="col-6 col-md-6 text-md-start text-center">
-        <div class="gioia-selection-text">
+        <div class="selection-text gioia-text px-lg-5">
           <div class="line fix"><span>WNĘTRZE</span></div>
           <div class="line change"><span>{{ selectedInterior }}</span></div>
           <div class="line fix"><span>ELEWACJA</span></div>

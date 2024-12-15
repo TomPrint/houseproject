@@ -81,60 +81,8 @@
   }
 }
 
-/* VECTOR HOUSE SECTION */
-.your {
-  color: #646464;
-}
-
-.vector-house-section .row {
-  margin-top: 10px; /* Add a bit of spacing above the row */
-  align-items: center; /* Vertically center items in the row */
-}
-
-.vector-house {
-  max-width: 80%; /* Ensure the vector image scales properly */
-}
-
-.selection-text {
-  font-size: 1.1rem; /* Maintain readability */
-  margin-top: 0px; 
-  flex-direction: column; /* Stack text lines vertically */
-  justify-content: center; /* Center vertically within the column */
-  align-items: center; /* Center horizontally within the column */
-}
-
-.selection-text .line {
-  display: block; /* Each item on a new line */
-  margin: 20px 0; /* Adjust spacing between text lines */
-}
-
-@media (max-width: 768px) {
-  .selection-text .line{
-    margin: 2px 0;/* Slightly reduce image size on mobile */
-  }
-}
-
-.fix {
-  color: #444444; /* Color for headings */
-}
-
-.change {
-  color: #7C8A77; /* Color for choices */
-}
-
-@media (max-width: 768px) {
-  .vector-house {
-    max-width: 98%; /* Slightly reduce image size on mobile */
-  }
-
-  .selection-text {
-    padding: 0; /* Remove extra padding on smaller screens */
-  }
-}
 
 
-
-/* GIOIA-SPECIFIC STYLES */
 /* GIOIA INTERIOR AND EXTERIOR SPECIFIC STYLES */
 
 /* GIOIA INTERIOR SECTION */
@@ -186,15 +134,6 @@
   color: #444444;
 }
 
-/* VECTOR SECTION */
-.gioia-vector-section .gioia-vector {
-  max-width: 80%;
-}
-
-.gioia-vector-section .gioia-selection-text .line {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
 
 @media (max-width: 768px) {
   .gioia-interior .interior-image {
@@ -206,11 +145,75 @@
     text-align: center;
   }
 
-  .gioia-vector {
-    max-width: 98%;
-  }
 }
 
 
 
+/* VECTOR HOUSE SECTION */
+.your {
+  color: #646464;
+}
+
+.vector-house-section .row {
+  margin-top: 10px; /* Add a bit of spacing above the row */
+  align-items: center; /* Vertically center items in the row */
+}
+
+.vector-house {
+  max-width: 80%; /* Ensure the vector image scales properly */
+}
+
+.selection-text {
+  font-size: 1.1rem; /* Maintain readability */
+  margin-top: 0px; 
+  flex-direction: column; /* Stack text lines vertically */
+  justify-content: center; /* Center vertically within the column */
+  align-items: center; /* Center horizontally within the column */
+  margin-bottom: -40px;
+}
+
+.selection-text .line {
+  display: block; /* Each item on a new line */
+  margin: 20px 0; /* Adjust spacing between text lines */
+}
+
+@media (max-width: 768px) {
+  .selection-text .line{
+    margin: 2px 0;/* Slightly reduce image size on mobile */
+  }
+}
+
+.fix {
+  color: #444444; /* Color for headings */
+}
+
+.change {
+  color: #7C8A77; /* Color for choices */
+}
+
+@media (max-width: 768px) {
+  .vector-house {
+    max-width: 98%; /* Slightly reduce image size on mobile */
+  }
+
+  .selection-text {
+    padding: 0; /* Remove extra padding on smaller screens */
+  }
+}
+
+.gioia-text{
+  margin-top: -50px;
+  margin-bottom: 10px
+}
+
+.calma-text{
+  margin-top: 30px;
+  margin-bottom: -80px;
+}
+
+@media (max-width: 768px) {
+  .calma-text {
+    margin-bottom: 10px;
+  }
+}
 
