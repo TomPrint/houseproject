@@ -13,7 +13,7 @@
         <h1 class="title text-center">WYBIERZ SWÓJ DOM!</h1>
 
         <!-- HOUSES CHANGE -->
-        <div class="row justify-content-center align-items-center mt-4 g-3 houses">
+        <div class="row justify-content-center align-items-center mt-4 g-2.5 houses px-3">
           <!-- CALMA House -->
           <div
             class="col-6 col-md-4 text-center house"
@@ -30,7 +30,7 @@
 
           <!-- GIOIA House -->
           <div
-            class="col-6 col-md-4 text-center house"
+            class="col-6 col-md-4 text-center gioia-house house"
             [class.active]="selectedHouse() === 'GIOIA'"
             [class.faded]="selectedHouse() !== 'GIOIA'"
             (click)="toggleHouse('GIOIA')"
@@ -38,7 +38,7 @@
             <img
               [src]="houses.GIOIA.image"
               alt="GIOIA House"
-              class="img-fluid house-img"
+              class="img-fluid house-img gioia-house-img"
             />
           </div>
         </div>

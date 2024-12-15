@@ -91,6 +91,11 @@
     margin-bottom: 30px; 
 }
 
+.gioia-house{
+    max-width: 220px;
+    min-width: 160px; 
+}
+
 /* House Image Styling */
 .house-img {
     max-width: 100%; 
@@ -101,7 +106,11 @@
 /* Reduce house image size on smaller screens */
 @media (max-width: 768px) {
     .house-img {
-        max-width: 80%; 
+        max-width: 75%; 
+    }
+
+    .gioia-house-img{
+        max-width: 95%; 
     }
 }
 
