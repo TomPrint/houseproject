@@ -97,7 +97,7 @@
 
 .selection-text {
   font-size: 1.1rem; /* Maintain readability */
-  margin-top: 4px; 
+  margin-top: 0px; 
   flex-direction: column; /* Stack text lines vertically */
   justify-content: center; /* Center vertically within the column */
   align-items: center; /* Center horizontally within the column */
@@ -131,4 +131,86 @@
     padding: 0; /* Remove extra padding on smaller screens */
   }
 }
+
+
+
+/* GIOIA-SPECIFIC STYLES */
+/* GIOIA INTERIOR AND EXTERIOR SPECIFIC STYLES */
+
+/* GIOIA INTERIOR SECTION */
+.gioia-interior .interior-image {
+  max-width: 80%;
+  margin: 0 auto; /* Center the image */
+}
+
+.gioia-interior .arrow-container {
+  display: flex;
+  justify-content: center;
+}
+
+.gioia-interior .gioia-arrow {
+  background-color: #78856B;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gioia-interior .gioia-arrow i {
+  font-weight: bold;
+}
+
+.gioia-interior .description {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #444444;
+}
+
+/* GIOIA EXTERIOR SECTION */
+.gioia-exterior .image-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.gioia-exterior .description {
+  font-size: 1rem;
+  color: #444444;
+}
+
+/* VECTOR SECTION */
+.gioia-vector-section .gioia-vector {
+  max-width: 80%;
+}
+
+.gioia-vector-section .gioia-selection-text .line {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .gioia-interior .interior-image {
+    max-width: 100%;
+  }
+
+  .gioia-interior .description,
+  .gioia-exterior .description {
+    text-align: center;
+  }
+
+  .gioia-vector {
+    max-width: 98%;
+  }
+}
+
+
+
 

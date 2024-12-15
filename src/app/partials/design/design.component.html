@@ -20,7 +20,7 @@
         <img [src]="houseData.exteriors[currentExteriorIndex].image" class="img-fluid" alt="Exterior Design" />
       </div>
       <div class="col-md-2 arrow-container d-flex justify-content-center py-3">
-        <button class="arrow left" (click)="nextExterior()">
+        <button class="arrow right" (click)="nextExterior()">
           <i class="bi bi-chevron-left"></i>
         </button>
       </div>
@@ -30,7 +30,7 @@
       </div>
     </div>
   </div>
-
+<!-- VECTOR HOUSE SECTION -->
   <div class="vector-house-section container my-5">
     <h2 class="text-center mb-4 mt-3 your">TWÓJ WYBÓR</h2>
     <div class="row align-items-center">
@@ -53,36 +53,61 @@
 
 <div *ngIf="houseData.name === 'GIOIA'">
   <div class="container">
-    <h2>WYBÓR WNĘTRZA</h2>
-    <div class="row align-items-center interior">
-      <div class="col-md-12 text-center">
-        <img [src]="houseData.interiors[currentInteriorIndex].image" class="img-fluid" alt="Interior Design" />
+    <!-- Interior Section -->
+    <div class="row gioia-interior my-4 text-center">
+      <!-- Interior Image -->
+      <div class="col-12">
+        <img [src]="houseData.interiors[currentInteriorIndex].image" class="img-fluid interior-image" alt="Interior Design" />
+      </div>
+      <!-- Centered Arrow -->
+      <div class="col-12 arrow-container mt-3">
+        <button class="arrow" (click)="nextInterior()">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+      <!-- Interior Text -->
+      <div class="col-12 mt-3">
         <h3 class="design-name">{{ houseData.interiors[currentInteriorIndex].name }}</h3>
         <p class="description">{{ houseData.interiors[currentInteriorIndex].description }}</p>
       </div>
-      <button class="arrow" (click)="nextInterior()">
-        <i class="bi bi-chevron-right"></i>
-      </button>
     </div>
 
-    <h2>WYBÓR ZEWNĘTRZNEGO WYGLĄDU</h2>
-    <div class="row align-items-center exterior">
-      <div class="col-md-12 text-center">
+    <!-- Exterior Section -->
+    <div class="row align-items-center gioia-exterior my-4">
+      <!-- Exterior Image -->
+      <div class="col-12 col-lg-6 image-section">
         <img [src]="houseData.exteriors[currentExteriorIndex].image" class="img-fluid" alt="Exterior Design" />
+      </div>
+      <!-- Arrow -->
+      <div class="col-12 col-lg-1 d-flex justify-content-center my-3 my-lg-0">
+        <button class="arrow right" (click)="nextExterior()">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+      </div>
+      <!-- Exterior Text -->
+      <div class="col-12 col-lg-5 text-section text-lg-start text-center">
         <h3 class="design-name">{{ houseData.exteriors[currentExteriorIndex].name }}</h3>
         <p class="description">{{ houseData.exteriors[currentExteriorIndex].description }}</p>
       </div>
-      <button class="arrow left" (click)="nextExterior()">
-        <i class="bi bi-chevron-left"></i>
-      </button>
     </div>
   </div>
 
-  <h2>TWÓJ WYBÓR</h2>
-  <div class="selection-summary text-center">
-    <img src="/assets/GIOIA_vector.webp" class="vector-house" alt="House Vector" />
-    <p>WNĘTRZE: {{ selectedInterior }}</p>
-    <p>ELEWACJA: {{ selectedExterior }}</p>
+  <!-- VECTOR HOUSE SECTION -->
+  <div class="gioia-vector-section container my-5">
+    <h2 class="text-center mb-4 mt-3 your">TWÓJ WYBÓR</h2>
+    <div class="row align-items-center">
+      <div class="col-6 col-md-6 d-flex justify-content-end mb-3 mb-md-0">
+        <img src="/assets/GIOIA_vector.webp" class="gioia-vector img-fluid" alt="House Vector" />
+      </div>
+      <div class="col-6 col-md-6 text-md-start text-center">
+        <div class="gioia-selection-text">
+          <div class="line fix"><span>WNĘTRZE</span></div>
+          <div class="line change"><span>{{ selectedInterior }}</span></div>
+          <div class="line fix"><span>ELEWACJA</span></div>
+          <div class="line change"><span>{{ selectedExterior }}</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -93,62 +118,3 @@
 
 
 
-
-
-
-<!-- GIOIA Layout -->
-<div *ngIf="houseData.name === 'GIOIA'">
-  <div class="container">
-    <h2>WYBÓR WNĘTRZA</h2>
-    <div class="row align-items-center interior">
-      <div class="col-md-12 text-center">
-        <img
-          [src]="houseData.interiors[currentInteriorIndex].image"
-          class="img-fluid"
-          alt="Interior Design"
-        />
-        <!-- Interior Name -->
-        <h3 class="design-name">
-          {{ houseData.interiors[currentInteriorIndex].name }}
-        </h3>
-        <!-- Interior Description -->
-        <p class="description">
-          {{ houseData.interiors[currentInteriorIndex].description }}
-        </p>
-      </div>
-      <button class="arrow" (click)="nextInterior()">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-
-    <h2>WYBÓR ZEWNĘTRZNEGO WYGLĄDU</h2>
-    <div class="row align-items-center exterior">
-      <div class="col-md-12 text-center">
-        <img
-          [src]="houseData.exteriors[currentExteriorIndex].image"
-          class="img-fluid"
-          alt="Exterior Design"
-        />
-        <!-- Exterior Name -->
-        <h3 class="design-name">
-          {{ houseData.exteriors[currentExteriorIndex].name }}
-        </h3>
-        <!-- Exterior Description -->
-        <p class="description">
-          {{ houseData.exteriors[currentExteriorIndex].description }}
-        </p>
-      </div>
-      <button class="arrow left" (click)="nextExterior()">
-        <i class="bi bi-chevron-left"></i>
-      </button>
-    </div>
-  </div>
-
-  <!-- Vector House Section -->
-  <h2>TWÓJ WYBÓR</h2>
-  <div class="selection-summary text-center">
-    <img src="/assets/GIOIA_vector.webp" class="vector-house" alt="House Vector" />
-    <p>WNĘTRZE: {{ selectedInterior }}</p>
-    <p>ELEWACJA: {{ selectedExterior }}</p>
-  </div>
-</div>
