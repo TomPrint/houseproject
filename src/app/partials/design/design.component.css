@@ -30,7 +30,7 @@
 
 /* BUTTON ARROWS */
 .arrow {
-  background-color: #78856B;
+  background-color: #7C8A77;
   border: none;
   width: 48px;
   height: 48px;
@@ -45,10 +45,7 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.arrow:hover {
-  background-color: #657961;
-  transform: scale(1.1);
-}
+
 
 .arrow i {
   transform: rotate(0deg);
@@ -80,8 +77,6 @@
     order: 3; /* Exterior image comes third */
   }
 }
-
-
 
 /* GIOIA INTERIOR AND EXTERIOR SPECIFIC STYLES */
 
@@ -128,12 +123,10 @@
   height: auto;
 }
 
-
 .gioia-exterior .description {
   font-size: 1rem;
   color: #444444;
 }
-
 
 @media (max-width: 768px) {
   .gioia-interior .interior-image {
@@ -144,10 +137,7 @@
   .gioia-exterior .description {
     text-align: center;
   }
-
 }
-
-
 
 /* VECTOR HOUSE SECTION */
 .your {
@@ -178,8 +168,8 @@
 }
 
 @media (max-width: 768px) {
-  .selection-text .line{
-    margin: 2px 0;/* Slightly reduce image size on mobile */
+  .selection-text .line {
+    margin: 2px 0; /* Slightly reduce image size on mobile */
   }
 }
 
@@ -201,12 +191,12 @@
   }
 }
 
-.gioia-text{
+.gioia-text {
   margin-top: -50px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
-.calma-text{
+.calma-text {
   margin-top: 30px;
   margin-bottom: -80px;
 }
@@ -216,4 +206,3 @@
     margin-bottom: 10px;
   }
 }
-
