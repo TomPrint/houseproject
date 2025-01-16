@@ -51,25 +51,37 @@ export class OfferComponent {
         {
           name: 'NOWOCZESNY',
           image: '/assets/CALMA_nowoczesny_int.webp',
-          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę. 
+          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę. 
 Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.`
         },
         {
           name: 'MINIMALISTYCZNY',
           image: '/assets/CALMA_minimalistyczny_int.webp',
-          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
+          description: `Minimalizm połączony z japońską estetyką tworzy przestrzeń pełną spokoju i harmonii. Naturalne drewno i duże ilości światła wprowadzają ciepło i naturalność do każdej części domu. Proste linie i oszczędne formy podkreślają funkcjonalność oraz elegancję wnętrza, a subtelne akcenty dodają mu charakteru.
+To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz wysoką funkcjonalność. Dzięki przemyślanemu designowi oferuje przestrzeń, w której można czuć się zrelaksowanym i zintegrowanym z naturą.`
+        },
+        {
+          name: 'SKANDYNAWSKI',
+          image: '/assets/CALMA_skandynawski_int.webp',
+          description: `Skandynawski styl to nie tylko minimalizm, ale także praktyczność i wygoda. Meble o prostych kształtach są funkcjonalne i estetyczne, a inteligentne rozwiązania przestrzenne maksymalizują użyteczność każdego metra kwadratowego. 
+To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno, ale nie boją się odrobiny koloru. Dzięki przemyślanemu designowi i wysokiej jakości materiałom, przestrzeń ta jest nie tylko estetyczna, ale również komfortowa i funkcjonalna. To miejsce, w którym można czuć się swobodnie, zrelaksowanym i pełnym energii.`
         }
       ],
       exteriors: [
         {
-          name: 'DREWNO',
-          image: '/assets/CALMA_drewno_ext.webp',
-          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
-        },
-        {
           name: 'METAL',
           image: '/assets/CALMA_metal_ext.webp',
-          description: `Sipsum lemur sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
+          description: `Fasada z blachy na rąbek łączy nowoczesny design z wytrzymałością, zapewniając długotrwałą ochronę domu. Dzięki zaawansowanemu montażowi na rąbek stojący, fasada jest estetyczna, szczelna i odporna na warunki atmosferyczne, na korozję oraz promieniowanie UV.`
+        },
+        {
+          name: 'DREWNO',
+          image: '/assets/CALMA_drewno_ext.webp',
+          description: `Fasada drewniana to synonim naturalnego piękna i ekologii, doskonale wpisująca się w otoczenie, jednocześnie zapewniając trwałość i funkcjonalność. Wykorzystujemy wysokiej jakości deski elewacyjne montowane pionowo, które poddawane są zaawansowanym procesom zabezpieczającym.`
+        },
+        {
+          name: 'KOMBINACJA',
+          image: '/assets/CALMA_kombinacja_ext.webp',
+          description: `Fasada drewniano-metalowa łączy naturalne piękno drewna z nowoczesnym wyglądem blachy na rąbek, tworząc elegancki i trwały efekt. Deski elewacyjne montowane pionowo dodają ciepła i przytulności, podczas gdy blacha na rąbek zapewnia nowoczesny akcent i wyjątkową ochronę.`
         }
       ]
     },
@@ -101,25 +113,39 @@ Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktow
         {
           name: 'NOWOCZESNY',
           image: '/assets/GIOIA_nowoczesny_int.webp',
-          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę.`
+          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę. 
+Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.
+`
+        },
+        {
+          name: 'SKANDYNAWSKI',
+          image: '/assets/GIOIA_skandynawski_int.webp',
+          description: `Skandynawski styl to nie tylko minimalizm, ale także praktyczność i wygoda. Meble o prostych kształtach są funkcjonalne i estetyczne, a inteligentne rozwiązania przestrzenne maksymalizują użyteczność każdego metra kwadratowego. 
+To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno, ale nie boją się odrobiny koloru. Dzięki przemyślanemu designowi i wysokiej jakości materiałom, przestrzeń ta jest nie tylko estetyczna, ale również komfortowa i funkcjonalna. To miejsce, w którym można czuć się swobodnie, zrelaksowanym i pełnym energii.
+`
         },
         {
           name: 'MINIMALISTYCZNY',
           image: '/assets/GIOIA_minimalistyczny_int.webp',
-          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
+          description: `Minimalizm połączony z japońską estetyką tworzy przestrzeń pełną spokoju i harmonii. Naturalne drewno i duże ilości światła wprowadzają ciepło i naturalność do każdej części domu. Proste linie i oszczędne formy podkreślają funkcjonalność oraz elegancję wnętrza, a subtelne akcenty dodają mu charakteru.
+To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz wysoką funkcjonalność. Dzięki przemyślanemu designowi oferuje przestrzeń, w której można czuć się zrelaksowanym i zintegrowanym z naturą.`
         }
       ],
       exteriors: [
         {
-          name: 'MINIMALISTYCZNY',
-          image: '/assets/GIOIA_minimalistyczny_ext.webp',
-          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. 
-Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.`
-        },
-        {
           name: 'METAL',
           image: '/assets/GIOIA_metal_ext.webp',
-          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel velit quis risus cursus aliquet. Aenean accumsan venenatis ante, in posuere nunc vehicula id. Duis vel metus a dui gravida fermentum.`
+          description: `Fasada z blachy na rąbek łączy nowoczesny design z wytrzymałością, zapewniając długotrwałą ochronę domu. Dzięki zaawansowanemu montażowi na rąbek stojący, fasada jest estetyczna, szczelna i odporna na warunki atmosferyczne, na korozję oraz promieniowanie UV.`
+        },
+        {
+          name: 'DREWNO',
+          image: '/assets/GIOIA_drewno_ext.webp',
+          description: `Fasada drewniana to synonim naturalnego piękna i ekologii, doskonale wpisująca się w otoczenie, jednocześnie zapewniając trwałość i funkcjonalność. Wykorzystujemy wysokiej jakości deski elewacyjne montowane pionowo, które poddawane są zaawansowanym procesom zabezpieczającym.`
+        },
+        {
+          name: 'KOMBINACJA',
+          image: '/assets/GIOIA_kombinacja_ext.webp',
+          description: `Fasada drewniano-metalowa łączy naturalne piękno drewna z nowoczesnym wyglądem blachy na rąbek, tworząc elegancki i trwały efekt. Deski elewacyjne montowane pionowo dodają ciepła i przytulności, podczas gdy blacha na rąbek zapewnia nowoczesny akcent i wyjątkową ochronę.`
         }
       ]
     }
