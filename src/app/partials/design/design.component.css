@@ -1,6 +1,5 @@
 /* INTERIOR AND EXTERIOR SECTIONS */
 
-/* INTERIOR AND EXTERIOR SECTIONS */
 
 /* Arrow Container */
 .arrow-container {
@@ -44,7 +43,7 @@
 .interior-image,
 .exterior-image {
   max-width: 100%;
-  max-height: 250px;
+  max-height: 350px;
   object-fit: contain;
 }
 
@@ -62,7 +61,7 @@
   font-size: 1.8rem;
   cursor: pointer;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease;
+ 
 }
 
 .arrow i {
@@ -119,63 +118,95 @@
 
 /* GIOIA INTERIOR AND EXTERIOR SPECIFIC STYLES */
 
-/* GIOIA INTERIOR SECTION */
+/* GIOIA SPECIFIC STYLES */
 .gioia-interior .interior-image {
   max-width: 80%;
-  margin: 0 auto; /* Center the image */
+  margin: 0 auto;
+  max-height: 300px;
 }
 
-.gioia-interior .arrow-container {
+.gioia-exterior { /* Target the row directly */
+  display: flex; /* Make the row a flex container */
+  align-items: center; /* Vertically center items in the row */
+}
+.gioia-exterior .arrow-container {
+  align-self: center;
+}
+
+.gioia-text-section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
 }
 
-.gioia-interior .gioia-arrow {
-  background-color: #78856B;
-  border: none;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+.gioia-text-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to top, #fff, transparent);
+  pointer-events: none;
 }
 
-.gioia-interior .gioia-arrow i {
-  font-weight: bold;
-}
-
-.gioia-interior .description {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #444444;
-}
-
-/* GIOIA EXTERIOR SECTION */
-.gioia-exterior .image-section img {
-  max-width: 100%;
-  height: auto;
-}
-
-.gioia-exterior .description {
-  font-size: 1rem;
-  color: #444444;
-}
-
-@media (max-width: 768px) {
+/* Media Queries */
+@media (min-width: 992px) {
   .gioia-interior .interior-image {
-    max-width: 100%;
+      max-width: 90%;
+      max-height: 400px;
+  }
+  .gioia-text-section {
+      height: 300px;
+  }
+  .gioia-exterior .arrow-container {
+      margin-top: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .row-gioia { /* Target the row with row-gioia class */
+      flex-direction: column;
+  }
+
+  .image-container {
+      order: 1;
+      margin-bottom: 1rem;
+      max-height: none;
+  }
+
+  .arrow-container {
+      order: 2;
+      margin-bottom: 1rem;
+  }
+
+  .gioia-text-section {
+      order: 3;
+      height: auto;
+      overflow: visible;
+      text-align: center;
+  }
+
+  .gioia-text-section::after {
+      display: none;
   }
 
   .gioia-interior .description,
   .gioia-exterior .description {
-    text-align: center;
+      text-align: center;
   }
+
+  .interior-image,
+  .exterior-image {
+      max-height: 450px;
+  }
+
+  .interior-image, .exterior-image, .gioia-interior .interior-image{
+    max-width: 100%; /* Important: Full width on mobile */
+    max-height: 450px; /* Adjust as needed */
+}
 }
 
 /* VECTOR HOUSE SECTION */

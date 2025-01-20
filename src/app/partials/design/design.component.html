@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <div class="row align-items-center exterior mt-2">
+    <div class="row row-calma align-items-center exterior mt-2">
         <div class="col-md-5 image-container">
             <img [src]="houseData.exteriors[currentExteriorIndex].image" class="img-fluid exterior-image" alt="Exterior Design" />
         </div>
@@ -31,7 +31,7 @@
 </div>
 
 <!-- CALMA VECTOR HOUSE SECTION -->
-<div class="vector-section container my-5 py-4">
+<div class="vector-section container my-3 py-3 pb-5">
   <h2 class="text-center mb-4 mt-3 py-4 your">TWÓJ WYBÓR</h2>
   <div class="row align-items-center">
     <div class="col-6 col-md-6 d-flex justify-content-end mb-3 mb-md-0">
@@ -53,47 +53,38 @@
 
 <div *ngIf="houseData.name === 'GIOIA'">
   <div class="container">
-    <!-- Interior Section -->
-    <div class="row gioia-interior my-4 text-center">
-      <!-- Interior Image -->
-      <div class="col-12">
-        <img [src]="houseData.interiors[currentInteriorIndex].image" class="img-fluid interior-image" alt="Interior Design" />
-      </div>
-      <!-- Centered Arrow -->
-      <div class="col-12 arrow-container mt-3">
-        <button class="arrow" (click)="nextInterior()">
-          <i class="bi bi-chevron-right"></i>
-        </button>
-      </div>
-      <!-- Interior Text -->
-      <div class="col-12 mt-3">
-        <h3 class="design-name">{{ houseData.interiors[currentInteriorIndex].name }}</h3>
-        <p class="description">{{ houseData.interiors[currentInteriorIndex].description }}</p>
-      </div>
+    <div class="row row-gioia gioia-interior my-3 text-center">
+        <div class="col-12 image-container">
+            <img [src]="houseData.interiors[currentInteriorIndex].image" class="img-fluid interior-image" alt="Interior Design" />
+        </div>
+        <div class="col-12 arrow-container py-3">
+            <button class="arrow" (click)="nextInterior()">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+        <div class="col-12 mt-3 gioia-text-section"> <h3 class="design-name">{{ houseData.interiors[currentInteriorIndex].name }}</h3>
+            <p class="description">{{ houseData.interiors[currentInteriorIndex].description }}</p>
+        </div>
     </div>
 
-    <!-- Exterior Section -->
-    <div class="row align-items-center gioia-exterior my-4">
-      <!-- Exterior Image -->
-      <div class="col-12 col-lg-6 image-section">
-        <img [src]="houseData.exteriors[currentExteriorIndex].image" class="img-fluid" alt="Exterior Design" />
-      </div>
-      <!-- Arrow -->
-      <div class="col-12 col-lg-1 d-flex justify-content-center my-3 my-lg-0">
-        <button class="arrow right" (click)="nextExterior()">
-          <i class="bi bi-chevron-left"></i>
-        </button>
-      </div>
-      <!-- Exterior Text -->
-      <div class="col-12 col-lg-5 text-section text-lg-start text-center">
-        <h3 class="design-name text-center">{{ houseData.exteriors[currentExteriorIndex].name }}</h3>
-        <p class="description">{{ houseData.exteriors[currentExteriorIndex].description }}</p>
-      </div>
+    <div class="row row-gioia gioia-exterior mt-1">
+        <div class="col-12 col-lg-6 image-container">
+            <img [src]="houseData.exteriors[currentExteriorIndex].image" class="img-fluid exterior-image" alt="Exterior Design" />
+        </div>
+        <div class="col-12 col-lg-1 arrow-container d-flex justify-content-center py-3 my-lg-0">
+            <button class="arrow right" (click)="nextExterior()">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+        </div>
+        <div class="col-12 col-lg-5 gioia-text-section text-lg-start text-center">
+            <h3 class="design-name text-center">{{ houseData.exteriors[currentExteriorIndex].name }}</h3>
+            <p class="description">{{ houseData.exteriors[currentExteriorIndex].description }}</p>
+        </div>
     </div>
-  </div>
+</div>
 
   <!-- GIOIA VECTOR HOUSE SECTION -->
-  <div class="vector-section container my-5 py-4">
+  <div class="vector-section container my-3 py-3 pb-5">
     <h2 class="text-center mb-4 mt-3 py-4 your">TWÓJ WYBÓR</h2>
     <div class="row align-items-center">
       <div class="col-6 col-md-6 d-flex justify-content-end mb-3 mb-md-0">
