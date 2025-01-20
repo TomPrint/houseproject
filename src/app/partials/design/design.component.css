@@ -1,5 +1,7 @@
 /* INTERIOR AND EXTERIOR SECTIONS */
 
+/* INTERIOR AND EXTERIOR SECTIONS */
+
 /* Arrow Container */
 .arrow-container {
   display: flex;
@@ -12,20 +14,37 @@
 .text-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
+  height: 250px;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Image Section */
-.image-section {
+.text-section.no-gradient::after {
+  display: none;
+}
+
+.text-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to top, #fff, transparent);
+  pointer-events: none;
+}
+
+/* Image container */
+.image-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.image-section img {
+.interior-image,
+.exterior-image {
   max-width: 100%;
-  height: auto;
+  max-height: 250px;
   object-fit: contain;
 }
 
@@ -46,8 +65,6 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
-
 .arrow i {
   transform: rotate(0deg);
   font-weight: bold;
@@ -57,25 +74,46 @@
   transform: rotate(180deg);
 }
 
-@media (max-width: 768px) {
-  .interior .text-section {
-    order: 1; /* Interior description comes first */
+/* Media Queries */
+@media (min-width: 768px) {
+  .interior-image,
+  .exterior-image {
+      max-height: 400px;
   }
-  .interior .arrow-container {
-    order: 2; /* Interior arrow comes second */
+  .text-section{
+      height: 300px;
   }
-  .interior .image-section {
-    order: 3; /* Interior image comes third */
+}
+
+@media (max-width: 767px) {
+  .row-calma {
+      flex-direction: column;
   }
 
-  .exterior .text-section {
-    order: 1; /* Exterior description comes first */
+  .image-container {
+      order: 1;
+      margin-bottom: 1rem;
+      max-height: none;
   }
+
+  .interior .arrow-container,
   .exterior .arrow-container {
-    order: 2; /* Exterior arrow comes second */
+      order: 2;
+      margin-bottom: 1rem;
   }
-  .exterior .image-section {
-    order: 3; /* Exterior image comes third */
+
+  .text-section {
+      order: 3;
+      height: auto;
+      overflow: visible; /* Show all text */
+  }
+  .text-section::after{
+      display: none;
+  }
+
+  .interior-image,
+  .exterior-image {
+      max-height: 300px;
   }
 }
 
