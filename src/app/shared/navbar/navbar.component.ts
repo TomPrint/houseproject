@@ -19,4 +19,12 @@ isHomePage(): boolean {
   return this.router.url === '/';
 }
 
+closeMobileMenu() {
+  const mobileNav = document.getElementById('mobileNav');
+  if (mobileNav) {
+    mobileNav.classList.remove('show'); // Bootstrapowy sposób na zwinięcie menu
+  }
+}
+
+
 }
