@@ -85,7 +85,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column; /* Ensure items stack vertically */
-    gap: 20px; /* Add spacing between links */
+    gap: 5px; /* Add spacing between links */
     transition: transform 0.3s ease-in-out; /* Smooth open/close animation */
     text-align: center; /* Center align text */
   }
@@ -111,7 +111,7 @@
   .fullscreen-nav .nav-link {
     font-size: 2rem; /* Larger text for visibility */
     color: #ffffff; /* White text */
-    margin: 15px 0; /* Spacing between links */
+    margin: 7px 0; /* Spacing between links */
     text-align: center;
     display: block; /* Ensure block layout for stacking */
   }
