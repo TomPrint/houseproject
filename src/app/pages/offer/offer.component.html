@@ -82,32 +82,32 @@
     </div>
   </div>
 
-  <!-- RENDERS CHANGE -->
-  <div class="render-section px-2 mt-4 renders">
-    <div class="row justify-content-center align-items-center">
-      <!-- Render Container -->
-      <div class="col-12 col-md-8 text-center render-container">
-        <!-- Arrow and Text -->
-        <div class="arrow-container px-2">
-          <button class="btn arrow-btn" (click)="nextRender()">
-            <i class="bi bi-chevron-up"></i>
-          </button>
-          <span class="arrow-text mt-2">
-            {{ currentRenderText() }}
-          </span>
-        </div>
-        <!-- Render Image -->
-        <div class="render-img-wrapper">
-          <img
-            [src]="houses[selectedHouse()].renders[currentRenderIndex()]"
-            alt="Render"
-            class="render-img"
-            (click)="openModal(houses[selectedHouse()].renders[currentRenderIndex()])"
-          />
-        </div>
+<!-- RENDERS SECTION -->
+<div class="render-section px-2 mt-4 renders">
+  <div class="row justify-content-center align-items-center">
+    <!-- Render Container -->
+    <div class="col-12 col-md-8 text-center render-container">
+      <!-- Render Image 1 -->
+      <div class="render-img-wrapper">
+        <img
+          [src]="houses[selectedHouse()].renders[0]"
+          alt="Render 1"
+          class="render-img"
+          (click)="openModal(houses[selectedHouse()].renders[0])"
+        />
+      </div>
+      <!-- Render Image 2 -->
+      <div class="render-img-wrapper mt-3">
+        <img
+          [src]="houses[selectedHouse()].renders[1]"
+          alt="Render 2"
+          class="render-img"
+          (click)="openModal(houses[selectedHouse()].renders[1])"
+        />
       </div>
     </div>
   </div>
+</div>
 
   <!-- FACADE IMAGES SECTION -->
   <div class="container bg-white py-2">
