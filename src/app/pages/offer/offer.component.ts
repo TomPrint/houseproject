@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from "../../shared/navbar/navbar.component";
 import { BrownComponent } from "../../shared/brown/brown.component";
@@ -83,6 +83,11 @@ To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno,
           image: '/assets/CALMA_kombinacja_ext.webp',
           description: `Fasada drewniano-metalowa łączy naturalne piękno drewna z nowoczesnym wyglądem blachy na rąbek, tworząc elegancki i trwały efekt. Deski elewacyjne montowane pionowo dodają ciepła i przytulności, podczas gdy blacha na rąbek zapewnia nowoczesny akcent i wyjątkową ochronę.`
         }
+      ],
+      images: [
+        'assets/main1.webp',
+        'assets/main2.webp',
+        'assets/main3.webp'
       ]
     },
     GIOIA: {
@@ -147,6 +152,11 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
           image: '/assets/GIOIA_kombinacja_ext.webp',
           description: `Fasada drewniano-metalowa łączy naturalne piękno drewna z nowoczesnym wyglądem blachy na rąbek, tworząc elegancki i trwały efekt. Deski elewacyjne montowane pionowo dodają ciepła i przytulności, podczas gdy blacha na rąbek zapewnia nowoczesny akcent i wyjątkową ochronę.`
         }
+      ],
+      images: [
+        'assets/main6.webp',
+        'assets/main5.webp',
+        'assets/main4.webp'
       ]
     }
   };
@@ -188,6 +198,10 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
   currentRenderText() {
     return this.currentRenderIndex() === 0 ? 'PARTER' : 'PIĘTRO';
   }
+
+  sliderImages = computed(() => {
+    return this.selectedHouse() === 'CALMA' ? this.houses.CALMA.images : this.houses.GIOIA.images;
+  });
 
   openModal(image: string) {
     this.selectedImage.set(image); // Set the image to be displayed in the modal

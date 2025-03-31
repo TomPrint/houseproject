@@ -1,41 +1,26 @@
-<!-- SPLIDE SLIDER SECTION  -->
- 
+<!-- SLIDER-->
+
 <section>
-    <div class="bg-img-slider">
-      <div id="splide" class="splide">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide">
-              <img src="assets/main1.webp" alt="Image 1">
-            </li>
-            <li class="splide__slide">
-              <img src="assets/main2.webp" alt="Image 2">
-            </li>
-            <li class="splide__slide">
-              <img src="assets/main3.webp" alt="Image 3">
-            </li>
-            <li class="splide__slide">
-              <img src="assets/main4.webp" alt="Image 4">
-            </li>
-            <li class="splide__slide">
-              <img src="assets/main5.webp" alt="Image 5">
-            </li>
-            <li class="splide__slide">
-              <img src="assets/main6.webp" alt="Image 6">
-            </li>
-          </ul>
-        </div>
+  <div class="bg-img-slider">
+    <div #splideContainer id="splide" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide" *ngFor="let image of images; let i = index">
+            <img [src]="image" [attr.alt]="'Slider image ' + (i + 1)">
+          </li>
+        </ul>
       </div>
     </div>
-  </section>
-  
-  <!-- MARKETING TEXT BOTTOM SECTION -->
-  <section>
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-xl">
-          <h2 class="mb-4 text-center" style="color: #485145;">WYBIERZ SWÓJ DOM!</h2>
-        </div>
+  </div>
+</section>
+
+<!-- MARKETING TEXT BOTTOM SECTION -->
+<section>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-xl">
+        <h2 class="mb-4 text-center" style="color: #485145;">WYBIERZ SWÓJ DOM!</h2>
       </div>
     </div>
-  </section>
+  </div>
+</section>
