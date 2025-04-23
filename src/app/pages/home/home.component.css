@@ -4,7 +4,9 @@
     width: 100%;
     padding-top: 56.25%; /* 16x9 aspect ratio (9 / 16 = 0.5625) */
     overflow: hidden; /* Prevent overflow */
-    background-color: black; /* Fallback background color */
+    background-color: black;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.8); /* cień tylko na dole */
+    /* Fallback background color */
 }
 
 .bg-img {
@@ -155,7 +157,7 @@
 }
     
 .image-translate{
-    transform: translateY(-80px) translateX(-70px);  
+    transform: translateY(-80px) translateX(-70px);
 }
 
 @media (max-width: 1300px) {
