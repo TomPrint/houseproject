@@ -1,50 +1,35 @@
 <div class="outside-container">
 
-  <div class="container">
+ 
     <app-navbar></app-navbar>
-    <div class="p-md-5"></div>
-    <!-- Triangle section -->
-    <div class="triangle">
-      <!-- Logo -->
-      <img src="/assets/logo.svg" alt="Logo" class="logo" />
-
-      <!-- Content Below Logo -->
-      <div class="d-flex flex-column align-items-center" id="oferta">
-        <!-- Title -->
-        <h1 class="title text-center">WYBIERZ SWÓJ DOM!</h1>
-
-        <!-- HOUSES CHANGE -->
-        <div class="row justify-content-center align-items-center mt-4 g-2.5 houses px-3">
-          <!-- CALMA House -->
+    <div class="container pt-5 mt-5">
+    <div id="oferta" class="text-center">
+      <h1 class="title mb-4">WYBIERZ SWÓJ DOM!</h1>
+  
+      <div class="row justify-content-center g-4">
+        <div
+          class="col-6 col-sm-4 col-md-3 col-lg-2"
+          *ngFor="let house of houseList()"
+        >
           <div
-            class="col-6 col-md-4 text-center house"
-            [class.active]="selectedHouse() === 'CALMA'"
-            [class.faded]="selectedHouse() !== 'CALMA'"
-            (click)="toggleHouse('CALMA')"
+            class="house text-center p-2"
+            [class.active]="selectedHouse() === house.key"
+            [class.faded]="selectedHouse() !== house.key"
+            (click)="toggleHouse(house.key)"
           >
             <img
-              [src]="houses.CALMA.image"
-              alt="CALMA House"
+              [src]="house.image"
+              [alt]="house.name + ' House'"
               class="img-fluid house-img"
             />
-          </div>
-
-          <!-- GIOIA House -->
-          <div
-            class="col-6 col-md-4 text-center gioia-house house"
-            [class.active]="selectedHouse() === 'GIOIA'"
-            [class.faded]="selectedHouse() !== 'GIOIA'"
-            (click)="toggleHouse('GIOIA')"
-          >
-            <img
-              [src]="houses.GIOIA.image"
-              alt="GIOIA House"
-              class="img-fluid house-img gioia-house-img"
-            />
+            <p class="house-name mt-2">{{ house.name }}</p>
           </div>
         </div>
       </div>
     </div>
+
+  
+
   </div>
 
   <!-- DRAWINGS CHANGE -->
