@@ -1,6 +1,7 @@
 export const houses = {
     CALMA: {
       name: 'CALMA',
+      square:  10, // Square footage of the house
       image: '/assets/Calma-vector.svg', // Main image for CALMA
       drawing: ['/assets/Calma_parter.webp', '/assets/Calma_gora.webp'], // Floor plans
       renders: ['/assets/Calma_render.webp', '/assets/Calma_render2.webp'], // Render images
@@ -65,6 +66,7 @@ To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno,
     },
     GIOIA: {
       name: 'GIOIA',
+      square:  10,
       image: '/assets/Gioia-vector.svg', // Main image for GIOIA
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
@@ -134,6 +136,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House3: {
       name: 'House3',
+      square:  10,
       image: '/assets/budynek-3.svg', // Main image for GIOIA
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
@@ -203,6 +206,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House4: {
       name: 'House4',
+      square:  10,
       image: '/assets/budynek-4.svg', // Main image for GIOIA
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
@@ -272,6 +276,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House5: {
       name: 'House5',
+      square:  10,
       image: '/assets/budynek-5.svg', // Main image for GIOIA
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
@@ -341,6 +346,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House6: {
       name: 'House6',
+      square:  10,
       image: '/assets/budynek-6.svg', // Main image for GIOIA
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
@@ -410,6 +416,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House7: {
       name: 'House7',
+      square:  10,
       image: '/assets/budynek-7.svg', // Main image for GIOIA
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
@@ -479,6 +486,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House8: {
       name: 'House8',
+      square:  10,
       image: '/assets/budynek-8.svg', // Main image for GIOIA
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
@@ -548,6 +556,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House9: {
       name: 'House9',
+      square:  10,
       image: '/assets/budynek-9.svg', // Main image for GIOIA
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
@@ -617,6 +626,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House10: {
       name: 'House10',
+      square:  10,
       image: '/assets/budynek-10.svg', // Main image for GIOIA
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images

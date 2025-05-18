@@ -68,6 +68,23 @@
     transform: scale(1.05);
   }
 
+  .house-square {
+    font-size: 1rem;
+    color: #555;
+    margin-left: 6px;
+    /* no font-variant */
+  }
+  
+.m {
+    text-transform: lowercase !important;
+}
+
+.house-square .sup {
+    font-size: 0.6em;
+    vertical-align: super;
+    line-height: 1;
+  }
+
 /* DRAWINGS SECTION */
 .floor-plan-section {
     background-color: #FFFFFF;

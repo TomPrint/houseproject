@@ -22,7 +22,12 @@
               [alt]="house.name + ' House'"
               class="img-fluid house-img"
             />
-            <p class="house-name mt-2">{{ house.name }}</p>
+            <p class="house-name mt-2">
+              {{ house.name }}
+              <span class="house-square">
+                {{ house.square }} <span class="m">m</span><span class="sup">2</span>
+              </span>
+            </p>
           </div>
         </div>
       </div>
