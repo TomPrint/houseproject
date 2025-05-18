@@ -4,26 +4,21 @@
 
   <!-- Background Slideshow -->
   <div class="bg-slideshow">
-    <div class="bg-img" style="background-image: url('/assets/main1.webp');"></div>
-    <div class="bg-img" style="background-image: url('/assets/main2.webp');"></div>
-    <div class="bg-img" style="background-image: url('/assets/main3.webp');"></div>
-    <div class="bg-img" style="background-image: url('/assets/main4.webp');"></div>
-    <div class="bg-img" style="background-image: url('/assets/main5.webp');"></div>
-    <div class="bg-img" style="background-image: url('/assets/main6.webp');"></div>
+    <app-fader></app-fader>
   </div>
   <div class="bg-slideshow-button-container">
     <a href="#spacer"><img src="assets/spacer3d_img.png" class="spacer3D"></a>
   </div>
   <!-- Logo Section -->
   <div class="logo-container">
-    <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
+    <a href="" routerLink="/"><img class="logo img-fluid" src="/assets/logo.png" alt="Logo"></a>
   </div>
 
 
 
   <!--ABOUT US SECTION  -->
  
-<section>
+<!-- <section>
     <div class="container">
       <div id="onas"></div>
         <div class="row">
@@ -54,7 +49,7 @@
           </div>
         </div>
         </div>
-</section>
+</section> -->
 
 <!-- BROWN BG SECTION WITH ICONS -->
 <section>
@@ -108,6 +103,7 @@
             </p>
             <br>
             <a href="" class="btn btnProject mb-5 fs-5" role="button" routerLink="/kontakt">KONTAKT</a>
+            <p class="mb-3"></p>
           </div>
         </div>
       </div>
@@ -143,7 +139,7 @@
               Stwórz swoje wymarzone wnętrze, naturalnie!
             </p>
             <a href="" class="btn btnProject mb-5 fs-5" role="button" routerLink="/oferta">KATALOG</a>
-            <p class="mb-5"></p>
+            <p class="mb-3"></p>
           </div>
         </div>  
       </div>
@@ -151,6 +147,9 @@
 
   </div>
 </section>
+<!-- <button class="scroll-to-top" (click)="scrollToTop()" *ngIf="showScrollTop">
+  <i class="bi bi-arrow-up-circle"></i>
+</button> -->
 
 
 

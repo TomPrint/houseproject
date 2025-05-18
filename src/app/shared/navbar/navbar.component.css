@@ -1,4 +1,12 @@
+
+
 /* NAVIGATION */
+.custom-navbar .nav-link {
+  color: #f0f0f0; /* jasny, ale nie biały na 100%, dla lepszej czytelności */
+  font-weight: 900;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
 
 /* General Custom Navbar Styling */
 .custom-navbar {
@@ -20,17 +28,18 @@
 
 /* Active navigation item styling */
 .custom-navbar .active-nav-item .nav-link {
-  background-color: fffff; /* Background similar to btnOffer */
+  background-color: none; /* Background similar to btnOffer */
   border-radius: 5px; /* Rounded edges */
   padding: 5px 5px; /* Add padding for better spacing */
   color: white !important; /* White text color */
   text-decoration: none;
+  font-size: larger;
 }
 
 
 /* Special styling for the home page */
 .home-page-navbar .custom-navbar {
-  background-color: rgba(151, 179, 195, 0.75);
+  background-color: rgba(151, 179, 195, 0.95);
 }
 
 .flag-img{
@@ -64,6 +73,7 @@
     position: fixed;
     top: 10px;
     right: 10px;
+    margin-right: 10px;
     z-index: 1100; /* Ensure it's above everything */
     background-color: rgba(124, 138, 119, 0.7); /* Match design */
     border: none;
@@ -130,4 +140,21 @@
   }
 
   
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 35px;
+  color: #00000086; /* lub inny kolor, np. czarny: #000 */
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.2);
 }
