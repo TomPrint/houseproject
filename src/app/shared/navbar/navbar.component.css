@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+.monsterrata-text {
+  font-family: "Montserrat", sans-serif;
+}
 /* NAVIGATION */
 .custom-navbar .nav-link {
   color: #f0f0f0; /* jasny, ale nie biały na 100%, dla lepszej czytelności */
-  font-weight: 900;
+  font-weight: 400;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
@@ -33,13 +37,13 @@
   padding: 5px 5px; /* Add padding for better spacing */
   color: white !important; /* White text color */
   text-decoration: none;
-  font-size: larger;
+  
 }
 
 
 /* Special styling for the home page */
 .home-page-navbar .custom-navbar {
-  background-color: rgba(151, 179, 195, 0.95);
+  background-color: rgba(151, 179, 195, 0.8);
 }
 
 .flag-img{
@@ -132,7 +136,7 @@
 
   /* Special styling for the home page fullscreen navigation */
   .home-page-navbar .fullscreen-nav {
-    background-color: rgba(151, 179, 195, 0.75); /* Light blue overlay for home */
+    background-color: rgba(151, 179, 195, 0.8); /* Light blue overlay for home */
   }
 
   .home-page-navbar .navbar-toggler {

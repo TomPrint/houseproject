@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.montserrata-text{
+  font-family: "Montserrat", sans-serif;
+}
+
+
 /* 16x9 ratio for the slideshow */
 .bg-slideshow {
   position: relative;
