@@ -2,9 +2,7 @@ import { Component, computed, signal, AfterViewInit, ViewChild, ElementRef } fro
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { BrownComponent } from '../../shared/brown/brown.component';
-import { SliderComponent } from '../../shared/slider/slider.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
-import { DesignComponent } from '../../partials/design/design.component';
 import { houses } from './houses';
 import Splide from '@splidejs/splide';
 
@@ -15,9 +13,7 @@ import Splide from '@splidejs/splide';
     NavbarComponent,
     CommonModule,
     BrownComponent,
-    SliderComponent,
     FooterComponent,
-    DesignComponent,
   ],
   templateUrl: './offer.component.html',
   styleUrls: ['./offer.component.css'],
