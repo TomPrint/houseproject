@@ -2,7 +2,7 @@ export const houses = {
     CALMA: {
       name: 'CALMA',
       square:  10, // Square footage of the house
-      image: '/assets/Calma-vector.svg', // Main image for CALMA
+      image: '/assets/budynek-1.svg', // Main image for CALMA
       drawing: ['/assets/Calma_parter.webp', '/assets/Calma_gora.webp'], // Floor plans
       renders: ['/assets/Calma_render.webp', '/assets/Calma_render2.webp'], // Render images
       facades: [
@@ -67,7 +67,7 @@ To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno,
     GIOIA: {
       name: 'GIOIA',
       square:  10,
-      image: '/assets/Gioia-vector.svg', // Main image for GIOIA
+      image: '/assets/budynek-2.svg', // Main image for GIOIA
       drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
       facades: [

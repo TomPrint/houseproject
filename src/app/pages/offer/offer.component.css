@@ -3,11 +3,11 @@
 .outside-container {
     overflow: hidden; /* Prevent unwanted overflow */
 }
+
 .container {
     max-width: 100%;
     padding: 0;
     overflow-x: hidden;
-
   }
   
   /* Title */
@@ -23,67 +23,80 @@
     }
   }
   
-  /* House wrapper */
-  .house {
-    cursor: pointer;
-    transition: all 0.3s ease;
-    opacity: 1;
+  /* Selected house wrapper */
+  .selected-wrapper {
+    width: 100%;
+    max-width: 320px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
   }
   
-  /* Image */
-  .house-img {
+  /* Shadow below selected house */
+  .shadow-container {
+    background: rgba(124, 138, 119, 0.5);
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 20px -10px rgba(124, 138, 119, 0.9);
+    padding: 0.5rem;
+  }
+  
+  /* Selected house image */
+  .selected-house-img {
+    max-height: 170%;
+    width: auto;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Carousel thumbnails */
+  .house-thumb {
+    max-width: 100px;
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
   
-  /* Name */
+  
+  /* Highlight selected thumbnail */
+  .splide__slide.active .house-thumb {
+    opacity: 1;
+    border-radius: 4px;
+  }
+  
+  /* House name and square meter label */
   .house-name {
     font-size: 0.95rem;
     font-weight: 500;
     color: #333;
     margin: 0;
     text-transform: uppercase;
-    transition: all 0.3s ease;
   }
   
-  /* Selected house */
-  .house.active .house-img {
-    transform: scale(1.15);
-    opacity: 1;
-  }
-  
-  .house.active .house-name {
-    font-weight: 700;
-  }
-  
-  /* Unselected/faded house */
-  .house.faded .house-img {
-    transform: scale(0.95);
-    opacity: 0.5;
-  }
-  
-  /* Hover effect */
-  .house:hover .house-img {
-    transform: scale(1.05);
-  }
-
   .house-square {
-    font-size: 1rem;
+    font-size: 0.85rem;
     color: #555;
-    margin-left: 6px;
-    /* no font-variant */
+    margin-left: 4px;
+    white-space: nowrap;
   }
   
-.m {
-    text-transform: lowercase !important;
-}
-
-.house-square .sup {
+  .m {
+    text-transform: lowercase;
+  }
+  
+  .sup {
     font-size: 0.6em;
     vertical-align: super;
     line-height: 1;
   }
+  
+  
+ 
+  
 
 /* DRAWINGS SECTION */
 .floor-plan-section {

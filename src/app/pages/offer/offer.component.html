@@ -3,39 +3,56 @@
  
     <app-navbar></app-navbar>
     <div class="container pt-5 mt-5">
-    <div id="oferta" class="text-center">
-      <h1 class="title mb-4">WYBIERZ SWÓJ DOM!</h1>
-  
-      <div class="row justify-content-center g-4">
-        <div
-          class="col-6 col-sm-4 col-md-3 col-lg-2"
-          *ngFor="let house of houseList()"
-        >
-          <div
-            class="house text-center p-2"
-            [class.active]="selectedHouse() === house.key"
-            [class.faded]="selectedHouse() !== house.key"
-            (click)="toggleHouse(house.key)"
-          >
+      <div id="oferta" class="text-center">
+        <h1 class="title mb-5 py-2">WYBIERZ SWÓJ DOM!</h1>
+    
+        <!-- Selected house (fixed height + shadow) -->
+        <div class="selected-house text-center mb-5">
+          <div class="selected-wrapper mx-auto shadow-container">
             <img
-              [src]="house.image"
-              [alt]="house.name + ' House'"
-              class="img-fluid house-img"
+              [src]="houses[selectedHouse()].image"
+              [alt]="houses[selectedHouse()].name + ' House'"
+              class="img-fluid selected-house-img"
             />
-            <p class="house-name mt-2">
-              {{ house.name }}
-              <span class="house-square">
-                {{ house.square }} <span class="m">m</span><span class="sup">2</span>
-              </span>
-            </p>
+          </div>
+          <p class="house-name mt-2 mb-0">
+            {{ houses[selectedHouse()].name }}
+            <span class="house-square">
+              {{ houses[selectedHouse()].square }} <span class="m">m</span><span class="sup">2</span>
+            </span>
+          </p>
+        </div>
+    
+        <!-- Scrollable carousel with all houses (including selected) -->
+        <div id="house-carousel" class="splide px-3 pb-5" #houseCarousel>
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li
+                class="splide__slide text-center"
+                *ngFor="let house of houseList()"
+                [class.active]="house.key === selectedHouse()"
+                (click)="toggleHouse(house.key)"
+              >
+                <img
+                  [src]="house.image"
+                  [alt]="house.name + ' House'"
+                  class="img-fluid house-thumb"
+                />
+                <p class="house-name mt-1 mb-0">
+                  {{ house.name }}
+                  <span class="house-square">
+                    {{ house.square }} <span class="m">m</span><span class="sup">2</span>
+                  </span>
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
+    
+    
 
-  
-
-  </div>
 
   <!-- DRAWINGS CHANGE -->
   <div class="floor-plan-section px-2">
