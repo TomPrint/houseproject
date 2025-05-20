@@ -26,9 +26,9 @@ export class OfferComponent implements AfterViewInit {
   currentDrawingIndex = signal(0);
   currentRenderIndex = signal(0);
   selectedInterior = signal<string>('');
-  selectedExterior = signal<string>('');
   currentInteriorIndex = signal(0);
   currentExteriorIndex = signal(0);
+  selectedExterior = signal<string>('');
 
   @ViewChild('houseCarousel') houseCarousel!: ElementRef;
 
@@ -46,6 +46,36 @@ export class OfferComponent implements AfterViewInit {
     this.selectedExterior.set('');
     this.currentInteriorIndex.set(0);
     this.currentExteriorIndex.set(0);
+    const newExteriors = this.houses[this.selectedHouse()]?.exteriors;
+    if (newExteriors && newExteriors.length > 0) {
+      this.selectedExterior.set(newExteriors[0].name);
+    } else {
+      this.selectedExterior.set('');
+    }
+  }
+
+  currentHouseExteriors = computed(() => {
+    const currentHouseKey = this.selectedHouse();
+    return this.houses[currentHouseKey]?.exteriors || [];
+  });
+
+  selectedExteriorObject = computed(() => {
+    const exteriors = this.currentHouseExteriors();
+    const index = this.currentExteriorIndex();
+    if (exteriors.length > index && index >= 0) {
+      return exteriors[index];
+    }
+    return null;
+  });
+
+  selectExterior(index: number): void {
+    this.currentExteriorIndex.set(index);
+    const exterior = this.selectedExteriorObject();
+    if (exterior) {
+      this.selectedExterior.set(exterior.name);
+    } else {
+      this.selectedExterior.set('');
+    }
   }
 
   nextDrawing() {
@@ -93,5 +123,9 @@ export class OfferComponent implements AfterViewInit {
         480: { perPage: 2 },
       },
     }).mount();
+
+    if (this.currentHouseExteriors().length > 0 && this.selectedExterior() === '') {
+      this.selectExterior(0);
+    }
   }
 }

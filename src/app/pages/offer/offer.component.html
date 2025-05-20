@@ -2,15 +2,18 @@
 
  
     <app-navbar></app-navbar>
+
+    <!--CAROUSEL SELECTOR SECTION  -->
     <div class="container pt-5 mt-5">
+      
       <div id="oferta" class="text-center">
-        <h1 class="title mb-5 py-2">WYBIERZ SWÓJ DOM!</h1>
+        <h1 class="title mb-5 py-4">WYBIERZ SWÓJ DOM!</h1>
     
         <!-- Selected house (fixed height + shadow) -->
         <div class="selected-house text-center mb-5">
           <div class="selected-wrapper mx-auto shadow-container">
             <img
-              [src]="houses[selectedHouse()].image"
+              [src]="houses[selectedHouse()].vector"
               [alt]="houses[selectedHouse()].name + ' House'"
               class="img-fluid selected-house-img"
             />
@@ -24,7 +27,7 @@
         </div>
     
         <!-- Scrollable carousel with all houses (including selected) -->
-        <div id="house-carousel" class="splide px-3 pb-5" #houseCarousel>
+        <div id="house-carousel" class="splide px-4 pb-5" #houseCarousel>
           <div class="splide__track">
             <ul class="splide__list">
               <li
@@ -34,7 +37,7 @@
                 (click)="toggleHouse(house.key)"
               >
                 <img
-                  [src]="house.image"
+                  [src]="house.vector"
                   [alt]="house.name + ' House'"
                   class="img-fluid house-thumb"
                 />
@@ -51,11 +54,103 @@
       </div>
     </div>
     
-    
+  <!-- HOUSE GALLERY FRONT BACK SECTION -->
+<div class="container-fluid py-5" style="background: url('/assets/bg tree 1.jpg') center center / cover no-repeat;">
+  <div class="container">
+    <div class="row justify-content-center align-items-stretch text-center">
+      <!-- Front Image -->
+      <div class="col-12 col-md-6 mb-3 mb-md-0 d-flex flex-column align-items-center">
+        <div class="ratio ratio-4x3 w-100">
+          <img
+            [src]="houses[selectedHouse()].imagefront"
+            alt="Front view of {{ houses[selectedHouse()].name }}"
+            class="img-fluid rounded shadow"
+            (click)="openModal(houses[selectedHouse()].imagefront)"
+            style="cursor: pointer;"
+          />
+        </div>
+        <p class="text-center fw-bold pt-4">WIDOK PRZÓD</p>
+      </div>
+
+      <!-- Back Image -->
+      <div class="col-12 col-md-6 d-flex flex-column align-items-center">
+        <div class="ratio ratio-4x3 w-100">
+          <img
+            [src]="houses[selectedHouse()].imageback"
+            alt="Back view of {{ houses[selectedHouse()].name }}"
+            class="img-fluid rounded shadow"
+            (click)="openModal(houses[selectedHouse()].imageback)"
+            style="cursor: pointer;"
+          />
+        </div>
+        <p class="text-center fw-bold pt-4">WIDOK TYŁ</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- BROWN ICONS SECTION -->
+  <app-brown @defer></app-brown>
+
+
+<!-- EXTERIOR SELECTOR SECTION -->
+<div class="container my-5">
+  <h3 class="text-center mb-4">WYBIERZ WYKOŃCZENIE ZEWNĘTRZNE</h3>
+
+  <!-- Thumbnail selectors row -->
+  <div class="row justify-content-center">
+    <div class="col-12 d-flex flex-wrap justify-content-center gap-3 mb-4">
+      <div
+        *ngFor="let item of currentHouseExteriors(); let i = index"
+        (click)="selectExterior(i)"
+        class="d-flex flex-column align-items-center p-2 rounded shadow-sm"
+        [ngClass]="{ 'border-active': currentExteriorIndex() === i }"
+        style="cursor: pointer; border: 2px solid transparent; width: 120px;"
+      >
+        <img
+          [src]="item.image"
+          [alt]="item.name"
+          class="rounded mb-1"
+          style="width: 100%; height: 80px; object-fit: cover;"
+        />
+        <span class="fw-semibold text-uppercase small text-center">
+          {{ item.name }}
+        </span>
+      </div>
+    </div>
+
+    <!-- Main selected image -->
+    <div class="col-12 d-flex justify-content-center">
+      <div class="selected-exterior-container text-center">
+        <div *ngIf="selectedExteriorObject() as ext">
+          <img
+            [src]="ext.image"
+            [alt]="ext.name"
+            class="img-fluid rounded shadow"
+            style="max-width: 100%; height: auto; cursor: zoom-in;"
+            (click)="openModal(ext.image)"
+          />
+          <h5 class="mt-3 text-uppercase fw-semibold">
+            {{ ext.name }}
+          </h5>
+          <p>{{ ext.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
 
 
   <!-- DRAWINGS CHANGE -->
-  <div class="floor-plan-section px-2">
+  <div class="floor-plan-section px-2 py-6">
     <div class="row justify-content-center align-items-center position-relative">
       <!-- Current Drawing Image -->
       <div class="col-12 col-md-7 text-center">
@@ -160,8 +255,6 @@
   </div>
 </div>
 
-  <!-- BROWN ICONS SECTION -->
-  <app-brown @defer></app-brown>
 
   <!-- DESIGN COMPONENT -->
   <!-- <app-design

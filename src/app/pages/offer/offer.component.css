@@ -68,7 +68,15 @@
     opacity: 1;
     border-radius: 4px;
   }
-  
+
+  /* arrow styling */
+  ::ng-deep .splide__arrow {
+    background-color: #7C8A77 !important;
+    color: white !important;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   /* House name and square meter label */
   .house-name {
     font-size: 0.95rem;
@@ -95,7 +103,18 @@
     line-height: 1;
   }
   
+
+  /* EXTERIORS SECTION */
+  .selected-exterior-container {
+    max-width: 30%; /* Adjust as needed, e.g., 60% or 50% */
+  }
   
+  
+  /* Remove blue Bootstrap active background */
+  .border-active {
+    border: 2px solid #7C8A77 !important;
+    background-color: #fff !important;
+  }
  
   
 
@@ -302,7 +321,7 @@
 
 /* SECTION FOR FACADE IMAGES */
 
-.ratio img:hover {
+.facade-wrapper .ratio img:hover{
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
