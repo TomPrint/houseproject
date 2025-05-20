@@ -104,18 +104,23 @@
   }
   
 
-  /* EXTERIORS SECTION */
-  .selected-exterior-container {
-    max-width: 30%; /* Adjust as needed, e.g., 60% or 50% */
+/* EXTERIORS SECTION */
+.selected-exterior-container {
+    width: 60%; /* Default for mobile */
+    margin: 0 auto;
   }
   
+  @media (min-width: 768px) {
+    .selected-exterior-container {
+      width: 30%; /* For tablets and larger */
+    }
+  }
   
   /* Remove blue Bootstrap active background */
   .border-active {
     border: 2px solid #7C8A77 !important;
     background-color: #fff !important;
   }
- 
   
 
 /* DRAWINGS SECTION */
