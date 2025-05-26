@@ -244,11 +244,28 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="modal-body d-flex justify-content-center align-items-center">
-<img
-  [src]="selectedImage()"
-  [ngClass]="isZoomedModal() ? 'modal-image-130' : 'modal-image-default'"
-  alt="Enlarged Drawing" />
+
+      <div class="modal-body p-0">
+        <!-- Zoomed drawing view with scroll -->
+        <div *ngIf="isZoomedModal()" class="modal-scroll-wrapper">
+          <img
+            [src]="selectedImage()"
+            class="modal-image-130"
+            alt="Enlarged Drawing"
+          />
+        </div>
+
+        <!-- Default image view, centered -->
+        <div
+          *ngIf="!isZoomedModal()"
+          class="d-flex justify-content-center align-items-center w-100 h-100"
+        >
+          <img
+            [src]="selectedImage()"
+            class="modal-image-default"
+            alt="Enlarged Drawing"
+          />
+        </div>
       </div>
     </div>
   </div>

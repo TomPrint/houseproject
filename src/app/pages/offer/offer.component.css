@@ -400,34 +400,17 @@
   }
 
   .modal-image-130 {
-    transform: scale(1.2);
-    transform-origin: center;
-    transition: transform 0.3s ease;
+    display: block;
+    width: auto;
+    height: auto;
     max-width: none;
-    max-height: 80vh;
-    cursor: zoom-in;
-  }
-
-
-
-  .magnifier-container {
-    position: relative;
-    display: inline-block;
+    max-height: none;
+    cursor: move; /* or zoom-in if you prefer */
   }
   
-  .magnifier-glass {
-    position: absolute;
-    border: 3px solid #7c8a77;
-    border-radius: 50%;
-    cursor: none;
-    width: 150px;
-    height: 150px;
-    background-repeat: no-repeat;
-    background-size: 200%; /* Controls zoom level */
-    z-index: 1052;
-    pointer-events: none;
-    display: none;
-  }
+
+
+
 
 
   
