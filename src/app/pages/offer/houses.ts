@@ -1,7 +1,7 @@
 export const houses = {
     CALMA: {
       name: 'CALMA',
-      square:  10, // Square footage of the house
+      square:  39.3, // Square footage of the house
       vector: '/assets/budynek-1.svg', // Main image for CALMA
       imagefront: '/assets/calma-front.png',
       imageback:'/assets/calma-back.png', 
@@ -63,7 +63,7 @@ To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno,
     },
     GIOIA: {
       name: 'GIOIA',
-      square:  10,
+      square:  67.8,
       vector: '/assets/budynek-2.svg',
       imagefront: '/assets/gioia-front.png',
       imageback:'/assets/gioia-back.png', // Main image for GIOIA
@@ -130,7 +130,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House3: {
       name: 'House3',
-      square:  10,
+      square:  58.0,
       vector: '/assets/budynek-3.svg',
       imagefront: '/assets/calma-front.png',
       imageback:'/assets/calma-back.png',  // Main image for GIOIA
@@ -197,7 +197,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House4: {
       name: 'House4',
-      square:  10,
+      square:  69.8,
       vector: '/assets/budynek-4.svg',
       imagefront: '/assets/gioia-front.png',
       imageback:'/assets/gioia-back.png',  // Main image for GIOIA
@@ -264,7 +264,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House5: {
       name: 'House5',
-      square:  10,
+      square:  65.3,
       vector: '/assets/budynek-5.svg',
       imagefront: '/assets/calma-front.png',
       imageback:'/assets/calma-back.png',  // Main image for GIOIA
@@ -331,7 +331,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House6: {
       name: 'House6',
-      square:  10,
+      square:  70.0,
       vector: '/assets/budynek-6.svg',
       imagefront: '/assets/gioia-front.png',
       imageback:'/assets/gioia-back.png',
@@ -398,7 +398,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House7: {
       name: 'House7',
-      square:  10,
+      square:  53.8,
       vector: '/assets/budynek-7.svg',
       imagefront: '/assets/calma-front.png',
       imageback:'/assets/calma-back.png',
@@ -465,7 +465,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House8: {
       name: 'House8',
-      square:  10,
+      square:  57.6,
       vector: '/assets/budynek-8.svg',
       imagefront: '/assets/gioia-front.png',
       imageback: '/assets/gioia-back.png',
@@ -532,7 +532,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House9: {
       name: 'House9',
-      square:  10,
+      square:  67.8,
       vector: '/assets/budynek-9.svg',
       imagefront: '/assets/calma-front.png',
       imageback:'/assets/calma-back.png', 
@@ -599,7 +599,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
     House10: {
       name: 'House10',
-      square:  10,
+      square:  58.0,
       vector: '/assets/budynek-10.svg',
       imagefront: '/assets/gioia-front.png',
       imageback:'/assets/gioia-back.png',
