@@ -23,6 +23,8 @@ export class OfferComponent implements AfterViewInit {
 
   selectedHouse = signal<keyof typeof houses>('CALMA');
   selectedImage = signal<string>('');
+  isZoomedModal = signal(false); // New signal to control zoom
+
   currentDrawingIndex = signal(0);
   currentRenderIndex = signal(0);
   selectedInterior = signal<string>('');
@@ -100,8 +102,9 @@ export class OfferComponent implements AfterViewInit {
     return this.houses[this.selectedHouse()].images;
   });
 
-  openModal(image: string) {
+  openModal(image: string, zoomed: boolean = false) {
     this.selectedImage.set(image);
+    this.isZoomedModal.set(zoomed);
     const modalElement = document.getElementById('enlargeModal');
     if (modalElement) {
       const modalInstance = new (window as any).bootstrap.Modal(modalElement);

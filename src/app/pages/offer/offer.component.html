@@ -66,10 +66,10 @@
             alt="Front view of {{ houses[selectedHouse()].name }}"
             class="img-fluid rounded shadow"
             (click)="openModal(houses[selectedHouse()].imagefront)"
-            style="cursor: pointer;"
+            style="cursor: zoom-in;"
           />
         </div>
-        <p class="text-center fw-bold pt-4">WIDOK PRZÓD</p>
+        <p class="text-center fw-bold pt-4">{{ houses[selectedHouse()].name }} WIDOK PRZÓD</p>
       </div>
 
       <!-- Back Image -->
@@ -80,10 +80,10 @@
             alt="Back view of {{ houses[selectedHouse()].name }}"
             class="img-fluid rounded shadow"
             (click)="openModal(houses[selectedHouse()].imageback)"
-            style="cursor: pointer;"
+            style="cursor: zoom-in;"
           />
         </div>
-        <p class="text-center fw-bold pt-4">WIDOK TYŁ</p>
+        <p class="text-center fw-bold pt-4"> {{ houses[selectedHouse()].name }} WIDOK TYŁ </p>
       </div>
     </div>
   </div>
@@ -95,8 +95,8 @@
 
 
 <!-- EXTERIOR SELECTOR SECTION -->
-<div class="container my-5">
-  <h3 class="text-center mb-4">WYBIERZ WYKOŃCZENIE ZEWNĘTRZNE</h3>
+<div class="container my-3">
+  <h3 class="text-center mb-4">PRZYKŁAD WYKOŃCZENIA ZEWNĘTRZNEGO</h3>
 
   <!-- Thumbnail selectors row -->
   <div class="row justify-content-center">
@@ -104,9 +104,9 @@
       <div
         *ngFor="let item of currentHouseExteriors(); let i = index"
         (click)="selectExterior(i)"
-        class="d-flex flex-column align-items-center p-2 rounded shadow-sm"
+        class="exterior-thumb d-flex flex-column align-items-center p-2 rounded shadow-sm"
         [ngClass]="{ 'border-active': currentExteriorIndex() === i }"
-        style="cursor: pointer; border: 2px solid transparent; width: 120px;"
+        style="cursor: pointer; border: 2px solid transparent;"
       >
         <img
           [src]="item.image"
@@ -125,12 +125,12 @@
       <div class="selected-exterior-container text-center">
         <div *ngIf="selectedExteriorObject() as ext">
           <img
-            [src]="ext.image"
-            [alt]="ext.name"
-            class="img-fluid rounded shadow"
-            style="max-width: 100%; height: auto; cursor: zoom-in;"
-            (click)="openModal(ext.image)"
-          />
+          [src]="ext.image"
+          [alt]="ext.name"
+          class="img-fluid rounded shadow responsive-selected-image"
+          style="padding: 2px; cursor: zoom-in;"
+          (click)="openModal(ext.image)"
+        />
           <h5 class="mt-3 text-uppercase fw-semibold">
             {{ ext.name }}
           </h5>
@@ -142,55 +142,33 @@
 </div>
 
 
-
-
-
-  
-
-
-
-  <!-- DRAWINGS CHANGE -->
-  <div class="floor-plan-section px-2 py-6">
-    <div class="row justify-content-center align-items-center position-relative">
-      <!-- Current Drawing Image -->
-      <div class="col-12 col-md-7 text-center">
-        <div class="image-wrapper">
-          <img
-            id="drawingImage"
-            [src]="houses[selectedHouse()].drawing[currentDrawingIndex()]"
-            alt="Drawing"
-            class="img-fluid floor-plan-img"
-            (click)="openModal(houses[selectedHouse()].drawing[currentDrawingIndex()])"
-          />
-        </div>
-      </div>
-      <!-- Navigation Arrow -->
-      <div class="col-2 text-center align-self-center">
-        <button class="arrow-btn px-2 py-2" (click)="nextDrawing()">
-          <i class="bi bi-chevron-right"></i>
-        </button>
-      </div>
-    </div>
-  
-    <!-- Info List -->
-    <div class="row justify-content-end mt-1 mx-2">
-      <div class="col-12 col-md-3 text-end info-list">
-        <ul class="list-unstyled">
-          <li *ngFor="let item of houses[selectedHouse()].info">
-            {{ item }}
-          </li>
-        </ul>
+<!--SVG FACADES SECTION -->
+<div class="container bg-white pt-3">
+  <h3 class="text-center pt-3 mb-0">{{ houses[selectedHouse()].name }} RYSUNEK ELEWACJI</h3>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-12 col-md-10 col-lg-8 col-xl-8 d-flex justify-content-center">
+      <div class="ratio ratio-1x1 w-100">
+        <img
+          [src]="houses[selectedHouse()].facade"
+          alt="Fasada"
+          class="img-fluid rounded facade-img"
+          (click)="openModal(houses[selectedHouse()].facade)"
+        />
       </div>
     </div>
   </div>
-
+</div>
+  
 <!-- RENDERS SECTION -->
 <div class="render-section px-2 mt-4 renders">
+  <!-- Section Title -->
+  <h3 class="text-center pt-3 mb-0">{{ houses[selectedHouse()].name }} PRZEKRÓJ DOMU</h3>
+
   <div class="row justify-content-center align-items-center">
     <!-- Render Container -->
-    <div class="col-12 col-md-8 text-center render-container">
+    <div class="col-12 col-md-10 col-lg-8 col-xl-7 text-center render-container">
       <!-- Render Image 1 -->
-      <div class="render-img-wrapper">
+      <div class="render-img-wrapper mt-3">
         <img
           [src]="houses[selectedHouse()].renders[0]"
           alt="Render 1"
@@ -211,25 +189,43 @@
   </div>
 </div>
 
-  <!-- FACADE IMAGES SECTION -->
-  <div class="container bg-white py-2">
-    <div class="row row-cols-2 row-cols-md-4 g-3 justify-content-center align-items-end">
-      <!-- Facade Images -->
-      <div
-        *ngFor="let facade of houses[selectedHouse()].facades; let i = index"
-        class="col d-flex justify-content-center"
-      >
-        <div class="ratio ratio-1x1 w-75">
-          <img
-            [src]="facade"
-            alt="Facade Image {{ i + 1 }}"
-            class="img-fluid rounded"
-            (click)="openModal(facade)"
-          />
-        </div>
+
+
+<!-- DRAWING SECTION -->
+<div class="floor-plan-section px-2 pt-4">
+  <!-- Section Title -->
+  <h3 class="text-center pt-3 mb-0">{{ houses[selectedHouse()].name }} RZUT DOMU</h3>
+
+  <div class="row justify-content-center align-items-center">
+    <!-- Drawing Image -->
+    <div class="col-12 col-md-10 col-lg-8 col-xl-7 text-center">
+      <div class="image-wrapper">
+        <img
+        [src]="houses[selectedHouse()].drawing"
+        alt="Rzut domu"
+        class="img-fluid floor-plan-img"
+        (click)="openModal(houses[selectedHouse()].drawing, true)" />
       </div>
     </div>
   </div>
+
+  <!-- Info List -->
+  <div class="row justify-content-end mt-1 mx-2">
+    <div class="col-12 col-md-3 text-end info-list">
+      <ul class="list-unstyled">
+        <li *ngFor="let item of houses[selectedHouse()].info">
+          {{ item }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <!-- MODAL FOR ENLARGED IMAGES -->
 
   <div
   class="modal fade"
@@ -249,7 +245,10 @@
         ></button>
       </div>
       <div class="modal-body d-flex justify-content-center align-items-center">
-        <img [src]="selectedImage()" alt="Enlarged Drawing" class="img-fluid" />
+<img
+  [src]="selectedImage()"
+  [ngClass]="isZoomedModal() ? 'modal-image-130' : 'modal-image-default'"
+  alt="Enlarged Drawing" />
       </div>
     </div>
   </div>

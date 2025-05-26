@@ -5,14 +5,9 @@ export const houses = {
       vector: '/assets/budynek-1.svg', // Main image for CALMA
       imagefront: '/assets/calma-front.png',
       imageback:'/assets/calma-back.png', 
-      drawing: ['/assets/Calma_parter.webp', '/assets/Calma_gora.webp'], // Floor plans
+      drawing: '/assets/rzut1.svg', // Floor plans
       renders: ['/assets/Calma_render.webp', '/assets/Calma_render2.webp'],
-      facades: [
-        '/assets/Calma_facade1.webp',
-        '/assets/Calma_facade2.webp',
-        '/assets/Calma_facade3.webp',
-        '/assets/Calma_facade4.webp',
-      ], // Facade images
+      facade: '/assets/Elewacja1.svg', // Facade image
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 4,2 m²',
@@ -46,17 +41,17 @@ To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno,
       exteriors: [
         {
           name: 'METAL',
-          image: '/assets/CALMA_metal_ext.webp',
+          image: '/assets/GIOIA_metal_ext.webp',
           description: `Fasada z blachy na rąbek łączy nowoczesny design z wytrzymałością, zapewniając długotrwałą ochronę domu. Dzięki zaawansowanemu montażowi na rąbek stojący, fasada jest estetyczna, szczelna i odporna na warunki atmosferyczne, na korozję oraz promieniowanie UV.`
         },
         {
           name: 'DREWNO',
-          image: '/assets/CALMA_drewno_ext.webp',
+          image: '/assets/GIOIA_drewno_ext.webp',
           description: `Fasada drewniana to synonim naturalnego piękna i ekologii, doskonale wpisująca się w otoczenie, jednocześnie zapewniając trwałość i funkcjonalność. Wykorzystujemy wysokiej jakości deski elewacyjne montowane pionowo, które poddawane są zaawansowanym procesom zabezpieczającym.`
         },
         {
           name: 'KOMBINACJA',
-          image: '/assets/CALMA_kombinacja_ext.webp',
+          image: '/assets/GIOIA_kombinacja_ext.webp',
           description: `Fasada drewniano-metalowa łączy naturalne piękno drewna z nowoczesnym wyglądem blachy na rąbek, tworząc elegancki i trwały efekt. Deski elewacyjne montowane pionowo dodają ciepła i przytulności, podczas gdy blacha na rąbek zapewnia nowoczesny akcent i wyjątkową ochronę.`
         }
       ],
@@ -72,14 +67,9 @@ To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno,
       vector: '/assets/budynek-2.svg',
       imagefront: '/assets/gioia-front.png',
       imageback:'/assets/gioia-back.png', // Main image for GIOIA
-      drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
+      drawing: '/assets/rzut2.svg', // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
-      facades: [
-        '/assets/Gioia_facade1.webp',
-        '/assets/Gioia_facade2.webp',
-        '/assets/Gioia_facade3.webp',
-        '/assets/Gioia_facade4.webp',
-      ], // Facade images
+      facade: '/assets/Elewacja2.svg', // Facade image, // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 4,2 m²',
@@ -144,14 +134,9 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-3.svg',
       imagefront: '/assets/calma-front.png',
       imageback:'/assets/calma-back.png',  // Main image for GIOIA
-      drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
+      drawing: '/assets/rzut3.svg', // Floor plans // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
-      facades: [
-        '/assets/Gioia_facade1.webp',
-        '/assets/Gioia_facade2.webp',
-        '/assets/Gioia_facade3.webp',
-        '/assets/Gioia_facade4.webp',
-      ], // Facade images
+      facade: '/assets/Elewacja3.svg',  // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 4,2 m²',
@@ -216,14 +201,9 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-4.svg',
       imagefront: '/assets/gioia-front.png',
       imageback:'/assets/gioia-back.png',  // Main image for GIOIA
-      drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
+      drawing: '/assets/rzut4.svg', // Floor plans // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
-      facades: [
-        '/assets/Gioia_facade1.webp',
-        '/assets/Gioia_facade2.webp',
-        '/assets/Gioia_facade3.webp',
-        '/assets/Gioia_facade4.webp',
-      ], // Facade images
+      facade: '/assets/Elewacja4.svg',  // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 4,2 m²',
@@ -288,14 +268,9 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-5.svg',
       imagefront: '/assets/calma-front.png',
       imageback:'/assets/calma-back.png',  // Main image for GIOIA
-      drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
+      drawing: '/assets/rzut5.svg', // Floor plans // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
-      facades: [
-        '/assets/Gioia_facade1.webp',
-        '/assets/Gioia_facade2.webp',
-        '/assets/Gioia_facade3.webp',
-        '/assets/Gioia_facade4.webp',
-      ], // Facade images
+      facade: '/assets/Elewacja5.svg', // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 4,2 m²',
@@ -360,14 +335,9 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-6.svg',
       imagefront: '/assets/gioia-front.png',
       imageback:'/assets/gioia-back.png',
-      drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
+      drawing: '/assets/rzut6.svg', // Floor plans // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
-      facades: [
-        '/assets/Gioia_facade1.webp',
-        '/assets/Gioia_facade2.webp',
-        '/assets/Gioia_facade3.webp',
-        '/assets/Gioia_facade4.webp',
-      ], // Facade images
+      facade: '/assets/Elewacja6.svg',  // Facade images // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 4,2 m²',
@@ -432,14 +402,9 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-7.svg',
       imagefront: '/assets/calma-front.png',
       imageback:'/assets/calma-back.png',
-      drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
+      drawing: '/assets/rzut7.svg', // Floor plans// Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
-      facades: [
-        '/assets/Gioia_facade1.webp',
-        '/assets/Gioia_facade2.webp',
-        '/assets/Gioia_facade3.webp',
-        '/assets/Gioia_facade4.webp',
-      ], // Facade images
+      facade: '/assets/Elewacja7.svg',  // Facade images // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 4,2 m²',
@@ -504,14 +469,9 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-8.svg',
       imagefront: '/assets/gioia-front.png',
       imageback: '/assets/gioia-back.png',
-      drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
+      drawing: '/assets/rzut8.svg', // Floor plans // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
-      facades: [
-        '/assets/Gioia_facade1.webp',
-        '/assets/Gioia_facade2.webp',
-        '/assets/Gioia_facade3.webp',
-        '/assets/Gioia_facade4.webp',
-      ], // Facade images
+      facade: '/assets/Elewacja8.svg',  // Facade images // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 4,2 m²',
@@ -576,14 +536,9 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-9.svg',
       imagefront: '/assets/calma-front.png',
       imageback:'/assets/calma-back.png', 
-      drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
+      drawing: '/assets/rzut9.svg', // Floor plans // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
-      facades: [
-        '/assets/Gioia_facade1.webp',
-        '/assets/Gioia_facade2.webp',
-        '/assets/Gioia_facade3.webp',
-        '/assets/Gioia_facade4.webp',
-      ], // Facade images
+      facade: '/assets/Elewacja9.svg',  // Facade images // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 4,2 m²',
@@ -648,14 +603,9 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-10.svg',
       imagefront: '/assets/gioia-front.png',
       imageback:'/assets/gioia-back.png',
-      drawing: ['/assets/Gioia_parter.webp', '/assets/Gioia_gora.webp'], // Floor plans
+      drawing: '/assets/rzut10.svg', // Floor plans
       renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
-      facades: [
-        '/assets/Gioia_facade1.webp',
-        '/assets/Gioia_facade2.webp',
-        '/assets/Gioia_facade3.webp',
-        '/assets/Gioia_facade4.webp',
-      ], // Facade images
+      facade: '/assets/Elewacja10.svg',  // Facade images // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
         '1. Wiatrołap - 4,2 m²',
