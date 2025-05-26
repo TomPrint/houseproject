@@ -194,20 +194,25 @@
 <!-- DRAWING SECTION -->
 <div class="floor-plan-section px-2 pt-4">
   <!-- Section Title -->
-  <h3 class="text-center pt-3 mb-0">{{ houses[selectedHouse()].name }} RZUT DOMU</h3>
+  <h3 class="text-center pt-3 mb-0">
+    {{ houses[selectedHouse()].name }} RZUT DOMU
+  </h3>
 
   <div class="row justify-content-center align-items-center">
-    <!-- Drawing Image -->
-    <div class="col-12 col-md-10 col-lg-8 col-xl-7 text-center">
-      <div class="image-wrapper">
+    <!-- Drawing Image Column -->
+    <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+      <div class="image-wrapper d-flex justify-content-center">
         <img
-        [src]="houses[selectedHouse()].drawing"
-        alt="Rzut domu"
-        class="img-fluid floor-plan-img"
-        (click)="openModal(houses[selectedHouse()].drawing, true)" />
+          [src]="houses[selectedHouse()].drawing"
+          alt="Rzut domu"
+          class="floor-plan-img"
+          (click)="openModal(houses[selectedHouse()].drawing, true)"
+        />
       </div>
     </div>
   </div>
+
+
 
   <!-- Info List -->
   <div class="row justify-content-end mt-1 mx-2">
