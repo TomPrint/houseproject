@@ -21,7 +21,7 @@ export const routes: Routes = [
   { path: 'oferta', component: OfferComponent},
   { path: 'oferta/catalog', component: CatalogComponent},
   { path: 'oferta/realizacja', component:RealizationComponent},
-  { path: 'oferta/indywidualna', component: IndividualComponent},
+  { path: 'wnetrza', component: IndividualComponent},
   { path: 'dostepne', component: AvaiableComponent},
 
   { path: '**', redirectTo: '', pathMatch: 'full' }, // ! place this line always as last item !
