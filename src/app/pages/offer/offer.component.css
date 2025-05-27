@@ -371,8 +371,6 @@
 
 
 
-
-
 /* MODAL */
 .modal-content {
     background-color: #ffffff;
@@ -388,6 +386,28 @@
     left: 1rem;
     top: 1rem;
     z-index: 1051;
+  }
+
+  .modal-scroll-wrapper {
+    width: 100vw;
+    height: 100vh;      /* fill the entire viewport/modal */
+    overflow: auto;     /* allow scrolling if the image overflows */
+  }
+
+  @media (max-width: 768px) {
+    .modal-scroll-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-image-130 {
+      width: 90%;
+      height: auto;
+    }
+  }
+
+  .modal {
+    z-index: 1200; /* Higher than .navbar-toggler (z-index: 1100) */
   }
   
   /* Default-sized image in modal (100% width max, centered, auto scale) */
