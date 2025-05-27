@@ -151,7 +151,7 @@
         <img
           [src]="houses[selectedHouse()].facade"
           alt="Fasada"
-          class="img-fluid rounded facade-img"
+          class="img-fluid rounded facade-img px-2"
           (click)="openModal(houses[selectedHouse()].facade)"
         />
       </div>
@@ -215,7 +215,7 @@
 
 
   <!-- Info List -->
-  <div class="row justify-content-end mt-1 mx-2">
+  <div class="row justify-content-end mt-1 mx-2 mb-5 pb-5">
     <div class="col-12 col-md-3 text-end info-list">
       <ul class="list-unstyled">
         <li *ngFor="let item of houses[selectedHouse()].info">
@@ -230,7 +230,7 @@
 
 
 
-  <!-- MODAL FOR ENLARGED IMAGES -->
+  <!-- MODAL CODE FOR ENLARGED IMAGES -->
 
   <div
   class="modal fade"
