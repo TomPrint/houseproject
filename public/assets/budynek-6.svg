@@ -5,7 +5,7 @@
       .cls-1 {
         stroke-linecap: round;
         stroke-linejoin: round;
-        stroke-width: .14px;
+        stroke-width: .4px;
       }
 
       .cls-1, .cls-2, .cls-3 {
