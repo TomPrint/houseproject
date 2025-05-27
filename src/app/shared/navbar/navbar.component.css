@@ -17,9 +17,10 @@
   position: absolute;
   top: 15px;
   right: 5px;
-  background-color: rgba(124, 138, 119, 0.5); /* Default green background */
-  padding: 10px 20px;
-  border-radius: 5px;
+  background-color: rgba(124, 138, 119, 0.8); /* Default green background */
+  padding: 5px 5px;
+  box-shadow: 0px 8px 24px -9px rgba(66, 68, 90, 1);
+  border-radius: 8px;
   z-index: 10;
   width: auto;
   overflow: hidden;
@@ -33,7 +34,7 @@
 /* Active navigation item styling */
 .custom-navbar .active-nav-item .nav-link {
   background-color: none; /* Background similar to btnOffer */
-  border-radius: 5px; /* Rounded edges */
+  border-radius: 8px; /* Rounded edges */
   padding: 5px 5px; /* Add padding for better spacing */
   color: white !important; /* White text color */
   text-decoration: none;
@@ -43,7 +44,8 @@
 
 /* Special styling for the home page */
 .home-page-navbar .custom-navbar {
-  background-color: rgba(151, 179, 195, 0.8);
+  background-color: rgba(124, 138, 119, 0.8);
+  box-shadow: 0px 8px 24px -9px rgba(66, 68, 90, 1);
 }
 
 .flag-img{
@@ -79,7 +81,7 @@
     right: 10px;
     margin-right: 10px;
     z-index: 1100; /* Ensure it's above everything */
-    background-color: rgba(124, 138, 119, 0.7); /* Match design */
+    background-color: rgba(124, 138, 119, 0.8); /* Match design */
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -93,7 +95,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(124, 138, 119, 0.9); /* Fullscreen green overlay */
+    background-color: rgba(124, 138, 119, 0.8); /* Fullscreen green overlay */
     z-index: 1050; /* Ensure it's above everything */
     display: none; /* Initially hide fullscreen menu */
     align-items: center;
@@ -136,11 +138,11 @@
 
   /* Special styling for the home page fullscreen navigation */
   .home-page-navbar .fullscreen-nav {
-    background-color: rgba(151, 179, 195, 0.8); /* Light blue overlay for home */
+    background-color: rgba(124, 138, 119, 0.8); /* Light blue overlay for home */
   }
 
   .home-page-navbar .navbar-toggler {
-    background-color: rgba(151, 179, 195, 0.75);
+    background-color: rgba(124, 138, 119, 0.8);
   }
 
   
@@ -153,7 +155,7 @@
   background: none;
   border: none;
   font-size: 35px;
-  color: #00000086; /* lub inny kolor, np. czarny: #000 */
+  color: rgb(43, 58, 124); 
   cursor: pointer;
   z-index: 1000;
   transition: transform 0.3s ease;
