@@ -19,6 +19,7 @@ import { environment } from '../../../environment';
 })
 export class ContactComponent implements OnInit {
   contactForm!: FormGroup;
+  formSubmitted: boolean = false; 
   formError: boolean = false;
   formSuccess: boolean = false; 
   
@@ -34,10 +35,15 @@ export class ContactComponent implements OnInit {
       surname: ['', [Validators.required, Validators.pattern('^[a-zA-ZÀ-ÿąćęłńóśźżĄĆĘŁŃÓŚŹŻ\\s-]+$')]],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.pattern('^[0-9]{7,15}$')]],
-      topic: ['', Validators.required],
+      // topic: ['', Validators.required],
       contactPreference: ['', Validators.required],
       message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(1000)]]
     })
+      this.contactForm.valueChanges.subscribe(() => {
+    if (this.formSubmitted && this.contactForm.valid) {
+      this.formError = false; // Ukryj komunikat o błędzie, jeśli formularz został poprawiony
+    }
+  });
   }
 
   onSubmit() {
@@ -58,16 +64,19 @@ export class ContactComponent implements OnInit {
       surname: this.contactForm.value.surname,
       email: this.contactForm.value.email,
       phone: this.contactForm.value.phone,
-      topic: this.contactForm.value.topic,
+      // topic: this.contactForm.value.topic,
       contactPreference: this.contactForm.value.contactPreference,
       message: this.contactForm.value.message
     };
 
     emailjs.send(environment.SERVICE, environment.TEMPLATE, formData ,environment.PUBLIC)
     .then(() => {
-        console.log('SUCCESS!');
-        console.log(this.contactForm.value);
-        this.contactForm.reset(); // Reset the form fields
+        this.contactForm.reset();
+         this.formSubmitted = false;      // resetuje stan kliknięcia
+      // schowaj komunikat po 5 sekundach
+      setTimeout(() => {
+        this.formSuccess = false;
+      }, 4000); // Reset the form fields
       },
       (error:any) => {
         console.log('FAILED...', (error as EmailJSResponseStatus).text);

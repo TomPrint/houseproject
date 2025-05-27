@@ -9,6 +9,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FooterComponent } from "../../shared/footer/footer.component";
+import { ContactComponent } from "../contact/contact.component";
 
 
 
@@ -20,7 +21,7 @@ import { FooterComponent } from "../../shared/footer/footer.component";
     RouterLink,
     MatProgressSpinnerModule,
     MatButtonModule,
-    MatTooltipModule, NavbarComponent, FooterComponent, FaderComponent],
+    MatTooltipModule, NavbarComponent, FooterComponent, FaderComponent, ContactComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
