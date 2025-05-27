@@ -143,13 +143,13 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
         '2. Pokój dzienny - 24,2 m²',
         '3. Kuchnia - 5,3 m²',
         '4. Łazienka - 3,8 m²',
-        '5. Hol - 6,9 m²',
-        '6. Pokój - 4,5 m²',
-        '7. Pokój - 4,6 m²',
+        '8. Hol - 6,9 m²',
+        '9. Pokój - 4,5 m²',
+        '10. Pokój - 4,6 m²',
         'Powierzchnia dodatkowa:',
-        '8. Taras - 11,8 m²',
-        '9. Taras - 11,8 m²',
-        '10. Ganek - 4,3 m²'
+        '5. Taras - 11,8 m²',
+        '6. Taras - 11,8 m²',
+        '7. Ganek - 4,3 m²'
       ],
       interiors: [
         {
@@ -211,13 +211,13 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
         '2. Pokój dzienny - 27,4 m²',
         '3. Kuchnia - 5,3 m²',
         '4. Łazienka - 3,8 m²',
-        '5. Hol - 3,2 m²',
-        '6. Pokój - 5,2 m²',
-        '7. Pokój - 5,7 m²',
+        '8. Hol - 3,2 m²',
+        '9. Pokój - 5,2 m²',
+        '10. Pokój - 5,7 m²',
         'Powierzchnia dodatkowa:',
-        '8. Taras - 11,6 m²',
-        '9. Taras - 11,8 m²',
-        '10. Ganek - 4,3 m²'
+        '5. Taras - 11,6 m²',
+        '6. Taras - 11,8 m²',
+        '7. Ganek - 4,3 m²'
       ],
       interiors: [
         {
@@ -344,14 +344,14 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
         '2. Pokój dzienny + aneks kuchenny - 29,6 m²',
         '3. Łazienka - 4,7 m²',
         '4. Pokój - 14,5 m²',
-        '5. Hol - 5,3 m²',
-        '6. Pokój - 5,1 m²',
-        '7. Pokój - 6,4 m²',
-        '8. Pokój - 6,4 m²',
-        '9. Łazienka - 1,2 m²',
+        '7. Hol - 5,3 m²',
+        '8. Pokój - 5,1 m²',
+        '9. Pokój - 6,4 m²',
+        '10. Pokój - 6,4 m²',
+        '11. Łazienka - 1,2 m²',
         'Powierzchnia dodatkowa:',
-        '10. Pom. tech. - 1,8 m²',
-        '11. Taras - 7,5 m²'
+        '5. Pom. tech. - 1,8 m²',
+        '6. Taras - 7,5 m²'
       ],
       interiors: [
         {
@@ -412,13 +412,13 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
         '1. Hol - 3,6 m²',
         '2. Jadalnia + aneks kuchenny - 27,9 m²',
         '3. Łazienka - 4,2 m²',
-        '4. Hol - 7,4 m²',
-        '5. Łazienka - 2,7 m²',
-        '6. Pokój - 13,9 m²',
-        '7. Pokój - 9,1 m²',
+        '6. Hol - 7,4 m²',
+        '7. Łazienka - 2,7 m²',
+        '8. Pokój - 13,9 m²',
+        '9. Pokój - 9,1 m²',
         'Powierzchnia dodatkowa:',
-        '8. Pom. tech. - 2,5 m²',
-        '9. Taras - 6,3 m²',
+        '4. Pom. tech. - 2,5 m²',
+        '5. Taras - 6,3 m²',
         '10. Taras - 6,2 m²'
       ],
       interiors: [
@@ -481,13 +481,13 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
         '2. WC + Pom. tech. - 4,1 m²',
         '3. Kuchnia - 4,7 m²',
         '4. Pokój dzienny - 20,5 m²',
-        '5. Hol - 3,7 m²',
-        '6. Pokój - 9,4 m²',
-        '7. Pokój - 8,9 m²',
-        '8. Łazienka + pralnia - 6,3 m²',
+        '7. Hol - 3,7 m²',
+        '8. Pokój - 9,4 m²',
+        '9. Pokój - 8,9 m²',
+        '10. Łazienka + pralnia - 6,3 m²',
         'Powierzchnia dodatkowa:',
-        '9. Taras - 2,9 m²',
-        '10. Taras - 10,2 m²'
+        '6. Taras - 2,9 m²',
+        '11. Taras - 10,2 m²'
       ],
       interiors: [
         {
@@ -548,14 +548,17 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
         '1. Hol - 2,7 m²',
         '2. Kuchnia - 10,2 m²',
         '3. Pokój dzienny + jadalnia - 21,5 m²',
-        '4. Taras - 10,5 m²',
-        '5. Łazienka - 3,1 m²',
-        '6. Hol - 5,2 m²',
-        '7. Pokój - 9,6 m²',
-        '8. Pokój - 11,7 m²',
-        '9. Pokój - 8,3 m²',
-        '10. Łazienka - 7,4 m²',
-        '11. Taras - 3,2 m²',
+        '3. Taras - 9 m²',
+        '4. Gabinet - 6,1 m²',
+        '5. Pom. tech. - 2 m²',
+        '5. Taras - 10,5 m²',
+        '6. Łazienka - 3,1 m²',
+        '8. Hol - 5,2 m²',
+        '9. Pokój - 9,6 m²',
+        '10. Pokój - 11,7 m²',
+        '11. Pokój - 8,3 m²',
+        '12. Łazienka - 7,4 m²',
+        '13. Taras - 3,2 m²',
       ],
       interiors: [
         {
@@ -617,12 +620,12 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
         '2. Pokój dzienny + aneks kuchenny - 25,6 m²',
         '3. Łazienka - 4,2 m²',
         '4. Pokój - 7,5 m²',
-        '5. Ganek - 4,3 m²',
-        '6. Hol - 2,8 m²',
-        '7. Pokój - 5,1 m²',
+        '7. Ganek - 4,3 m²',
+        '8. Hol - 2,8 m²',
+        '9. Pokój - 5,1 m²',
         'Powierzchnia dodatkowa:',
-        '8. Taras - 4,2 m²',
-        '9. Taras - 4,2 m²',
+        '5. Taras - 4,2 m²',
+        '6. Taras - 4,2 m²',
         '10. Antresola - 0,9 m²'
       ],
       interiors: [
