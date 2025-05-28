@@ -6,7 +6,13 @@
       <div class="splide__track">
         <ul class="splide__list">
           <li class="splide__slide" *ngFor="let image of images; let i = index">
-            <img [src]="image" [attr.alt]="'Slider image ' + (i + 1)">
+            <img 
+              [src]="image.src" 
+              [attr.alt]="'Slider image ' + (i + 1)"
+              (click)="goToOffer(image.houseKey)"
+              style="cursor:pointer;" 
+              />
+             <div class="image-caption text-center">{{ image.caption }}</div>
           </li>
         </ul>
       </div>

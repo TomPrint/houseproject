@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { ContactComponent } from "../contact/contact.component";
+import { SliderComponent } from "../../shared/slider/slider.component";
 
 
 
@@ -21,7 +22,7 @@ import { ContactComponent } from "../contact/contact.component";
     RouterLink,
     MatProgressSpinnerModule,
     MatButtonModule,
-    MatTooltipModule, NavbarComponent, FooterComponent, FaderComponent, ContactComponent],
+    MatTooltipModule, NavbarComponent, FooterComponent, FaderComponent, ContactComponent, SliderComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -29,6 +30,19 @@ export class HomeComponent {
   Walk3dSanitizedUrl: SafeResourceUrl;
   loading = true; // Loading spinner
   // showScrollTop = false;
+  sliderImages = [
+  { src: 'assets/budynek-1.svg', caption: 'CALMA', houseKey: 'CALMA' },
+  { src: 'assets/budynek-2.svg', caption: 'GIOIA',  houseKey: 'GIOIA' },
+  { src: 'assets/budynek-3.svg', caption: 'House3', houseKey: 'House3' },
+  { src: 'assets/budynek-4.svg', caption: 'Budynek 4', houseKey: 'House4'  },
+  { src: 'assets/budynek-5.svg', caption: 'Budynek 5', houseKey: 'House5'  },
+  { src: 'assets/budynek-6.svg', caption: 'Budynek 6', houseKey: 'House6'  },
+  { src: 'assets/budynek-7.svg', caption: 'Budynek 7', houseKey: 'House7'  },
+  { src: 'assets/budynek-8.svg', caption: 'Budynek 8', houseKey: 'House8'  },
+  { src: 'assets/budynek-9.svg', caption: 'Budynek 9', houseKey: 'House9'  },
+  { src: 'assets/budynek-10.svg', caption: 'Budynek 10', houseKey: 'House10'  },
+];
+
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

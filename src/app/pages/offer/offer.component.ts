@@ -1,29 +1,35 @@
-import { Component, computed, signal, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  computed,
+  signal,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  inject,
+  OnInit,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { BrownComponent } from '../../shared/brown/brown.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { houses } from './houses';
 import Splide from '@splidejs/splide';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-offer',
   standalone: true,
-  imports: [
-    NavbarComponent,
-    CommonModule,
-    BrownComponent,
-    FooterComponent,
-  ],
+  imports: [NavbarComponent, CommonModule, BrownComponent, FooterComponent],
   templateUrl: './offer.component.html',
   styleUrls: ['./offer.component.css'],
 })
-export class OfferComponent implements AfterViewInit {
+export class OfferComponent implements AfterViewInit, OnInit {
   houses = houses;
+  route = inject(ActivatedRoute);
 
   selectedHouse = signal<keyof typeof houses>('CALMA');
   selectedImage = signal<string>('');
-  isZoomedModal = signal(false); // New signal to control zoom
+  isZoomedModal = signal(false);
 
   currentDrawingIndex = signal(0);
   currentRenderIndex = signal(0);
@@ -40,6 +46,21 @@ export class OfferComponent implements AfterViewInit {
       ...house,
     }))
   );
+
+ ngOnInit(): void {
+  this.route.queryParamMap.subscribe((params) => {
+    const houseParam = params.get('house');
+    if (houseParam) {
+      // Znajdujemy klucz w this.houses niezależnie od wielkości liter
+      const houseKey = Object.keys(this.houses).find(
+        key => key.toLowerCase() === houseParam.toLowerCase()
+      );
+      if (houseKey) {
+        this.toggleHouse(houseKey);
+      }
+    }
+  });
+}
 
   toggleHouse(house: string) {
     this.selectedHouse.set(house as keyof typeof houses);

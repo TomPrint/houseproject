@@ -29,7 +29,7 @@
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
-    opacity: 25%; 
+    opacity: 18%; 
     z-index: 1; /* Positioned behind content */
 }
 
@@ -44,3 +44,4 @@
      /* optional, rounds the image corners */
   }
 }
+

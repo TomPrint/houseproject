@@ -13,7 +13,7 @@ import { environment } from '../../../environment';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [NavbarComponent, FooterComponent, MatInputModule, ReactiveFormsModule, CommonModule],
+  imports: [ MatInputModule, ReactiveFormsModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })

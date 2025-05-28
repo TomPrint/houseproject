@@ -9,11 +9,13 @@ a {
     height:60vh;  
 }
 
-@media (max-width: 768px) and (orientation: landscape) {
+@media (max-width: 950px) and (orientation: landscape) {
     .bg-green {
-        min-height: 70vh;
+        min-height: 120vh;
+        }
     }
-  }
+    
+  
 
 
 .shadow {
@@ -77,9 +79,9 @@ input[type="radio"]:checked:focus {
 }
 
 /* Wyśrodkowanie zawartości na małych ekranach */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .bg-green {
-        height: 55vh;
+        height: 65vh;
         text-align: center;
         margin-bottom: 10px; /* Zmniejszenie wysokości tła na urządzeniach mobilnych */
     }
@@ -119,3 +121,21 @@ input[type="radio"]:checked:focus {
     margin-top: 0;
     margin-bottom: 0; /* Usuń dodatkowe odstępy nad input */
   }
+
+  @media (max-width: 700px), (max-width: 750px) and (orientation: landscape) {
+  .contact-info {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .contact-info p {
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-info a {
+    display: inline-block;
+    width: 100%;
+  }
+}
