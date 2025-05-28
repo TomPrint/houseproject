@@ -40,7 +40,7 @@ export class SliderComponent implements OnChanges, OnDestroy {
       try {
         this.splideInstance = new Splide(container, {
           // --- Splide Options ---
-          type: 'loop',
+          type: 'slide',
           perPage: 5,
           perMove: 1,
           gap: '1rem',
