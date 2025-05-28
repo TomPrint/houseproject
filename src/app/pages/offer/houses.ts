@@ -92,18 +92,19 @@ Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktow
 `
         },
         {
+          name: 'MINIMALISTYCZNY',
+          image: '/assets/GIOIA_minimalistyczny_int.webp',
+          description: `Minimalizm połączony z japońską estetyką tworzy przestrzeń pełną spokoju i harmonii. Naturalne drewno i duże ilości światła wprowadzają ciepło i naturalność do każdej części domu. Proste linie i oszczędne formy podkreślają funkcjonalność oraz elegancję wnętrza, a subtelne akcenty dodają mu charakteru.
+To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz wysoką funkcjonalność. Dzięki przemyślanemu designowi oferuje przestrzeń, w której można czuć się zrelaksowanym i zintegrowanym z naturą.`
+        },
+        {
           name: 'SKANDYNAWSKI',
           image: '/assets/GIOIA_skandynawski_int.webp',
           description: `Skandynawski styl to nie tylko minimalizm, ale także praktyczność i wygoda. Meble o prostych kształtach są funkcjonalne i estetyczne, a inteligentne rozwiązania przestrzenne maksymalizują użyteczność każdego metra kwadratowego. 
 To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno, ale nie boją się odrobiny koloru. Dzięki przemyślanemu designowi i wysokiej jakości materiałom, przestrzeń ta jest nie tylko estetyczna, ale również komfortowa i funkcjonalna. To miejsce, w którym można czuć się swobodnie, zrelaksowanym i pełnym energii.
 `
         },
-        {
-          name: 'MINIMALISTYCZNY',
-          image: '/assets/GIOIA_minimalistyczny_int.webp',
-          description: `Minimalizm połączony z japońską estetyką tworzy przestrzeń pełną spokoju i harmonii. Naturalne drewno i duże ilości światła wprowadzają ciepło i naturalność do każdej części domu. Proste linie i oszczędne formy podkreślają funkcjonalność oraz elegancję wnętrza, a subtelne akcenty dodają mu charakteru.
-To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz wysoką funkcjonalność. Dzięki przemyślanemu designowi oferuje przestrzeń, w której można czuć się zrelaksowanym i zintegrowanym z naturą.`
-        }
+
       ],
       exteriors: [
         {
