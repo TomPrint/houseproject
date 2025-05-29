@@ -31,16 +31,19 @@ export class HomeComponent {
   loading = true; // Loading spinner
   // showScrollTop = false;
   sliderImages = [
-  { src: 'assets/budynek-1.svg', caption: 'CALMA', houseKey: 'CALMA' },
-  { src: 'assets/budynek-2.svg', caption: 'GIOIA',  houseKey: 'GIOIA' },
-  { src: 'assets/budynek-3.svg', caption: 'House3', houseKey: 'House3' },
-  { src: 'assets/budynek-4.svg', caption: 'Budynek 4', houseKey: 'House4'  },
-  { src: 'assets/budynek-5.svg', caption: 'Budynek 5', houseKey: 'House5'  },
-  { src: 'assets/budynek-6.svg', caption: 'Budynek 6', houseKey: 'House6'  },
-  { src: 'assets/budynek-7.svg', caption: 'Budynek 7', houseKey: 'House7'  },
-  { src: 'assets/budynek-8.svg', caption: 'Budynek 8', houseKey: 'House8'  },
-  { src: 'assets/budynek-9.svg', caption: 'Budynek 9', houseKey: 'House9'  },
-  { src: 'assets/budynek-10.svg', caption: 'Budynek 10', houseKey: 'House10'  },
+  { src: 'assets/budynek-1.svg', caption: 'CALMA - użyt.: 27.8 m2 | zab.: 39.3 m2', houseKey: 'CALMA' },
+  { src: 'assets/budynek-3.svg', caption: 'FRESCA - użytk.: 53.5 m2 | zab.: 58 m2 ', houseKey: 'FRESCA' },
+  { src: 'assets/budynek-2.svg', caption: 'GIOIA - użytk.: 54.6 m2 | zab.: 67.8 m2' ,  houseKey: 'GIOIA' },
+  { src: 'assets/budynek-4.svg', caption: 'ARIOSA - użytk.: 54.8 m2 | zab.: 69.8 m2 ', houseKey: 'ARIOSA' },
+  { src: 'assets/budynek-6.svg', caption: 'SOLARE - użytk: 78.5 m2 | zab.: 70 m2 ', houseKey: 'SOLARE' },
+  { src: 'assets/budynek-9.svg', caption: 'RICCA - użytk.: 110.5 m2 | zab.: 67.8 m2 ', houseKey: 'RICCA' },
+  { src: 'assets/budynek-5.svg', caption: 'ALLEGRA - użytk.: 40.5 m2 | zab.: 65.3 m2 ', houseKey: 'ALLEGRA' },
+  { src: 'assets/budynek-10.svg', caption: 'CARINA - użytk.: 53.7 m2 | zab.: 58 m2 ', houseKey: 'CARINA' },
+  { src: 'assets/budynek-8.svg', caption: 'MODERNA - użytk.: 61.5 m2 | zab.: 57.6 m2 ', houseKey: 'MODERNA'  },
+  { src: 'assets/budynek-7.svg', caption: 'TONICA - użytk.: 68.8 m2 | zab.: 53.8 m2 ', houseKey: 'TONICA'  },
+  
+  
+  
 ];
 
 

@@ -20,7 +20,7 @@ export const routes: Routes = [
   { path: 'technologia', component: TechnologyComponent},
   { path: 'oferta', component: OfferComponent},
   { path: 'oferta/catalog', component: CatalogComponent},
-  { path: 'oferta/realizacja', component:RealizationComponent},
+  { path: 'jaktodziala', component:RealizationComponent},
   { path: 'wnetrza', component: IndividualComponent},
   { path: 'dostepne', component: AvaiableComponent},
 

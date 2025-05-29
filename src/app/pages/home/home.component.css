@@ -53,42 +53,11 @@
     /* padding: 10px 20px; */
 }
 
-.logo-container {
-    position: absolute; /* Positioned relative to the parent */
-    top: 20px; /* Adjust spacing from the top */
-    left: 10%; /* Move it more to the left side */
-    transform: translateX(0); /* Neutralize centering */
-    z-index: 10; /* Ensure it's above other elements */
-}
-
-/* Logo size */
-.logo {
-    max-height: 150px; /* Default size */
-    width: auto;
-    height: auto;
-}
-
-/* Larger Screens - Adjustments */
-@media (min-width: 1200px) {
-    .logo-container {
-        top: 30px; /* Add more spacing from the top */
-        left: 5%; /* Move further to the left */
-    }
-
-    .logo {
-        max-height: 250px; /* Make the logo bigger */
-        width: auto; /* Maintain aspect ratio */
-        height: auto;
-    }
-}
-
 /* General adjustments for other elements */
 .outside-container {
     position: relative; /* Ensure proper stacking context */
     overflow: hidden; /* Prevent unwanted overflow */
 }
-
-
 
 /* ! SECTION 1 ! */
 
@@ -216,9 +185,6 @@
 
 /* Responsive behavior for smaller screens */
 @media (max-width: 768px) {
-    .logo {
-        max-height: 100px; /* Shrink logo height on smaller screens */
-    }
 
     .navbar-nav .nav-item {
         margin-top: 5px; /* Reduce top margin for smaller screens */

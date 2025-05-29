@@ -9,8 +9,6 @@
     font-style: normal;
   }
 
-  
-
 body {
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
@@ -21,4 +19,39 @@ body {
     overflow-y: scroll; /* Keep vertical scroll on html */
 }
 
+/* SEKCJA LOGO */
 
+.logo-container {
+    position: absolute; 
+    top: 20px; 
+    left: 10%; 
+    transform: translateX(0); 
+    z-index: 10; 
+}
+
+.logo {
+    max-height: 180px;
+    width: auto;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-height: 150px; 
+    }
+}
+
+@media (min-width: 1200px) {
+    .logo-container {
+        top: 30px; 
+        left: 5%; 
+    }
+
+    .logo {
+        max-height: 250px; 
+        width: auto; 
+        height: auto;
+    }
+}
+
+/* NOWA SEKCJA */
