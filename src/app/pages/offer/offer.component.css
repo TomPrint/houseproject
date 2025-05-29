@@ -1,3 +1,6 @@
+.logo-container { 
+    filter: invert(1);
+}
 /* General Container Styles */
 
 .outside-container {

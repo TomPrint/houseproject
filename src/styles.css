@@ -23,8 +23,8 @@ body {
 
 .logo-container {
     position: absolute; 
-    top: 20px; 
-    left: 10%; 
+    top: 10px; 
+    left: 8%; 
     transform: translateX(0); 
     z-index: 10; 
 }
