@@ -6,7 +6,7 @@
 }
 /* NAVIGATION */
 .custom-navbar .nav-link {
-  color: #f0f0f0; /* jasny, ale nie biały na 100%, dla lepszej czytelności */
+  color: #f0f0f0; 
   font-weight: 400;
   font-size: 1rem;
   transition: color 0.3s ease;
@@ -33,12 +33,9 @@
 
 /* Active navigation item styling */
 .custom-navbar .active-nav-item .nav-link {
-  background-color: none; /* Background similar to btnOffer */
-  border-radius: 8px; /* Rounded edges */
-  padding: 5px 5px; /* Add padding for better spacing */
-  color: white !important; /* White text color */
-  text-decoration: none;
-  
+  font-size: 1rem; /* brak powiększania */
+  color: white !important;
+  text-decoration: underline;
 }
 
 
