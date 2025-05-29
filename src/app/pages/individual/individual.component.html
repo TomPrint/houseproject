@@ -3,69 +3,73 @@
 
   <!-- Logo Section -->
   <div class="logo-container">
-    <a href="" routerLink="/"><img class="logo img-fluid" src="/assets/logo.png" alt="Logo"></a>
+    <a routerLink="/">
+      <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
+    </a>
   </div>
 
   <div class="container py-2 px-2 mb-5">
-    <h2 class="header-container text-center py-2">NASZE PRZYKŁADOWE WNĘTRZA</h2>
-    <p class="lead px-5">Twoja przestrzeń, Twój styl. Poznaj nasze inspiracje.</p>
+    <h2 class="header-container text-center py-2 mb-5">
+      NASZE PRZYKŁADOWE WNĘTRZA
+    </h2>
 
     <div *ngFor="let style of galleryData" class="mb-4">
       <h2>{{ style.style }}</h2>
       <p>{{ style.description }}</p>
-      <div class="row row-cols-1 row-cols-md-2 g-4">
+
+      <div class="row row-cols-1 row-cols-md-2 g-2">
+        <!-- CALMA Image -->
         <div class="col">
-          <div class="card">
+          <div class="card border-0">
             <img
               [src]="style.calmaImage"
               class="card-img-top gallery-image"
               alt="CALMA {{ style.style }}"
               (click)="openModal(style.calmaImage)"
               style="cursor: pointer;"
-            >
-            <div class="card-body">
-              <h5 class="card-title">{{ style.style }}</h5>
-            </div>
+            />
           </div>
         </div>
+
+        <!-- GIOIA Image -->
         <div class="col">
-          <div class="card">
+          <div class="card border-0">
             <img
               [src]="style.gioiaImage"
               class="card-img-top gallery-image"
               alt="GIOIA {{ style.style }}"
               (click)="openModal(style.gioiaImage)"
               style="cursor: pointer;"
-            >
-            <div class="card-body">
-              <h5 class="card-title">{{ style.style }}</h5>
-            </div>
+            />
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Modal -->
     <div
-    class="modal fade transparent-modal"
-    id="enlargeModal"
-    tabindex="-1"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content bg-transparent border-0">
-        <div class="modal-body p-0 d-flex justify-content-center align-items-center bg-transparent">
-          <img
-            *ngIf="selectedImage"
-            [src]="selectedImage"
-            class="img-fluid"
-            alt="Fullscreen Interior"
-            style="max-width: 95vw; max-height: 95vh; object-fit: contain;"
-          />
+      class="modal fade transparent-modal"
+      id="enlargeModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-transparent border-0">
+          <div
+            class="modal-body p-0 d-flex justify-content-center align-items-center bg-transparent"
+          >
+            <img
+              *ngIf="selectedImage"
+              [src]="selectedImage"
+              class="img-fluid"
+              alt="Fullscreen Interior"
+              style="max-width: 95vw; max-height: 95vh; object-fit: contain;"
+            />
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  </div>
   <app-footer></app-footer>
 </div>

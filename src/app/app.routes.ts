@@ -19,7 +19,7 @@ export const routes: Routes = [
   { path: 'faq', component: FaqComponent},
   { path: 'technologia', component: TechnologyComponent},
   { path: 'oferta', component: OfferComponent},
-  { path: 'oferta/catalog', component: CatalogComponent},
+  { path: 'finansowanie', component: CatalogComponent},
   { path: 'jaktodziala', component:RealizationComponent},
   { path: 'wnetrza', component: IndividualComponent},
   { path: 'dostepne', component: AvaiableComponent},

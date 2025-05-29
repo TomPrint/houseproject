@@ -40,8 +40,8 @@
           <li class="nav-item" routerLinkActive="active-nav-item">
             <a class="nav-link monsterrata-text " routerLink="/proces">DLA BIZNESU</a>
           </li>
-          <li class="nav-item" routerLinkActive="active-nav-item">
-            <a class="nav-link monsterrata-text " routerLink="">FINANSOWANIE</a>
+          <li class="nav-item" routerLinkActive="active-nav-item" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link monsterrata-text " routerLink="/finansowanie">FINANSOWANIE</a>
           </li>
           <li class="nav-item" routerLinkActive="active-nav-item" [routerLinkActiveOptions]="{ exact: true }">
             <a class="nav-link monsterrata-text " routerLink="">O NAS</a>
@@ -97,7 +97,7 @@
           <a class="nav-link" href="proces">Dla biznesu</a>
         </li>
         <li class="nav-item align-items-center">
-          <a class="nav-link" href="">Finansowanie</a>
+          <a class="nav-link" href="/finansowanie">Finansowanie</a>
         </li>
          <li class="nav-item align-items-center">
           <a class="nav-link" href="">O nas</a>

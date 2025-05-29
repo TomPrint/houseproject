@@ -1,52 +1,83 @@
-<!-- catalog.component.html -->
-<div class="container-fluid p-3">
-  <!-- Sorting Buttons -->
-  <div class="sort-buttons-container">
-    <div class="mb-3">
-      <div class="row align-items-center">
-        <div class="col-6 col-md-auto mb-md-0">
-          <button type="button" class="btn btn-outline-dark disabled w-100"><i class="bi bi-sort-down">Sortuj po :</i></button>
-        </div>
-        <div class="col-6 col-md my-1">
-          <button type="button" class="btn btn-outline-dark w-100" (click)="sortBy('size')">Powierzchnia</button>
-        </div>
-        <div class="col-6 col-md my-1">
-          <button type="button" class="btn btn-outline-dark w-100" (click)="sortBy('floors')">Kondygnacja</button>
-        </div>
-        <div class="col-6 col-md my-1">
-          <button type="button" class="btn btn-outline-dark w-100" (click)="sortBy('roofType')">Dach</button>
-        </div>
-        <div class="col-6 col-md my-1">
-          <button type="button" class="btn btn-outline-dark w-100" (click)="sortBy('beds')">Sypialnie</button>
-        </div>
-        <div class="col-6 col-md my-1">
-          <button type="button" class="btn btn-outline-dark w-100" (click)="sortBy('baths')">Łazienki</button>
-        </div>
+<div class="outside-container">
+  <app-navbar></app-navbar>
+
+  <!-- Logo Section -->
+  <div class="logo-container text-center">
+    <a routerLink="/">
+      <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
+    </a>
+  </div>
+
+  <!-- Full-width Centered Heading -->
+  <div class="w-100 text-center mt-5 mb-4 finance-container">
+    <h2 class="pb-2 d-inline-block">
+      <i class="bi bi-piggy-bank me-2 icon-custom-green"></i>
+      NASZ POŚREDNIK FINANSOWY
+    </h2>
+  </div>
+
+  <!-- Finansowy Section -->
+  <section class="container finance-container py-3">
+    <div class="row align-items-center gx-5">
+      <!-- Text Column -->
+      <div class="col-12 col-lg-6">
+
+        <p class="lead mb-4">
+          Witkowski Finanse to firma prowadzona przez Łukasza Witkowskiego, pośrednika finansowego z 15-letnim doświadczeniem, będącego częścią ogólnopolskiego pośrednika finansowego – Feniks Finanse.
+        </p>
+
+        <p class="mb-3">
+          <i class="bi bi-check-circle-fill text-success me-2"></i>
+          Najważniejsze dla nas jest zadowolenie klienta, dlatego nie pobieramy od niego żadnej prowizji za nasze usługi. Jesteśmy niezależnym pośrednikiem finansowym, co oznacza, że nasze interesy są ściśle związane z interesami klienta.
+        </p>
+
+        <p class="mb-3">
+          <i class="bi bi-bank text-info me-2"></i>
+          Działamy w oparciu o etyczne standardy i stawiamy na transparentność naszych działań. Jako część Feniks Finanse, firma Witkowski Finanse współpracuje ze wszystkimi bankami świadczącymi usługi kredytowe i ubezpieczeniowe na polskim rynku. Dzięki temu Łukasz Witkowski jest w stanie znaleźć najlepsze rozwiązania dopasowane do sytuacji życiowej, zawodowej i finansowej klienta.
+        </p>
+
+        <p class="mb-3">
+          <i class="bi bi-clipboard-check text-secondary me-2"></i>
+          Optymalny wybór oferty finansowej zawsze wymaga szczegółowej analizy sytuacji klienta oraz dogłębnego zrozumienia ofert poszczególnych instytucji finansowych. Dlatego też doświadczenie i znajomość procedur oraz ofert w różnych bankach to klucz do zaproponowania najlepszego rozwiązania, dopasowanego do indywidualnych potrzeb i oczekiwań klienta.
+        </p>
+
+        <p class="mb-3">
+          <i class="bi bi-gear-fill text-warning me-2"></i>
+          Oferujemy również wsparcie post-kredytowe. W przypadku pojawienia się zmian na rynku finansowym, nasza firma oferuje wsparcie w dostosowaniu kredytu do nowych warunków...
+        </p>
+
+        <p class="mb-3">
+          <i class="bi bi-globe text-muted me-2"></i>
+          Dojeżdżamy do klientów na terenie Warszawy, okolic, a nawet całej Polski, by ułatwić im cały proces ubiegania się o kredyt. Większość spraw we wstępnym etapie realizujemy zdalnie.
+        </p>
+
+       
+  
+        <div
+        [routerLink]="['/']"
+        fragment="contact"
+        class="cta-button-box"
+      >
+        <i class="bi bi-telephone-forward me-2 icon-custom-green"></i>
+        <strong>Skontaktuj się z nami już dziś i przekonaj się, że z nami uzyskanie kredytu jest łatwiejsze niż myślisz!</strong>
+      </div>
+     
+    
+      </div>
+
+      <!-- Image Column -->
+      <div class="col-12 col-lg-6 text-center mt-4 mt-lg-0">
+        <img 
+          src="/assets/finance.jpg" 
+          alt="Pośrednik Finansowy Witkowski Finanse" 
+          class="img-fluid rounded-4 shadow-lg border"
+          style="transition: transform 0.3s ease-in-out;"
+          onmouseover="this.style.transform='scale(1.02)'"
+          onmouseout="this.style.transform='scale(1)'"
+        >
       </div>
     </div>
-  </div>
-  
-  <!-- Cards Display -->
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col" *ngFor="let card of cards">
-          <div 
-              class="card" 
-              (mouseover)="onMouseOver(card)" 
-              (mouseleave)="onMouseLeave(card)"
-              [ngClass]="{'hover': card.isHovered}">
-              <img src="{{card.imgSrc}}" class="card-img-top" alt="...">
-              <div class="card-body">
-                  <h5 class="card-title">{{card.title}}</h5>
-                  <p class="card-text">{{card.description}}</p>
-                  <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                      <button type="button" class="btn btn-secondary"><i class="bi bi-arrows"> {{card.size}}<small>m2</small></i></button>
-                      <button type="button" class="btn btn-secondary"><i class="bi bi-layers-fill"> {{card.floors}}</i></button>
-                      <button type="button" class="btn btn-secondary"><i class="bi bi-triangle-fill"></i> {{card.roofType}}</button>
-                      <button type="button" class="btn btn-secondary"><img src="assets/bed_icon.png" style="height: 18px;"> {{card.beds}}</button>
-                      <button type="button" class="btn btn-secondary"><img src="assets/bath_icon.png" style="height: 18px;"> {{card.baths}}</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+  </section>
+
+  <app-footer></app-footer>
 </div>
