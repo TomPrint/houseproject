@@ -129,6 +129,75 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
         'assets/main4.webp'
       ]
     },
+    CARINA: {
+      name: 'CARINA',
+      square:  53.7,
+      vector: '/assets/budynek-10.svg',
+      imagefront: '/assets/gioia-front.png',
+      imageback:'/assets/gioia-back.png',
+      drawing: '/assets/rzut10.svg', // Floor plans
+      renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
+      facade: '/assets/Elewacja10.svg',  // Facade images // Facade images
+      info: [
+        'Powierzchnia użytkowa mieszkalna:',
+        '1. Wiatrołap - 4,2 m²',
+        '2. Pokój dzienny + aneks kuchenny - 25,6 m²',
+        '3. Łazienka - 4,2 m²',
+        '4. Pokój - 7,5 m²',
+        '7. Ganek - 4,3 m²',
+        '8. Hol - 2,8 m²',
+        '9. Pokój - 5,1 m²',
+        'Powierzchnia dodatkowa:',
+        '5. Taras - 4,2 m²',
+        '6. Taras - 4,2 m²',
+        '10. Antresola - 0,9 m²'
+      ],
+      interiors: [
+        {
+          name: 'NOWOCZESNY',
+          image: '/assets/GIOIA_nowoczesny_int.webp',
+          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę. 
+Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.
+`
+        },
+        {
+          name: 'SKANDYNAWSKI',
+          image: '/assets/GIOIA_skandynawski_int.webp',
+          description: `Skandynawski styl to nie tylko minimalizm, ale także praktyczność i wygoda. Meble o prostych kształtach są funkcjonalne i estetyczne, a inteligentne rozwiązania przestrzenne maksymalizują użyteczność każdego metra kwadratowego. 
+To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno, ale nie boją się odrobiny koloru. Dzięki przemyślanemu designowi i wysokiej jakości materiałom, przestrzeń ta jest nie tylko estetyczna, ale również komfortowa i funkcjonalna. To miejsce, w którym można czuć się swobodnie, zrelaksowanym i pełnym energii.
+`
+        },
+        {
+          name: 'MINIMALISTYCZNY',
+          image: '/assets/GIOIA_minimalistyczny_int.webp',
+          description: `Minimalizm połączony z japońską estetyką tworzy przestrzeń pełną spokoju i harmonii. Naturalne drewno i duże ilości światła wprowadzają ciepło i naturalność do każdej części domu. Proste linie i oszczędne formy podkreślają funkcjonalność oraz elegancję wnętrza, a subtelne akcenty dodają mu charakteru.
+To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz wysoką funkcjonalność. Dzięki przemyślanemu designowi oferuje przestrzeń, w której można czuć się zrelaksowanym i zintegrowanym z naturą.`
+        }
+      ],
+      exteriors: [
+        {
+          name: 'METAL',
+          image: '/assets/GIOIA_metal_ext.webp',
+          description: `Fasada z blachy na rąbek łączy nowoczesny design z wytrzymałością, zapewniając długotrwałą ochronę domu. Dzięki zaawansowanemu montażowi na rąbek stojący, fasada jest estetyczna, szczelna i odporna na warunki atmosferyczne, na korozję oraz promieniowanie UV.`
+        },
+        {
+          name: 'DREWNO',
+          image: '/assets/GIOIA_drewno_ext.webp',
+          description: `Fasada drewniana to synonim naturalnego piękna i ekologii, doskonale wpisująca się w otoczenie, jednocześnie zapewniając trwałość i funkcjonalność. Wykorzystujemy wysokiej jakości deski elewacyjne montowane pionowo, które poddawane są zaawansowanym procesom zabezpieczającym.`
+        },
+        {
+          name: 'KOMBINACJA',
+          image: '/assets/GIOIA_kombinacja_ext.webp',
+          description: `Fasada drewniano-metalowa łączy naturalne piękno drewna z nowoczesnym wyglądem blachy na rąbek, tworząc elegancki i trwały efekt. Deski elewacyjne montowane pionowo dodają ciepła i przytulności, podczas gdy blacha na rąbek zapewnia nowoczesny akcent i wyjątkową ochronę.`
+        }
+      ],
+      images: [
+        'assets/main6.webp',
+        'assets/main5.webp',
+        'assets/main4.webp'
+      ]
+    },
+
     GIOIA: {
       name: 'GIOIA',
       square:  54.6,
@@ -334,6 +403,213 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
         'assets/main4.webp'
       ]
     },
+
+    ALLEGRA: {
+      name: 'ALLEGRA',
+      square:  40.5,
+      vector: '/assets/budynek-5.svg',
+      imagefront: '/assets/calma-front.png',
+      imageback:'/assets/calma-back.png',  // Main image for GIOIA
+      drawing: '/assets/rzut5.svg', // Floor plans // Floor plans
+      renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
+      facade: '/assets/Elewacja5.svg', // Facade images
+      info: [
+        'Powierzchnia użytkowa mieszkalna:',
+        '1. Wiatrołap - 4,5 m²',
+        '2. Pokój dzienny - 17,7 m²',
+        '3. Kuchnia - 5,3 m²',
+        '4. Pokój - 9,2 m²',
+        '5. Łazienka - 3,8 m²',
+        'Powierzchnia dodatkowa:',
+        '6. Taras - 11,7 m²',
+        '7. Taras - 5,8 m²'
+      ],
+      interiors: [
+        {
+          name: 'NOWOCZESNY',
+          image: '/assets/GIOIA_nowoczesny_int.webp',
+          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę. 
+Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.
+`
+        },
+        {
+          name: 'SKANDYNAWSKI',
+          image: '/assets/GIOIA_skandynawski_int.webp',
+          description: `Skandynawski styl to nie tylko minimalizm, ale także praktyczność i wygoda. Meble o prostych kształtach są funkcjonalne i estetyczne, a inteligentne rozwiązania przestrzenne maksymalizują użyteczność każdego metra kwadratowego. 
+To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno, ale nie boją się odrobiny koloru. Dzięki przemyślanemu designowi i wysokiej jakości materiałom, przestrzeń ta jest nie tylko estetyczna, ale również komfortowa i funkcjonalna. To miejsce, w którym można czuć się swobodnie, zrelaksowanym i pełnym energii.
+`
+        },
+        {
+          name: 'MINIMALISTYCZNY',
+          image: '/assets/GIOIA_minimalistyczny_int.webp',
+          description: `Minimalizm połączony z japońską estetyką tworzy przestrzeń pełną spokoju i harmonii. Naturalne drewno i duże ilości światła wprowadzają ciepło i naturalność do każdej części domu. Proste linie i oszczędne formy podkreślają funkcjonalność oraz elegancję wnętrza, a subtelne akcenty dodają mu charakteru.
+To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz wysoką funkcjonalność. Dzięki przemyślanemu designowi oferuje przestrzeń, w której można czuć się zrelaksowanym i zintegrowanym z naturą.`
+        }
+      ],
+      exteriors: [
+        {
+          name: 'METAL',
+          image: '/assets/GIOIA_metal_ext.webp',
+          description: `Fasada z blachy na rąbek łączy nowoczesny design z wytrzymałością, zapewniając długotrwałą ochronę domu. Dzięki zaawansowanemu montażowi na rąbek stojący, fasada jest estetyczna, szczelna i odporna na warunki atmosferyczne, na korozję oraz promieniowanie UV.`
+        },
+        {
+          name: 'DREWNO',
+          image: '/assets/GIOIA_drewno_ext.webp',
+          description: `Fasada drewniana to synonim naturalnego piękna i ekologii, doskonale wpisująca się w otoczenie, jednocześnie zapewniając trwałość i funkcjonalność. Wykorzystujemy wysokiej jakości deski elewacyjne montowane pionowo, które poddawane są zaawansowanym procesom zabezpieczającym.`
+        },
+        {
+          name: 'KOMBINACJA',
+          image: '/assets/GIOIA_kombinacja_ext.webp',
+          description: `Fasada drewniano-metalowa łączy naturalne piękno drewna z nowoczesnym wyglądem blachy na rąbek, tworząc elegancki i trwały efekt. Deski elewacyjne montowane pionowo dodają ciepła i przytulności, podczas gdy blacha na rąbek zapewnia nowoczesny akcent i wyjątkową ochronę.`
+        }
+      ],
+      images: [
+        'assets/main6.webp',
+        'assets/main5.webp',
+        'assets/main4.webp'
+      ]
+    },
+
+    MODERNA: {
+      name: 'MODERNA',
+      square:  61.5,
+      vector: '/assets/budynek-8.svg',
+      imagefront: '/assets/gioia-front.png',
+      imageback: '/assets/gioia-back.png',
+      drawing: '/assets/rzut8.svg', // Floor plans // Floor plans
+      renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
+      facade: '/assets/Elewacja8.svg',  // Facade images // Facade images
+      info: [
+        'Powierzchnia użytkowa mieszkalna:',
+        '1. Hol - 3,9 m²',
+        '2. WC + Pom. tech. - 4,1 m²',
+        '3. Kuchnia - 4,7 m²',
+        '4. Pokój dzienny - 20,5 m²',
+        '7. Hol - 3,7 m²',
+        '8. Pokój - 9,4 m²',
+        '9. Pokój - 8,9 m²',
+        '10. Łazienka + pralnia - 6,3 m²',
+        'Powierzchnia dodatkowa:',
+        '6. Taras - 2,9 m²',
+        '11. Taras - 10,2 m²'
+      ],
+      interiors: [
+        {
+          name: 'NOWOCZESNY',
+          image: '/assets/GIOIA_nowoczesny_int.webp',
+          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę. 
+Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.
+`
+        },
+        {
+          name: 'SKANDYNAWSKI',
+          image: '/assets/GIOIA_skandynawski_int.webp',
+          description: `Skandynawski styl to nie tylko minimalizm, ale także praktyczność i wygoda. Meble o prostych kształtach są funkcjonalne i estetyczne, a inteligentne rozwiązania przestrzenne maksymalizują użyteczność każdego metra kwadratowego. 
+To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno, ale nie boją się odrobiny koloru. Dzięki przemyślanemu designowi i wysokiej jakości materiałom, przestrzeń ta jest nie tylko estetyczna, ale również komfortowa i funkcjonalna. To miejsce, w którym można czuć się swobodnie, zrelaksowanym i pełnym energii.
+`
+        },
+        {
+          name: 'MINIMALISTYCZNY',
+          image: '/assets/GIOIA_minimalistyczny_int.webp',
+          description: `Minimalizm połączony z japońską estetyką tworzy przestrzeń pełną spokoju i harmonii. Naturalne drewno i duże ilości światła wprowadzają ciepło i naturalność do każdej części domu. Proste linie i oszczędne formy podkreślają funkcjonalność oraz elegancję wnętrza, a subtelne akcenty dodają mu charakteru.
+To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz wysoką funkcjonalność. Dzięki przemyślanemu designowi oferuje przestrzeń, w której można czuć się zrelaksowanym i zintegrowanym z naturą.`
+        }
+      ],
+      exteriors: [
+        {
+          name: 'METAL',
+          image: '/assets/GIOIA_metal_ext.webp',
+          description: `Fasada z blachy na rąbek łączy nowoczesny design z wytrzymałością, zapewniając długotrwałą ochronę domu. Dzięki zaawansowanemu montażowi na rąbek stojący, fasada jest estetyczna, szczelna i odporna na warunki atmosferyczne, na korozję oraz promieniowanie UV.`
+        },
+        {
+          name: 'DREWNO',
+          image: '/assets/GIOIA_drewno_ext.webp',
+          description: `Fasada drewniana to synonim naturalnego piękna i ekologii, doskonale wpisująca się w otoczenie, jednocześnie zapewniając trwałość i funkcjonalność. Wykorzystujemy wysokiej jakości deski elewacyjne montowane pionowo, które poddawane są zaawansowanym procesom zabezpieczającym.`
+        },
+        {
+          name: 'KOMBINACJA',
+          image: '/assets/GIOIA_kombinacja_ext.webp',
+          description: `Fasada drewniano-metalowa łączy naturalne piękno drewna z nowoczesnym wyglądem blachy na rąbek, tworząc elegancki i trwały efekt. Deski elewacyjne montowane pionowo dodają ciepła i przytulności, podczas gdy blacha na rąbek zapewnia nowoczesny akcent i wyjątkową ochronę.`
+        }
+      ],
+      images: [
+        'assets/main6.webp',
+        'assets/main5.webp',
+        'assets/main4.webp'
+      ]
+    },
+
+    
+   
+    TONICA: {
+      name: 'TONICA',
+      square:  68.8,
+      vector: '/assets/budynek-7.svg',
+      imagefront: '/assets/calma-front.png',
+      imageback:'/assets/calma-back.png',
+      drawing: '/assets/rzut7.svg', // Floor plans// Floor plans
+      renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
+      facade: '/assets/Elewacja7.svg',  // Facade images // Facade images
+      info: [
+        'Powierzchnia użytkowa mieszkalna:',
+        '1. Hol - 3,6 m²',
+        '2. Jadalnia + aneks kuchenny - 27,9 m²',
+        '3. Łazienka - 4,2 m²',
+        '6. Hol - 7,4 m²',
+        '7. Łazienka - 2,7 m²',
+        '8. Pokój - 13,9 m²',
+        '9. Pokój - 9,1 m²',
+        'Powierzchnia dodatkowa:',
+        '4. Pom. tech. - 2,5 m²',
+        '5. Taras - 6,3 m²',
+        '10. Taras - 6,2 m²'
+      ],
+      interiors: [
+        {
+          name: 'NOWOCZESNY',
+          image: '/assets/GIOIA_nowoczesny_int.webp',
+          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę. 
+Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.
+`
+        },
+        {
+          name: 'SKANDYNAWSKI',
+          image: '/assets/GIOIA_skandynawski_int.webp',
+          description: `Skandynawski styl to nie tylko minimalizm, ale także praktyczność i wygoda. Meble o prostych kształtach są funkcjonalne i estetyczne, a inteligentne rozwiązania przestrzenne maksymalizują użyteczność każdego metra kwadratowego. 
+To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno, ale nie boją się odrobiny koloru. Dzięki przemyślanemu designowi i wysokiej jakości materiałom, przestrzeń ta jest nie tylko estetyczna, ale również komfortowa i funkcjonalna. To miejsce, w którym można czuć się swobodnie, zrelaksowanym i pełnym energii.
+`
+        },
+        {
+          name: 'MINIMALISTYCZNY',
+          image: '/assets/GIOIA_minimalistyczny_int.webp',
+          description: `Minimalizm połączony z japońską estetyką tworzy przestrzeń pełną spokoju i harmonii. Naturalne drewno i duże ilości światła wprowadzają ciepło i naturalność do każdej części domu. Proste linie i oszczędne formy podkreślają funkcjonalność oraz elegancję wnętrza, a subtelne akcenty dodają mu charakteru.
+To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz wysoką funkcjonalność. Dzięki przemyślanemu designowi oferuje przestrzeń, w której można czuć się zrelaksowanym i zintegrowanym z naturą.`
+        }
+      ],
+      exteriors: [
+        {
+          name: 'METAL',
+          image: '/assets/GIOIA_metal_ext.webp',
+          description: `Fasada z blachy na rąbek łączy nowoczesny design z wytrzymałością, zapewniając długotrwałą ochronę domu. Dzięki zaawansowanemu montażowi na rąbek stojący, fasada jest estetyczna, szczelna i odporna na warunki atmosferyczne, na korozję oraz promieniowanie UV.`
+        },
+        {
+          name: 'DREWNO',
+          image: '/assets/GIOIA_drewno_ext.webp',
+          description: `Fasada drewniana to synonim naturalnego piękna i ekologii, doskonale wpisująca się w otoczenie, jednocześnie zapewniając trwałość i funkcjonalność. Wykorzystujemy wysokiej jakości deski elewacyjne montowane pionowo, które poddawane są zaawansowanym procesom zabezpieczającym.`
+        },
+        {
+          name: 'KOMBINACJA',
+          image: '/assets/GIOIA_kombinacja_ext.webp',
+          description: `Fasada drewniano-metalowa łączy naturalne piękno drewna z nowoczesnym wyglądem blachy na rąbek, tworząc elegancki i trwały efekt. Deski elewacyjne montowane pionowo dodają ciepła i przytulności, podczas gdy blacha na rąbek zapewnia nowoczesny akcent i wyjątkową ochronę.`
+        }
+      ],
+      images: [
+        'assets/main6.webp',
+        'assets/main5.webp',
+        'assets/main4.webp'
+      ]
+    },
+
     RICCA: {
       name: 'RICCA',
       square:  110.5,
@@ -404,277 +680,9 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
         'assets/main5.webp',
         'assets/main4.webp'
       ]
-    },
-    ALLEGRA: {
-      name: 'ALLEGRA',
-      square:  40.5,
-      vector: '/assets/budynek-5.svg',
-      imagefront: '/assets/calma-front.png',
-      imageback:'/assets/calma-back.png',  // Main image for GIOIA
-      drawing: '/assets/rzut5.svg', // Floor plans // Floor plans
-      renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
-      facade: '/assets/Elewacja5.svg', // Facade images
-      info: [
-        'Powierzchnia użytkowa mieszkalna:',
-        '1. Wiatrołap - 4,5 m²',
-        '2. Pokój dzienny - 17,7 m²',
-        '3. Kuchnia - 5,3 m²',
-        '4. Pokój - 9,2 m²',
-        '5. Łazienka - 3,8 m²',
-        'Powierzchnia dodatkowa:',
-        '6. Taras - 11,7 m²',
-        '7. Taras - 5,8 m²'
-      ],
-      interiors: [
-        {
-          name: 'NOWOCZESNY',
-          image: '/assets/GIOIA_nowoczesny_int.webp',
-          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę. 
-Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.
-`
-        },
-        {
-          name: 'SKANDYNAWSKI',
-          image: '/assets/GIOIA_skandynawski_int.webp',
-          description: `Skandynawski styl to nie tylko minimalizm, ale także praktyczność i wygoda. Meble o prostych kształtach są funkcjonalne i estetyczne, a inteligentne rozwiązania przestrzenne maksymalizują użyteczność każdego metra kwadratowego. 
-To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno, ale nie boją się odrobiny koloru. Dzięki przemyślanemu designowi i wysokiej jakości materiałom, przestrzeń ta jest nie tylko estetyczna, ale również komfortowa i funkcjonalna. To miejsce, w którym można czuć się swobodnie, zrelaksowanym i pełnym energii.
-`
-        },
-        {
-          name: 'MINIMALISTYCZNY',
-          image: '/assets/GIOIA_minimalistyczny_int.webp',
-          description: `Minimalizm połączony z japońską estetyką tworzy przestrzeń pełną spokoju i harmonii. Naturalne drewno i duże ilości światła wprowadzają ciepło i naturalność do każdej części domu. Proste linie i oszczędne formy podkreślają funkcjonalność oraz elegancję wnętrza, a subtelne akcenty dodają mu charakteru.
-To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz wysoką funkcjonalność. Dzięki przemyślanemu designowi oferuje przestrzeń, w której można czuć się zrelaksowanym i zintegrowanym z naturą.`
-        }
-      ],
-      exteriors: [
-        {
-          name: 'METAL',
-          image: '/assets/GIOIA_metal_ext.webp',
-          description: `Fasada z blachy na rąbek łączy nowoczesny design z wytrzymałością, zapewniając długotrwałą ochronę domu. Dzięki zaawansowanemu montażowi na rąbek stojący, fasada jest estetyczna, szczelna i odporna na warunki atmosferyczne, na korozję oraz promieniowanie UV.`
-        },
-        {
-          name: 'DREWNO',
-          image: '/assets/GIOIA_drewno_ext.webp',
-          description: `Fasada drewniana to synonim naturalnego piękna i ekologii, doskonale wpisująca się w otoczenie, jednocześnie zapewniając trwałość i funkcjonalność. Wykorzystujemy wysokiej jakości deski elewacyjne montowane pionowo, które poddawane są zaawansowanym procesom zabezpieczającym.`
-        },
-        {
-          name: 'KOMBINACJA',
-          image: '/assets/GIOIA_kombinacja_ext.webp',
-          description: `Fasada drewniano-metalowa łączy naturalne piękno drewna z nowoczesnym wyglądem blachy na rąbek, tworząc elegancki i trwały efekt. Deski elewacyjne montowane pionowo dodają ciepła i przytulności, podczas gdy blacha na rąbek zapewnia nowoczesny akcent i wyjątkową ochronę.`
-        }
-      ],
-      images: [
-        'assets/main6.webp',
-        'assets/main5.webp',
-        'assets/main4.webp'
-      ]
-    },
-    CARINA: {
-      name: 'CARINA',
-      square:  53.7,
-      vector: '/assets/budynek-10.svg',
-      imagefront: '/assets/gioia-front.png',
-      imageback:'/assets/gioia-back.png',
-      drawing: '/assets/rzut10.svg', // Floor plans
-      renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
-      facade: '/assets/Elewacja10.svg',  // Facade images // Facade images
-      info: [
-        'Powierzchnia użytkowa mieszkalna:',
-        '1. Wiatrołap - 4,2 m²',
-        '2. Pokój dzienny + aneks kuchenny - 25,6 m²',
-        '3. Łazienka - 4,2 m²',
-        '4. Pokój - 7,5 m²',
-        '7. Ganek - 4,3 m²',
-        '8. Hol - 2,8 m²',
-        '9. Pokój - 5,1 m²',
-        'Powierzchnia dodatkowa:',
-        '5. Taras - 4,2 m²',
-        '6. Taras - 4,2 m²',
-        '10. Antresola - 0,9 m²'
-      ],
-      interiors: [
-        {
-          name: 'NOWOCZESNY',
-          image: '/assets/GIOIA_nowoczesny_int.webp',
-          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę. 
-Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.
-`
-        },
-        {
-          name: 'SKANDYNAWSKI',
-          image: '/assets/GIOIA_skandynawski_int.webp',
-          description: `Skandynawski styl to nie tylko minimalizm, ale także praktyczność i wygoda. Meble o prostych kształtach są funkcjonalne i estetyczne, a inteligentne rozwiązania przestrzenne maksymalizują użyteczność każdego metra kwadratowego. 
-To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno, ale nie boją się odrobiny koloru. Dzięki przemyślanemu designowi i wysokiej jakości materiałom, przestrzeń ta jest nie tylko estetyczna, ale również komfortowa i funkcjonalna. To miejsce, w którym można czuć się swobodnie, zrelaksowanym i pełnym energii.
-`
-        },
-        {
-          name: 'MINIMALISTYCZNY',
-          image: '/assets/GIOIA_minimalistyczny_int.webp',
-          description: `Minimalizm połączony z japońską estetyką tworzy przestrzeń pełną spokoju i harmonii. Naturalne drewno i duże ilości światła wprowadzają ciepło i naturalność do każdej części domu. Proste linie i oszczędne formy podkreślają funkcjonalność oraz elegancję wnętrza, a subtelne akcenty dodają mu charakteru.
-To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz wysoką funkcjonalność. Dzięki przemyślanemu designowi oferuje przestrzeń, w której można czuć się zrelaksowanym i zintegrowanym z naturą.`
-        }
-      ],
-      exteriors: [
-        {
-          name: 'METAL',
-          image: '/assets/GIOIA_metal_ext.webp',
-          description: `Fasada z blachy na rąbek łączy nowoczesny design z wytrzymałością, zapewniając długotrwałą ochronę domu. Dzięki zaawansowanemu montażowi na rąbek stojący, fasada jest estetyczna, szczelna i odporna na warunki atmosferyczne, na korozję oraz promieniowanie UV.`
-        },
-        {
-          name: 'DREWNO',
-          image: '/assets/GIOIA_drewno_ext.webp',
-          description: `Fasada drewniana to synonim naturalnego piękna i ekologii, doskonale wpisująca się w otoczenie, jednocześnie zapewniając trwałość i funkcjonalność. Wykorzystujemy wysokiej jakości deski elewacyjne montowane pionowo, które poddawane są zaawansowanym procesom zabezpieczającym.`
-        },
-        {
-          name: 'KOMBINACJA',
-          image: '/assets/GIOIA_kombinacja_ext.webp',
-          description: `Fasada drewniano-metalowa łączy naturalne piękno drewna z nowoczesnym wyglądem blachy na rąbek, tworząc elegancki i trwały efekt. Deski elewacyjne montowane pionowo dodają ciepła i przytulności, podczas gdy blacha na rąbek zapewnia nowoczesny akcent i wyjątkową ochronę.`
-        }
-      ],
-      images: [
-        'assets/main6.webp',
-        'assets/main5.webp',
-        'assets/main4.webp'
-      ]
-    },
-    MODERNA: {
-      name: 'MODERNA',
-      square:  61.5,
-      vector: '/assets/budynek-8.svg',
-      imagefront: '/assets/gioia-front.png',
-      imageback: '/assets/gioia-back.png',
-      drawing: '/assets/rzut8.svg', // Floor plans // Floor plans
-      renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
-      facade: '/assets/Elewacja8.svg',  // Facade images // Facade images
-      info: [
-        'Powierzchnia użytkowa mieszkalna:',
-        '1. Hol - 3,9 m²',
-        '2. WC + Pom. tech. - 4,1 m²',
-        '3. Kuchnia - 4,7 m²',
-        '4. Pokój dzienny - 20,5 m²',
-        '7. Hol - 3,7 m²',
-        '8. Pokój - 9,4 m²',
-        '9. Pokój - 8,9 m²',
-        '10. Łazienka + pralnia - 6,3 m²',
-        'Powierzchnia dodatkowa:',
-        '6. Taras - 2,9 m²',
-        '11. Taras - 10,2 m²'
-      ],
-      interiors: [
-        {
-          name: 'NOWOCZESNY',
-          image: '/assets/GIOIA_nowoczesny_int.webp',
-          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę. 
-Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.
-`
-        },
-        {
-          name: 'SKANDYNAWSKI',
-          image: '/assets/GIOIA_skandynawski_int.webp',
-          description: `Skandynawski styl to nie tylko minimalizm, ale także praktyczność i wygoda. Meble o prostych kształtach są funkcjonalne i estetyczne, a inteligentne rozwiązania przestrzenne maksymalizują użyteczność każdego metra kwadratowego. 
-To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno, ale nie boją się odrobiny koloru. Dzięki przemyślanemu designowi i wysokiej jakości materiałom, przestrzeń ta jest nie tylko estetyczna, ale również komfortowa i funkcjonalna. To miejsce, w którym można czuć się swobodnie, zrelaksowanym i pełnym energii.
-`
-        },
-        {
-          name: 'MINIMALISTYCZNY',
-          image: '/assets/GIOIA_minimalistyczny_int.webp',
-          description: `Minimalizm połączony z japońską estetyką tworzy przestrzeń pełną spokoju i harmonii. Naturalne drewno i duże ilości światła wprowadzają ciepło i naturalność do każdej części domu. Proste linie i oszczędne formy podkreślają funkcjonalność oraz elegancję wnętrza, a subtelne akcenty dodają mu charakteru.
-To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz wysoką funkcjonalność. Dzięki przemyślanemu designowi oferuje przestrzeń, w której można czuć się zrelaksowanym i zintegrowanym z naturą.`
-        }
-      ],
-      exteriors: [
-        {
-          name: 'METAL',
-          image: '/assets/GIOIA_metal_ext.webp',
-          description: `Fasada z blachy na rąbek łączy nowoczesny design z wytrzymałością, zapewniając długotrwałą ochronę domu. Dzięki zaawansowanemu montażowi na rąbek stojący, fasada jest estetyczna, szczelna i odporna na warunki atmosferyczne, na korozję oraz promieniowanie UV.`
-        },
-        {
-          name: 'DREWNO',
-          image: '/assets/GIOIA_drewno_ext.webp',
-          description: `Fasada drewniana to synonim naturalnego piękna i ekologii, doskonale wpisująca się w otoczenie, jednocześnie zapewniając trwałość i funkcjonalność. Wykorzystujemy wysokiej jakości deski elewacyjne montowane pionowo, które poddawane są zaawansowanym procesom zabezpieczającym.`
-        },
-        {
-          name: 'KOMBINACJA',
-          image: '/assets/GIOIA_kombinacja_ext.webp',
-          description: `Fasada drewniano-metalowa łączy naturalne piękno drewna z nowoczesnym wyglądem blachy na rąbek, tworząc elegancki i trwały efekt. Deski elewacyjne montowane pionowo dodają ciepła i przytulności, podczas gdy blacha na rąbek zapewnia nowoczesny akcent i wyjątkową ochronę.`
-        }
-      ],
-      images: [
-        'assets/main6.webp',
-        'assets/main5.webp',
-        'assets/main4.webp'
-      ]
-    },
-   
-    TONICA: {
-      name: 'TONICA',
-      square:  68.8,
-      vector: '/assets/budynek-7.svg',
-      imagefront: '/assets/calma-front.png',
-      imageback:'/assets/calma-back.png',
-      drawing: '/assets/rzut7.svg', // Floor plans// Floor plans
-      renders: ['/assets/Gioia_render.webp', '/assets/Gioia_render2.webp'], // Render images
-      facade: '/assets/Elewacja7.svg',  // Facade images // Facade images
-      info: [
-        'Powierzchnia użytkowa mieszkalna:',
-        '1. Hol - 3,6 m²',
-        '2. Jadalnia + aneks kuchenny - 27,9 m²',
-        '3. Łazienka - 4,2 m²',
-        '6. Hol - 7,4 m²',
-        '7. Łazienka - 2,7 m²',
-        '8. Pokój - 13,9 m²',
-        '9. Pokój - 9,1 m²',
-        'Powierzchnia dodatkowa:',
-        '4. Pom. tech. - 2,5 m²',
-        '5. Taras - 6,3 m²',
-        '10. Taras - 6,2 m²'
-      ],
-      interiors: [
-        {
-          name: 'NOWOCZESNY',
-          image: '/assets/GIOIA_nowoczesny_int.webp',
-          description: `Wnętrze, które łączy nowoczesny design z elegancją i funkcjonalnością. Dominują neutralne barwy – biele, szarości i beże oraz czerń – tworzące spokojną i stylową atmosferę. Wysokiej jakości materiały, takie jak naturalne drewno, zapewniają trwałość i estetykę. 
-Proste i nowoczesne meble o minimalistycznych formach oraz designerskie, punktowe oświetlenie podkreślają subtelną elegancję przestrzeni. To harmonijne wnętrze jest idealne dla osób ceniących funkcjonalność i nowoczesny styl życia.
-`
-        },
-        {
-          name: 'SKANDYNAWSKI',
-          image: '/assets/GIOIA_skandynawski_int.webp',
-          description: `Skandynawski styl to nie tylko minimalizm, ale także praktyczność i wygoda. Meble o prostych kształtach są funkcjonalne i estetyczne, a inteligentne rozwiązania przestrzenne maksymalizują użyteczność każdego metra kwadratowego. 
-To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno, ale nie boją się odrobiny koloru. Dzięki przemyślanemu designowi i wysokiej jakości materiałom, przestrzeń ta jest nie tylko estetyczna, ale również komfortowa i funkcjonalna. To miejsce, w którym można czuć się swobodnie, zrelaksowanym i pełnym energii.
-`
-        },
-        {
-          name: 'MINIMALISTYCZNY',
-          image: '/assets/GIOIA_minimalistyczny_int.webp',
-          description: `Minimalizm połączony z japońską estetyką tworzy przestrzeń pełną spokoju i harmonii. Naturalne drewno i duże ilości światła wprowadzają ciepło i naturalność do każdej części domu. Proste linie i oszczędne formy podkreślają funkcjonalność oraz elegancję wnętrza, a subtelne akcenty dodają mu charakteru.
-To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz wysoką funkcjonalność. Dzięki przemyślanemu designowi oferuje przestrzeń, w której można czuć się zrelaksowanym i zintegrowanym z naturą.`
-        }
-      ],
-      exteriors: [
-        {
-          name: 'METAL',
-          image: '/assets/GIOIA_metal_ext.webp',
-          description: `Fasada z blachy na rąbek łączy nowoczesny design z wytrzymałością, zapewniając długotrwałą ochronę domu. Dzięki zaawansowanemu montażowi na rąbek stojący, fasada jest estetyczna, szczelna i odporna na warunki atmosferyczne, na korozję oraz promieniowanie UV.`
-        },
-        {
-          name: 'DREWNO',
-          image: '/assets/GIOIA_drewno_ext.webp',
-          description: `Fasada drewniana to synonim naturalnego piękna i ekologii, doskonale wpisująca się w otoczenie, jednocześnie zapewniając trwałość i funkcjonalność. Wykorzystujemy wysokiej jakości deski elewacyjne montowane pionowo, które poddawane są zaawansowanym procesom zabezpieczającym.`
-        },
-        {
-          name: 'KOMBINACJA',
-          image: '/assets/GIOIA_kombinacja_ext.webp',
-          description: `Fasada drewniano-metalowa łączy naturalne piękno drewna z nowoczesnym wyglądem blachy na rąbek, tworząc elegancki i trwały efekt. Deski elewacyjne montowane pionowo dodają ciepła i przytulności, podczas gdy blacha na rąbek zapewnia nowoczesny akcent i wyjątkową ochronę.`
-        }
-      ],
-      images: [
-        'assets/main6.webp',
-        'assets/main5.webp',
-        'assets/main4.webp'
-      ]
     }
+
+
 
 
   };
