@@ -1,10 +1,11 @@
 .outside-container {
     position: relative; /* Ensure proper stacking context */
     overflow: hidden; /* Prevent unwanted overflow */
+    min-height: 100vh;
   }
 
 .header-container{
-  margin-top: 100px;
+  margin-top: 130px;
 }
 
 .card-img-top {

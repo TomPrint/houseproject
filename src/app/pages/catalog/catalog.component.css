@@ -1,15 +1,26 @@
+
+.outside-container {
+  position: relative; /* Ensure proper stacking context */
+  overflow: hidden; /* Prevent unwanted overflow */
+  min-height: 100vh;
+}
+
 .logo-container { 
     filter: invert(1);
 }
 
 
 .finance-container{
-    padding-top: 70px;
+    padding-top: 120px;
 }
 
 
 .icon-custom-green{
     color:#7C8A77 !important
+}
+
+.icon-custom-brown{
+ color: #B89F86 !important
 }
 
   .finance-heading {
@@ -26,17 +37,21 @@
     display: block;
     width: 100%;
     padding: 1rem 1.5rem;
-    background-color: #f1f5f0; /* soft green/gray background */
+    background-color: #f1f5f0; /* initial soft green/gray */
     color: #333;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
     text-align: center;
     text-decoration: none;
+    transition: background-color 0.3s ease;
   }
   
+  /* Hover effect for the box only */
   .cta-button-box:hover {
-    background-color: #e2eae0;
-    transform: scale(1.02);
+    background-color: #e2eae0; /* slightly greener on hover */
+  }
+  
+  /* Pointer only for the links */
+  .cta-button-box a {
+    font-weight: 500;
   }

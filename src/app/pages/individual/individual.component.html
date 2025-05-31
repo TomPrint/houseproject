@@ -1,45 +1,45 @@
-<div class="outside-container">
+<div class="outside-container min-vh-100 d-flex flex-column">
   <app-navbar></app-navbar>
 
   <!-- Logo Section -->
-  <div class="logo-container">
+  <div class="logo-container text-center py-4">
     <a routerLink="/">
       <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
     </a>
   </div>
 
-  <div class="container py-2 px-2 mb-5">
+  <div class="container flex-grow-1 py-4 px-3">
     <h2 class="header-container text-center py-2 mb-5">
       NASZE PRZYKŁADOWE WNĘTRZA
     </h2>
 
-    <div *ngFor="let style of galleryData" class="mb-4">
-      <h2>{{ style.style }}</h2>
-      <p>{{ style.description }}</p>
+    <div *ngFor="let style of galleryData" class="mb-5">
+      <h2 class="h4 fw-bold">{{ style.style }}</h2>
+      <p class="mb-4">{{ style.description }}</p>
 
-      <div class="row row-cols-1 row-cols-md-2 g-2">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
         <!-- CALMA Image -->
         <div class="col">
-          <div class="card border-0">
+          <div class="card border-0 shadow-sm h-100">
             <img
               [src]="style.calmaImage"
-              class="card-img-top gallery-image"
+              class="card-img-top gallery-image rounded"
               alt="CALMA {{ style.style }}"
               (click)="openModal(style.calmaImage)"
-              style="cursor: pointer;"
+              style="cursor: pointer; object-fit: cover;"
             />
           </div>
         </div>
 
         <!-- GIOIA Image -->
         <div class="col">
-          <div class="card border-0">
+          <div class="card border-0 shadow-sm h-100">
             <img
               [src]="style.gioiaImage"
-              class="card-img-top gallery-image"
+              class="card-img-top gallery-image rounded"
               alt="GIOIA {{ style.style }}"
               (click)="openModal(style.gioiaImage)"
-              style="cursor: pointer;"
+              style="cursor: pointer; object-fit: cover;"
             />
           </div>
         </div>

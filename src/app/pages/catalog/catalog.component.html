@@ -1,83 +1,89 @@
-<div class="outside-container">
+<div class="outside-container d-flex flex-column min-vh-100">
   <app-navbar></app-navbar>
 
-  <!-- Logo Section -->
-  <div class="logo-container text-center">
-    <a routerLink="/">
-      <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
-    </a>
-  </div>
-
-  <!-- Full-width Centered Heading -->
-  <div class="w-100 text-center mt-5 mb-4 finance-container">
-    <h2 class="pb-2 d-inline-block">
-      <i class="bi bi-piggy-bank me-2 icon-custom-green"></i>
-      NASZ POŚREDNIK FINANSOWY
-    </h2>
-  </div>
-
-  <!-- Finansowy Section -->
-  <section class="container finance-container py-3">
-    <div class="row align-items-center gx-5">
-      <!-- Text Column -->
-      <div class="col-12 col-lg-6">
-
-        <p class="lead mb-4">
-          Witkowski Finanse to firma prowadzona przez Łukasza Witkowskiego, pośrednika finansowego z 15-letnim doświadczeniem, będącego częścią ogólnopolskiego pośrednika finansowego – Feniks Finanse.
-        </p>
-
-        <p class="mb-3">
-          <i class="bi bi-check-circle-fill text-success me-2"></i>
-          Najważniejsze dla nas jest zadowolenie klienta, dlatego nie pobieramy od niego żadnej prowizji za nasze usługi. Jesteśmy niezależnym pośrednikiem finansowym, co oznacza, że nasze interesy są ściśle związane z interesami klienta.
-        </p>
-
-        <p class="mb-3">
-          <i class="bi bi-bank text-info me-2"></i>
-          Działamy w oparciu o etyczne standardy i stawiamy na transparentność naszych działań. Jako część Feniks Finanse, firma Witkowski Finanse współpracuje ze wszystkimi bankami świadczącymi usługi kredytowe i ubezpieczeniowe na polskim rynku. Dzięki temu Łukasz Witkowski jest w stanie znaleźć najlepsze rozwiązania dopasowane do sytuacji życiowej, zawodowej i finansowej klienta.
-        </p>
-
-        <p class="mb-3">
-          <i class="bi bi-clipboard-check text-secondary me-2"></i>
-          Optymalny wybór oferty finansowej zawsze wymaga szczegółowej analizy sytuacji klienta oraz dogłębnego zrozumienia ofert poszczególnych instytucji finansowych. Dlatego też doświadczenie i znajomość procedur oraz ofert w różnych bankach to klucz do zaproponowania najlepszego rozwiązania, dopasowanego do indywidualnych potrzeb i oczekiwań klienta.
-        </p>
-
-        <p class="mb-3">
-          <i class="bi bi-gear-fill text-warning me-2"></i>
-          Oferujemy również wsparcie post-kredytowe. W przypadku pojawienia się zmian na rynku finansowym, nasza firma oferuje wsparcie w dostosowaniu kredytu do nowych warunków...
-        </p>
-
-        <p class="mb-3">
-          <i class="bi bi-globe text-muted me-2"></i>
-          Dojeżdżamy do klientów na terenie Warszawy, okolic, a nawet całej Polski, by ułatwić im cały proces ubiegania się o kredyt. Większość spraw we wstępnym etapie realizujemy zdalnie.
-        </p>
-
-       
-  
-        <div
-        [routerLink]="['/']"
-        fragment="contact"
-        class="cta-button-box"
-      >
-        <i class="bi bi-telephone-forward me-2 icon-custom-green"></i>
-        <strong>Skontaktuj się z nami już dziś i przekonaj się, że z nami uzyskanie kredytu jest łatwiejsze niż myślisz!</strong>
-      </div>
-     
-    
-      </div>
-
-      <!-- Image Column -->
-      <div class="col-12 col-lg-6 text-center mt-4 mt-lg-0">
-        <img 
-          src="/assets/finance.jpg" 
-          alt="Pośrednik Finansowy Witkowski Finanse" 
-          class="img-fluid rounded-4 shadow-lg border"
-          style="transition: transform 0.3s ease-in-out;"
-          onmouseover="this.style.transform='scale(1.02)'"
-          onmouseout="this.style.transform='scale(1)'"
-        >
-      </div>
+  <!-- Main Content Area -->
+  <main class="flex-grow-1">
+    <!-- Logo Section -->
+    <div class="logo-container text-center">
+      <a routerLink="/">
+        <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
+      </a>
     </div>
-  </section>
 
+    <!-- Full-width Centered Heading -->
+    <div class="w-100 text-center mt-5 mb-4 finance-container">
+      <h2 class="pb-2 d-inline-block">
+        <i class="bi bi-piggy-bank me-2 icon-custom-brown"></i>
+        NASZ POŚREDNIK FINANSOWY
+      </h2>
+    </div>
+
+    <!-- Finansowy Section -->
+    <section class="container finance-container py-3">
+      <div class="row align-items-center gx-5">
+        <!-- Text Column -->
+        <div class="col-12 col-lg-6">
+          <p class="lead mb-4">
+            Witkowski Finanse to firma prowadzona przez Łukasza Witkowskiego, pośrednika finansowego z 15-letnim doświadczeniem, będącego częścią ogólnopolskiego pośrednika finansowego – Feniks Finanse.
+          </p>
+
+          <p class="mb-3">
+            <i class="bi bi-check-circle-fill text-success me-2 icon-custom-brown"></i>
+            Najważniejsze dla nas jest zadowolenie klienta, dlatego nie pobieramy od niego żadnej prowizji za nasze usługi. Jesteśmy niezależnym pośrednikiem finansowym, co oznacza, że nasze interesy są ściśle związane z interesami klienta.
+          </p>
+
+          <p class="mb-3">
+            <i class="bi bi-bank text-info me-2 icon-custom-brown"></i>
+            Działamy w oparciu o etyczne standardy i stawiamy na transparentność naszych działań. Jako część Feniks Finanse, firma Witkowski Finanse współpracuje ze wszystkimi bankami świadczącymi usługi kredytowe i ubezpieczeniowe na polskim rynku. Dzięki temu Łukasz Witkowski jest w stanie znaleźć najlepsze rozwiązania dopasowane do sytuacji życiowej, zawodowej i finansowej klienta.
+          </p>
+
+          <p class="mb-3">
+            <i class="bi bi-clipboard-check text-secondary me-2 icon-custom-brown"></i>
+            Optymalny wybór oferty finansowej zawsze wymaga szczegółowej analizy sytuacji klienta oraz dogłębnego zrozumienia ofert poszczególnych instytucji finansowych. Dlatego też doświadczenie i znajomość procedur oraz ofert w różnych bankach to klucz do zaproponowania najlepszego rozwiązania, dopasowanego do indywidualnych potrzeb i oczekiwań klienta.
+          </p>
+
+          <p class="mb-3">
+            <i class="bi bi-gear-fill text-warning me-2 icon-custom-brown"></i>
+            Oferujemy również wsparcie post-kredytowe. W przypadku pojawienia się zmian na rynku finansowym, nasza firma oferuje wsparcie w dostosowaniu kredytu do nowych warunków...
+          </p>
+
+          <p class="mb-3">
+            <i class="bi bi-globe text-muted me-2 icon-custom-brown"></i>
+            Dojeżdżamy do klientów na terenie Warszawy, okolic, a nawet całej Polski, by ułatwić im cały proces ubiegania się o kredyt. Większość spraw we wstępnym etapie realizujemy zdalnie.
+          </p>
+
+          <div class="cta-button-box mt-4">
+            <i class="bi bi-telephone-forward me-2 icon-custom-green"></i>
+            <strong>
+              Skontaktuj się z nami już dziś i przekonaj się, że z nami uzyskanie kredytu jest łatwiejsze niż myślisz!
+            </strong>
+          
+            <div class="mt-3">
+              <a href="tel:+48510150176" class="d-block text-decoration-none text-dark">
+                <i class="bi bi-telephone me-2"></i>+48 510 150 176
+              </a>
+              <a href="mailto:l.witkowski@feniksfinanse.pl" class="d-block text-decoration-none text-dark mt-2 py">
+                <i class="bi bi-envelope me-2"></i>l.witkowski&#64;feniksfinanse.pl
+              </a>
+            </div>
+          </div>
+        </div> <!-- Close Text Column -->
+
+        <!-- Image Column -->
+        <div class="col-12 col-lg-6 text-center mt-4 mt-lg-0">
+          <img 
+            src="/assets/finance.webp" 
+            alt="Pośrednik Finansowy Witkowski Finanse" 
+            class="img-fluid rounded-4 shadow-lg border mx-2"
+            style="transition: transform 0.3s ease-in-out;"
+            onmouseover="this.style.transform='scale(1.02)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <app-footer></app-footer>
 </div>

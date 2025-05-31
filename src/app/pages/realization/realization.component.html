@@ -1,8 +1,115 @@
-<div class="outside-container">
+<div class="outside-container d-flex flex-column min-vh-100 realization-bg">
   <app-navbar></app-navbar>
-    <!-- Logo Section -->
-  <div class="logo-container">
-    <a href="" routerLink="/"><img class="logo img-fluid" src="/assets/logo.png" alt="Logo"></a>
-  </div>
 
+  <!-- Main content area -->
+  <main class="flex-grow-1 ">
+    <!-- Logo Section -->
+    <div class="logo-container text-center my-4">
+      <a routerLink="/">
+        <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
+      </a>
+    </div>
+
+    <!-- Headline and Subtitle -->
+    <div class="text-center text-dark py-5">
+      <h2 class="header-container px-1">DOMY MODUŁOWE – JAK TO DZIAŁA?</h2>
+      <p class="lead w-75 mx-auto mt-4">
+        <strong>Twój sukces w 4 łatwych krokach</strong><br>
+        Droga do wymarzonego domu jest łatwa i przyjemna. W kilku krokach przeprowadzimy Cię przez cały proces,  
+        dzięki czemu będziesz się cieszyć nowym domem bez zbędnego stresu.
+      </p>
+    </div>
+
+    <!-- 4 Steps Section -->
+    <div class="container my-5">
+      <div class="row g-4">
+        <!-- Krok 1 -->
+        <div class="col-md-6">
+          <div class="card step-card step-green h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Krok 1 – Wybór wymarzonego domu</h5>
+              <p class="card-text">
+                Rozpocznij od wyboru swojego modelu domu. Wybierz jeden z trzech pakietów wykończenia i elewacji.
+                To pierwszy krok do przygotowania oferty. Następnie skontaktuj się z nami telefonicznie lub poprzez formularz kontaktowy.
+                Wspólnie z naszym przedstawicielem dostosujesz projekt lub niestandardowe rozwiązania.
+                Po tym etapie wycenimy budowę Twojego domu.
+              </p>
+              <div class="mt-auto text-center pt-3">
+                <img
+                  src="/assets/consulting.webp"
+                  alt="Krok 1 – Wybór domu"
+                  class="img-fluid step-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Krok 2 -->
+        <div class="col-md-6">
+          <div class="card step-card step-beige h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Krok 2 – Podpisanie umowy</h5>
+              <p class="card-text">
+                Podpisujemy umowę, możemy również zacząć od umowy rezerwacji, która wpisuje Twój dom w nasz grafik produkcyjny,
+                jednocześnie dając Ci czas na ewentualne zmiany projektu. Umowa końcowa szczegółowo określa budynek, zakres prac i cenę.
+              </p>
+              <div class="mt-auto text-center pt-3">
+                <img
+                  src="/assets/signing.webp"
+                  alt="Krok 2 – Podpisanie umowy"
+                  class="img-fluid step-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Krok 3 -->
+        <div class="col-md-6">
+          <div class="card step-card step-white h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Krok 3 – Prefabrykacja Twojego domu w naszym zakładzie</h5>
+              <p class="card-text">
+                Teraz rozpoczynamy budowę Twojego domu w naszym zakładzie. W oparciu o wybrane procesy produkcyjne powstają
+                pełne ściany z oknami, drzwiami i izolacją. Taki proces zapewnia wysoką jakość wykonania i skraca czas montażu.
+                Jednocześnie można też wykonać fundamenty.
+              </p>
+              <div class="mt-auto text-center pt-3">
+                <img
+                  src="/assets/creating.webp"
+                  alt="Krok 3 – Prefabrykacja domu"
+                  class="img-fluid step-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Krok 4 -->
+        <div class="col-md-6">
+          <div class="card step-card step-green h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Krok 4 – Montaż domu we wskazanym miejscu</h5>
+              <p class="card-text">
+                Kiedy wszystko jest gotowe, nasi pracownicy przyjeżdżają na Twoją działkę i zaczynają montaż domu.
+                Prefabrykacja elementów sprawia, że stan deweloperski powstaje w bardzo krótkim czasie, bez względu na pory roku.
+                Jeśli wybrałeś pakiet obejmujący wykończenie wnętrza, również się tym zajmiemy. Potem możesz już wprowadzić się do swojego nowego domu.
+              </p>
+              <div class="mt-auto text-center pt-3">
+                <img
+                  src="/assets/realization.webp"
+                  alt="Krok 4 – Budowa domu"
+                  class="img-fluid step-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <app-footer></app-footer>
 </div>
