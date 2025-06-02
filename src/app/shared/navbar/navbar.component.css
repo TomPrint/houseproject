@@ -122,9 +122,9 @@
 
   /* Center and style navigation links */
   .fullscreen-nav .nav-link {
-    font-size: 2rem; /* Larger text for visibility */
+    font-size: 1.6rem; /* Larger text for visibility */
     color: #ffffff; /* White text */
-    margin: 7px 0; /* Spacing between links */
+    margin: 4px 0; /* Spacing between links */
     text-align: center;
     display: block; /* Ensure block layout for stacking */
   }
