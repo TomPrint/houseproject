@@ -146,6 +146,12 @@
     }
   }
 
+  .img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 
 /* SECTION FOR FACADE IMAGES */
 

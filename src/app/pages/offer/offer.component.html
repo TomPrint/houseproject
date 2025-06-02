@@ -59,17 +59,18 @@
       </div>
     </div>
     
-  <!-- HOUSE GALLERY FRONT BACK SECTION -->
+<!-- HOUSE GALLERY FRONT BACK SECTION -->
 <div class="container-fluid py-5" style="background: url('/assets/bg tree 1.jpg') center center / cover no-repeat;">
   <div class="container">
     <div class="row justify-content-center align-items-stretch text-center">
+      
       <!-- Front Image -->
       <div class="col-12 col-md-6 mb-3 mb-md-0 d-flex flex-column align-items-center">
         <div class="ratio ratio-4x3 w-100">
           <img
             [src]="houses[selectedHouse()].imagefront"
             alt="Front view of {{ houses[selectedHouse()].name }}"
-            class="img-fluid rounded shadow"
+            class="img-cover rounded shadow"
             (click)="openModal(houses[selectedHouse()].imagefront)"
             style="cursor: zoom-in;"
           />
@@ -83,13 +84,14 @@
           <img
             [src]="houses[selectedHouse()].imageback"
             alt="Back view of {{ houses[selectedHouse()].name }}"
-            class="img-fluid rounded shadow"
+            class="img-cover rounded shadow"
             (click)="openModal(houses[selectedHouse()].imageback)"
             style="cursor: zoom-in;"
           />
         </div>
-        <p class="text-center fw-bold pt-4"> {{ houses[selectedHouse()].name }} WIDOK TYŁ </p>
+        <p class="text-center fw-bold pt-4">{{ houses[selectedHouse()].name }} WIDOK TYŁ</p>
       </div>
+
     </div>
   </div>
 </div>
@@ -166,14 +168,12 @@
   
 <!-- RENDERS SECTION -->
 <div class="render-section px-2 mt-4 renders">
-  <!-- Section Title -->
   <h3 class="text-center pt-3 mb-0">{{ houses[selectedHouse()].name }} PRZEKRÓJ DOMU</h3>
 
   <div class="row justify-content-center align-items-center">
-    <!-- Render Container -->
     <div class="col-12 col-md-10 col-lg-8 col-xl-7 text-center render-container">
-      <!-- Render Image 1 -->
-      <div class="render-img-wrapper mt-3">
+      <!-- Render Image 1 (always shown if present) -->
+      <div class="render-img-wrapper mt-3" *ngIf="houses[selectedHouse()].renders?.[0]">
         <img
           [src]="houses[selectedHouse()].renders[0]"
           alt="Render 1"
@@ -181,8 +181,9 @@
           (click)="openModal(houses[selectedHouse()].renders[0])"
         />
       </div>
-      <!-- Render Image 2 -->
-      <div class="render-img-wrapper mt-3">
+
+      <!-- Render Image 2 (conditionally shown only if it exists) -->
+      <div class="render-img-wrapper mt-3" *ngIf="houses[selectedHouse()].renders?.[1]">
         <img
           [src]="houses[selectedHouse()].renders[1]"
           alt="Render 2"
