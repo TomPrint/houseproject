@@ -2,17 +2,6 @@
   position: relative; /* Ensure proper stacking context */
   overflow: hidden; /* Prevent unwanted overflow */
 }
-
-.navbar-container {
-  position: absolute; /* lub fixed jeśli chcesz */
-  top: 0;
-  left: 0; /* tutaj ustaw lewą stronę */
-  width: 100%;
-  margin-left: 30px; /* albo usuń jeśli przeszkadza */
-  z-index: 15;
-}
-
-
 .bg_proces_img {
     background-image: white; /* Tło */
     height: 82vh;

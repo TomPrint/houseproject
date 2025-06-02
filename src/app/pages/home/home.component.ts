@@ -75,7 +75,7 @@ export class HomeComponent {
 
 
   constructor(private sanitizer: DomSanitizer) {
-    const url = 'https://livetour.istaging.com/478b7e8f-43ca-4609-9391-1c8074e210fb?index=5';
+    const url = 'https://livetour.istaging.com/478b7e8f-43ca-4609-9391-1c8074e210fb?index=1';
     this.Walk3dSanitizedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
