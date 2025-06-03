@@ -1,8 +1,57 @@
-<div class="container-fluid text-center">
-    <p>technology works!</p>
+<div class="outside-container d-flex flex-column min-vh-100">
+  <app-navbar></app-navbar>
+
+  <main class="flex-grow-1">
+    <!-- Logo -->
+    <div class="logo-container text-center my-4">
+      <a routerLink="/">
+        <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
+      </a>
+    </div>
+
+    <!-- Technology Section -->
+    <div class="container py-4">
+      <h2 class="text-center mb-5 main-container">TECHNOLOGIA</h2>
+
+      <!-- Step 1 to 6 -->
+      <div *ngFor="let step of steps; let i = index" 
+           class="row mb-4 align-items-center py-3"
+           [ngClass]="{'tech-bg': i % 2 === 0}">
+        
+        <!-- Image Column -->
+        <div [ngClass]="{'order-md-2': i % 2 === 1}" class="col-md-5 text-center mb-3 mb-md-0">
+          <img *ngIf="step.image" 
+               [src]="step.image" 
+               [alt]="'Zdjęcie ' + (i + 1)" 
+               class="img-fluid rounded shadow-sm tech-image">
+        </div>
+
+        <!-- Text Column -->
+        <div class="col-md-7">
+          <h4 class="fw-bold">{{ step.title }}</h4>
+          <p>{{ step.description }}</p>
+          <ul *ngIf="step.points">
+            <li *ngFor="let point of step.points">{{ point }}</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Summary Section -->
+      <div class="p-4 rounded mt-2 ">
+        <h4 class="fw-bold text-center mb-3 py-3">Co zyskujesz dzięki naszej technologii?</h4>
+        <ul class="list-unstyled text-center">
+          <li class="my-2">⏱️ Oszczędność czasu – budowa nawet w 6 tygodni</li>
+          <li class="my-2">💰 Stały koszt – bez niespodzianek w trakcie realizacji</li>
+          <li class="my-2">🌱 Ekologia – mniejsze zużycie materiałów i energii</li>
+          <li class="my-2">📦 Elastyczność – dopasowanie projektu do Twoich potrzeb</li>
+          <li class="my-2">🛠️ Wysoka jakość – kontrola każdego etapu</li>
+        </ul>
+        <p class="text-center mt-3 fw-semibold mt-5 px-y">
+          Zamieszkaj szybciej, mądrzej i nowocześniej – z Ammer House.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <app-footer></app-footer>
 </div>
-
-
-
-
-
