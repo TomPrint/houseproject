@@ -19,7 +19,7 @@
       </div>
 
       <!-- About and Image -->
-      <div class="row align-items-center">
+      <div class="row align-items-center ">
         <div class="col-lg-6">
           <p class="fs-5">
             Ammer House to polski producent nowoczesnych budynków modułowych i prefabrykowanych.
@@ -28,14 +28,32 @@
             lub prowadzenia działalności.
           </p>
         </div>
-        <div class="col-lg-6 text-center">
-          <img src="/assets/team.webp" alt="Ammer House" class="img-fluid custom-shadow">
+<div class="col-lg-6 text-center">
+  <div class="animated-house-wrapper mx-auto" (click)="triggerAnimation()">
+    <div class="animated-house" [class.animate]="animate">
+      <div class="building">
+        <div class="window-alt">
+  <div class="curtain" [class.animate]="animate"></div>
+  <div class="pullie" [class.animate]="animate"></div>
+</div>
+        <div class="window"><div class="streak"></div></div>
+        <div class="window"><div class="streak"></div></div>
+        <div class="window"><div class="streak"></div></div>
+        <div class="window-alt"><div class="pullie"></div></div>
+        <div class="window"><div class="streak"></div></div>
+        <div class="door">
+          <div class="door-window"></div>
+          <div class="box"></div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
 
       <!-- What we do -->
-      <div class="mb-2">
-        <h3 class="fw-bold mb-3 mt-3">Co robimy?</h3>
+      <div class="mb-3">
+        <h3 class="fw-bold mb-3">Co robimy?</h3>
         <p class="lead">Specjalizujemy się w projektowaniu i produkcji:</p>
         <ul class="list-unstyled fs-5">
           <li ><i class="bi bi-caret-right-fill icon-custom-green"></i> Domów modułowych i letniskowych</li>
@@ -116,9 +134,7 @@
     </div>
   </main>
 
-  <!-- house animation -->
-
-  
+ 
 
   <app-footer></app-footer>
 </div>
