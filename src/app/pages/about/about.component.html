@@ -1,5 +1,124 @@
-<div class="container-fluid text-center">
-    <p>about!</p>
+<div class="outside-container d-flex flex-column min-vh-100">
+  <app-navbar></app-navbar>
+
+  <!-- Main Content Area -->
+  <main class="flex-grow-1">
+    <!-- Logo Section -->
+    <div class="logo-container text-center py-4">
+      <a routerLink="/">
+        <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
+      </a>
+    </div>
+
+    <!-- About Content -->
+    <div class="container py-5 ">
+      <!-- Heading -->
+      <div class="text-center mb-5">
+        <h2 class="main-container">O NAS – AMMER HOUSE <i class="bi bi-house icon-custom-green"></i></h2>
+        <p class="lead">Tworzymy nową jakość w budownictwie modułowym</p>
+      </div>
+
+      <!-- About and Image -->
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <p class="fs-5">
+            Ammer House to polski producent nowoczesnych budynków modułowych i prefabrykowanych.
+            Od lat dostarczamy rozwiązania dla klientów prywatnych i biznesowych, oferując
+            funkcjonalne, estetyczne i energooszczędne obiekty – gotowe do zamieszkania, pracy
+            lub prowadzenia działalności.
+          </p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="/assets/team.webp" alt="Ammer House" class="img-fluid custom-shadow">
+        </div>
+      </div>
+
+      <!-- What we do -->
+      <div class="mb-2">
+        <h3 class="fw-bold mb-3 mt-3">Co robimy?</h3>
+        <p class="lead">Specjalizujemy się w projektowaniu i produkcji:</p>
+        <ul class="list-unstyled fs-5">
+          <li ><i class="bi bi-caret-right-fill icon-custom-green"></i> Domów modułowych i letniskowych</li>
+          <li><i class="bi bi-caret-right-fill icon-custom-green"></i> Obiektów do 70 m² (bez konieczności pozwolenia na budowę)</li>
+          <li><i class="bi bi-caret-right-fill icon-custom-green"></i> Garaży i domków rekreacyjnych</li>
+          <li><i class="bi bi-caret-right-fill icon-custom-green"></i> Budynków usługowych i handlowych: biur, sklepów, salonów sprzedaży</li>
+        </ul>
+      </div>
+
+      <!-- Why us -->
+      <div class="mb-5">
+        <h3 class="fw-bold mb-4">Dlaczego my?</h3>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="d-flex align-items-start">
+              <span><i class="bi bi-clock-history icon-custom-brown px-1"></i></span>
+              <div>
+                <h5 class="fw-semibold mb-1">Krótki czas realizacji</h5>
+                <p class="mb-0">
+                  Dzięki technologii prefabrykacji budowa może być nawet o 80% szybsza niż tradycyjna.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex align-items-start">
+              <span> <i class="bi bi-bricks icon-custom-green px-1"></i></span>
+              <div>
+                <h5 class="fw-semibold mb-1">Jakość i trwałość</h5>
+                <p class="mb-0">
+                  Produkcja w hali fabrycznej z wykorzystaniem sprawdzonych materiałów i kadry – pełna kontrola jakości.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex align-items-start">
+              <span> <i class="bi bi-lightbulb icon-custom-green px-1"></i></span>
+              <div>
+                <h5 class="fw-semibold mb-1">Nowoczesny design</h5>
+                <p class="mb-0">
+                  Nowatorska konstrukcja, opatentowane materiały, duże przeszklenia – funkcjonalność i estetyka w jednym.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex align-items-start">
+              <span> <i class="bi bi-car-front-fill icon-custom-brown px-1"></i></span>
+              <div>
+                <h5 class="fw-semibold mb-1">Mobilność i elastyczność</h5>
+                <p class="mb-0">
+                  Moduły można łatwo rozbudować, przestawić lub zdemontować – pełna swoboda dla Twoich planów.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Values -->
+      <div class="mb-5">
+        <h3 class="fw-bold mb-3">Nasze wartości</h3>
+        <ul class="list-unstyled fs-5">
+          <li>✔ Precyzja wykonania</li>
+          <li>✔ Indywidualne podejście do klienta</li>
+          <li>✔ Innowacyjność i rozwój technologii</li>
+          <li>✔ Zrównoważone, energooszczędne rozwiązania</li>
+        </ul>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="text-center mt-5">
+<a [routerLink]="['/']" fragment="contact" class="btn btn-outline-secondary px-4 py-2">
+  Skontaktuj się z nami
+</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- house animation -->
+
+  
+
+  <app-footer></app-footer>
 </div>
-
-

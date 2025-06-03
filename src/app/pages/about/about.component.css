@@ -1,0 +1,42 @@
+.outside-container {
+  position: relative; /* Ensure proper stacking context */
+  overflow: hidden; /* Prevent unwanted overflow */
+  min-height: 100vh;
+}
+
+.logo-container { 
+    filter: invert(1);
+}
+
+.main-container{
+    padding-top: 120px;
+}
+
+
+.icon-custom-green{
+    color:#7C8A77 !important
+}
+
+.icon-custom-brown{
+ color: #B89F86 !important
+}
+
+
+ul {
+  padding-left: 1.2rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+.fs-3 {
+  line-height: 1;
+}
+
+.custom-shadow {
+  box-shadow: 0 4px 12px rgba(124, 138, 119, 0.6); 
+}
+
+/* Hosue animation */
+
