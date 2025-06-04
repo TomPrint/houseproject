@@ -1,9 +1,85 @@
 .outside-container {
-  position: relative; /* Ensure proper stacking context */
-  overflow: hidden; /* Prevent unwanted overflow */
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
 }
+
+.logo-container {
+  filter: invert(1);
+}
+
+.main-container {
+  padding-top: 100px;
+}
+
+.text-container {
+  background-image: url('/assets/bg_tree.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.text-section {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+
+
+.font {
+  font-size: 1.1rem;
+}
+
+.icon-color {
+  color: #7C8A77;
+  font-size: 1.3rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  
+}
+
+.contact-box {
+  background-color: #B89F86 ;
+  border-radius: 0.75rem;
+}
+
+/* Responsive improvement: mobile layout */
+@media (max-width: 767.98px) {
+  .text-section {
+    text-align: center;
+  }
+
+  ul {
+    text-align: left;
+  }
+
+  .text-container {
+    padding: 2rem 1.25rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ! KOD DO WKRÓTCE
 .bg_proces_img {
-    background-image: white; /* Tło */
+    background-image: white; 
     height: 82vh;
     display: flex;
     flex-direction: column;
@@ -17,8 +93,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem; /* Możesz dostosować rozmiar czcionki */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Cień dla tekstu */
+    font-size: 2.5rem; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
   }
   
   app-footer {
@@ -27,8 +103,8 @@
   
   .grid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr); /* Domyślnie 10 kolumn */
-    grid-template-rows: repeat(10, 1fr); /* Domyślnie 10 wierszy */
+    grid-template-columns: repeat(10, 1fr); 
+    grid-template-rows: repeat(10, 1fr); 
     gap: 10px;
     position: absolute;
     top: 0;
@@ -47,32 +123,32 @@
     transition: opacity 1.5s ease;
   }
   
-  /* Media queries dla różnych rozmiarów ekranów */
+
   @media (max-width: 1200px) {
     .grid {
-      grid-template-columns: repeat(8, 1fr); /* 8 kolumn na dużych tabletach */
-      grid-template-rows: repeat(8, 1fr); /* 8 wierszy na dużych tabletach */
+      grid-template-columns: repeat(8, 1fr); 
+      grid-template-rows: repeat(8, 1fr); 
     }
   }
   
   @media (max-width: 992px) {
     .grid {
-      grid-template-columns: repeat(6, 1fr); /* 6 kolumn na tabletach */
-      grid-template-rows: repeat(6, 1fr); /* 6 wierszy na tabletach */
+      grid-template-columns: repeat(6, 1fr); 
+      grid-template-rows: repeat(6, 1fr); 
     }
   }
   
   @media (max-width: 768px) {
     .grid {
-      grid-template-columns: repeat(4, 1fr); /* 4 kolumny na małych tabletach */
-      grid-template-rows: repeat(4, 1fr); /* 4 wiersze na małych tabletach */
+      grid-template-columns: repeat(4, 1fr); 
+      grid-template-rows: repeat(4, 1fr);
     }
   }
   
   @media (max-width: 576px) {
     .grid {
-      grid-template-columns: repeat(3, 1fr); /* 2 kolumny na małych ekranach */
-      grid-template-rows: repeat(3, 1fr); /* 2 wiersze na małych ekranach */
+      grid-template-columns: repeat(3, 1fr); 
+      grid-template-rows: repeat(3, 1fr); 
     }
   }
-  
+   */

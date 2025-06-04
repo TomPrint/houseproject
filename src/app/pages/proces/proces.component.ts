@@ -10,31 +10,45 @@ import { CommonModule } from '@angular/common';
   templateUrl: './proces.component.html',
   styleUrl: './proces.component.css'
 })
-export class ProcesComponent implements OnInit, OnDestroy {
-  cells: Array<{ img: string, opacity: number }> = [];
-  private intervalId: any;
+export class ProcesComponent   {
 
-  ngOnInit() {
-    // Inicjalizacja komórek siatki
-    for (let i = 0; i < 100; i++) {
-      this.cells.push({
-        img: Math.random() > 0.5 ? '/assets/PT 200.png' : '/assets/PT 229.png',
-        opacity: Math.random()*0.2 // Początkowa losowa przezroczystość
-      });
-    }
+images = [
+  '/assets/business1.webp',
+  '/assets/business2.webp',
+  '/assets/business3.webp',
+  '/assets/business4.webp',
+  '/assets/business5.webp'
+];
 
-    // Zmieniaj losową przezroczystość co 2 sekundy
-    this.intervalId = setInterval(() => {
-      this.cells.forEach(cell => {
-        cell.opacity = Math.random()*0.5; // Zmieniaj przezroczystość losowo
-      });
-    }, 2000);
-  }
 
-  ngOnDestroy() {
-    // Wyczyść interwał po zniszczeniu komponentu
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-    }
-  }
+
+
+
+  //! KOD DO WKRTÓTCE 
+  // cells: Array<{ img: string, opacity: number }> = [];
+  // private intervalId: any;
+
+  // ngOnInit() {
+  //   // Inicjalizacja komórek siatki
+  //   for (let i = 0; i < 100; i++) {
+  //     this.cells.push({
+  //       img: Math.random() > 0.5 ? '/assets/PT 200.png' : '/assets/PT 229.png',
+  //       opacity: Math.random()*0.2 // Początkowa losowa przezroczystość
+  //     });
+  //   }
+
+  //   // Zmieniaj losową przezroczystość co 2 sekundy
+  //   this.intervalId = setInterval(() => {
+  //     this.cells.forEach(cell => {
+  //       cell.opacity = Math.random()*0.5; // Zmieniaj przezroczystość losowo
+  //     });
+  //   }, 2000);
+  // }
+
+  // ngOnDestroy() {
+  //   // Wyczyść interwał po zniszczeniu komponentu
+  //   if (this.intervalId) {
+  //     clearInterval(this.intervalId);
+  //   }
+  // }
 }

@@ -146,6 +146,18 @@
                         </div>
                       </div>
 
+                      <div class="mb-3">
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="rodoConsent" formControlName="rodoConsent">
+    <label class="form-check-label small" for="rodoConsent">
+      Wyrażam zgodę na przetwarzanie moich danych osobowych w celu udzielenia odpowiedzi na przesłane zapytanie zgodnie z obowiązującymi przepisami o ochronie danych osobowych.
+    </label>
+  </div>
+  <div *ngIf="contactForm.get('rodoConsent')?.invalid && contactForm.get('rodoConsent')?.touched" class="text-danger mt-1">
+    <small>Wymagana zgoda na przetwarzanie danych osobowych.</small>
+  </div>
+</div>
+
                       <div class="row mt-3 align-items-center">
                         <!-- Komunikat o błędach -->
                         <div class="col-12 col-md-7 order-2 order-md-1 p-0">

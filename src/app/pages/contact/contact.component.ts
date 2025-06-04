@@ -37,7 +37,8 @@ export class ContactComponent implements OnInit {
       phone: ['', [Validators.required, Validators.pattern('^[0-9]{7,15}$')]],
       // topic: ['', Validators.required],
       contactPreference: ['', Validators.required],
-      message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(1000)]]
+      message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(1000)]],
+      rodoConsent: [false, Validators.requiredTrue]
     })
       this.contactForm.valueChanges.subscribe(() => {
     if (this.formSubmitted && this.contactForm.valid) {

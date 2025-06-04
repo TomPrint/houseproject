@@ -1,8 +1,172 @@
-<div class="outside-container">
-  <div class="bg_proces_img">
-    <app-navbar></app-navbar>
+<div class="outside-container d-flex flex-column min-vh-100">
+  <app-navbar></app-navbar>
 
-    <div class="d-flex align-items-center justify-content-center content-area">
+  <main class="flex-grow-1">
+    <div class="logo-container text-center py-4">
+      <a routerLink="/">
+        <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
+      </a>
+    </div>
+
+    <section class="business-section container-fluid px-0 main-container">
+      <h1 class="text-center mb-5 main-container ">DLA BIZNESU</h1>
+
+      <!-- Background section with content -->
+      
+
+        <!-- Block 1: Full-width Image -->
+        <div class="row ">
+          <div class="col-12">
+            <img [src]="images[0]" class="img-fluid  w-100" alt="Ośrodek">
+          </div>
+        </div>
+<div class="text-container  px-3 px-md-5">
+<div class="row align-items-center mb-5">
+  <!-- Image column -->
+  <div class="col-md-6 order-2 order-md-1 mt-4">
+    <img [src]="images[1]" class="img-fluid rounded shadow-sm w-100" alt="Domki">
+  </div>
+
+  <!-- Text column -->
+  <div class="col-md-6 order-1 order-md-2">
+    <h2 class="text-section mb-3 display-4">
+      Zbuduj nowoczesny ośrodek wypoczynkowy z Ammer House
+    </h2>
+    <p class="display-6">Gotowe domki modułowe jako fundament Twojego biznesu turystycznego.</p>
+    <p class="lead">
+      Szukasz sprawdzonego i szybkiego sposobu na stworzenie nowoczesnego ośrodka wypoczynkowego? </p>
+     <p class="lead">Z Ammer House zrealizujesz inwestycję w czasie krótszym niż tradycyjne budownictwo – bez kompromisów jakościowych.</p>
+   
+  </div>
+</div>
+
+        <!-- Block 3: Text left, image right -->
+        <div class="row align-items-center mb-5 flex-md-row-reverse">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <img [src]="images[2]" class="img-fluid rounded shadow-sm w-100" alt="Recepcje">
+          </div>
+          <div class="col-md-6">
+            <h2 class="text-section mb-3">
+              <i class="bi bi-layout-text-sidebar icon-color me-2"></i>Oferujemy kompleksową zabudowę ośrodków
+            </h2>
+            <ul>
+              <li class="lead">Domki letniskowe i całoroczne</li>
+              <li class="lead">Domki do 35 m² bez pozwolenia</li>
+              <li class="lead">Recepcje, strefy gastronomiczne i sanitarne</li>
+              <li class="lead">Budynki usługowe, chill zone, sauny, spa, magazynki i techniczne</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Block 4: Centered Text -->
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 class="text-section mb-4">
+              <i class="bi bi-lightning-charge-fill icon-color me-2"></i>Dlaczego domki modułowe to idealna baza?
+            </h2>
+            <p class="lead" ><strong>Szybkość budowy:</strong> domki montowane w ciągu kilku dni – ośrodek gotowy w kilka tygodni.</p>
+            <p class="lead"><strong>Biznesowy komfort i powtarzalność:</strong> gotowe moduły, spójna estetyka i funkcjonalność.</p>
+            <p class="lead"><strong>Ekologia i energooszczędność:</strong> pasywne budynki = niższe koszty i przyjazność środowisku.</p>
+            <p class="lead"><strong>Elastyczność:</strong> łatwa rozbudowa, przenoszenie i skalowanie.</p>
+          </div>
+        </div>
+
+        <!-- Block 5: Full-width image -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-10">
+            <img [src]="images[3]" class="img-fluid rounded shadow-sm w-100" alt="Strefy wspólne">
+          </div>
+        </div>
+
+        <!-- Block 6: Image right, text left -->
+        <div class="row align-items-center mb-5">
+          <div class="col-md-6">
+            <h2 class="text-section mb-3">
+              <i class="bi bi-rulers icon-color me-2"></i>Projektujemy pod inwestora
+            </h2>
+            <p class="lead">Nie masz jeszcze projektu?</p>
+            <ul>
+              <li class="lead">Układ ośrodka (zagospodarowanie działki)</li>
+              <li class="lead">Indywidualne wnętrza domków</li>
+              <li class="lead">Strefy wspólne (recepcja, kuchnie, sanitariaty)</li>
+              <li class="lead">Mała architektura i landscaping</li>
+            </ul>
+            <p class="lead"><strong >Dostosujemy rozwiązanie do Twojego budżetu, działki i grupy docelowej.</strong></p>
+          </div>
+          <div class="col-md-6">
+            <img [src]="images[4]" class="img-fluid rounded shadow-sm w-100 mb-3" alt="Projektowanie">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Final grouped section -->
+      <div class="row justify-content-center mb-5 text-center px-3 px-md-5 py-4">
+        <div class="col-lg-10">
+          <h2 class="text-section mb-3">
+            <i class="bi bi-check2-all icon-color me-2"></i>Zakres współpracy
+          </h2>
+          <ul>
+            <li>✔ Pomoc w doborze odpowiednich typów zabudowy</li>
+            <li>✔ Kompleksowa produkcja i dostawa domków</li>
+            <li>✔ Transport, montaż i serwis</li>
+            <li>✔ Wyposażenie wnętrz pod klucz</li>
+            <li>✔ Wsparcie projektowe i dokumentacyjne</li>
+          </ul>
+
+          <h2 class="text-section mt-5 mb-3">
+            <i class="bi bi-people-fill icon-color me-2"></i>Dla kogo?
+          </h2>
+          <ul>
+            <li>• ośrodki wakacyjne i całoroczne</li>
+            <li>• glamping, eko-resorty</li>
+            <li>• agroturystyka i gospodarstwa tematyczne</li>
+            <li>• parki rozrywki i atrakcje turystyczne</li>
+            <li>• inwestycje w najem krótkoterminowy (Booking, Airbnb)</li>
+          </ul>
+
+          <h2 class="text-section mt-5 mb-3">
+            <i class="bi bi-currency-exchange icon-color me-2"></i>Zainwestuj z zyskiem
+          </h2>
+          <ul>
+            <li>Krótki czas realizacji = szybsze uruchomienie sprzedaży</li>
+            <li>Stała cena = brak niespodzianek</li>
+            <li>Estetyczne domki = wyższa stawka za nocleg</li>
+            <li>Niskie koszty utrzymania = większa marża</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact CTA -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8">
+          <div class="contact-box p-4 text-white text-center shadow">
+            <h3 class="mb-3"><i class="bi bi-envelope-paper-heart me-2"></i>Skontaktuj się z nami</h3>
+            <p>
+              Planujesz budowę ośrodka lub chcesz rozbudować istniejący?<br>
+              Pomożemy Ci stworzyć miejsce, do którego goście będą chcieli wracać.
+            </p>
+            <p>
+              <strong>Email: </strong> <a href="mailto:office&#64;ammerhouse.com" class="text-white">office&#64;ammerhouse.com</a><br>
+              <strong>Telefon: </strong> <a href="tel:+48604698080" class="text-white">604 69 80 80</a>
+            </p>
+            <a href="mailto:office@ammerhouse.com" class="btn btn-light mt-3 fw-bold text-dark">ZAPYTAJ O OFERTĘ</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <app-footer></app-footer>
+</div>
+
+
+
+
+
+    <!--! KOD DO WKRTÓTCE -->
+    <!-- <div class="d-flex align-items-center justify-content-center content-area">
       <div class="text-center">
         <h1>WKRÓTCE...</h1>
       </div>
@@ -13,7 +177,4 @@
         <img [src]="cell.img" [style.opacity]="cell.opacity" alt="grid-image">
       </div>
     </div>
-  </div>
-
-  <app-footer></app-footer>
-</div>
+  </div> -->
