@@ -13,12 +13,34 @@
 }
 
 .text-container {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden; /* Just in case */
+}
+
+/* Add the background image with lower opacity */
+.text-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('/assets/bg_tree.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100%;
+  opacity: 0.58; /* <-- Adjust this for transparency */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Keep actual content above the background */
+.text-container > * {
+  position: relative;
+  z-index: 2;
 }
 
 .text-section {
