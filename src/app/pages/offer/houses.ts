@@ -5,7 +5,7 @@ export const houses = {
       vector: '/assets/budynek-1.svg', // Main image for CALMA
       imagefront: '/assets/calma-front.webp',
       imageback:'/assets/calma-back.webp', 
-      drawing: '/assets/rzut1.svg', // Floor plans
+      drawing: '/assets/rzut1.webp', // Floor plans
       renders: ['/assets/calma-render1.webp', '/assets/calma-render2.webp'],
       facade: '/assets/Elewacja1.svg', // Facade image
       info: [
@@ -67,7 +67,7 @@ To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno,
       vector: '/assets/budynek-3.svg',
       imagefront: '/assets/inprogress.webp',
       imageback:'/assets/inprogress.webp',  // Main image for GIOIA
-      drawing: '/assets/rzut3.svg', // Floor plans // Floor plans
+      drawing: '/assets/rzut3.webp', // Floor plans // Floor plans
       renders: ['/assets/inprogress.webp'], // Render images
       facade: '/assets/Elewacja3.svg',  // Facade images
       info: [
@@ -135,7 +135,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-10.svg',
       imagefront: '/assets/carina-front.webp',
       imageback:'/assets/carina-back.webp',
-      drawing: '/assets/rzut10.svg', // Floor plans
+      drawing: '/assets/rzut10.webp', // Floor plans
       renders: ['/assets/carina-render1.webp', '/assets/carina-render2.webp'], // Render images
       facade: '/assets/Elewacja10.svg',  // Facade images // Facade images
       info: [
@@ -204,7 +204,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-2.svg',
       imagefront: '/assets/gioia-front.webp',
       imageback:'/assets/gioia-back.webp', // Main image for GIOIA
-      drawing: '/assets/rzut2.svg', // Floor plans
+      drawing: '/assets/rzut2.webp', // Floor plans
       renders: ['/assets/gioia-render1.webp', '/assets/gioia-render2.webp'], // Render images
       facade: '/assets/Elewacja2.svg', // Facade image, // Facade images
       info: [
@@ -272,7 +272,7 @@ To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno,
       vector: '/assets/budynek-4.svg',
       imagefront: '/assets/ariosa-front.webp',
       imageback:'/assets/ariosa-back.webp',  // Main image for GIOIA
-      drawing: '/assets/rzut4.svg', // Floor plans // Floor plans
+      drawing: '/assets/rzut4.webp', // Floor plans // Floor plans
       renders: ['/assets/ariosa-render1.webp', '/assets/ariosa-render2.webp'], // Render images
       facade: '/assets/Elewacja4.svg',  // Facade images
       info: [
@@ -340,7 +340,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-6.svg',
       imagefront: '/assets/solare-front.webp',
       imageback:'/assets/solare-back.webp',
-      drawing: '/assets/rzut6.svg', // Floor plans // Floor plans
+      drawing: '/assets/rzut6.webp', // Floor plans // Floor plans
       renders: ['/assets/solare-render1.webp', '/assets/solare-render2.webp'], // Render images
       facade: '/assets/Elewacja6.svg',  // Facade images // Facade images
       info: [
@@ -410,7 +410,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-5.svg',
       imagefront: '/assets/allegra-front.webp',
       imageback:'/assets/allegra-back.webp',  // Main image for GIOIA
-      drawing: '/assets/rzut5.svg', // Floor plans // Floor plans
+      drawing: '/assets/rzut5.webp', // Floor plans // Floor plans
       renders: ['/assets/allegra-render1.webp',], // Render images
       facade: '/assets/Elewacja5.svg', // Facade images
       info: [
@@ -476,7 +476,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-8.svg',
       imagefront: '/assets/moderna-front.webp',
       imageback: '/assets/moderna-back.webp',
-      drawing: '/assets/rzut8.svg', // Floor plans // Floor plans
+      drawing: '/assets/rzut8.webp', // Floor plans // Floor plans
       renders: ['/assets/moderna-render1.webp', '/assets/moderna-render2.webp'], // Render images
       facade: '/assets/Elewacja8.svg',  // Facade images // Facade images
       info: [
@@ -547,7 +547,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-7.svg',
       imagefront: '/assets/tonica-front.webp',
       imageback:'/assets/tonica-back.webp',
-      drawing: '/assets/rzut7.svg', // Floor plans// Floor plans
+      drawing: '/assets/rzut7.webp', // Floor plans// Floor plans
       renders: ['/assets/tonica-render1.webp', '/assets/tonica-render2.webp'], // Render images
       facade: '/assets/Elewacja7.svg',  // Facade images // Facade images
       info: [
@@ -616,7 +616,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       vector: '/assets/budynek-9.svg',
       imagefront: '/assets/ricca-front.webp',
       imageback:'/assets/ricca-back.webp', 
-      drawing: '/assets/rzut9.svg', // Floor plans // Floor plans
+      drawing: '/assets/rzut9.webp', // Floor plans // Floor plans
       renders: ['/assets/ricca-render1.webp', '/assets/ricca-render2.webp'], // Render images
       facade: '/assets/Elewacja9.svg',  // Facade images // Facade images
       info: [
