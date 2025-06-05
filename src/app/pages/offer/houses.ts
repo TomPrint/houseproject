@@ -133,10 +133,10 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       name: 'CARINA',
       square:  53.7,
       vector: '/assets/budynek-10.svg',
-      imagefront: '/assets/inprogress.webp',
-      imageback:'/assets/inprogress.webp',
+      imagefront: '/assets/carina-front.webp',
+      imageback:'/assets/carina-back.webp',
       drawing: '/assets/rzut10.svg', // Floor plans
-      renders: ['/assets/inprogress.webp'], // Render images
+      renders: ['/assets/carina-render1.webp', '/assets/carina-render2.webp'], // Render images
       facade: '/assets/Elewacja10.svg',  // Facade images // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
@@ -270,10 +270,10 @@ To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno,
       name: 'ARIOSA',
       square:  54.8,
       vector: '/assets/budynek-4.svg',
-      imagefront: '/assets/inprogress.webp',
-      imageback:'/assets/inprogress.webp',  // Main image for GIOIA
+      imagefront: '/assets/ariosa-front.webp',
+      imageback:'/assets/ariosa-back.webp',  // Main image for GIOIA
       drawing: '/assets/rzut4.svg', // Floor plans // Floor plans
-      renders: ['/assets/inprogress.webp'], // Render images
+      renders: ['/assets/ariosa-render1.webp', '/assets/ariosa-render2.webp'], // Render images
       facade: '/assets/Elewacja4.svg',  // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
@@ -614,10 +614,10 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       name: 'RICCA',
       square:  110.5,
       vector: '/assets/budynek-9.svg',
-      imagefront: '/assets/inprogress.webp',
-      imageback:'/assets/inprogress.webp', 
+      imagefront: '/assets/ricca-front.webp',
+      imageback:'/assets/ricca-back.webp', 
       drawing: '/assets/rzut9.svg', // Floor plans // Floor plans
-      renders: ['/assets/inprogress.webp'], // Render images
+      renders: ['/assets/ricca-render1.webp', '/assets/ricca-render2.webp'], // Render images
       facade: '/assets/Elewacja9.svg',  // Facade images // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
