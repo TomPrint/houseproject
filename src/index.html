@@ -3,14 +3,74 @@
 <head>
   <meta charset="utf-8">
   <title>Houseproject</title>
-  
+
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Klaro config MUST be before script -->
+  <script>
+    var klaroConfig = {
+      elementID: 'klaro',
+      storageMethod: 'cookie',
+      cookieName: 'klaro',
+      htmlTexts: true,
+      privacyPolicy: '/privacy',
+      default: false,
+      mustConsent: true,
+      acceptAll: true,
+      translations: {
+        en: {
+          consentModal: {
+            title: 'Cookies & Privacy',
+            description: 'We use cookies to improve your experience. You can opt out at any time.',
+          },
+          acceptAll: 'Accept all',
+          decline: 'Decline',
+          save: 'Save settings',
+          purposes: {
+            analytics: 'Analytics',
+          },
+        },
+        pl: {
+          consentModal: {
+            title: 'Ciasteczka i Prywatność',
+            description: 'Używamy plików cookies w celu poprawy działania strony. Możesz je wyłączyć w każdej chwili.',
+          },
+          acceptAll: 'Akceptuj wszystkie',
+          decline: 'Odrzuć',
+          save: 'Zapisz ustawienia',
+          purposes: {
+            analytics: 'Analityka',
+          },
+        },
+      },
+      apps: [
+        {
+          name: 'google-analytics',
+          title: 'Google Analytics',
+          purposes: ['analytics'],
+          cookies: ['_ga', '_gid'],
+          required: false,
+          optOut: false,
+          onlyOnce: true,
+        },
+      ],
+    };
+  </script>
+
+  <!-- Klaro CSS & Script (after config) -->
+  <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.8/klaro.min.css" />
+  <script defer src="https://cdn.kiprotect.com/klaro/v0.8/klaro.min.js"></script>
 </head>
 <body>
   <app-root></app-root>
+
+  <!-- Klaro mounts here -->
+  <div id="klaro"></div>
 </body>
 </html>
