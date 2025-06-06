@@ -65,10 +65,10 @@ To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno,
       name: 'FRESCA',
       square:  53.5,
       vector: '/assets/budynek-3.svg',
-      imagefront: '/assets/inprogress.webp',
-      imageback:'/assets/inprogress.webp',  // Main image for GIOIA
+      imagefront: '/assets/fresca-front.webp',
+      imageback:'/assets/fresca-back.webp',  // Main image for GIOIA
       drawing: '/assets/rzut3.webp', // Floor plans // Floor plans
-      renders: ['/assets/inprogress.webp'], // Render images
+      renders: ['/assets/fresca-render1.webp', '/assets/fresca-render2.webp'], // Render images
       facade: '/assets/Elewacja3.svg',  // Facade images
       info: [
         'Powierzchnia użytkowa mieszkalna:',
