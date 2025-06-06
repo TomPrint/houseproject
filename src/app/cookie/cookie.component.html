@@ -1,0 +1,37 @@
+<div *ngIf="showBanner" class="cookie-modal-overlay">
+  <div class="cookie-modal">
+    <h3>
+      <i class="bi bi-cookie" style="font-size: 1.5rem; color: #B89F86; margin-right: 0.5rem;"></i>
+      Ustawienia plików cookies
+    </h3>
+    <p>
+  Korzystamy z plików cookies, aby zapewnić prawidłowe funkcjonowanie strony, analizować ruch oraz – za Twoją zgodą – prowadzić działania marketingowe. Możesz zdecydować, na które kategorie wyrażasz zgodę. Szczegóły znajdziesz w naszej 
+  <span role="button" data-bs-toggle="modal" data-bs-target="#privacyModal" class="text-decoration-underline">polityce prywatności</span>. Ustawienia cookies możesz zmienić w dowolnym momencie, klikając ikonę plików cookies w prawym dolnym rogu strony.
+</p>
+
+    <div class="cookie-option">
+      <label>
+        <input type="checkbox" checked disabled />
+        Niezbędne pliki cookies (zawsze włączone)
+      </label>
+    </div>
+
+    <div class="cookie-option">
+      <label>
+        <input type="checkbox" [(ngModel)]="analyticsConsent" />
+        Analityczne pliki cookies
+      </label>
+    </div>
+
+    <div class="cookie-option">
+      <label>
+        <input type="checkbox" [(ngModel)]="marketingConsent" />
+        Marketingowe pliki cookies
+      </label>
+    </div>
+
+    <div class="cookie-buttons">
+      <button (click)="saveConsent()">Zapisz ustawienia</button>
+    </div>
+  </div>
+</div>

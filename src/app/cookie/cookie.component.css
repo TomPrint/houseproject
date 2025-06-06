@@ -1,0 +1,40 @@
+.cookie-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1040; /* 👈 Lower than Bootstrap modal (1055) */
+}
+
+.cookie-modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.cookie-option {
+  margin: 1rem 0;
+}
+
+.cookie-buttons {
+  text-align: right;
+}
+
+.cookie-buttons button {
+  background-color: #B89F86;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+

@@ -1,4 +1,4 @@
-<div class="footer-bg">
+<div class="footer-bg mt-3">
   <div class="row d-flex align-items-end">
     <div class="col-sm text-center text-white">
       <p>© 2024 Ammer House</p>
@@ -8,8 +8,13 @@
       <img class="logo-footer img-fluid" src="/assets/logo_footer_img.png" alt="Logo">
     </div>
     <div class="col-sm text-center text-white mt-2">
-      <p role="button" data-bs-toggle="modal" data-bs-target="#privacyModal" class="text-decoration-underline">
+      <p role="button" data-bs-toggle="modal" data-bs-target="#privacyModal" class="text-decoration-underline mb-1">
         Polityka prywatności
+      </p>
+      <p role="button"
+         class="text-decoration-underline mb-0"
+         (click)="openCookies()">
+        Zmień ustawienia cookies
       </p>
     </div>
   </div>
