@@ -1,4 +1,8 @@
 /* FOOTER */
+.outside-container {
+  position: relative; /* Ensure proper stacking context */
+  overflow: hidden; /* Prevent unwanted overflow */
+}
 
 .footer-bg {
     background-color: #7C8A77;
