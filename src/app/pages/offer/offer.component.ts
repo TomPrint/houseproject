@@ -11,21 +11,22 @@ import {
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { BrownComponent } from '../../shared/brown/brown.component';
-import { FooterComponent } from '../../shared/footer/footer.component';
 import { houses } from './houses';
 import Splide from '@splidejs/splide';
 import { ActivatedRoute } from '@angular/router';
+import { ImagePreloadingService } from '../../services/image-preloading.service';
 
 @Component({
   selector: 'app-offer',
   standalone: true,
-  imports: [NavbarComponent, CommonModule, BrownComponent, FooterComponent],
+  imports: [NavbarComponent, CommonModule, BrownComponent],
   templateUrl: './offer.component.html',
   styleUrls: ['./offer.component.css'],
 })
 export class OfferComponent implements AfterViewInit, OnInit {
   houses = houses;
   route = inject(ActivatedRoute);
+  imagePreloadingService = inject(ImagePreloadingService);
 
   selectedHouse = signal<keyof typeof houses>('CALMA');
   selectedImage = signal<string>('');
@@ -50,19 +51,40 @@ export class OfferComponent implements AfterViewInit, OnInit {
  ngOnInit(): void {
   this.route.queryParamMap.subscribe((params) => {
     const houseParam = params.get('house');
+    let houseKey: keyof typeof houses = this.selectedHouse(); 
+
     if (houseParam) {
-      // Znajdujemy klucz w this.houses niezależnie od wielkości liter
-      const houseKey = Object.keys(this.houses).find(
+      const foundHouseKey = Object.keys(this.houses).find(
         key => key.toLowerCase() === houseParam.toLowerCase()
       );
-      if (houseKey) {
-        this.toggleHouse(houseKey);
+      if (foundHouseKey) {
+        houseKey = foundHouseKey as keyof typeof houses;
       }
+    }
+    
+    this.preloadHouseImages(houseKey);
+    if (houseParam && houseKey) {
+      this.toggleHouse(houseKey);
     }
   });
 }
 
+  preloadHouseImages(houseKey: keyof typeof houses): void {
+    const house = this.houses[houseKey];
+    const imageUrls = [
+      house.imagefront,
+      house.imageback,
+      house.drawing,
+      ...house.renders,
+      ...house.interiors.map(i => i.image),
+      ...house.exteriors.map(e => e.image),
+      ...house.images,
+    ];
+    (this.imagePreloadingService as ImagePreloadingService).preload(imageUrls);
+  }
+
   toggleHouse(house: string) {
+    this.preloadHouseImages(house as keyof typeof houses);
     this.selectedHouse.set(house as keyof typeof houses);
     this.currentDrawingIndex.set(0);
     this.selectedInterior.set('');

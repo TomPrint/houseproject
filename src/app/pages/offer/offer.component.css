@@ -175,7 +175,6 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    cursor: pointer;
 }
 
 .arrow-container {
@@ -202,7 +201,6 @@
     align-items: center;
     color: #ffffff;
     font-size: 1.5rem;
-    cursor: pointer;
     outline: none; /* Remove focus outline */
 }
 
@@ -250,7 +248,7 @@
     margin: 0 auto;
     object-fit: contain; 
     transition: transform 0.5s ease-in-out; 
-    cursor: pointer;
+    cursor: zoom-in;
 }
 
 /* Prevent Image Movement */
@@ -298,7 +296,7 @@
     background-color: #FFFFFF;
     text-align: center;
     overflow-x: hidden;
-    cursor: pointer;
+    cursor: zoom-in;
 }
 
 /* Adjust Arrow Styling */
