@@ -1,6 +1,6 @@
 export const houses = {
     CALMA: {
-      name: 'CALMA',
+      name: '1-CALMA',
       square:  27.8, // Square footage of the house
       vector: '/assets/budynek-1.svg', // Main image for CALMA
       imagefront: '/assets/calma-front.webp',
@@ -62,7 +62,7 @@ To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno,
       ]
     },
     FRESCA: {
-      name: 'FRESCA',
+      name: '2-FRESCA',
       square:  53.5,
       vector: '/assets/budynek-3.svg',
       imagefront: '/assets/fresca-front.webp',
@@ -130,7 +130,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       ]
     },
     CARINA: {
-      name: 'CARINA',
+      name: '3-CARINA',
       square:  53.7,
       vector: '/assets/budynek-10.svg',
       imagefront: '/assets/carina-front.webp',
@@ -199,7 +199,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
 
     GIOIA: {
-      name: 'GIOIA',
+      name: '4-GIOIA',
       square:  54.6,
       vector: '/assets/budynek-2.svg',
       imagefront: '/assets/gioia-front.webp',
@@ -267,7 +267,7 @@ To wnętrze jest idealne dla osób, które cenią prostotę i naturalne piękno,
       ]
     },
     ARIOSA: {
-      name: 'ARIOSA',
+      name: '5-ARIOSA',
       square:  54.8,
       vector: '/assets/budynek-4.svg',
       imagefront: '/assets/ariosa-front.webp',
@@ -335,7 +335,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
       ]
     },
     SOLARE: {
-      name: 'SOLARE',
+      name: '6-SOLARE',
       square:  78.5,
       vector: '/assets/budynek-6.svg',
       imagefront: '/assets/solare-front.webp',
@@ -405,7 +405,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
 
     ALLEGRA: {
-      name: 'ALLEGRA',
+      name: '7-ALLEGRA',
       square:  40.5,
       vector: '/assets/budynek-5.svg',
       imagefront: '/assets/allegra-front.webp',
@@ -471,7 +471,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
 
     MODERNA: {
-      name: 'MODERNA',
+      name: '8-MODERNA',
       square:  61.5,
       vector: '/assets/budynek-8.svg',
       imagefront: '/assets/moderna-front.webp',
@@ -542,7 +542,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     
    
     TONICA: {
-      name: 'TONICA',
+      name: '9-TONICA',
       square:  68.8,
       vector: '/assets/budynek-7.svg',
       imagefront: '/assets/tonica-front.webp',
@@ -611,7 +611,7 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
     },
 
     RICCA: {
-      name: 'RICCA',
+      name: '10-RICCA',
       square:  110.5,
       vector: '/assets/budynek-9.svg',
       imagefront: '/assets/ricca-front.webp',
@@ -624,17 +624,17 @@ To wnętrze jest idealne dla osób ceniących prostotę, naturalne piękno oraz 
         '1. Hol - 2,7 m²',
         '2. Kuchnia - 10,2 m²',
         '3. Pokój dzienny + jadalnia - 21,5 m²',
-        '3. Taras - 9 m²',
         '4. Gabinet - 6,1 m²',
-        '5. Pom. tech. - 2 m²',
-        '5. Taras - 10,5 m²',
         '6. Łazienka - 3,1 m²',
         '8. Hol - 5,2 m²',
         '9. Pokój - 9,6 m²',
         '10. Pokój - 11,7 m²',
         '11. Pokój - 8,3 m²',
         '12. Łazienka - 7,4 m²',
-        '13. Taras - 3,2 m²',
+        'Powierzchnia dodatkowa:',
+        '5. Pom. tech. - 2 m²',
+        '7. Taras - 9 m²',
+        '13. Taras - 3,2 m²'
       ],
       interiors: [
         {
