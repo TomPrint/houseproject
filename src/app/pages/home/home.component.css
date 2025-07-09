@@ -40,6 +40,9 @@
     right: 20px;        /* 20px from the right of the container */
     z-index: 10;
     margin: 10px;
+    background-color: #7C8A77;
+    box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
+    border-radius: 25px;
        /* Ensure it appears above other elements in the slideshow */
 }
 
