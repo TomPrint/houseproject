@@ -58,49 +58,78 @@
   </div>
 
 <!-- HOUSE GALLERY FRONT BACK SECTION -->
-<div
-  class="container-fluid py-5"
-  style="background: url('/assets/bg tree 1.jpg') center center / cover no-repeat;"
->
+<div class="container-fluid py-5" style="background: url('/assets/bg tree 1.jpg') center center / cover no-repeat;">
   <div class="container">
     <div class="row justify-content-center align-items-stretch text-center">
-      
+
       <!-- Front Image -->
       <div class="col-12 col-md-6 mb-3 mb-md-0 d-flex flex-column align-items-center">
-        <div class="ratio ratio-4x3 w-100">
+        <div class="ratio ratio-4x3 w-100 position-relative">
+          <!-- spinner -->
+          <div
+            *ngIf="frontLoading()"
+            class="position-absolute top-50 start-50 translate-middle z-3 pe-none"
+            aria-hidden="true"
+          >
+            <div
+              class="spinner-border"
+              role="status"
+              aria-label="Ładowanie obrazu"
+              style="color:#7C8A77; width:3rem; height:3rem;"
+            ></div>
+          </div>
+
           <img
+            #frontImg
             [src]="houses[selectedHouse()].imagefront"
             alt="Front view of {{ houses[selectedHouse()].name }}"
             class="img-cover rounded shadow"
             (click)="openModal(houses[selectedHouse()].imagefront)"
+            (load)="onFrontLoad()"
+            (error)="onFrontError()"
+            [class.opacity-0]="frontLoading()"
             style="cursor: zoom-in;"
             loading="eager"
             decoding="async"
             fetchpriority="high"
           />
         </div>
-        <p class="text-center fw-bold pt-4">
-          {{ houses[selectedHouse()].name }} WIDOK PRZÓD
-        </p>
+        <p class="text-center fw-bold pt-4">{{ houses[selectedHouse()].name }} WIDOK PRZÓD</p>
       </div>
 
       <!-- Back Image -->
       <div class="col-12 col-md-6 d-flex flex-column align-items-center">
-        <div class="ratio ratio-4x3 w-100">
+        <div class="ratio ratio-4x3 w-100 position-relative">
+          <!-- spinner -->
+          <div
+            *ngIf="backLoading()"
+            class="position-absolute top-50 start-50 translate-middle z-3 pe-none"
+            aria-hidden="true"
+          >
+            <div
+              class="spinner-border"
+              role="status"
+              aria-label="Ładowanie obrazu"
+              style="color:#7C8A77; width:3rem; height:3rem;"
+            ></div>
+          </div>
+
           <img
+            #backImg
             [src]="houses[selectedHouse()].imageback"
             alt="Back view of {{ houses[selectedHouse()].name }}"
             class="img-cover rounded shadow"
             (click)="openModal(houses[selectedHouse()].imageback)"
+            (load)="onBackLoad()"
+            (error)="onBackError()"
+            [class.opacity-0]="backLoading()"
             style="cursor: zoom-in;"
             loading="eager"
             decoding="async"
             fetchpriority="high"
           />
         </div>
-        <p class="text-center fw-bold pt-4">
-          {{ houses[selectedHouse()].name }} WIDOK TYŁ
-        </p>
+        <p class="text-center fw-bold pt-4">{{ houses[selectedHouse()].name }} WIDOK TYŁ</p>
       </div>
 
     </div>

@@ -39,7 +39,18 @@ export class OfferComponent implements AfterViewInit, OnInit {
   currentExteriorIndex = signal(0);
   selectedExterior = signal<string>('');
 
+  // Per-image spinners
+  frontLoading = signal<boolean>(true);
+  backLoading = signal<boolean>(true);
+
+  // Page overlay
+  isLoading = signal<boolean>(true);
+
   @ViewChild('houseCarousel') houseCarousel!: ElementRef;
+
+  // NEW: refs for hero images so we can check .complete/.naturalWidth
+  @ViewChild('frontImg') frontImgRef!: ElementRef<HTMLImageElement>;
+  @ViewChild('backImg')  backImgRef!: ElementRef<HTMLImageElement>;
 
   houseList = computed(() =>
     Object.entries(this.houses).map(([key, house]) => ({
@@ -49,74 +60,93 @@ export class OfferComponent implements AfterViewInit, OnInit {
   );
 
   ngOnInit(): void {
-    // Handle query param (house=...)
-    this.route.queryParamMap.subscribe(async (params) => {
-      const houseParam = params.get('house');
+    // Preload hero (front/back) for ALL houses (lightweight + big UX win)
+    this.preloadHeroesForAllHouses();
 
-      // If the URL specifies a house, switch to it (with hero decode first)
+    // Keep overlay until current house’s front/back load
+    this.isLoading.set(true);
+
+    this.route.queryParamMap.subscribe((params) => {
+      const houseParam = params.get('house');
+      let houseKey: keyof typeof houses = this.selectedHouse();
+
       if (houseParam) {
         const foundHouseKey = Object.keys(this.houses).find(
           (key) => key.toLowerCase() === houseParam.toLowerCase()
-        ) as keyof typeof houses | undefined;
-
+        );
         if (foundHouseKey) {
-          await this.toggleHouse(foundHouseKey);
-          return;
+          houseKey = foundHouseKey as keyof typeof houses;
         }
       }
 
-      // Otherwise, ensure initial house heroes are warm (front/back) and
-      // start preloading the rest in the background.
-      const initialKey = this.selectedHouse();
-      const h = this.houses[initialKey];
-      await this.imagePreloadingService.preloadAndDecode([
-        h.imagefront,
-        h.imageback,
-      ]);
-      this.preloadRest(initialKey);
+      // Start preloading everything for the house (background)
+      this.preloadHouseRest(houseKey);
 
-      // Ensure exterior selection for initial house
-      const newExteriors = this.houses[initialKey]?.exteriors;
-      this.selectedExterior.set(newExteriors?.[0]?.name ?? '');
+      // If URL points to a different house, switch (spinners + overlay reset inside)
+      if (houseParam && houseKey) {
+        this.toggleHouse(houseKey);
+      } else {
+        // First load safety: if the initial images are already cached, clear spinners
+        setTimeout(() => this.syncSpinnerWithImgCompleteness(), 0);
+      }
     });
   }
 
-  /**
-   * Preload the non-hero images for a given house in the background.
-   */
-  private preloadRest(houseKey: keyof typeof houses): void {
-    const house = this.houses[houseKey];
-    const restUrls = [
-      house.drawing,
-      ...house.renders,
-      ...house.interiors.map((i) => i.image),
-      ...house.exteriors.map((e) => e.image),
-      ...house.images,
-    ].filter(Boolean);
-    // Fire and forget
-    this.imagePreloadingService.preload(restUrls);
+  /** Preload only the hero (front/back) for every house once at startup */
+  private preloadHeroesForAllHouses(): void {
+    const urls: string[] = [];
+    for (const key of Object.keys(this.houses) as Array<keyof typeof houses>) {
+      const h = this.houses[key];
+      urls.push(h.imagefront, h.imageback);
+    }
+    this.imagePreloadingService.preload(urls);
   }
 
-  /**
-   * Switch to a different house:
-   * 1) Preload + decode front/back heroes so they paint instantly.
-   * 2) Preload the rest in the background.
-   * 3) Update UI state.
-   */
-  async toggleHouse(house: string | keyof typeof houses) {
+  /** Preload only front/back for a specific house */
+  private preloadHouseHero(houseKey: keyof typeof houses): void {
+    const h = this.houses[houseKey];
+    this.imagePreloadingService.preload([h.imagefront, h.imageback]);
+  }
+
+  /** Preload the rest of assets for the selected house (background, optional) */
+  private preloadHouseRest(houseKey: keyof typeof houses): void {
+    const h = this.houses[houseKey];
+    const rest = [
+      h.drawing,
+      ...h.renders,
+      ...h.interiors.map((i) => i.image),
+      ...h.exteriors.map((e) => e.image),
+      ...h.images,
+    ].filter(Boolean);
+    this.imagePreloadingService.preload(rest);
+  }
+
+  /** Kept for compatibility (but now only does "rest", heroes are handled separately) */
+  preloadHouseImages(houseKey: keyof typeof houses): void {
+    this.preloadHouseRest(houseKey);
+  }
+
+  toggleHouse(house: string | keyof typeof houses) {
     const key = house as keyof typeof houses;
-    const h = this.houses[key];
 
-    // Make sure the two visible images are fully decoded before the swap
-    await this.imagePreloadingService.preloadAndDecode([
-      h.imagefront,
-      h.imageback,
-    ]);
+    // ✅ If same house clicked, do NOT reset loading; just make sure spinners/overlay are off.
+    if (key === this.selectedHouse()) {
+      this.frontLoading.set(false);
+      this.backLoading.set(false);
+      this.isLoading.set(false);
+      return;
+    }
 
-    // Start background preloading for everything else
-    this.preloadRest(key);
+    // Show overlay + spinners for the new house
+    this.isLoading.set(true);
+    this.frontLoading.set(true);
+    this.backLoading.set(true);
 
-    // Now update state (UI swaps only once images are ready to paint)
+    // Prewarm hero + rest
+    this.preloadHouseHero(key);
+    this.preloadHouseRest(key);
+
+    // Switch state
     this.selectedHouse.set(key);
     this.currentDrawingIndex.set(0);
     this.selectedInterior.set('');
@@ -125,10 +155,34 @@ export class OfferComponent implements AfterViewInit, OnInit {
     this.currentExteriorIndex.set(0);
 
     const newExteriors = this.houses[this.selectedHouse()]?.exteriors;
-    if (newExteriors && newExteriors.length > 0) {
-      this.selectedExterior.set(newExteriors[0].name);
-    } else {
-      this.selectedExterior.set('');
+    this.selectedExterior.set(newExteriors?.[0]?.name ?? '');
+
+    // After DOM updates src bindings, verify if images are already complete (cache hit)
+    setTimeout(() => this.syncSpinnerWithImgCompleteness(), 0);
+  }
+
+  // Image event handlers (hide overlay when both heroes are done)
+  onFrontLoad()  { this.frontLoading.set(false); this.maybeHideOverlay(); }
+  onBackLoad()   { this.backLoading.set(false);  this.maybeHideOverlay(); }
+  onFrontError() { this.frontLoading.set(false); this.maybeHideOverlay(); }
+  onBackError()  { this.backLoading.set(false);  this.maybeHideOverlay(); }
+
+  private syncSpinnerWithImgCompleteness() {
+    const front = this.frontImgRef?.nativeElement;
+    const back  = this.backImgRef?.nativeElement;
+
+    if (front?.complete && front.naturalWidth > 0) {
+      this.frontLoading.set(false);
+    }
+    if (back?.complete && back.naturalWidth > 0) {
+      this.backLoading.set(false);
+    }
+    this.maybeHideOverlay();
+  }
+
+  private maybeHideOverlay() {
+    if (!this.frontLoading() && !this.backLoading()) {
+      this.isLoading.set(false);
     }
   }
 
@@ -149,11 +203,7 @@ export class OfferComponent implements AfterViewInit, OnInit {
   selectExterior(index: number): void {
     this.currentExteriorIndex.set(index);
     const exterior = this.selectedExteriorObject();
-    if (exterior) {
-      this.selectedExterior.set(exterior.name);
-    } else {
-      this.selectedExterior.set('');
-    }
+    this.selectedExterior.set(exterior ? exterior.name : '');
   }
 
   nextDrawing() {
@@ -174,10 +224,7 @@ export class OfferComponent implements AfterViewInit, OnInit {
     return this.currentRenderIndex() === 0 ? 'PARTER' : 'PIĘTRO';
   }
 
-  sliderImages = computed(() => {
-    return this.houses[this.selectedHouse()].images;
-    // If you want to ensure these are preloaded too, they’re covered by preloadRest()
-  });
+  sliderImages = computed(() => this.houses[this.selectedHouse()].images);
 
   openModal(image: string, zoomed: boolean = false) {
     this.selectedImage.set(image);
@@ -190,7 +237,7 @@ export class OfferComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit() {
-    new Splide(this.houseCarousel.nativeElement, {
+    const splide = new Splide(this.houseCarousel.nativeElement, {
       type: 'slide',
       rewind: true,
       perPage: 4,
@@ -202,10 +249,25 @@ export class OfferComponent implements AfterViewInit, OnInit {
         768: { perPage: 3 },
         480: { perPage: 2 },
       },
-    }).mount();
+    });
+
+    splide.on('move', (newIndex: number) => {
+      const list = this.houseList();
+      const current = list[newIndex]?.key as keyof typeof houses | undefined;
+      const prev = list[newIndex - 1]?.key as keyof typeof houses | undefined;
+      const next = list[newIndex + 1]?.key as keyof typeof houses | undefined;
+      if (current) this.preloadHouseHero(current);
+      if (prev) this.preloadHouseHero(prev);
+      if (next) this.preloadHouseHero(next);
+    });
+
+    splide.mount();
 
     if (this.currentHouseExteriors().length > 0 && this.selectedExterior() === '') {
       this.selectExterior(0);
     }
+
+    // First view: ensure spinners reflect actual image state once view init completes
+    setTimeout(() => this.syncSpinnerWithImgCompleteness(), 0);
   }
 }
