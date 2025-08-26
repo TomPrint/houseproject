@@ -11,43 +11,54 @@ import Splide from '@splidejs/splide';
 export class FaderComponent implements AfterViewInit {
   @ViewChild('splide') splideElem!: ElementRef;
 
-  ngAfterViewInit() {
-    const root = this.splideElem.nativeElement as HTMLElement;
-    const imgs = Array.from(root.querySelectorAll<HTMLImageElement>('img'));
+ngAfterViewInit() {
+  const root = this.splideElem.nativeElement as HTMLElement;
+  const imgs = Array.from(root.querySelectorAll<HTMLImageElement>('img'));
+  if (!imgs.length) return;
 
-    // 1) Preload all images OFF-DOM (works regardless of visibility)
-    Promise.all(imgs.map(img => this.preload(img.src)))
-      .catch(() => {}) // don’t block on errors
-      .then(() => {
-        // 2) Start the carousel only after everything is ready
-        new Splide(this.splideElem.nativeElement, {
-          type: 'fade',
-          rewind: true,
-          autoplay: true,
-          interval: 6000,
-          pauseOnHover: false,
-          pauseOnFocus: false,
-          speed: 3000,
-          arrows: false,
-          pagination: false,
-          waitForTransition: true,
-        }).mount();
-      });
-  }
-
-  private preload(src: string): Promise<void> {
-    return new Promise((resolve) => {
+  const load = (src: string) =>
+    new Promise<void>((resolve) => {
       const img = new Image();
       img.onload = () => {
-        // ensure decode (when supported) for instant paint
-        if ('decode' in img) {
-          (img as any).decode().catch(() => {}).finally(() => resolve());
-        } else {
-          resolve();
-        }
+        if ('decode' in img) (img as any).decode().catch(() => {}).finally(resolve);
+        else resolve();
       };
-      img.onerror = () => resolve(); // resolve on error to avoid hanging
+      img.onerror = () => resolve();
       img.src = src;
     });
-  }
+
+  const firstSrc = imgs[0].src;
+  const secondSrc = imgs[1]?.src;
+
+  // 1) Ensure the first image is ready
+  load(firstSrc).then(() => {
+    const splide = new Splide(this.splideElem.nativeElement, {
+      type: 'fade',
+      rewind: true,
+      autoplay: false,           // start paused; we’ll turn it on once slide #2 is ready
+      interval: 6000,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      speed: 1200,               // faster fade feels snappier
+      arrows: false,
+      pagination: false,
+      waitForTransition: true,
+    }).mount();
+
+    // 2) Preload the next few slides in the background
+    const rest = imgs.slice(1).map((i) => i.src);
+    Promise.all(rest.slice(0, 3).map(load))     // warm 2–3 neighbors first
+      .catch(() => {})
+      .then(() => {
+        // 3) Once the second is warm, kick off autoplay
+        if (secondSrc) {
+          load(secondSrc).then(() => splide.Components.Autoplay.play());
+        } else {
+          splide.Components.Autoplay.play();
+        }
+        // keep warming the rest without blocking UI
+        rest.slice(3).forEach((src) => load(src));
+      });
+  });
+}
 }
