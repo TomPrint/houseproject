@@ -57,42 +57,55 @@
     </div>
   </div>
 
-  <!-- HOUSE GALLERY FRONT BACK SECTION -->
-  <div class="container-fluid py-5" style="background: url('/assets/bg tree 1.jpg') center center / cover no-repeat;">
-    <div class="container">
-      <div class="row justify-content-center align-items-stretch text-center">
-
-        <!-- Front Image -->
-        <div class="col-12 col-md-6 mb-3 mb-md-0 d-flex flex-column align-items-center">
-          <div class="ratio ratio-4x3 w-100">
-            <img
-              [src]="houses[selectedHouse()].imagefront"
-              alt="Front view of {{ houses[selectedHouse()].name }}"
-              class="img-cover rounded shadow"
-              (click)="openModal(houses[selectedHouse()].imagefront)"
-              style="cursor: zoom-in;"
-            />
-          </div>
-          <p class="text-center fw-bold pt-4">{{ houses[selectedHouse()].name }} WIDOK PRZÓD</p>
+<!-- HOUSE GALLERY FRONT BACK SECTION -->
+<div
+  class="container-fluid py-5"
+  style="background: url('/assets/bg tree 1.jpg') center center / cover no-repeat;"
+>
+  <div class="container">
+    <div class="row justify-content-center align-items-stretch text-center">
+      
+      <!-- Front Image -->
+      <div class="col-12 col-md-6 mb-3 mb-md-0 d-flex flex-column align-items-center">
+        <div class="ratio ratio-4x3 w-100">
+          <img
+            [src]="houses[selectedHouse()].imagefront"
+            alt="Front view of {{ houses[selectedHouse()].name }}"
+            class="img-cover rounded shadow"
+            (click)="openModal(houses[selectedHouse()].imagefront)"
+            style="cursor: zoom-in;"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
         </div>
-
-        <!-- Back Image -->
-        <div class="col-12 col-md-6 d-flex flex-column align-items-center">
-          <div class="ratio ratio-4x3 w-100">
-            <img
-              [src]="houses[selectedHouse()].imageback"
-              alt="Back view of {{ houses[selectedHouse()].name }}"
-              class="img-cover rounded shadow"
-              (click)="openModal(houses[selectedHouse()].imageback)"
-              style="cursor: zoom-in;"
-            />
-          </div>
-          <p class="text-center fw-bold pt-4">{{ houses[selectedHouse()].name }} WIDOK TYŁ</p>
-        </div>
-
+        <p class="text-center fw-bold pt-4">
+          {{ houses[selectedHouse()].name }} WIDOK PRZÓD
+        </p>
       </div>
+
+      <!-- Back Image -->
+      <div class="col-12 col-md-6 d-flex flex-column align-items-center">
+        <div class="ratio ratio-4x3 w-100">
+          <img
+            [src]="houses[selectedHouse()].imageback"
+            alt="Back view of {{ houses[selectedHouse()].name }}"
+            class="img-cover rounded shadow"
+            (click)="openModal(houses[selectedHouse()].imageback)"
+            style="cursor: zoom-in;"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+        <p class="text-center fw-bold pt-4">
+          {{ houses[selectedHouse()].name }} WIDOK TYŁ
+        </p>
+      </div>
+
     </div>
   </div>
+</div>
 
   <!-- BROWN ICONS SECTION -->
   @defer {

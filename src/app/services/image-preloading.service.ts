@@ -1,20 +1,33 @@
+// image-preloading.service.ts
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class ImagePreloadingService {
+  preload(urls: string[] | string): Promise<void[]> {
+    const list = Array.isArray(urls) ? urls : [urls];
+    const tasks = list
+      .filter(Boolean)
+      .map((src) => new Promise<void>((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve();
+        img.onerror = () => resolve(); // don't block on errors
+        img.src = src;
+      }));
+    return Promise.all(tasks);
+  }
 
-  preload(urls: string[]): void {
-    urls.forEach(url => {
-      const img = new Image();
-      img.onload = () => {
-        console.log(`Image preloaded: ${url}`);
-      };
-      img.onerror = () => {
-        console.error(`Failed to preload image: ${url}`);
-      };
-      img.src = url;
-    });
+  /** Preload + decode = fully ready to paint */
+  preloadAndDecode(urls: string[] | string): Promise<void[]> {
+    const list = Array.isArray(urls) ? urls : [urls];
+    const tasks = list
+      .filter(Boolean)
+      .map((src) => {
+        const img = new Image();
+        img.src = src;
+        // decode() resolves after the image is fully decoded (no layout jank)
+        const decoded = ('decode' in img) ? (img as any).decode().catch(() => {}) : Promise.resolve();
+        return decoded.then(() => undefined);
+      });
+    return Promise.all(tasks);
   }
 }
