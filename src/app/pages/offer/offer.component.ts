@@ -47,6 +47,7 @@ export class OfferComponent implements AfterViewInit, OnInit {
   isLoading = signal<boolean>(true);
 
   @ViewChild('houseCarousel') houseCarousel!: ElementRef;
+  private splide?: Splide;
 
   // NEW: refs for hero images so we can check .complete/.naturalWidth
   @ViewChild('frontImg') frontImgRef!: ElementRef<HTMLImageElement>;
@@ -161,6 +162,10 @@ export class OfferComponent implements AfterViewInit, OnInit {
     setTimeout(() => this.syncSpinnerWithImgCompleteness(), 0);
   }
 
+  goToHouse(index: number) {
+    this.splide?.go(index);
+  }
+
   // Image event handlers (hide overlay when both heroes are done)
   onFrontLoad()  { this.frontLoading.set(false); this.maybeHideOverlay(); }
   onBackLoad()   { this.backLoading.set(false);  this.maybeHideOverlay(); }
@@ -238,16 +243,14 @@ export class OfferComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit() {
     const splide = new Splide(this.houseCarousel.nativeElement, {
-      type: 'slide',
-      rewind: true,
-      perPage: 4,
+      type: 'loop',
+      focus: 'center',
+      perPage: 3,
       gap: '1rem',
       pagination: false,
       arrows: true,
       breakpoints: {
-        1024: { perPage: 4 },
-        768: { perPage: 3 },
-        480: { perPage: 2 },
+        768: { perPage: 1 },
       },
     });
 
@@ -261,7 +264,14 @@ export class OfferComponent implements AfterViewInit, OnInit {
       if (next) this.preloadHouseHero(next);
     });
 
+    splide.on('mounted move', () => {
+      const list = this.houseList();
+      const key = list[splide.index]?.key as keyof typeof houses | undefined;
+      if (key) this.toggleHouse(key);
+    });
+
     splide.mount();
+    this.splide = splide;
 
     if (this.currentHouseExteriors().length > 0 && this.selectedExterior() === '') {
       this.selectExterior(0);

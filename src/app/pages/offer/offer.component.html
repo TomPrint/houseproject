@@ -12,32 +12,14 @@
     <div id="oferta" class="text-center">
       <h1 class="title mb-5 py-4">WYBIERZ SWÓJ DOM!</h1>
 
-      <!-- Selected house (fixed height + shadow) -->
-      <div class="selected-house text-center mb-5">
-        <div class="selected-wrapper mx-auto shadow-container">
-          <img
-            [src]="houses[selectedHouse()].vector"
-            [alt]="houses[selectedHouse()].name + ' House'"
-            class="img-fluid selected-house-img"
-          />
-        </div>
-        <p class="house-name mt-2 mb-0">
-          {{ houses[selectedHouse()].name }}
-          <span class="house-square">
-            {{ houses[selectedHouse()].square }} <span class="m">m</span><span class="sup">2</span>
-          </span>
-        </p>
-      </div>
-
       <!-- Scrollable carousel with all houses (including selected) -->
       <div id="house-carousel" class="splide px-4 pb-5" #houseCarousel>
         <div class="splide__track">
           <ul class="splide__list">
             <li
               class="splide__slide text-center"
-              *ngFor="let house of houseList()"
-              [class.active]="house.key === selectedHouse()"
-              (click)="toggleHouse(house.key)"
+              *ngFor="let house of houseList(); let i = index"
+              (click)="goToHouse(i)"
             >
               <img
                 [src]="house.vector"
