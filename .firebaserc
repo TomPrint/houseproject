@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "houseproject-f35ed"
-  }
+    "default": "houses-c9bdc"
+  },
+  "targets": {},
+  "etags": {}
 }

@@ -27,24 +27,6 @@
   }
 }
 
-/* Button container for the slideshow */
-.bg-slideshow-button-container {
-    position: relative;
-    height: 100%; /* Fill the height of the slideshow */
-}
-
-/* The actual button positioned at the bottom-right */
-.spacer3D {
-    position: absolute; /* Positioned within the bg-slideshow-button-container */
-    bottom: 20px;       /* 20px from the bottom of the container */
-    right: 20px;        /* 20px from the right of the container */
-    z-index: 10;
-    margin: 10px;
-    background-color: #7C8A77;
-    box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
-    border-radius: 25px;
-       /* Ensure it appears above other elements in the slideshow */
-}
 
 /* Ensure navbar is fixed at the top */
 .navbar-container {
@@ -203,10 +185,7 @@
         font-size: 0.9rem; /* Decrease button text size */
     }
 
-    .spacer3D {
-        height: 30px;
-           /* Ensure it appears above other elements in the slideshow */
-    }
+    
 }
 
 /* ! Top Bg Image Animation */
@@ -214,57 +193,7 @@
 
 
 
-/* 3D TOUR */
-.iframe-container {
-    position: relative;
-    width: 100%;
-    height: 700px;
-    padding: 10px;
-  }
-  
-  iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 10px;
-  }
-
-  @media (max-width: 900px) {
-    .iframe-container {
-      height: 500px;
-      max-width: calc(100% - 40px); /* Total width minus horizontal padding */
-      padding: 0; /* No internal padding, width is controlled by max-width */
-      margin: 20px auto; /* Center the container */
-    }
-}
-  
-  .spinner-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 10;
-  }
-  
-  .loading-text {
-    margin-top: 10px;
-    font-size: 18px;
-    color: black; /* Set loading text color to black */
-    font-weight: bold;
-  }
-
-  .mat-mdc-progress-spinner { 
-    --mdc-circular-progress-active-indicator-color: black; 
-  }
-
-
-  /* ABIUT US  */
+/* ABIUT US  */
   .left-top-spacer{
     padding-top: 100px;
   }
@@ -312,5 +241,6 @@ p {
 .no_underline{
     text-decoration: none;
 }
+
 
 

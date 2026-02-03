@@ -6,9 +6,6 @@
   <div class="bg-slideshow">
     <app-fader></app-fader>
   </div>
-  <div class="bg-slideshow-button-container">
-    <a href="#spacer"><img src="assets/spacer3d_img.png" class="spacer3D"></a>
-  </div>
   <!-- Logo Section -->
   <div class="logo-container">
     <a href="" routerLink="/"><img class="logo img-fluid" src="/assets/logo.png" alt="Logo"></a>
@@ -215,26 +212,6 @@
   <br>
 </section>
 
-
-<!-- 3D TOUR SECTION -->
-
-<div id="spacer" class="iframe-container px-md-5" @defer>
-  <iframe
-    [src]="Walk3dSanitizedUrl"
-    frameborder="0"
-    allowfullscreen
-    (load)="onIframeLoad()">
-  </iframe>
-
-  <div *ngIf="loading" class="spinner-container">
-      <!-- <div class="spinner-grow text-secondary" role="status"></div> -->
-        <mat-spinner></mat-spinner>
-        <span class="loading-text">Ładuję spacer 3D</span>
-  </div>
-
-</div>
-
-
 <!-- MARKETING TEXT BOTTOM SECTION -->
 <section>
   <div class="container my-5">
@@ -249,3 +226,6 @@
 
 
 </div>
+
+
+

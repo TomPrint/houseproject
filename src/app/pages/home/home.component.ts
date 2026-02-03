@@ -1,13 +1,9 @@
-import { Component, AfterViewInit, HostListener } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { NavbarComponent } from "../../shared/navbar/navbar.component";
 import { FaderComponent } from "../../shared/fader/fader.component"
 
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatButtonModule } from '@angular/material/button';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { ContactComponent } from "../contact/contact.component";
 import { SliderComponent } from "../../shared/slider/slider.component";
@@ -20,15 +16,11 @@ import { SliderComponent } from "../../shared/slider/slider.component";
   imports: [RouterModule,
     CommonModule,
     RouterLink,
-    MatProgressSpinnerModule,
-    MatButtonModule,
-    MatTooltipModule, NavbarComponent, FooterComponent, FaderComponent, ContactComponent, SliderComponent],
+    NavbarComponent, FooterComponent, FaderComponent, ContactComponent, SliderComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  Walk3dSanitizedUrl: SafeResourceUrl;
-  loading = true; // Loading spinner
   // showScrollTop = false;
   sliderImages = [
   { src: 'assets/budynek-1.svg', caption: '1-CALMA - użyt.: 27.8 m2 | zab.: 39.3 m2', houseKey: 'CALMA' },
@@ -74,17 +66,7 @@ export class HomeComponent {
   // }
 
 
-  constructor(private sanitizer: DomSanitizer) {
-    const url = 'https://livetour.istaging.com/478b7e8f-43ca-4609-9391-1c8074e210fb?index=1';
-    this.Walk3dSanitizedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  }
-
-  onIframeLoad() {
-    // Add a delay to make the spinner visible for at least 500ms
-    setTimeout(() => {
-      this.loading = false; // Hide the loading spinner after the delay
-    }, 500); // Adjust the delay duration as needed
-  }
+  constructor() {}
 
   // scrollToTop(): void {
   //   window.scrollTo({ top: 0, behavior: 'smooth' });

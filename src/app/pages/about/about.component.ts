@@ -12,20 +12,4 @@ import { RouterModule } from '@angular/router';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  animate = false;
-
-  triggerAnimation() {
-    this.animate = false;
-    setTimeout(() => {
-      this.animate = true;
-    }, 50); // Ensure DOM update
-  }
-
-  ngOnInit() {
-    // Optional: delay the start a little for smoother UX
-    setTimeout(() => {
-      this.animate = true;
-    }, 100);
-  }
-
 }

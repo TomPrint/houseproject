@@ -10,6 +10,7 @@ import { TechnologyComponent } from './pages/technology/technology.component';
 import { IndividualComponent } from './pages/individual/individual.component';
 import { ProcesComponent } from './pages/proces/proces.component';
 import { AvaiableComponent } from './pages/avaiable/avaiable.component';
+import { VirtualtourComponent } from './pages/virtualtour/virtualtour.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, 
@@ -23,6 +24,7 @@ export const routes: Routes = [
   { path: 'jaktodziala', component:RealizationComponent},
   { path: 'wnetrza', component: IndividualComponent},
   { path: 'dostepne', component: AvaiableComponent},
+  { path: 'virtualtour', component: VirtualtourComponent},
 
   { path: '**', redirectTo: '', pathMatch: 'full' }, // ! place this line always as last item !
 ];

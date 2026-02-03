@@ -43,17 +43,18 @@ export class NavbarComponent {
 
   constructor(private router: Router){}
 
+  isHomePage(): boolean {
+    return this.router.url === '/';
+  }
 
-isHomePage(): boolean {
-  return this.router.url === '/';
-}
-
-closeMobileMenu() {
-  const mobileNav = document.getElementById('mobileNav');
-  if (mobileNav) {
-    mobileNav.classList.remove('show'); // Bootstrapowy sposób na zwinięcie menu
+  closeMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    if (mobileNav) {
+      mobileNav.classList.remove('show'); // Bootstrapowy sposób na zwinięcie menu
+    }
   }
 }
 
 
-}
+
+

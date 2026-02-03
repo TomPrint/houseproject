@@ -23,7 +23,7 @@
   border-radius: 8px;
   z-index: 10;
   width: auto;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Styling for nav items */
@@ -34,11 +34,29 @@
 /* Active navigation item styling */
 .custom-navbar .active-nav-item .nav-link {
   font-size: 1rem; /* brak powiększania */
-  color: white !important;
-  text-decoration: underline;
+  color: #f7f0e9 !important;
+  text-decoration: none;
+  position: relative;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 6px 12px;
 }
 
-
+.custom-navbar .active-nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  width: 70%;
+  height: 1.6em;
+  transform: translate(-50%, -50%);
+  background: rgba(184, 159, 134, 0.5);
+  border-radius: 999px;
+  filter: blur(14px);
+  box-shadow: 0 0 22px rgba(184, 159, 134, 0.7);
+  z-index: -1;
+}
 /* Special styling for the home page */
 .home-page-navbar .custom-navbar {
   background-color: rgba(124, 138, 119, 0.8);
@@ -161,3 +179,10 @@
 .scroll-to-top:hover {
   transform: scale(1.2);
 }
+
+
+
+
+
+
+

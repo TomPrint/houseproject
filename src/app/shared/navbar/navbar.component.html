@@ -29,6 +29,9 @@
             <a class="nav-link monsterrata-text " routerLink="/oferta">NASZE DOMY</a>
           </li>
           <li class="nav-item" routerLinkActive="active-nav-item" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link monsterrata-text " routerLink="/virtualtour">SPACER 3D</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active-nav-item" [routerLinkActiveOptions]="{ exact: true }">
             <a class="nav-link monsterrata-text " routerLink="/wnetrza">WNĘTRZA</a>
           </li>
           <li class="nav-item" routerLinkActive="active-nav-item" [routerLinkActiveOptions]="{ exact: true }">
@@ -49,13 +52,6 @@
           <li class="nav-item" routerLinkActive="active-nav-item">
             <a class="nav-link monsterrata-text" href="#contact" >KONTAKT</a>
           </li>
-
-          <!-- <li>
-            <li class="nav-item">
-            <a class="nav-link monsterrata-text " routerLink="/" fragment="spacer">SPACER WIRTUALNY</a>
-          </li> -->
-
-
 
           <!-- WERSJE JĘZYKOWE - TYMCZASOWO WYŁĄCZONE -->
           <!-- <li class="nav-item" routerLinkActive="active-nav-item">
@@ -84,12 +80,14 @@
           <a class="nav-link" href="oferta">Nasze domy</a>
         </li>
         <li class="nav-item align-items-center">
+          <a class="nav-link" routerLink="/virtualtour" (click)="closeMobileMenu()">Spacer 3D</a>
+        </li>
+        <li class="nav-item align-items-center">
           <a class="nav-link" href="wnetrza">Wnętrza</a>
         </li>
         <li class="nav-item align-items-center">
           <a class="nav-link" href="/jaktodziala">Jak to działa</a>
         </li>
-        <li class="nav-item">
         <li class="nav-item align-items-center">
           <a class="nav-link" href="technologia">Technologia</a>
         </li>
@@ -106,12 +104,7 @@
           <a class="nav-link" href="#contact" (click)="closeMobileMenu()">Kontakt</a>
         </li>
 
-        <!-- <li>
-          <a class="nav-link" routerLink="/" fragment="spacer" (click)="closeMobileMenu()">Spacer wirtualny</a>
-        </li>
-         -->
-
-         <!-- Sekcja flag pod kontaktem -->
+        <!-- Sekcja flag pod kontaktem -->
         <!-- <li class="nav-item d-flex justify-content-center gap-2 mt-2">
           <a class="nav-link px-2" routerLink=""><img class="flag2-img" src="assets/Flag_of_Poland.png" alt="PL"></a>
           <a class="nav-link px-2" routerLink=""><img class="flag2-img" src="assets/Flag_of_Great_Britain.png" alt="EN"></a>
@@ -121,3 +114,9 @@
     </div>
   </div>
 </nav>
+
+
+
+
+
+

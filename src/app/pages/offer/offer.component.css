@@ -4,6 +4,7 @@
 /* General Container Styles */
 
 .outside-container {
+    position: relative;
     overflow: hidden; /* Prevent unwanted overflow */
 }
 
@@ -454,3 +455,4 @@
 
 
   
+
