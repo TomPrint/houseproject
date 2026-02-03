@@ -1,75 +1,74 @@
-import { Component, HostListener } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Component, HostListener, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { RouterLink, RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from "../../shared/navbar/navbar.component";
-import { FaderComponent } from "../../shared/fader/fader.component"
-
+import { FaderComponent } from "../../shared/fader/fader.component";
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { ContactComponent } from "../contact/contact.component";
-import { SliderComponent } from "../../shared/slider/slider.component";
-
-
+import { houses } from '../offer/houses';
+import Splide from '@splidejs/splide';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterModule,
+  imports: [
+    RouterModule,
     CommonModule,
     RouterLink,
-    NavbarComponent, FooterComponent, FaderComponent, ContactComponent, SliderComponent],
+    NavbarComponent,
+    FooterComponent,
+    FaderComponent,
+    ContactComponent
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  // showScrollTop = false;
-  sliderImages = [
-  { src: 'assets/budynek-1.svg', caption: '1-CALMA - użyt.: 27.8 m2 | zab.: 39.3 m2', houseKey: 'CALMA' },
-  { src: 'assets/budynek-3.svg', caption: '2-FRESCA - użytk.: 53.5 m2 | zab.: 58 m2 ', houseKey: 'FRESCA' },
-  { src: 'assets/budynek-10.svg', caption: '3-CARINA - użytk.: 53.7 m2 | zab.: 58 m2 ', houseKey: 'CARINA' },
-  { src: 'assets/budynek-2.svg', caption: '4-GIOIA - użytk.: 54.6 m2 | zab.: 67.8 m2' ,  houseKey: 'GIOIA' },
-  { src: 'assets/budynek-4.svg', caption: '5-ARIOSA - użytk.: 54.8 m2 | zab.: 69.8 m2 ', houseKey: 'ARIOSA' },
-  { src: 'assets/budynek-6.svg', caption: '6-SOLARE - użytk: 78.5 m2 | zab.: 70 m2 ', houseKey: 'SOLARE' },
-  { src: 'assets/budynek-5.svg', caption: '7-ALLEGRA - użytk.: 40.5 m2 | zab.: 65.3 m2 ', houseKey: 'ALLEGRA' },
-  { src: 'assets/budynek-8.svg', caption: '8-MODERNA - użytk.: 61.5 m2 | zab.: 57.6 m2 ', houseKey: 'MODERNA'  },
-  { src: 'assets/budynek-7.svg', caption: '9-TONICA - użytk.: 68.8 m2 | zab.: 53.8 m2 ', houseKey: 'TONICA'  },
-  { src: 'assets/budynek-9.svg', caption: '10-RICCA - użytk.: 110.5 m2 | zab.: 67.8 m2 ', houseKey: 'RICCA' },
- 
-  
+export class HomeComponent implements AfterViewInit {
+  houses = houses;
+  houseList = Object.entries(this.houses).map(([key, house]) => ({
+    key,
+    ...house,
+  }));
 
- 
-  
-  
-  
-];
-
+  @ViewChild('houseCarousel') houseCarousel!: ElementRef;
+  private splide?: Splide;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const mobileNav = document.getElementById('mobileNav');
     const isMobileMenuOpen = mobileNav?.classList.contains('show') ?? false;
-    
     // this.showScrollTop = window.pageYOffset > 300 && !isMobileMenuOpen;
   }
 
-  // ngAfterViewInit() {
-  //   const mobileNav = document.getElementById('mobileNav');
-  //   if (mobileNav) {
-  //     mobileNav.addEventListener('shown.bs.collapse', () => this.updateScrollButtonVisibility());
-  //     mobileNav.addEventListener('hidden.bs.collapse', () => this.updateScrollButtonVisibility());
-  //   }
-  // }
+  constructor(private router: Router) {}
 
-  // updateScrollButtonVisibility() {
-  //   const mobileNav = document.getElementById('mobileNav');
-  //   const isMobileMenuOpen = mobileNav?.classList.contains('show') ?? false;
-  //   this.showScrollTop = window.pageYOffset > 300 && !isMobileMenuOpen;
-  // }
+  goToOffer(houseKey: string) {
+    this.router.navigate(['/oferta'], { queryParams: { house: houseKey } });
+  }
+
+  onActiveHouseClick(houseKey: string, event: MouseEvent) {
+    const target = event.target as HTMLElement | null;
+    const slide = target?.closest('.splide__slide');
+    if (slide?.classList.contains('is-active')) {
+      this.goToOffer(houseKey);
+    }
+  }
 
 
-  constructor() {}
+  ngAfterViewInit() {
+    this.splide = new Splide(this.houseCarousel.nativeElement, {
+      type: 'loop',
+      focus: 'center',
+      perPage: 3,
+      gap: '1rem',
+      pagination: false,
+      arrows: true,
+      drag: true,
+      breakpoints: {
+        768: { perPage: 1 },
+      },
+    });
 
-  // scrollToTop(): void {
-  //   window.scrollTo({ top: 0, behavior: 'smooth' });
-  // }
-
+    this.splide.mount();
+  }
 }

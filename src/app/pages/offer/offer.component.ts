@@ -162,9 +162,6 @@ export class OfferComponent implements AfterViewInit, OnInit {
     setTimeout(() => this.syncSpinnerWithImgCompleteness(), 0);
   }
 
-  goToHouse(index: number) {
-    this.splide?.go(index);
-  }
 
   // Image event handlers (hide overlay when both heroes are done)
   onFrontLoad()  { this.frontLoading.set(false); this.maybeHideOverlay(); }
@@ -264,7 +261,7 @@ export class OfferComponent implements AfterViewInit, OnInit {
       if (next) this.preloadHouseHero(next);
     });
 
-    splide.on('mounted move', () => {
+    splide.on('move', () => {
       const list = this.houseList();
       const key = list[splide.index]?.key as keyof typeof houses | undefined;
       if (key) this.toggleHouse(key);
@@ -272,6 +269,14 @@ export class OfferComponent implements AfterViewInit, OnInit {
 
     splide.mount();
     this.splide = splide;
+
+    // Sync carousel position with selected house (e.g., from query param)
+    const list = this.houseList();
+    const selectedKey = this.selectedHouse();
+    const selectedIndex = list.findIndex((h) => h.key === selectedKey);
+    if (selectedIndex >= 0) {
+      splide.go(selectedIndex);
+    }
 
     if (this.currentHouseExteriors().length > 0 && this.selectedExterior() === '') {
       this.selectExterior(0);

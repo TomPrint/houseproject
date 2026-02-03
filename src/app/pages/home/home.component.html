@@ -35,9 +35,33 @@
   </div>
 </section>
 
-<!-- SLIDER Z DOMKAMI Z PRZENIESIENIEM SIĘ DO OFERTY PO KLIKNIĘCIU -->
-<section>
-  <app-slider [images]="sliderImages"></app-slider>
+<!-- SELECTOR DOMKÓW (link do oferty po kliknięciu) -->
+<section class="bg-img-slider">
+  <div class="container py-5">
+    <div id="house-carousel-home" class="splide px-4 pb-5" #houseCarousel>
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li
+            class="splide__slide text-center"
+            *ngFor="let house of houseList"
+            (click)="onActiveHouseClick(house.key, $event)"
+          >
+            <img
+              [src]="house.vector"
+              [alt]="house.name + ' House'"
+              class="img-fluid house-thumb"
+            />
+            <p class="house-name mt-1 mb-0">
+              {{ house.name }}
+              <span class="house-square">
+                {{ house.square }} <span class="m">m</span><span class="sup">2</span>
+              </span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
   <!--ABOUT US SECTION  -->
