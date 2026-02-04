@@ -92,28 +92,57 @@
 }
 
   /* Keep layout stable under carousel */
-  .splide__track {
-    height: 260px;
-  }
+.splide__track {
+  height: 320px;
+}
   .splide__list {
     align-items: center;
   }
-  .splide__slide {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.splide__slide {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
 
   /* arrow styling */
-  ::ng-deep .splide__arrow {
-    background-color: #7C8A77 !important;
-    color: white !important;
-    border-radius: 50%;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+::ng-deep .splide__arrow {
+  background-color: #7C8A77 !important;
+  color: white !important;
+  border-radius: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+::ng-deep .splide__arrows {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 3rem;
+  
+}
+
+::ng-deep .splide__arrow--prev,
+::ng-deep .splide__arrow--next {
+  position: static;
+}
+
+/* Keep arrows inside the carousel box */
+.splide {
+  position: relative;
+  padding-bottom: 140px;
+  overflow: hidden;
+}
+
+/* Match home spacing above the slider */
+#house-carousel {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
   
   @media (max-width: 768px) {
     .house-thumb {
@@ -131,7 +160,7 @@
   color: #333;
   margin: 0;
   text-transform: uppercase;
-  min-height: 2.2em;
+  min-height: 1.8em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,7 +168,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 30px;
   z-index: 2;
 }
   
@@ -500,6 +529,10 @@
 
 
   
+
+
+
+
 
 
 
