@@ -267,11 +267,13 @@
 .offer-soft-bg {
   background-color: transparent !important;
   background-image: linear-gradient(
-    135deg,
-    rgba(184, 159, 134, 0.12) 0%,
-    rgba(255, 255, 255, 0.995) 50%,
-    rgba(124, 138, 119, 0.15) 100%
-  );
+      135deg,
+      rgba(184, 159, 134, 0.08) 0%,
+      rgba(255, 255, 255, 0.998) 50%,
+      rgba(124, 138, 119, 0.1) 100%
+    ),
+    radial-gradient(rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+  background-size: auto, 6px 6px;
   position: relative;
   overflow: hidden;
 }
@@ -279,11 +281,13 @@
 /* Reverse gradient only for Drawing section */
 .offer-soft-bg.floor-plan-section {
   background-image: linear-gradient(
-    135deg,
-    rgba(124, 138, 119, 0.15) 0%,
-    rgba(255, 255, 255, 0.995) 50%,
-    rgba(184, 159, 134, 0.12) 100%
-  );
+      135deg,
+      rgba(124, 138, 119, 0.1) 0%,
+      rgba(255, 255, 255, 0.998) 50%,
+      rgba(184, 159, 134, 0.08) 100%
+    ),
+    radial-gradient(rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+  background-size: auto, 6px 6px;
 }
 
 .offer-soft-bg::before,
