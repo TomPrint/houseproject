@@ -2,11 +2,12 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavbarComponent } from "../../shared/navbar/navbar.component";
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-proces',
   standalone: true,
-  imports: [NavbarComponent, FooterComponent, CommonModule],
+  imports: [NavbarComponent, FooterComponent, CommonModule, RouterLink],
   templateUrl: './proces.component.html',
   styleUrl: './proces.component.css'
 })

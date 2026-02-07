@@ -17,7 +17,12 @@
         <!-- Block 1: Full-width Image -->
         <div class="row">
           <div class="col-12">
-            <img [src]="images[0]" class="img-fluid w-100" alt="Osrodek">
+            <div class="hero-image-wrapper">
+              <img [src]="images[0]" class="img-fluid w-100" alt="Osrodek">
+              <a class="tour-cta" routerLink="/virtualtour" [queryParams]="{ index: 8 }">
+                <i class="bi bi-badge-3d"></i>SPACER 3D
+              </a>
+            </div>
           </div>
         </div>
 
