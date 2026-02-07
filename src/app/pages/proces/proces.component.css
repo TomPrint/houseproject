@@ -48,8 +48,6 @@
   font-weight: 600;
 }
 
-
-
 .font {
   font-size: 1.1rem;
 }
@@ -68,18 +66,57 @@ ul li {
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
   position: relative;
-  
+}
+
+.hex-list li {
+  padding-left: 0.9rem;
+}
+
+.hex-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4em;
+  width: 8px;
+  height: 8px;
+  background: #7C8A77;
+  transform: rotate(45deg);
+
+}
+
+/* Align bullets with centered list text */
+.text-center .hex-list {
+  display: inline-block;
+  text-align: left;
+}
+
+.standard-list {
+  list-style: disc;
+  list-style-position: inside;
+  padding-left: 0;
+  color: #000;
+}
+
+.standard-list li {
+  padding-left: 0;
+}
+
+.text-center .standard-list {
+  display: inline-block;
+  text-align: left;
 }
 
 .contact-box {
   background-color: #696969;
- 
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive improvement: mobile layout */
 @media (max-width: 767.98px) {
   .text-section {
     text-align: center;
+    font-size: 1.1rem;
   }
 
   ul {
@@ -89,7 +126,15 @@ ul li {
   .text-container {
     padding: 2rem 1.25rem;
   }
-}
+
+  .text-container::before {
+    background-attachment: scroll;
+    opacity: 0.35;
+  }
+
+  .contact-box {
+    padding: 1.5rem;
+  }}
 
 
 
@@ -97,9 +142,7 @@ ul li {
 
 
 
-
-
-/* ! KOD DO WKRÓTCE
+/* ! KOD DO WKR�TCE
 .bg_proces_img {
     background-image: white; 
     height: 82vh;
