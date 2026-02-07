@@ -125,32 +125,10 @@
     <div class="text-center py-5"><p>Ładowanie ikon...</p></div>
   }
 
-  <!--SVG FACADES SECTION -->
-  @defer {
-    <div class="container bg-white pt-3">
-      <h3 class="text-center pt-3 mb-0">{{ displayHouseName() }} RYSUNEK ELEWACJI</h3>
-      <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-md-10 col-lg-8 col-xl-8 d-flex justify-content-center">
-          <div class="ratio ratio-1x1 w-100">
-            <img
-              [src]="houses[selectedHouse()].facade"
-              alt="Fasada"
-              class="img-fluid rounded facade-img px-2"
-              (click)="openModal(houses[selectedHouse()].facade)"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  }
-  @loading {
-    <div class="text-center py-5"><p>Wczytywanie elewacji...</p></div>
-  }
-
-  <!-- RENDERS SECTION -->
+    <!-- RENDERS SECTION -->
   @defer {
     <div class="render-section px-2 mt-4 renders">
-      <h3 class="text-center pt-3 mb-0">{{ displayHouseName() }} PRZEKRÓJ DOMU</h3>
+      <h3 class="text-center pt-3 mb-0 pb-5">{{ displayHouseName() }} PRZEKRÓJ DOMU</h3>
 
       <div class="row justify-content-center align-items-center">
         <div class="col-12 col-md-10 col-lg-8 col-xl-7 text-center render-container">
@@ -181,15 +159,30 @@
     <div class="text-center py-5"><p>Wczytywanie renderów...</p></div>
   }
 
+
+
+
+
   <!-- DRAWING SECTION -->
   @defer {
     <div class="floor-plan-section px-2 pt-4">
       <!-- Section Title -->
-      <h3 class="text-center pt-3 mb-0">
+      <h3 class="text-center pt-3 mb-0 pb-5">
         {{ displayHouseName() }} RZUT DOMU
       </h3>
 
-      <div class="row justify-content-center align-items-center">
+      <!-- Info List (top right) -->
+      <div class="row justify-content-end mt-1 mx-2">
+        <div class="col-12 col-md-3 text-end info-list">
+          <ul class="list-unstyled">
+            <li *ngFor="let item of houses[selectedHouse()].info">
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center mb-5 pb-5">
         <!-- Drawing Image Column -->
         <div class="col-12 col-md-10 col-lg-8 col-xl-7">
           <div class="image-wrapper d-flex justify-content-center">
@@ -202,27 +195,40 @@
           </div>
         </div>
       </div>
-
-      <!-- Info List -->
-      <div class="row justify-content-end mt-1 mx-2 mb-5 pb-5">
-        <div class="col-12 col-md-3 text-end info-list">
-          <ul class="list-unstyled">
-            <li *ngFor="let item of houses[selectedHouse()].info">
-              {{ item }}
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
   }
   @loading {
     <div class="text-center py-5"><p>Wczytywanie rzutu domu...</p></div>
   }
 
+  <!--SVG FACADES SECTION -->
+  @defer {
+    <div class="container bg-white pt-3">
+      <h3 class="text-center pt-3 mb-0">{{ displayHouseName() }} RYSUNEK ELEWACJI</h3>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-8 d-flex justify-content-center">
+          <div class="ratio ratio-1x1 w-100">
+            <img
+              [src]="houses[selectedHouse()].facade"
+              alt="Fasada"
+              class="img-fluid rounded facade-img px-2"
+              (click)="openModal(houses[selectedHouse()].facade)"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  @loading {
+    <div class="text-center py-5"><p>Wczytywanie elewacji...</p></div>
+  }
+
+
+
   <!-- EXTERIOR SELECTOR SECTION -->
   @defer {
     <div class="container my-3">
-      <h3 class="text-center mb-4">PRZYKŁAD WYKOŃCZENIA ZEWNĘTRZNEGO</h3>
+      <h3 class="text-center mb-4 pb-5">PRZYKŁAD WYKOŃCZENIA ZEWNĘTRZNEGO</h3>
 
       <!-- Thumbnail selectors row -->
         <div class="row justify-content-center">

@@ -427,6 +427,11 @@
     color: #555;
 }
 
+.info-list,
+.info-list * {
+  cursor: default !important;
+}
+
 @media (max-width: 768px) {
     .info-list li {
         font-size: 0.9rem;
