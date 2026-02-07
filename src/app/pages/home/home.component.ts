@@ -28,7 +28,12 @@ export class HomeComponent implements AfterViewInit {
   houseList = Object.entries(this.houses).map(([key, house]) => ({
     key,
     ...house,
+    displayName: this.formatHouseName(house.name),
   }));
+
+  private formatHouseName(name: string): string {
+    return name.replace(/^\d+-/, '');
+  }
 
   @ViewChild('houseCarousel') houseCarousel!: ElementRef;
   private splide?: Splide;

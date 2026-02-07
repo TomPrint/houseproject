@@ -4,14 +4,12 @@
   <!-- Main Content Area -->
   <main class="flex-grow-1">
     <!-- Logo Section -->
-    <div class="logo-container">
-      <a routerLink="/">
-        <img class="logo img-fluid" src="/assets/logo.png" alt="Logo">
-      </a>
-    </div>
+  <div class="logo-container">
+    <a href="" routerLink="/"><img class="logo img-fluid" src="/assets/logo.png" alt="Logo"></a>
+  </div>
 
     <!-- About Content -->
-    <div class="container py-5 ">
+    <div class="container py-5">
       <!-- Heading -->
       <div class="text-center mb-5">
         <h2 class="main-container">O NAS – AMMER HOUSE <i class="bi bi-house icon-custom-green"></i></h2>
@@ -19,7 +17,7 @@
       </div>
 
       <!-- About and Image -->
-      <div class="row align-items-center ">
+      <div class="row align-items-center">
         <div class="col-lg-6">
           <p class="fs-5">
             Ammer House to polski producent nowoczesnych budynków modułowych i prefabrykowanych.
@@ -29,7 +27,31 @@
           </p>
         </div>
         <div class="col-lg-6 text-center">
-          <img class="img-fluid about-olaf" src="/assets/olaf.webp" alt="Olaf">
+          <div class="canvas-wrapper d-none d-lg-flex">
+            <a href="#" class="canvas" aria-label="Ammer House">
+              <div class="canvas_border">
+                <svg>
+                  <defs>
+                    <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style="stop-color:rgb(124,138,119);stop-opacity:1"></stop>
+                      <stop offset="100%" style="stop-color:rgb(92,110,86);stop-opacity:1"></stop>
+                    </linearGradient>
+                  </defs>
+                  <rect class="rect-gradient" fill="none" stroke="url(#grad-green)" stroke-linecap="square" stroke-width="4" stroke-miterlimit="30" width="100%" height="100%"></rect>
+                </svg>
+              </div>
+              <div class="canvas_img-wrapper">
+                <img class="canvas_img" src="/assets/olaf.webp" alt="Ammer House">
+              </div>
+              <div class="canvas_copy">
+                <img class="canvas_logo" src="/assets/logo.png" alt="Ammer House">
+                <span class="canvas_copy_details">POZNAJMY SIĘ</span>
+              </div>
+            </a>
+          </div>
+          <div class="d-lg-none">
+            <img class="img-fluid about-olaf" src="/assets/olaf.webp" alt="Ammer House">
+          </div>
         </div>
       </div>
 
@@ -38,7 +60,7 @@
         <h3 class="fw-bold mb-3">Co robimy?</h3>
         <p class="lead">Specjalizujemy się w projektowaniu i produkcji:</p>
         <ul class="list-unstyled fs-5">
-          <li ><i class="bi bi-caret-right-fill icon-custom-green"></i> Domów modułowych i letniskowych</li>
+          <li><i class="bi bi-caret-right-fill icon-custom-green"></i> Domów modułowych i letniskowych</li>
           <li><i class="bi bi-caret-right-fill icon-custom-green"></i> Obiektów do 70 m² (bez konieczności pozwolenia na budowę)</li>
           <li><i class="bi bi-caret-right-fill icon-custom-green"></i> Garaży i domków rekreacyjnych</li>
           <li><i class="bi bi-caret-right-fill icon-custom-green"></i> Budynków usługowych i handlowych: biur, sklepów, salonów sprzedaży</li>
@@ -62,7 +84,7 @@
           </div>
           <div class="col">
             <div class="d-flex align-items-start">
-              <span> <i class="bi bi-bricks icon-custom-green px-1"></i></span>
+              <span><i class="bi bi-bricks icon-custom-green px-1"></i></span>
               <div>
                 <h5 class="fw-semibold mb-1 mx-1"> Jakość i trwałość</h5>
                 <p class="mb-0">
@@ -73,7 +95,7 @@
           </div>
           <div class="col">
             <div class="d-flex align-items-start">
-              <span> <i class="bi bi-lightbulb icon-custom-green px-1"></i></span>
+              <span><i class="bi bi-lightbulb icon-custom-green px-1"></i></span>
               <div>
                 <h5 class="fw-semibold mb-1 mx-1"> Nowoczesny design</h5>
                 <p class="mb-0">
@@ -84,7 +106,7 @@
           </div>
           <div class="col">
             <div class="d-flex align-items-start">
-              <span> <i class="bi bi-car-front-fill icon-custom-brown px-1"></i></span>
+              <span><i class="bi bi-car-front-fill icon-custom-brown px-1"></i></span>
               <div>
                 <h5 class="fw-semibold mb-1 mx-1"> Mobilność i elastyczność</h5>
                 <p class="mb-0">
@@ -100,24 +122,19 @@
       <div class="mb-5">
         <h3 class="fw-bold mb-3">Nasze wartości</h3>
         <ul class="list-unstyled fs-5">
-          <li>✔ Precyzja wykonania</li>
-          <li>✔ Indywidualne podejście do klienta</li>
-          <li>✔ Innowacyjność i rozwój technologii</li>
-          <li>✔ Zrównoważone, energooszczędne rozwiązania</li>
+          <li>✓ Precyzja wykonania</li>
+          <li>✓ Indywidualne podejście do klienta</li>
+          <li>✓ Innowacyjność i rozwój technologii</li>
+          <li>✓ Zrównoważone, energooszczędne rozwiązania</li>
         </ul>
       </div>
 
       <!-- CTA Button -->
       <div class="text-center mt-5">
-<a [routerLink]="['/']" fragment="contact" class="btn btn-outline-secondary px-4 py-2">
-  Skontaktuj się z nami
-</a>
+        <a [routerLink]="['/']" fragment="contact" class="btn btn-outline-secondary px-4 py-2">
+          Skontaktuj się z nami
+        </a>
       </div>
     </div>
   </main>
-
- 
-
-
 </div>
-

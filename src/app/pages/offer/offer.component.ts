@@ -39,6 +39,14 @@ export class OfferComponent implements AfterViewInit, OnInit {
   currentExteriorIndex = signal(0);
   selectedExterior = signal<string>('');
 
+  displayHouseName() {
+    return this.formatHouseName(this.houses[this.selectedHouse()].name);
+  }
+
+  private formatHouseName(name: string): string {
+    return name.replace(/^\d+-/, '');
+  }
+
   // Per-image spinners
   frontLoading = signal<boolean>(true);
   backLoading = signal<boolean>(true);
@@ -57,6 +65,7 @@ export class OfferComponent implements AfterViewInit, OnInit {
     Object.entries(this.houses).map(([key, house]) => ({
       key,
       ...house,
+      displayName: this.formatHouseName(house.name),
     }))
   );
 
