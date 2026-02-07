@@ -4,8 +4,8 @@
   <!-- Main Content Area -->
   <main class="flex-grow-1">
     <!-- Logo Section -->
-  <div class="logo-container">
-    <a [routerLink]="['/']" fragment="contact"><img class="logo img-fluid" src="/assets/logo.png" alt="Logo"></a>
+   <div class="logo-container">
+    <a href="" routerLink="/"><img class="logo img-fluid" src="/assets/logo.png" alt="Logo"></a>
   </div>
 
     <!-- About Content -->
@@ -28,7 +28,7 @@
         </div>
         <div class="col-lg-6 text-center">
           <div class="canvas-wrapper d-none d-lg-flex">
-            <a href="#" class="canvas" aria-label="Ammer House">
+            <a href="/" class="canvas" aria-label="Ammer House" (click)="goToContact($event)">
               <div class="canvas_border">
                 <svg>
                   <defs>
@@ -45,7 +45,7 @@
               </div>
               <div class="canvas_copy">
                 <img class="canvas_logo" src="/assets/logo.png" alt="Ammer House">
-                <span class="canvas_copy_details">POZNAJMY SIĘ</span>
+                <span class="canvas_copy_details">ZAPRASZAM DO KONTAKTU</span>
               </div>
             </a>
           </div>
@@ -130,8 +130,8 @@
       </div>
 
       <!-- CTA Button -->
-      <div class="text-center mt-5">
-        <a [routerLink]="['/']" fragment="contact" class="btn btn-outline-secondary px-4 py-2">
+      <div class="text-center mt-5 d-lg-none">
+        <a href="/" class="btn btn-outline-secondary px-4 py-2" (click)="goToContact($event)">
           Skontaktuj się z nami
         </a>
       </div>
